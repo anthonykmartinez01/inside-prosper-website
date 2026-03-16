@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Hero from '../components/sections/Hero.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import BusinessListings from '../components/sections/BusinessListings.astro';
+import EmailCTA from '../components/sections/EmailCTA.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout
+  title="Inside Prosper — Discover The Best Local Businesses in Prosper, Texas"
+  description="For those of us who appreciate our local, hardworking friends and families. Discover the best local businesses in Prosper, Texas."
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <HowItWorks />
+    <BusinessListings />
+    <EmailCTA />
+  </main>
+  <Footer />
+</BaseLayout>

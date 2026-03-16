@@ -1,0 +1,77 @@
+---
+import { siteConfig, navigation } from '../../data/business';
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-bg-white/90 backdrop-blur-md border-b border-border-light">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 text-xl font-bold text-text">
+      <span class="text-primary text-2xl">&#9826;</span>
+      <span>{siteConfig.name}</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden items-center gap-8 md:flex">
+      {navigation.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm font-medium text-text-muted transition-colors hover:text-primary"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#get-listed"
+        class="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+      >
+        Get Listed
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="flex size-10 items-center justify-center rounded-lg md:hidden"
+      aria-label="Toggle menu"
+    >
+      <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden border-t border-border-light bg-bg-white px-6 pb-6 md:hidden">
+    <div class="flex flex-col gap-4 pt-4">
+      {navigation.map((link) => (
+        <a
+          href={link.href}
+          class="mobile-nav-link text-base font-medium text-text-muted transition-colors hover:text-primary"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="#get-listed"
+        class="mobile-nav-link mt-2 block rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+      >
+        Get Listed
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+    });
+  });
+</script>
