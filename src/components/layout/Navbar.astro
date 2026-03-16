@@ -2,27 +2,43 @@
 import { siteConfig, navigation } from '../../data/business';
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-bg-white/90 backdrop-blur-md border-b border-border-light">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+<header id="main-nav" class="fixed top-0 left-0 right-0 z-50">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 text-xl font-bold text-text">
+    <a href="/" class="flex items-center gap-2.5 text-xl font-bold text-white">
       <span class="text-primary text-2xl">&#9826;</span>
-      <span>{siteConfig.name}</span>
+      <span class="font-heading">{siteConfig.name}</span>
     </a>
 
     <!-- Desktop Nav -->
-    <div class="hidden items-center gap-8 md:flex">
+    <div class="hidden items-center gap-10 md:flex">
+      <a
+        href="/"
+        class="text-sm font-medium text-primary transition-colors"
+      >
+        Home
+      </a>
       {navigation.map((link) => (
         <a
           href={link.href}
-          class="text-sm font-medium text-text-muted transition-colors hover:text-primary"
+          class="text-sm font-medium text-white/70 transition-colors hover:text-white"
         >
           {link.label}
         </a>
       ))}
+    </div>
+
+    <!-- Desktop CTA Buttons -->
+    <div class="hidden items-center gap-3 md:flex">
+      <a
+        href="#how-it-works"
+        class="rounded-full border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10"
+      >
+        Learn More
+      </a>
       <a
         href="#get-listed"
-        class="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+        class="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-primary-dark hover:scale-105"
       >
         Get Listed
       </a>
@@ -31,7 +47,7 @@ import { siteConfig, navigation } from '../../data/business';
     <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="flex size-10 items-center justify-center rounded-lg md:hidden"
+      class="flex size-10 items-center justify-center rounded-lg text-white md:hidden"
       aria-label="Toggle menu"
     >
       <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,22 +57,36 @@ import { siteConfig, navigation } from '../../data/business';
   </nav>
 
   <!-- Mobile Nav -->
-  <div id="mobile-menu" class="hidden border-t border-border-light bg-bg-white px-6 pb-6 md:hidden">
+  <div id="mobile-menu" class="hidden border-t border-white/10 bg-bg-dark/95 backdrop-blur-xl px-6 pb-6 md:hidden">
     <div class="flex flex-col gap-4 pt-4">
+      <a
+        href="/"
+        class="mobile-nav-link text-base font-medium text-primary"
+      >
+        Home
+      </a>
       {navigation.map((link) => (
         <a
           href={link.href}
-          class="mobile-nav-link text-base font-medium text-text-muted transition-colors hover:text-primary"
+          class="mobile-nav-link text-base font-medium text-white/70 transition-colors hover:text-white"
         >
           {link.label}
         </a>
       ))}
-      <a
-        href="#get-listed"
-        class="mobile-nav-link mt-2 block rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
-      >
-        Get Listed
-      </a>
+      <div class="mt-2 flex flex-col gap-3">
+        <a
+          href="#how-it-works"
+          class="mobile-nav-link block rounded-full border border-white/25 px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-white/10"
+        >
+          Learn More
+        </a>
+        <a
+          href="#get-listed"
+          class="mobile-nav-link block rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+        >
+          Get Listed
+        </a>
+      </div>
     </div>
   </div>
 </header>
@@ -64,6 +94,7 @@ import { siteConfig, navigation } from '../../data/business';
 <script>
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
+  const nav = document.getElementById('main-nav');
 
   btn?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
@@ -74,4 +105,16 @@ import { siteConfig, navigation } from '../../data/business';
       menu?.classList.add('hidden');
     });
   });
+
+  // Scroll transition — using setAttribute with !important to override Tailwind v4 cascade layers
+  const baseStyle = 'transition:background-color 0.3s ease,backdrop-filter 0.3s ease,border-bottom 0.3s ease;';
+  const clearStyle = baseStyle + 'background-color:transparent !important;border-bottom:1px solid transparent !important;';
+  const solidStyle = baseStyle + 'background-color:rgba(13,13,13,0.95) !important;backdrop-filter:blur(16px) !important;-webkit-backdrop-filter:blur(16px) !important;border-bottom:1px solid rgba(255,255,255,0.08) !important;';
+
+  if (nav) {
+    nav.setAttribute('style', clearStyle);
+    window.addEventListener('scroll', () => {
+      nav.setAttribute('style', window.scrollY > 50 ? solidStyle : clearStyle);
+    }, { passive: true });
+  }
 </script>

@@ -1,37 +1,41 @@
 ---
 import BusinessCard from '../ui/BusinessCard.astro';
-import { getRecentBusinesses } from '../../data/business';
+import { getRecentBusinesses, categories } from '../../data/business';
 
 const recentBusinesses = getRecentBusinesses(6);
 ---
 
-<section id="businesses" class="bg-bg py-20 lg:py-28">
+<section id="businesses" class="bg-bg py-24 lg:py-36">
   <div class="mx-auto max-w-7xl px-6">
     <!-- Section header -->
-    <div class="reveal mb-14 text-center">
+    <div class="reveal mb-16 text-center">
       <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
         Local Favorites
       </span>
-      <h2 class="font-display text-3xl font-bold text-text sm:text-4xl">
-        Recently Added Local <span class="italic text-primary">Businesses</span>
+      <h2 class="font-heading text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
+        Recently Added Local <span class="font-display italic text-primary">Businesses</span>
       </h2>
-      <p class="mx-auto mt-4 max-w-lg text-base text-text-muted">
+      <p class="mx-auto mt-4 max-w-lg text-base leading-relaxed text-text-muted">
         Check out these hometown favorites!
       </p>
     </div>
 
     <!-- Business cards grid -->
     <div class="reveal-stagger grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {recentBusinesses.map((biz) => (
-        <div class="reveal">
-          <BusinessCard
-            name={biz.name}
-            description={biz.shortDescription}
-            image={biz.image}
-            slug={biz.slug}
-          />
-        </div>
-      ))}
+      {recentBusinesses.map((biz) => {
+        const cat = categories.find(c => c.slug === biz.category);
+        return (
+          <div class="reveal">
+            <BusinessCard
+              name={biz.name}
+              description={biz.shortDescription}
+              image={biz.image}
+              slug={biz.slug}
+              category={cat?.name}
+            />
+          </div>
+        );
+      })}
     </div>
   </div>
 </section>

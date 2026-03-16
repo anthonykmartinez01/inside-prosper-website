@@ -20,7 +20,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta name="author" content={siteConfig.name} />
-    <meta name="theme-color" content="#F97316" />
+    <meta name="theme-color" content="#F28C38" />
 
     <meta name="robots" content="index, follow" />
 
@@ -37,27 +37,132 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={description} />
 
     <!-- Fonts (self-hosted) -->
+    <link rel="preload" href="/fonts/plus-jakarta-sans-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/clash-display-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/playfair-400-italic.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/playfair-700.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <slot />
 
     <script>
-      const observer = new IntersectionObserver(
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // ── Section reveal observer (works for all motion preferences) ──
+      const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
+              // Free GPU memory after animation completes
+              setTimeout(() => {
+                (entry.target as HTMLElement).style.willChange = 'auto';
+              }, 1000);
+              revealObserver.unobserve(entry.target);
             }
           });
         },
         { threshold: 0.15 }
       );
 
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      document.querySelectorAll('.reveal').forEach((el) => {
+        if (!prefersReducedMotion) {
+          (el as HTMLElement).style.willChange = 'transform, opacity';
+        }
+        revealObserver.observe(el);
+      });
+
+      // ── Hero scroll animations (skip entirely for reduced motion) ──
+      if (!prefersReducedMotion) {
+        const heroBg = document.querySelector('[data-hero-bg]') as HTMLElement | null;
+        const heroFg = document.querySelector('[data-hero-fg]') as HTMLElement | null;
+        const heroText = document.querySelector('[data-hero-text]') as HTMLElement | null;
+        const heroOverlay = document.querySelector('[data-hero-overlay]') as HTMLElement | null;
+        const heroContent = document.querySelector('[data-hero-content]') as HTMLElement | null;
+        const heroSection = document.querySelector('[data-hero-section]') as HTMLElement | null;
+
+        const heroHeight = heroSection?.offsetHeight || window.innerHeight;
+
+        // Promote animated layers to GPU
+        [heroBg, heroFg, heroText, heroOverlay, heroContent].forEach(el => {
+          if (el) el.style.willChange = 'transform, opacity';
+        });
+
+        // rAF-throttled scroll handler — one calculation per frame max
+        let ticking = false;
+
+        function updateHeroAnimations() {
+          const y = window.scrollY;
+          const progress = Math.min(Math.max(y / heroHeight, 0), 1);
+
+          // ── PROSPER text: parallax + scale + opacity fade ──
+          // Moves at ~45% scroll speed (slower = further back)
+          // Scales 1 → 1.08 as hero exits (camera moving past)
+          // Fades 0.9 → 0 smoothly
+          if (heroText) {
+            const textY = y * 0.55;
+            const textScale = 1 + progress * 0.08;
+            const textOpacity = 0.9 * (1 - progress);
+            heroText.style.transform = `translateY(${textY}px) scale(${textScale})`;
+            heroText.style.opacity = String(Math.max(textOpacity, 0));
+          }
+
+          // ── Hero images: parallax + cinematic zoom settle ──
+          // Moves at ~75% scroll speed (medium parallax layer)
+          // Scale settles from 1.05 → 1 (prevents white edges + cinematic pull-back)
+          // Both bg and fg MUST stay aligned (same image, different masks)
+          if (heroBg) {
+            const imgY = y * 0.25;
+            const imgScale = 1.05 - progress * 0.05;
+            const imgTransform = `translateY(${imgY}px) scale(${imgScale})`;
+            heroBg.style.transform = imgTransform;
+            if (heroFg) heroFg.style.transform = imgTransform;
+          }
+
+          // ── Overlay darken on scroll ──
+          // Gradient div opacity: 0.6 → 1.0 (hero naturally dims as you leave)
+          if (heroOverlay) {
+            heroOverlay.style.opacity = String(0.6 + progress * 0.4);
+          }
+
+          // ── Hero content: fade out + slide down ──
+          // Fades quickly (gone by ~40% scroll) and slides down
+          // Creates feeling of content sinking back into the image
+          if (heroContent) {
+            const contentOpacity = 1 - progress * 2.5;
+            const contentY = progress * 60;
+            heroContent.style.transform = `translateY(${contentY}px)`;
+            heroContent.style.opacity = String(Math.max(contentOpacity, 0));
+          }
+
+          ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            requestAnimationFrame(updateHeroAnimations);
+            ticking = true;
+          }
+        }, { passive: true });
+
+        // ── will-change cleanup: free GPU when hero leaves viewport ──
+        const heroGpuObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const willChange = entry.isIntersecting ? 'transform, opacity' : 'auto';
+              [heroBg, heroFg, heroText, heroOverlay, heroContent].forEach(el => {
+                if (el) el.style.willChange = willChange;
+              });
+            });
+          },
+          { threshold: 0 }
+        );
+        if (heroSection) heroGpuObserver.observe(heroSection);
+
+        // Set initial state immediately (don't wait for first scroll)
+        updateHeroAnimations();
+      }
     </script>
   </body>
 </html>

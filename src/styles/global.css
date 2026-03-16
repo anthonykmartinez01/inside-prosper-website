@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #F97316;
-  --color-primary-dark: #EA580C;
+  --color-primary: #F28C38;
+  --color-primary-dark: #E8792B;
   --color-primary-light: #FFF7ED;
   --color-text: #1a1a1a;
   --color-text-muted: #6b7280;
@@ -10,14 +10,48 @@
   --color-bg-white: #ffffff;
   --color-bg-card: #ffffff;
   --color-bg-card-alt: #F5F3EF;
-  --color-bg-dark: #1E293B;
+  --color-bg-dark: #0D0D0D;
   --color-border: #e5e7eb;
   --color-border-light: #f0eeeb;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-hero: 'Clash Display', 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-/* Self-hosted Inter font */
+/* Self-hosted Plus Jakarta Sans */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-800.woff2') format('woff2');
+}
+
+/* Self-hosted Clash Display (hero giant text) */
+@font-face {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/clash-display-700.woff2') format('woff2');
+}
+
+/* Self-hosted Inter font (body fallback) */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -47,7 +81,7 @@
   src: url('/fonts/inter-700.woff2') format('woff2');
 }
 
-/* Self-hosted Playfair Display (serif display headings) */
+/* Self-hosted Playfair Display (serif accent) */
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
@@ -84,6 +118,56 @@
   }
 }
 
+/* Giant hero background text — Ascape-style depth layering */
+.hero-giant-text {
+  font-family: var(--font-hero);
+  font-size: clamp(100px, 24vw, 500px);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+/* Foreground mask — reveals only bottom portion of the image (buildings, silos, road)
+   so they physically overlap the PROSPER text behind them.
+   Sky area is masked out, letting the text show through. */
+.hero-foreground-mask {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 15%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.7) 42%, black 52%);
+  mask-image: linear-gradient(to bottom, transparent 15%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.7) 42%, black 52%);
+}
+
+/* Hero scroll animation initial states — JS takes over on scroll.
+   Set here so there's no visual flash before JS hydrates. */
+[data-hero-bg],
+[data-hero-fg] {
+  transform: scale(1.05);
+}
+
+[data-hero-text] {
+  opacity: 0.9;
+}
+
+[data-hero-overlay] {
+  opacity: 0.6;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Navbar scroll transition — handled via is:inline style in Navbar.astro */
+
 /* Scroll-triggered fade-up animation */
 .reveal {
   opacity: 0 !important;
@@ -105,27 +189,81 @@
 .reveal-stagger > .reveal:nth-child(5) { transition-delay: 400ms; }
 .reveal-stagger > .reveal:nth-child(6) { transition-delay: 500ms; }
 
-/* Hero entrance animation */
-@keyframes hero-fade-in {
-  0% { opacity: 0 !important; transform: translateY(20px) !important; }
+/* Hero entrance animations — staggered cascade on page load */
+@keyframes hero-fade-up {
+  0% { opacity: 0 !important; transform: translateY(30px) !important; }
   100% { opacity: 1 !important; transform: translateY(0) !important; }
 }
 
-.hero-animate {
-  animation: hero-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both !important;
+@keyframes hero-fade-down {
+  0% { opacity: 0 !important; transform: translateY(-20px) !important; }
+  100% { opacity: 1 !important; transform: translateY(0) !important; }
 }
 
-.hero-animate-delay-1 { animation-delay: 0.1s !important; }
-.hero-animate-delay-2 { animation-delay: 0.25s !important; }
-.hero-animate-delay-3 { animation-delay: 0.4s !important; }
+@keyframes hero-fade-only {
+  0% { opacity: 0 !important; }
+  100% { opacity: 1 !important; }
+}
 
-/* Card hover lift */
+.hero-animate {
+  animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both !important;
+}
+
+.hero-animate-slide-down {
+  animation-name: hero-fade-down !important;
+}
+
+.hero-animate-fade {
+  animation-name: hero-fade-only !important;
+}
+
+.hero-animate-delay-1 { animation-delay: 0.5s !important; }
+.hero-animate-delay-2 { animation-delay: 0.8s !important; }
+.hero-animate-delay-3 { animation-delay: 1.0s !important; }
+.hero-animate-delay-4 { animation-delay: 1.2s !important; }
+
+/* Card hover — scale + elevated shadow */
 .card-hover {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-hover:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: scale(1.02) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Reduced motion — disable ALL scroll and entrance animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .hero-animate-slide-down,
+  .hero-animate-fade {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .reveal.visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-hero-bg],
+  [data-hero-fg] {
+    transform: none !important;
+  }
+
+  [data-hero-text] {
+    opacity: 0.9 !important;
+  }
+
+  [data-hero-overlay] {
+    opacity: 1 !important;
+  }
 }

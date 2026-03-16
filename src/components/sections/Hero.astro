@@ -1,67 +1,96 @@
 ---
 ---
 
-<section class="relative flex min-h-[90vh] items-center overflow-hidden bg-bg-dark pt-16">
-  <!-- Background image overlay -->
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80')] bg-cover bg-center">
-    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+<section class="relative min-h-screen overflow-hidden bg-bg-dark" data-hero-section>
+  <!-- Layer 1: Full background image (sky + scene) -->
+  <div class="absolute inset-0" data-hero-bg>
+    <img
+      src="/images/hero-prosper.jpg"
+      alt="Sunset over Prosper, Texas — a small-town main street with American flags and grain silos"
+      class="size-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+      width="1920"
+      height="1080"
+    />
   </div>
 
-  <!-- Large background brand text (Ascape-style) -->
-  <div class="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
-    <span class="font-display select-none text-[12vw] font-bold uppercase tracking-widest text-white/10 leading-none">
+  <!-- Layer 2: Giant PROSPER text — positioned BEHIND the foreground cutout -->
+  <div class="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" data-hero-text>
+    <span class="hero-giant-text select-none text-white">
       PROSPER
     </span>
   </div>
 
-  <div class="relative z-10 mx-auto max-w-7xl px-6 py-20">
+  <!-- Layer 3: Foreground cutout — same image with CSS mask revealing only bottom portion -->
+  <div class="absolute inset-0 hero-foreground-mask" data-hero-fg>
+    <img
+      src="/images/hero-prosper.jpg"
+      alt=""
+      class="size-full object-cover"
+      loading="eager"
+      width="1920"
+      height="1080"
+    />
+  </div>
+
+  <!-- Layer 4: Gradient overlay — lighter in middle so PROSPER text shows clearly.
+       JS controls opacity (0.6 → 1.0) for scroll-based darkening. -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-[#0D0D0D]/15 to-[#0D0D0D]/95" data-hero-overlay></div>
+
+  <!-- Layer 5: Foreground content -->
+  <div class="relative z-20 mx-auto max-w-7xl px-6 pt-40 pb-52 lg:pt-48 lg:pb-64" data-hero-content>
     <div class="max-w-2xl">
-      <!-- Badge -->
-      <div class="hero-animate mb-6 inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
-        <svg class="size-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+      <!-- Badge — slides down from above -->
+      <div class="hero-animate hero-animate-slide-down mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm border border-white/10">
+        <svg class="size-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" /></svg>
         Prosper, Texas
       </div>
 
-      <!-- Heading -->
-      <h1 class="hero-animate hero-animate-delay-1 font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+      <!-- Heading — slides up from 30px below -->
+      <h1 class="hero-animate hero-animate-delay-1 font-heading text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
         Discover The Best Local
-        <span class="italic text-primary">Businesses</span>
+        <span class="font-display italic text-primary">Businesses</span>
         in Prosper
       </h1>
 
-      <!-- Subtitle -->
-      <p class="hero-animate hero-animate-delay-2 mt-6 max-w-lg text-lg text-white/80">
+      <!-- Subtitle — fade only -->
+      <p class="hero-animate hero-animate-fade hero-animate-delay-2 mt-6 max-w-lg text-base leading-relaxed text-[#F5F5F5]/70 sm:text-lg">
         For those of us who appreciate our local, hardworking friends and families.
       </p>
 
-      <!-- CTA buttons -->
+      <!-- CTA buttons — slide up -->
       <div class="hero-animate hero-animate-delay-3 mt-10 flex flex-wrap items-center gap-4">
         <a
           href="#businesses"
-          class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-primary-dark"
+          class="group inline-flex items-center gap-3 rounded-full bg-primary pl-7 pr-2 py-2 font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
         >
-          Explore Businesses
-          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          <span class="text-sm sm:text-base">Explore Businesses</span>
+          <span class="flex size-10 items-center justify-center rounded-full bg-white/20 transition-transform duration-200 group-hover:translate-x-0.5">
+            <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </span>
         </a>
         <a
           href="#how-it-works"
-          class="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+          class="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:text-base"
         >
           How It Works
         </a>
       </div>
 
-      <!-- Social proof -->
-      <div class="hero-animate hero-animate-delay-3 mt-12 flex items-center gap-3">
-        <div class="flex -space-x-2">
-          <div class="size-9 rounded-full border-2 border-white bg-primary-light"></div>
-          <div class="size-9 rounded-full border-2 border-white bg-primary/30"></div>
-          <div class="size-9 rounded-full border-2 border-white bg-primary/50"></div>
+      <!-- Social proof avatar stack — fade only -->
+      <div class="hero-animate hero-animate-fade hero-animate-delay-4 mt-12 flex items-center gap-4">
+        <div class="flex -space-x-3">
+          <div class="size-10 rounded-full border-2 border-white/80 bg-gradient-to-br from-primary to-primary-dark"></div>
+          <div class="size-10 rounded-full border-2 border-white/80 bg-gradient-to-br from-amber-400 to-orange-500"></div>
+          <div class="size-10 rounded-full border-2 border-white/80 bg-gradient-to-br from-rose-400 to-pink-500"></div>
+          <div class="size-10 rounded-full border-2 border-white/80 bg-gradient-to-br from-violet-400 to-indigo-500"></div>
         </div>
-        <p class="text-sm text-white/70">
+        <p class="text-sm text-[#F5F5F5]/60">
           Join neighbors discovering local gems in Prosper
         </p>
       </div>
     </div>
   </div>
+
 </section>

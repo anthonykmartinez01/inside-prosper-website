@@ -1,16 +1,16 @@
 ---
 ---
 
-<section id="how-it-works" class="bg-bg-white py-20 lg:py-28">
+<section id="how-it-works" class="bg-bg-white py-24 lg:py-36">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-      <!-- Text Content -->
-      <div class="reveal">
+    <div class="grid items-center gap-12 lg:grid-cols-5 lg:gap-20">
+      <!-- Text Content (wider column) -->
+      <div class="reveal lg:col-span-3">
         <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
           About Inside Prosper
         </span>
-        <h2 class="font-display text-3xl font-bold text-text sm:text-4xl">
-          How It <span class="italic text-primary">Works</span>
+        <h2 class="font-heading text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
+          How It <span class="font-display italic text-primary">Works</span>
         </h2>
 
         <div class="mt-8 space-y-5 text-base leading-relaxed text-text-muted">
@@ -30,26 +30,29 @@
         </div>
 
         <!-- Email signup -->
-        <form class="mt-8 flex max-w-md flex-col gap-3 sm:flex-row" data-email-form>
+        <form class="mt-10 flex max-w-md flex-col gap-3 sm:flex-row" data-email-form>
           <input
             type="email"
             placeholder="Email Address"
             required
-            class="flex-1 rounded-full border border-border bg-bg-white px-5 py-3 text-sm text-text placeholder:text-text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
+            class="flex-1 rounded-full border border-border bg-bg-white px-5 py-3.5 text-sm text-text placeholder:text-text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
           />
           <button
             type="submit"
-            class="whitespace-nowrap rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+            class="group whitespace-nowrap rounded-full bg-primary pl-6 pr-2 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-primary-dark inline-flex items-center gap-2"
           >
-            Get News & Win Prizes 🎉
+            <span>Get News & Win Prizes</span>
+            <span class="flex size-8 items-center justify-center rounded-full bg-white/20">
+              <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </span>
           </button>
         </form>
       </div>
 
-      <!-- Photo -->
-      <div class="reveal flex justify-center lg:justify-end">
+      <!-- Photo (narrower column) -->
+      <div class="reveal flex justify-center lg:col-span-2 lg:justify-end">
         <div class="relative">
-          <div class="overflow-hidden rounded-2xl">
+          <div class="overflow-hidden rounded-2xl shadow-lg">
             <img
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80"
               alt="Anthony Martinez, Content Director for Inside Prosper"

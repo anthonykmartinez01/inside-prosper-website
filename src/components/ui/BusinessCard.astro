@@ -4,13 +4,14 @@ interface Props {
   description: string;
   image: string;
   slug: string;
+  category?: string;
 }
 
-const { name, description, image, slug } = Astro.props;
+const { name, description, image, slug, category } = Astro.props;
 ---
 
-<div class="card-hover group overflow-hidden rounded-2xl border border-border-light bg-bg-card">
-  <div class="aspect-[4/3] overflow-hidden">
+<div class="card-hover group overflow-hidden rounded-2xl bg-bg-card shadow-sm">
+  <div class="relative aspect-[4/3] overflow-hidden">
     <img
       src={image}
       alt={name}
@@ -19,16 +20,26 @@ const { name, description, image, slug } = Astro.props;
       loading="lazy"
       class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
     />
+    {category && (
+      <span class="absolute top-3 left-3 rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-text shadow-sm">
+        {category}
+      </span>
+    )}
   </div>
   <div class="p-5">
-    <h3 class="font-display text-lg font-bold text-text">{name}</h3>
+    <h3 class="font-heading text-lg font-bold text-text">{name}</h3>
     <p class="mt-2 text-sm leading-relaxed text-text-muted line-clamp-2">{description}</p>
-    <a
-      href={`#${slug}`}
-      class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
-    >
-      View Profile
-      <svg class="size-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-    </a>
+    <div class="mt-4 flex items-center justify-between">
+      <a
+        href={`#${slug}`}
+        class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+      >
+        View Profile
+        <svg class="size-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+      <span class="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-200 group-hover:bg-primary group-hover:text-white">
+        <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </span>
+    </div>
   </div>
 </div>
