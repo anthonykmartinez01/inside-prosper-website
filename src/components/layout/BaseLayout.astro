@@ -79,15 +79,31 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
         const heroFg = document.querySelector('[data-hero-fg]') as HTMLElement | null;
         const heroText = document.querySelector('[data-hero-text]') as HTMLElement | null;
         const heroOverlay = document.querySelector('[data-hero-overlay]') as HTMLElement | null;
-        const heroContent = document.querySelector('[data-hero-content]') as HTMLElement | null;
         const heroSection = document.querySelector('[data-hero-section]') as HTMLElement | null;
+
+        // Individual hero content elements for staggered scroll animation
+        const heroEls = [
+          { el: document.querySelector('[data-hero-el="badge"]') as HTMLElement | null,   offset: 0.00, drift: -30, scale: 0.96 },
+          { el: document.querySelector('[data-hero-el="heading"]') as HTMLElement | null,  offset: 0.04, drift: -50, scale: 0.97 },
+          { el: document.querySelector('[data-hero-el="subtitle"]') as HTMLElement | null, offset: 0.08, drift: -35, scale: 0.98 },
+          { el: document.querySelector('[data-hero-el="cta"]') as HTMLElement | null,      offset: 0.12, drift: -25, scale: 0.98 },
+          { el: document.querySelector('[data-hero-el="social"]') as HTMLElement | null,   offset: 0.16, drift: -20, scale: 1.00 },
+        ];
 
         const heroHeight = heroSection?.offsetHeight || window.innerHeight;
 
         // Promote animated layers to GPU
-        [heroBg, heroFg, heroText, heroOverlay, heroContent].forEach(el => {
+        [heroBg, heroFg, heroText, heroOverlay].forEach(el => {
           if (el) el.style.willChange = 'transform, opacity';
         });
+        heroEls.forEach(({ el }) => {
+          if (el) el.style.willChange = 'transform, opacity, filter';
+        });
+
+        // Smooth easing curve — decelerates for a buttery feel
+        function easeOutQuart(t: number): number {
+          return 1 - Math.pow(1 - t, 4);
+        }
 
         // rAF-throttled scroll handler — one calculation per frame max
         let ticking = false;
@@ -96,22 +112,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
           const y = window.scrollY;
           const progress = Math.min(Math.max(y / heroHeight, 0), 1);
 
-          // ── PROSPER text: parallax + scale + opacity fade ──
-          // Moves at ~45% scroll speed (slower = further back)
-          // Scales 1 → 1.08 as hero exits (camera moving past)
-          // Fades 0.9 → 0 smoothly
-          if (heroText) {
-            const textY = y * 0.55;
-            const textScale = 1 + progress * 0.08;
-            const textOpacity = 0.9 * (1 - progress);
-            heroText.style.transform = `translateY(${textY}px) scale(${textScale})`;
-            heroText.style.opacity = String(Math.max(textOpacity, 0));
-          }
-
-          // ── Hero images: parallax + cinematic zoom settle ──
-          // Moves at ~75% scroll speed (medium parallax layer)
-          // Scale settles from 1.05 → 1 (prevents white edges + cinematic pull-back)
-          // Both bg and fg MUST stay aligned (same image, different masks)
+          // ── Background image: parallax + cinematic zoom settle ──
           if (heroBg) {
             const imgY = y * 0.25;
             const imgScale = 1.05 - progress * 0.05;
@@ -121,19 +122,29 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
           }
 
           // ── Overlay darken on scroll ──
-          // Gradient div opacity: 0.6 → 1.0 (hero naturally dims as you leave)
           if (heroOverlay) {
             heroOverlay.style.opacity = String(0.6 + progress * 0.4);
           }
 
-          // ── Hero content: fade out + slide down ──
-          // Fades quickly (gone by ~40% scroll) and slides down
-          // Creates feeling of content sinking back into the image
-          if (heroContent) {
-            const contentOpacity = 1 - progress * 2.5;
-            const contentY = progress * 60;
-            heroContent.style.transform = `translateY(${contentY}px)`;
-            heroContent.style.opacity = String(Math.max(contentOpacity, 0));
+          // ── Staggered content: each element fades/drifts independently ──
+          // Each element has its own scroll "window" defined by offset.
+          // Badge goes first, social proof goes last — cascading dissolve.
+          for (const { el, offset, drift, scale } of heroEls) {
+            if (!el) continue;
+
+            // Each element animates over ~30% of scroll travel, starting at its offset
+            const fadeSpeed = 3.3; // completes fade in ~30% of hero scroll
+            const localProgress = Math.min(Math.max((progress - offset) * fadeSpeed, 0), 1);
+            const eased = easeOutQuart(localProgress);
+
+            const opacity = 1 - eased;
+            const translateY = drift * eased;
+            const scaleVal = 1 + (scale - 1) * eased;
+            const blur = eased * 4; // subtle blur at end of fade
+
+            el.style.opacity = String(Math.max(opacity, 0));
+            el.style.transform = `translateY(${translateY}px) scale(${scaleVal})`;
+            el.style.filter = blur > 0.1 ? `blur(${blur}px)` : 'none';
           }
 
           ticking = false;
@@ -150,8 +161,11 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
         const heroGpuObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              const willChange = entry.isIntersecting ? 'transform, opacity' : 'auto';
-              [heroBg, heroFg, heroText, heroOverlay, heroContent].forEach(el => {
+              const willChange = entry.isIntersecting ? 'transform, opacity, filter' : 'auto';
+              [heroBg, heroFg, heroText, heroOverlay].forEach(el => {
+                if (el) el.style.willChange = entry.isIntersecting ? 'transform, opacity' : 'auto';
+              });
+              heroEls.forEach(({ el }) => {
                 if (el) el.style.willChange = willChange;
               });
             });
