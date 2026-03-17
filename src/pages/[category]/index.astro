@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '../components/layout/BaseLayout.astro';
-import Navbar from '../components/layout/Navbar.astro';
-import Footer from '../components/layout/Footer.astro';
-import BusinessCard from '../components/ui/BusinessCard.astro';
-import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import ItemListSchema from '../components/schema/ItemListSchema.astro';
-import { categories, getBusinessesByCategory, getCategoryUrl, getBusinessUrl, siteConfig, nearbyCities, type Category } from '../data/business';
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Navbar from '../../components/layout/Navbar.astro';
+import Footer from '../../components/layout/Footer.astro';
+import BusinessCard from '../../components/ui/BusinessCard.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import ItemListSchema from '../../components/schema/ItemListSchema.astro';
+import { categories, getBusinessesByCategory, getCategoryUrl, getBusinessUrl, siteConfig, nearbyCities, type Category } from '../../data/business';
 
 export function getStaticPaths() {
   return categories.map((cat) => ({
