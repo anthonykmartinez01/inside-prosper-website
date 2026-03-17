@@ -6,12 +6,14 @@ import HowItWorks from '../components/sections/HowItWorks.astro';
 import BusinessListings from '../components/sections/BusinessListings.astro';
 import EmailCTA from '../components/sections/EmailCTA.astro';
 import Footer from '../components/layout/Footer.astro';
+import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
 ---
 
 <BaseLayout
   title="Inside Prosper — Discover The Best Local Businesses in Prosper, Texas"
   description="For those of us who appreciate our local, hardworking friends and families. Discover the best local businesses in Prosper, Texas."
 >
+  <LocalBusinessSchema />
   <Navbar />
   <main>
     <Hero />

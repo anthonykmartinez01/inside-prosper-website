@@ -1,0 +1,28 @@
+---
+import { siteConfig } from '../../data/business';
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteConfig.name,
+  "url": siteConfig.siteUrl,
+  "email": siteConfig.email,
+  "description": siteConfig.description,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Prosper",
+    "addressRegion": "TX",
+    "postalCode": "75078",
+    "addressCountry": "US"
+  },
+  "telephone": siteConfig.phone,
+  "areaServed": [
+    { "@type": "City", "name": "Prosper" },
+    { "@type": "City", "name": "Celina" },
+    { "@type": "City", "name": "Frisco" },
+    { "@type": "City", "name": "McKinney" },
+    { "@type": "City", "name": "Little Elm" },
+    { "@type": "City", "name": "Aubrey" }
+  ]
+})} />

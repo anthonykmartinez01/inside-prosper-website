@@ -4,7 +4,18 @@ import { siteConfig } from '../../data/business';
 
 <footer class="border-t border-white/10 bg-bg-dark py-12">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+    <div class="flex flex-col items-center gap-8">
+      <!-- NAP — Name, Address, Phone -->
+      <address class="flex flex-col items-center gap-2 text-center not-italic">
+        <span class="text-sm font-semibold text-white/70">{siteConfig.name}</span>
+        <span class="text-sm text-white/50">{siteConfig.city}, {siteConfig.state} {siteConfig.zip}</span>
+        <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-white/50">
+          <a href={`tel:${siteConfig.phoneRaw}`} class="transition-colors hover:text-primary">{siteConfig.phone}</a>
+          <span class="hidden sm:inline text-white/20">·</span>
+          <a href={`mailto:${siteConfig.email}`} class="transition-colors hover:text-primary">{siteConfig.email}</a>
+        </div>
+      </address>
+
       <!-- Links -->
       <nav class="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
         <a href="#" class="transition-colors hover:text-primary">Privacy Policy</a>

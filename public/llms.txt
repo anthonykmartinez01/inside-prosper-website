@@ -1,0 +1,36 @@
+# Inside Prosper
+
+> Local business directory for Prosper, Texas — discover the best restaurants, shops, fitness studios, professionals, and tradespeople in the community.
+
+Inside Prosper is a community-driven directory showcasing the best local businesses in Prosper, Texas. Listings are curated and invitation-only, ensuring quality over quantity. The directory covers five categories: Food & Fun, Health & Fitness, Professionals, Shop, and Trades. Prosper is a fast-growing town in Collin and Denton counties, north of Frisco and south of Celina.
+
+## Pages
+
+- [Home](https://insideprosper.com/): Browse all local businesses by category
+- [How It Works](https://insideprosper.com/#how-it-works): Learn how Inside Prosper features local businesses
+- [Get Listed](https://insideprosper.com/#get-listed): Submit your business to the directory
+
+## Featured Businesses
+
+- 1418 Coffee — Specialty coffee shop at 1418 N Preston Rd, Prosper, TX
+- Salsa Tex-Mex — Tex-Mex restaurant in Prosper
+- Prema's Kitchen — Authentic Indian restaurant in Prosper
+- Sake Sushi & Hibachi — Japanese restaurant in Prosper
+- CrossFit Prosper — CrossFit gym in Prosper
+- Apex Fitness Prosper — Fitness facility in Prosper
+- F45 Training Prosper — Group fitness studio in Prosper
+- Greg Hall Law — Estate planning attorney in Prosper
+- Henry & Peters CPAs — CPA firm in Prosper
+- The Cawlfield Law Firm — Real estate attorney in Prosper
+- Lily Claire — Women's boutique in Prosper
+- Prosper Blooms — Florist in Prosper
+- Dawson + Claire — Women's boutique on Broadway St, Prosper
+- Cody & Sons Plumbing, Heating & Air — Plumbing and HVAC in Prosper
+- Top Notch Electrician — Electrician in Prosper
+- Legacy Plumbing — Plumbing services in Prosper
+
+## Contact
+
+- Phone: (818) 798-8966
+- Email: anthonykmartinez01@gmail.com
+- Location: Prosper, TX 75078

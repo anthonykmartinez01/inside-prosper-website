@@ -1,0 +1,36 @@
+---
+import { siteConfig } from '../../data/business';
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": siteConfig.name,
+  "description": siteConfig.description,
+  "url": siteConfig.siteUrl,
+  "email": siteConfig.email,
+  "telephone": siteConfig.phone,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Prosper",
+    "addressRegion": "TX",
+    "postalCode": "75078",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Prosper" },
+    { "@type": "City", "name": "Celina" },
+    { "@type": "City", "name": "Frisco" },
+    { "@type": "City", "name": "McKinney" },
+    { "@type": "City", "name": "Little Elm" },
+    { "@type": "City", "name": "Aubrey" }
+  ],
+  "image": `${siteConfig.siteUrl}/images/hero-prosper.jpg`,
+  "priceRange": "Free",
+  "knowsAbout": [
+    "Local businesses in Prosper Texas",
+    "Prosper TX restaurants",
+    "Prosper TX services",
+    "Prosper Texas directory"
+  ]
+})} />

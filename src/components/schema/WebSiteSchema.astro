@@ -1,0 +1,17 @@
+---
+import { siteConfig } from '../../data/business';
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteConfig.name,
+  "url": siteConfig.siteUrl,
+  "description": siteConfig.description,
+  "inLanguage": "en-US",
+  "publisher": {
+    "@type": "Organization",
+    "name": siteConfig.name,
+    "url": siteConfig.siteUrl
+  }
+})} />

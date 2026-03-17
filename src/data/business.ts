@@ -3,7 +3,12 @@ export const siteConfig = {
   description: 'Discover the best local businesses in Prosper, Texas.',
   siteUrl: 'https://insideprosper.com',
   email: 'anthonykmartinez01@gmail.com',
+  phone: '(818) 798-8966',
+  phoneRaw: '+18187988966',
   location: 'Prosper, Texas',
+  city: 'Prosper',
+  state: 'TX',
+  zip: '75078',
 };
 
 export interface Category {
@@ -58,6 +63,9 @@ export const businesses: Business[] = [
     category: 'food-fun',
     shortDescription: 'Upbeat restaurant providing familiar Tex-Mex standards and margaritas in many flavors. A Prosper favorite since opening.',
     longDescription: 'Salsa Tex-Mex is an upbeat restaurant providing familiar Tex-Mex standards and margaritas in many flavors. A Prosper favorite since opening, we pride ourselves on great food, friendly service, and a welcoming atmosphere for families and friends.',
+    phone: '(972) 346-4643',
+    address: '1170 N Preston Rd, Ste 190, Prosper, TX 75078',
+    hours: 'Mon\u2013Thu 11am\u20139:30pm, Fri\u2013Sat 11am\u201310pm, Sun 11am\u20139pm',
     image: '/images/salsa-tex-mex.png',
   },
   {
@@ -66,6 +74,8 @@ export const businesses: Business[] = [
     category: 'food-fun',
     shortDescription: 'Authentic Indian restaurant offering traditional dishes, Indo-Chinese specialties, and Southern Indian favorites.',
     longDescription: "Prema's Kitchen is an authentic Indian restaurant offering traditional dishes, Indo-Chinese specialties, and Southern Indian favorites. Our recipes are crafted with care, bringing the rich flavors of India to the Prosper community.",
+    address: '1921 N Preston Rd, Prosper, TX 75078',
+    hours: 'Daily 10am\u20132:30pm, 4:30pm\u201310pm',
     image: '/images/premas-kitchen.png',
   },
   {
@@ -74,6 +84,9 @@ export const businesses: Business[] = [
     category: 'food-fun',
     shortDescription: 'Japanese restaurant offering fresh sushi, sashimi, hibachi grills, and a full bar in a modern setting.',
     longDescription: 'Sake Sushi & Hibachi is a Japanese restaurant offering fresh sushi, sashimi, hibachi grills, and a full bar in a modern setting. We bring the art of Japanese cuisine to Prosper with quality ingredients and skilled chefs.',
+    phone: '(469) 260-3200',
+    address: '4580 W University Dr, Suite 50, Prosper, TX 75078',
+    hours: 'Mon\u2013Thu 11am\u20139:30pm, Fri 11am\u201310:30pm, Sat 12pm\u201310:30pm, Sun 12pm\u20139:30pm',
     image: '/images/sake-sushi-hibachi.png',
   },
   // Health & Fitness
@@ -85,7 +98,7 @@ export const businesses: Business[] = [
     longDescription: 'CrossFit Prosper is a premier CrossFit gym offering group classes, personal training, and a supportive community for all fitness levels. We believe fitness is for everyone and our coaches are dedicated to helping you reach your goals.',
     quote: 'We believe fitness is for everyone. Our community will push you to be your best.',
     phone: '(469) 842-0667',
-    address: 'Prosper, TX 75078',
+    address: '4295 S Coit Rd, Building 140, Prosper, TX 75078',
     hours: 'Mon\u2013Sat 5am\u20139pm',
     image: '/images/crossfit-prosper.png',
   },
@@ -95,6 +108,9 @@ export const businesses: Business[] = [
     category: 'health-fitness',
     shortDescription: 'Results-based fitness facility with expert trainers, modern equipment, and a community-focused approach to wellness.',
     longDescription: 'Apex Fitness Prosper is a results-based fitness facility with expert trainers, modern equipment, and a community-focused approach to wellness. We help you build strength, confidence, and lasting healthy habits.',
+    phone: '(469) 277-9532',
+    address: '750 Richland Blvd, Prosper, TX 75078',
+    hours: 'Mon\u2013Fri 6am\u201312pm & 4pm\u20138pm, Sat 6am\u201312pm, Sun Closed',
     image: '/images/apex-fitness-prosper.png',
   },
   {
@@ -103,6 +119,9 @@ export const businesses: Business[] = [
     category: 'health-fitness',
     shortDescription: 'Functional group fitness classes with 5,000+ dynamic movements, team energy, and real results for every body.',
     longDescription: 'F45 Training Prosper offers functional group fitness classes with 5,000+ dynamic movements, team energy, and real results for every body. Our innovative workouts combine cardio and resistance training for maximum impact.',
+    phone: '(972) 427-4002',
+    address: '1061 N Coleman St, Ste 150, Prosper, TX 75078',
+    hours: 'Mon\u2013Fri 5:15am\u20136:30pm, Sat 8am\u201311:45am, Sun 9am\u20133pm',
     image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80',
   },
   // Professionals
@@ -113,7 +132,9 @@ export const businesses: Business[] = [
     shortDescription: 'Estate planning and probate attorney serving Prosper families with personalized, compassionate legal guidance.',
     longDescription: 'Greg Hall Law is an estate planning and probate attorney serving Prosper families with personalized, compassionate legal guidance. We make the legal process as comfortable and clear as possible.',
     quote: 'Most people never want to meet with a lawyer. I make the process as comfortable and clear as possible.',
-    address: 'Prosper, TX 75078',
+    phone: '(214) 295-7000',
+    address: '290 S Preston Rd, Suite 300, Prosper, TX 75078',
+    hours: 'Mon\u2013Fri 9am\u20135pm',
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80',
   },
   {
@@ -122,6 +143,8 @@ export const businesses: Business[] = [
     category: 'professionals',
     shortDescription: 'Established CPA firm providing comprehensive tax, audit, and business advisory services to Prosper individuals and businesses.',
     longDescription: 'Henry & Peters CPAs is an established CPA firm providing comprehensive tax, audit, and business advisory services to Prosper individuals and businesses. We bring decades of experience to help you navigate your financial future.',
+    phone: '(469) 956-5400',
+    address: '8000 Warren Pkwy, Ste 103, Frisco, TX 75034',
     image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80',
   },
   {
@@ -130,6 +153,9 @@ export const businesses: Business[] = [
     category: 'professionals',
     shortDescription: 'Real estate attorney serving Prosper, Frisco, and Celina with residential and commercial legal services.',
     longDescription: 'The Cawlfield Law Firm is a real estate attorney serving Prosper, Frisco, and Celina with residential and commercial legal services. We guide you through every step of your real estate transaction with expertise and care.',
+    phone: '(972) 382-5400',
+    address: '129 N Ohio St, Celina, TX 75009',
+    hours: 'Mon\u2013Fri 8am\u20135pm',
     image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80',
   },
   // Shop
@@ -139,6 +165,9 @@ export const businesses: Business[] = [
     category: 'shop',
     shortDescription: 'Boutique shop on Broadway offering unique women\'s fashion, home d\u00e9cor, and artisanal gifts with a personal touch.',
     longDescription: 'Lily Claire is a boutique shop on Broadway offering unique women\'s fashion, home d\u00e9cor, and artisanal gifts with a personal touch. Step in and discover curated collections that make every visit special.',
+    phone: '(214) 649-4806',
+    address: '201 S Main St, Suite C, Prosper, TX 75078',
+    hours: 'Mon 1:30pm\u20136pm, Tue\u2013Sat 11am\u20136pm, Sun Closed',
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80',
   },
   {
@@ -147,6 +176,9 @@ export const businesses: Business[] = [
     category: 'shop',
     shortDescription: "Prosper's leading florist since 2014, creating expertly crafted arrangements for every occasion with local delivery.",
     longDescription: "Prosper Blooms has been Prosper's leading florist since 2014, creating expertly crafted arrangements for every occasion with local delivery. From weddings to everyday bouquets, we bring beauty to your doorstep.",
+    phone: '(469) 481-9294',
+    address: '210 W Broadway St, Prosper, TX 75078',
+    hours: 'Mon\u2013Fri 9am\u20135pm, Sat 10am\u20132pm, Sun Closed',
     image: 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=600&q=80',
   },
   {
@@ -168,6 +200,9 @@ export const businesses: Business[] = [
     category: 'trades',
     shortDescription: 'Full-service plumbing, heating, and air conditioning company serving Prosper with expert care and 24/7 live answering.',
     longDescription: 'Cody & Sons Plumbing, Heating & Air is a full-service plumbing, heating, and air conditioning company serving Prosper with expert care and 24/7 live answering. We treat every home like our own.',
+    phone: '(214) 339-3401',
+    address: '701 E Plano Pkwy, Suite 400, Plano, TX 75074',
+    hours: 'Mon\u2013Fri 8am\u20136pm, Sat 8am\u20133pm',
     image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80',
   },
   {
@@ -176,6 +211,9 @@ export const businesses: Business[] = [
     category: 'trades',
     shortDescription: 'Locally owned electrical contractor serving Prosper with reliable, affordable services and 24/7 fast responses.',
     longDescription: 'Top Notch Electrician is a locally owned electrical contractor serving Prosper with reliable, affordable services and 24/7 fast responses. We handle everything from panel upgrades to troubleshooting with professionalism.',
+    phone: '(972) 379-8646',
+    address: 'Serving Prosper, TX and surrounding areas',
+    hours: 'Open 24/7',
     image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80',
   },
   {
@@ -184,6 +222,9 @@ export const businesses: Business[] = [
     category: 'trades',
     shortDescription: 'Expert plumbing services in Prosper with a mission to spread good by doing good. Trusted by the community.',
     longDescription: 'Legacy Plumbing provides expert plumbing services in Prosper with a mission to spread good by doing good. Trusted by the community, we bring integrity and skill to every job.',
+    phone: '(972) 801-9798',
+    address: '1101 E Eldorado Pkwy, Little Elm, TX 75068',
+    hours: 'Mon\u2013Fri 7am\u20138pm, Sat\u2013Sun 7am\u20135:30pm',
     image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&q=80',
   },
 ];
