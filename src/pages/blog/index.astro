@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Navbar from '../../components/layout/Navbar.astro';
+import Footer from '../../components/layout/Footer.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import { getCollection } from 'astro:content';
+import { siteConfig } from '../../data/business';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const breadcrumbItems = [
+  { name: 'Home', url: siteConfig.siteUrl },
+  { name: 'Blog', url: `${siteConfig.siteUrl}/blog/` },
+];
+---
+
+<BaseLayout
+  title="Blog — Inside Prosper | Prosper, TX Local News & Updates"
+  description="Articles, guides, and updates about local businesses and life in Prosper, Texas. Stay connected with the Inside Prosper community."
+>
+  <BreadcrumbSchema items={breadcrumbItems} />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="bg-bg-dark pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <div class="mx-auto max-w-7xl px-6">
+        <nav class="mb-8 flex items-center gap-2 text-sm text-white/40" aria-label="Breadcrumb">
+          <a href="/" class="transition-colors hover:text-primary">Home</a>
+          <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span class="text-white/70">Blog</span>
+        </nav>
+
+        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+          Blog
+        </span>
+        <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Inside Prosper <span class="font-display italic text-primary">Blog</span>
+        </h1>
+        <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
+          News, guides, and stories about local businesses and life in Prosper, Texas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Posts -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        {posts.length === 0 ? (
+          <p class="text-center text-text-muted">No posts yet. Check back soon!</p>
+        ) : (
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+              <a
+                href={`/blog/${post.slug}/`}
+                class="group rounded-2xl border border-border bg-bg-card overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div class="p-6">
+                  <time class="text-xs font-medium text-text-muted" datetime={post.data.pubDate.toISOString()}>
+                    {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                  <h2 class="mt-2 font-heading text-xl font-bold text-text group-hover:text-primary transition-colors">
+                    {post.data.title}
+                  </h2>
+                  <p class="mt-2 text-sm leading-relaxed text-text-muted line-clamp-3">
+                    {post.data.description}
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {post.data.tags.map((tag: string) => (
+                      <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import { siteConfig, getSchemaType, getCategoryBySlug, getBusinessUrl, type Business } from '../../data/business';
+
+interface Props {
+  business: Business;
+}
+
+const { business } = Astro.props;
+const schemaType = getSchemaType(business.category);
+const category = getCategoryBySlug(business.category);
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": schemaType,
+  "name": business.name,
+  "description": business.longDescription,
+  "url": `${siteConfig.siteUrl}${getBusinessUrl(business)}`,
+  ...(business.phone && { "telephone": business.phone }),
+  ...(business.address && business.address !== 'Serving Prosper, TX and surrounding areas' && {
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": business.address.split(',')[0]?.trim(),
+      "addressLocality": "Prosper",
+      "addressRegion": "TX",
+      "postalCode": "75078",
+      "addressCountry": "US",
+    }
+  }),
+  ...(business.image && !business.image.startsWith('http') && {
+    "image": `${siteConfig.siteUrl}${business.image}`,
+  }),
+  ...(business.image && business.image.startsWith('http') && {
+    "image": business.image,
+  }),
+  "areaServed": {
+    "@type": "City",
+    "name": "Prosper",
+  },
+  ...(category && {
+    "category": category.name,
+  }),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />

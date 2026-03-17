@@ -1,0 +1,42 @@
+---
+import { categories, getCategoryUrl, getBusinessesByCategory } from '../../data/business';
+---
+
+<section class="bg-bg-white py-24 lg:py-36">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="reveal mb-16 text-center">
+      <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+        Browse by Category
+      </span>
+      <h2 class="font-heading text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
+        Explore Local <span class="font-display italic text-primary">Categories</span>
+      </h2>
+      <p class="mx-auto mt-4 max-w-lg text-base leading-relaxed text-text-muted">
+        Find exactly what you need in Prosper, Texas.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      {categories.map((cat) => {
+        const count = getBusinessesByCategory(cat.slug).length;
+        return (
+          <a
+            href={getCategoryUrl(cat)}
+            class="reveal group rounded-2xl border border-border bg-bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1"
+          >
+            <h3 class="font-heading text-lg font-bold text-text group-hover:text-primary transition-colors">
+              {cat.name}
+            </h3>
+            <p class="mt-2 text-sm text-text-muted line-clamp-2">{cat.description}</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs font-medium text-text-muted">{count} {count === 1 ? 'business' : 'businesses'}</span>
+              <span class="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-200 group-hover:bg-primary group-hover:text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

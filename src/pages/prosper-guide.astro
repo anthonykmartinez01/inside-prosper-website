@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import FAQSchema from '../components/schema/FAQSchema.astro';
+import { siteConfig, categories, getCategoryUrl, nearbyCities } from '../data/business';
+
+const breadcrumbItems = [
+  { name: 'Home', url: siteConfig.siteUrl },
+  { name: 'Prosper Guide', url: `${siteConfig.siteUrl}/prosper-guide/` },
+];
+
+const faqs = [
+  {
+    question: 'What is the population of Prosper, Texas?',
+    answer: 'Prosper has grown rapidly over the past decade and is home to an estimated 35,000+ residents as of 2025. It is one of the fastest-growing towns in the Dallas-Fort Worth metroplex.',
+  },
+  {
+    question: 'What school district serves Prosper, Texas?',
+    answer: 'Prosper is served by the Prosper Independent School District (Prosper ISD), which is consistently rated among the top school districts in Texas. The district includes several elementary schools, middle schools, and Prosper High School.',
+  },
+  {
+    question: 'What are the best neighborhoods in Prosper, TX?',
+    answer: 'Some of the most popular neighborhoods in Prosper include Windsong Ranch, Whitley Place, Star Trail, Gates of Prosper, Rhea Mills, and Light Farms (partially in Celina). Each offers a unique mix of amenities, lot sizes, and community features.',
+  },
+  {
+    question: 'How far is Prosper from Dallas?',
+    answer: 'Prosper is approximately 40 miles north of downtown Dallas, typically a 45-minute to 1-hour drive depending on traffic. It is conveniently located along the US-380 corridor between Frisco and Celina.',
+  },
+  {
+    question: 'What is there to do in Prosper, Texas?',
+    answer: 'Prosper offers a growing dining scene, local boutique shopping on Broadway Street, community events, fitness studios, and proximity to outdoor recreation. The town also hosts seasonal markets and festivals. Visit our directory to discover local businesses and activities.',
+  },
+  {
+    question: 'Is Prosper, TX a good place to live?',
+    answer: 'Prosper is consistently ranked among the best places to live in Texas thanks to its top-rated schools, safe neighborhoods, strong sense of community, and rapid growth that brings new amenities while maintaining a small-town feel.',
+  },
+  {
+    question: 'What cities are near Prosper, Texas?',
+    answer: `Prosper is surrounded by several thriving North Texas cities including ${nearbyCities.join(', ')}, Allen, and Plano. Its central location makes it easy to access dining, shopping, and entertainment across the region.`,
+  },
+];
+---
+
+<BaseLayout
+  title="Guide to Prosper, Texas — Things to Do, Eat & Explore | Inside Prosper"
+  description="Everything you need to know about Prosper, Texas — neighborhoods, schools, restaurants, and local businesses. Your complete guide to life in Prosper, TX."
+>
+  <BreadcrumbSchema items={breadcrumbItems} />
+  <FAQSchema faqs={faqs} />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="bg-bg-dark pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <div class="mx-auto max-w-7xl px-6">
+        <nav class="mb-8 flex items-center gap-2 text-sm text-white/40" aria-label="Breadcrumb">
+          <a href="/" class="transition-colors hover:text-primary">Home</a>
+          <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span class="text-white/70">Prosper Guide</span>
+        </nav>
+
+        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+          Local Guide
+        </span>
+        <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Guide to <span class="font-display italic text-primary">Prosper</span>, Texas
+        </h1>
+        <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
+          Everything you need to know about living, eating, and exploring in Prosper, TX.
+        </p>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+          About Prosper, Texas
+        </h2>
+        <div class="mt-8 space-y-5 text-base leading-relaxed text-text-muted">
+          <p>
+            Prosper, Texas is a rapidly growing town in Collin and Denton counties, located along the US-380 corridor approximately 40 miles north of Dallas. What was once a quiet farming community has evolved into one of the most sought-after suburbs in the Dallas-Fort Worth metroplex — a place where new construction and modern amenities meet genuine small-town values.
+          </p>
+          <p>
+            With a population that has surged past 35,000 residents, Prosper attracts families drawn by its top-rated school district (Prosper ISD), safe neighborhoods, and a community that genuinely looks out for one another. The town sits at the intersection of growth and character, offering residents the best of both worlds.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Neighborhoods -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl text-center mb-12">
+          Popular Neighborhoods
+        </h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { name: 'Windsong Ranch', desc: 'Master-planned community with resort-style amenities, a Crystal Lagoon, and miles of trails. One of the largest communities in Prosper.' },
+            { name: 'Whitley Place', desc: 'Established neighborhood known for its mature trees, spacious lots, and strong sense of community. Located near downtown Prosper.' },
+            { name: 'Star Trail', desc: 'Family-friendly community featuring multiple pools, playgrounds, sport courts, and a community center with a resort feel.' },
+            { name: 'Gates of Prosper', desc: 'Newer development offering modern floor plans, community parks, and easy access to shopping and dining along Preston Road.' },
+            { name: 'Rhea Mills', desc: 'Growing community with a mix of housing options, green spaces, and convenient access to major roadways.' },
+            { name: 'Light Farms', desc: 'Sprawling community straddling Prosper and Celina, known for its parks, pools, and active community events calendar.' },
+          ].map((hood) => (
+            <div class="rounded-2xl border border-border bg-bg-card p-6">
+              <h3 class="font-heading text-lg font-bold text-text">{hood.name}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-text-muted">{hood.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- What to do -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+          Things to Do in Prosper
+        </h2>
+        <div class="mt-8 space-y-5 text-base leading-relaxed text-text-muted">
+          <p>
+            Prosper may be a smaller town, but it punches above its weight when it comes to things to do. The dining scene is growing quickly, with everything from locally owned coffee shops and authentic Indian cuisine to Tex-Mex favorites and Japanese hibachi. Downtown Broadway Street is home to charming boutiques and a growing retail corridor.
+          </p>
+          <p>
+            Fitness enthusiasts will find CrossFit boxes, functional training studios, and community-focused gyms. Families enjoy the parks, trails, and community pools spread across Prosper's neighborhoods, as well as seasonal events and farmers markets.
+          </p>
+          <p>
+            And when you want to explore beyond town limits, Frisco's entertainment options, McKinney's historic downtown, and the shops of Allen are all just a short drive away.
+          </p>
+        </div>
+
+        <!-- Category links -->
+        <div class="mt-10 grid gap-3 sm:grid-cols-2">
+          {categories.map((cat) => (
+            <a
+              href={getCategoryUrl(cat)}
+              class="group flex items-center gap-3 rounded-xl border border-border bg-bg-card px-5 py-4 transition-all duration-200 hover:border-primary/30 hover:shadow-sm"
+            >
+              <span class="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+              <span class="text-sm font-semibold text-text group-hover:text-primary transition-colors">{cat.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl text-center mb-12">
+          Frequently Asked Questions About Prosper, TX
+        </h2>
+        <div class="space-y-6">
+          {faqs.map((faq) => (
+            <details class="group rounded-2xl border border-border bg-bg-card overflow-hidden">
+              <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-base font-semibold text-text hover:text-primary transition-colors">
+                {faq.question}
+                <svg class="size-5 shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div class="px-6 pb-5 text-sm leading-relaxed text-text-muted">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-bg-dark py-20 text-center">
+      <div class="mx-auto max-w-2xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          Discover the Best of <span class="text-primary">Prosper</span>
+        </h2>
+        <p class="mt-4 text-base text-white/60">
+          Browse our curated directory and support the local businesses that make Prosper special.
+        </p>
+        <a
+          href="/"
+          class="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3.5 font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
+        >
+          Explore Businesses
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -104,6 +104,22 @@ const ogImageUrl = new URL(ogImage, Astro.site);
 
         const heroHeight = heroSection?.offsetHeight || window.innerHeight;
 
+        // ── Critical fix: CSS entrance animations use !important which blocks
+        //    JS inline style updates. After entrance animations complete (~2.2s),
+        //    strip the animation property so JS scroll animations can take over. ──
+        const ENTRANCE_DURATION = 2200; // longest delay (1.2s) + duration (0.8s) + buffer
+        setTimeout(() => {
+          heroEls.forEach(({ el }) => {
+            if (!el) return;
+            // Force current computed state into inline styles before removing animation
+            const computed = getComputedStyle(el);
+            el.style.opacity = computed.opacity;
+            el.style.transform = computed.transform === 'none' ? '' : computed.transform;
+            // Now strip the CSS animation so !important no longer blocks inline styles
+            el.style.animation = 'none';
+          });
+        }, ENTRANCE_DURATION);
+
         // Promote animated layers to GPU
         [heroBg, heroFg, heroText, heroOverlay].forEach(el => {
           if (el) el.style.willChange = 'transform, opacity';

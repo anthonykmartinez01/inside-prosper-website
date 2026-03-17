@@ -4,9 +4,18 @@ import Navbar from '../components/layout/Navbar.astro';
 import Hero from '../components/sections/Hero.astro';
 import HowItWorks from '../components/sections/HowItWorks.astro';
 import BusinessListings from '../components/sections/BusinessListings.astro';
+import PopularCategories from '../components/sections/PopularCategories.astro';
+import AboutProsper from '../components/sections/AboutProsper.astro';
 import EmailCTA from '../components/sections/EmailCTA.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
+import ItemListSchema from '../components/schema/ItemListSchema.astro';
+import { businesses, siteConfig, getBusinessUrl } from '../data/business';
+
+const featuredItems = businesses.slice(0, 6).map((biz) => ({
+  name: biz.name,
+  url: `${siteConfig.siteUrl}${getBusinessUrl(biz)}`,
+}));
 ---
 
 <BaseLayout
@@ -14,11 +23,18 @@ import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro'
   description="For those of us who appreciate our local, hardworking friends and families. Discover the best local businesses in Prosper, Texas."
 >
   <LocalBusinessSchema />
+  <ItemListSchema
+    name="Featured Local Businesses in Prosper, Texas"
+    description="Discover the best local businesses in Prosper, TX — handpicked by the community."
+    items={featuredItems}
+  />
   <Navbar />
   <main>
     <Hero />
     <HowItWorks />
     <BusinessListings />
+    <PopularCategories />
+    <AboutProsper />
     <EmailCTA />
   </main>
   <Footer />

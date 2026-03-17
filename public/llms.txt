@@ -7,27 +7,34 @@ Inside Prosper is a community-driven directory showcasing the best local busines
 ## Pages
 
 - [Home](https://insideprosper.com/): Browse all local businesses by category
-- [How It Works](https://insideprosper.com/#how-it-works): Learn how Inside Prosper features local businesses
-- [Get Listed](https://insideprosper.com/#get-listed): Submit your business to the directory
+- [About](https://insideprosper.com/about/): Our mission and what makes Inside Prosper different
+- [Prosper Guide](https://insideprosper.com/prosper-guide/): Complete guide to living in Prosper, Texas
+- [Get Listed](https://insideprosper.com/get-listed/): Submit your business to the directory
+- [Blog](https://insideprosper.com/blog/): Articles and updates about Prosper, TX
 
-## Featured Businesses
+## Categories
 
-- 1418 Coffee — Specialty coffee shop at 1418 N Preston Rd, Prosper, TX
-- Salsa Tex-Mex — Tex-Mex restaurant in Prosper
-- Prema's Kitchen — Authentic Indian restaurant in Prosper
-- Sake Sushi & Hibachi — Japanese restaurant in Prosper
-- CrossFit Prosper — CrossFit gym in Prosper
-- Apex Fitness Prosper — Fitness facility in Prosper
-- F45 Training Prosper — Group fitness studio in Prosper
-- Greg Hall Law — Estate planning attorney in Prosper
-- Henry & Peters CPAs — CPA firm in Prosper
-- The Cawlfield Law Firm — Real estate attorney in Prosper
-- Lily Claire — Women's boutique in Prosper
-- Prosper Blooms — Florist in Prosper
-- Dawson + Claire — Women's boutique on Broadway St, Prosper
-- Cody & Sons Plumbing, Heating & Air — Plumbing and HVAC in Prosper
-- Top Notch Electrician — Electrician in Prosper
-- Legacy Plumbing — Plumbing services in Prosper
+- [Food & Fun](https://insideprosper.com/food-and-fun/): Restaurants, cafes, and eateries
+  - [1418 Coffee](https://insideprosper.com/food-and-fun/1418-coffee/) — Specialty coffee shop at 1418 N Preston Rd
+  - [Salsa Tex-Mex](https://insideprosper.com/food-and-fun/salsa-tex-mex/) — Tex-Mex restaurant
+  - [Prema's Kitchen](https://insideprosper.com/food-and-fun/premas-kitchen/) — Authentic Indian restaurant
+  - [Sake Sushi & Hibachi](https://insideprosper.com/food-and-fun/sake-sushi-hibachi/) — Japanese restaurant
+- [Health & Fitness](https://insideprosper.com/health-and-fitness/): Gyms, studios, and wellness
+  - [CrossFit Prosper](https://insideprosper.com/health-and-fitness/crossfit-prosper/) — CrossFit gym
+  - [Apex Fitness Prosper](https://insideprosper.com/health-and-fitness/apex-fitness-prosper/) — Fitness facility
+  - [F45 Training Prosper](https://insideprosper.com/health-and-fitness/f45-training-prosper/) — Group fitness
+- [Professionals](https://insideprosper.com/professionals/): Lawyers, CPAs, and services
+  - [Greg Hall Law](https://insideprosper.com/professionals/greg-hall-law/) — Estate planning attorney
+  - [Henry & Peters CPAs](https://insideprosper.com/professionals/henry-peters-cpas/) — CPA firm
+  - [The Cawlfield Law Firm](https://insideprosper.com/professionals/cawlfield-law-firm/) — Real estate attorney
+- [Shop](https://insideprosper.com/shop/): Boutiques, florists, and retail
+  - [Lily Claire](https://insideprosper.com/shop/lily-claire/) — Women's boutique
+  - [Prosper Blooms](https://insideprosper.com/shop/prosper-blooms/) — Florist
+  - [Dawson + Claire](https://insideprosper.com/shop/dawson-claire/) — Boutique on Broadway St
+- [Trades](https://insideprosper.com/trades/): Plumbers, electricians, and contractors
+  - [Cody & Sons](https://insideprosper.com/trades/cody-sons-plumbing/) — Plumbing, heating & air
+  - [Top Notch Electrician](https://insideprosper.com/trades/top-notch-electrician/) — Electrician
+  - [Legacy Plumbing](https://insideprosper.com/trades/legacy-plumbing/) — Plumbing services
 
 ## Contact
 

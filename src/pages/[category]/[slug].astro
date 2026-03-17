@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Navbar from '../../components/layout/Navbar.astro';
+import Footer from '../../components/layout/Footer.astro';
+import BusinessCard from '../../components/ui/BusinessCard.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import BusinessSchema from '../../components/schema/BusinessSchema.astro';
+import { businesses, categories, getBusinessesByCategory, getCategoryBySlug, getCategoryUrl, getBusinessUrl, siteConfig, type Business, type Category } from '../../data/business';
+
+export function getStaticPaths() {
+  return businesses.map((biz) => {
+    const cat = getCategoryBySlug(biz.category);
+    return {
+      params: { category: cat?.urlPath || biz.category, slug: biz.slug },
+      props: { business: biz },
+    };
+  });
+}
+
+interface Props {
+  business: Business;
+}
+
+const { business } = Astro.props;
+const category = getCategoryBySlug(business.category);
+const relatedBusinesses = getBusinessesByCategory(business.category).filter((b) => b.slug !== business.slug);
+
+const breadcrumbItems = [
+  { name: 'Home', url: siteConfig.siteUrl },
+  ...(category ? [{ name: category.name, url: `${siteConfig.siteUrl}${getCategoryUrl(category)}` }] : []),
+  { name: business.name, url: `${siteConfig.siteUrl}${getBusinessUrl(business)}` },
+];
+---
+
+<BaseLayout
+  title={`${business.name} — ${category?.name || 'Business'} in Prosper, TX | ${siteConfig.name}`}
+  description={business.shortDescription}
+>
+  <BreadcrumbSchema items={breadcrumbItems} />
+  <BusinessSchema business={business} />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="bg-bg-dark pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <!-- Breadcrumb -->
+        <nav class="mb-8 flex items-center gap-2 text-sm text-white/40" aria-label="Breadcrumb">
+          <a href="/" class="transition-colors hover:text-primary">Home</a>
+          <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          {category && (
+            <>
+              <a href={getCategoryUrl(category)} class="transition-colors hover:text-primary">{category.name}</a>
+              <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </>
+          )}
+          <span class="text-white/70">{business.name}</span>
+        </nav>
+
+        {category && (
+          <a href={getCategoryUrl(category)} class="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm border border-white/10 transition-colors hover:bg-white/15">
+            {category.name}
+          </a>
+        )}
+        <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          {business.name}
+        </h1>
+        <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
+          {business.shortDescription}
+        </p>
+      </div>
+    </section>
+
+    <!-- Business content -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid gap-12 lg:grid-cols-3">
+          <!-- Main content -->
+          <div class="lg:col-span-2">
+            <!-- Image -->
+            <div class="overflow-hidden rounded-2xl">
+              <img
+                src={business.image}
+                alt={`${business.name} — local business in Prosper, Texas`}
+                width="800"
+                height="500"
+                loading="eager"
+                class="w-full object-cover aspect-[16/10]"
+              />
+            </div>
+
+            <!-- Description -->
+            <div class="mt-10">
+              <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl">
+                About {business.name}
+              </h2>
+              <p class="mt-4 text-base leading-relaxed text-text-muted">
+                {business.longDescription}
+              </p>
+            </div>
+
+            <!-- Quote -->
+            {business.quote && (
+              <blockquote class="mt-10 border-l-4 border-primary pl-6 py-2">
+                <p class="text-lg font-display italic text-text">
+                  &ldquo;{business.quote}&rdquo;
+                </p>
+              </blockquote>
+            )}
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sticky top-28 rounded-2xl border border-border bg-bg-card p-6 shadow-sm">
+              <h3 class="font-heading text-lg font-bold text-text">Business Info</h3>
+
+              <div class="mt-6 space-y-5">
+                {business.phone && (
+                  <div class="flex items-start gap-3">
+                    <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-text">Phone</p>
+                      <a href={`tel:${business.phone.replace(/[^\d+]/g, '')}`} class="text-sm text-primary hover:text-primary-dark transition-colors">
+                        {business.phone}
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                {business.address && (
+                  <div class="flex items-start gap-3">
+                    <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-text">Address</p>
+                      <p class="text-sm text-text-muted">{business.address}</p>
+                    </div>
+                  </div>
+                )}
+
+                {business.hours && (
+                  <div class="flex items-start gap-3">
+                    <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-text">Hours</p>
+                      <p class="text-sm text-text-muted">{business.hours}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {business.phone && (
+                <a
+                  href={`tel:${business.phone.replace(/[^\d+]/g, '')}`}
+                  class="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
+                >
+                  <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  Call Now
+                </a>
+              )}
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related businesses -->
+    {relatedBusinesses.length > 0 && (
+      <section class="bg-bg-white py-16 lg:py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl mb-10">
+            Other {category?.name} Businesses in Prosper
+          </h2>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedBusinesses.map((biz) => (
+              <BusinessCard
+                name={biz.name}
+                description={biz.shortDescription}
+                image={biz.image}
+                slug={biz.slug}
+                category={category?.name}
+                categoryUrlPath={category?.urlPath}
+              />
+            ))}
+          </div>
+          {category && (
+            <div class="mt-10 text-center">
+              <a href={getCategoryUrl(category)} class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors">
+                <svg class="size-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                Back to all {category.name}
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    <!-- CTA -->
+    <section class="bg-bg-dark py-20 text-center">
+      <div class="mx-auto max-w-2xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          Is This Your <span class="text-primary">Business</span>?
+        </h2>
+        <p class="mt-4 text-base text-white/60">
+          Claim your listing to update your information, add photos, and connect with the Prosper community.
+        </p>
+        <a
+          href="/get-listed/"
+          class="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3.5 font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
+        >
+          Get Listed
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

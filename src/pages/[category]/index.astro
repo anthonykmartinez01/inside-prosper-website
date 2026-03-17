@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+import BusinessCard from '../components/ui/BusinessCard.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import ItemListSchema from '../components/schema/ItemListSchema.astro';
+import { categories, getBusinessesByCategory, getCategoryUrl, getBusinessUrl, siteConfig, nearbyCities, type Category } from '../data/business';
+
+export function getStaticPaths() {
+  return categories.map((cat) => ({
+    params: { category: cat.urlPath },
+    props: { category: cat },
+  }));
+}
+
+interface Props {
+  category: Category;
+}
+
+const { category } = Astro.props;
+const businesses = getBusinessesByCategory(category.slug);
+const otherCategories = categories.filter((c) => c.slug !== category.slug);
+
+const breadcrumbItems = [
+  { name: 'Home', url: siteConfig.siteUrl },
+  { name: category.name, url: `${siteConfig.siteUrl}${getCategoryUrl(category)}` },
+];
+
+const itemListItems = businesses.map((biz) => ({
+  name: biz.name,
+  url: `${siteConfig.siteUrl}${getBusinessUrl(biz)}`,
+}));
+---
+
+<BaseLayout
+  title={`Best ${category.name} in Prosper, TX | ${siteConfig.name}`}
+  description={category.metaDescription}
+>
+  <BreadcrumbSchema items={breadcrumbItems} />
+  <ItemListSchema
+    name={`Best ${category.name} in Prosper, Texas`}
+    description={category.description}
+    items={itemListItems}
+  />
+  <Navbar />
+  <main>
+    <!-- Hero banner -->
+    <section class="bg-bg-dark pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <div class="mx-auto max-w-7xl px-6">
+        <!-- Breadcrumb nav -->
+        <nav class="mb-8 flex items-center gap-2 text-sm text-white/40" aria-label="Breadcrumb">
+          <a href="/" class="transition-colors hover:text-primary">Home</a>
+          <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span class="text-white/70">{category.name}</span>
+        </nav>
+
+        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+          Prosper, Texas
+        </span>
+        <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Best {category.name} in <span class="font-display italic text-primary">Prosper</span>, Texas
+        </h1>
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
+          {category.description}
+        </p>
+      </div>
+    </section>
+
+    <!-- Category intro content -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mx-auto max-w-3xl text-base leading-relaxed text-text-muted">
+          <p>{category.longDescription}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business listings -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl mb-12">
+          {businesses.length} {category.name} {businesses.length === 1 ? 'Business' : 'Businesses'} in Prosper
+        </h2>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {businesses.map((biz) => (
+            <div class="reveal">
+              <BusinessCard
+                name={biz.name}
+                description={biz.shortDescription}
+                image={biz.image}
+                slug={biz.slug}
+                category={category.name}
+                categoryUrlPath={category.urlPath}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Nearby cities mention for local SEO -->
+    <section class="bg-bg py-16 lg:py-20">
+      <div class="mx-auto max-w-7xl px-6 text-center">
+        <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl">
+          Serving Prosper and Nearby Communities
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-muted">
+          Inside Prosper helps residents across {nearbyCities.slice(0, -1).join(', ')}, and {nearbyCities[nearbyCities.length - 1]} discover trusted local businesses. Whether you live in Prosper or a neighboring city, these {category.name.toLowerCase()} businesses are here to serve you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Explore more categories -->
+    <section class="bg-bg-white py-16 lg:py-20">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl mb-8 text-center">
+          Explore More Categories
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {otherCategories.map((cat) => (
+            <a
+              href={getCategoryUrl(cat)}
+              class="group rounded-xl border border-border bg-bg-card p-6 transition-all duration-200 hover:border-primary/30 hover:shadow-md"
+            >
+              <h3 class="font-heading text-lg font-bold text-text group-hover:text-primary transition-colors">{cat.name}</h3>
+              <p class="mt-2 text-sm text-text-muted line-clamp-2">{cat.description}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                Browse
+                <svg class="size-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-bg-dark py-20 text-center">
+      <div class="mx-auto max-w-2xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          Own a {category.name} Business in <span class="text-primary">Prosper</span>?
+        </h2>
+        <p class="mt-4 text-base text-white/60">
+          Get featured on Inside Prosper and connect with your neighbors. Listings are free and invitation-only.
+        </p>
+        <a
+          href="/get-listed/"
+          class="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3.5 font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
+        >
+          Get Listed Today
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

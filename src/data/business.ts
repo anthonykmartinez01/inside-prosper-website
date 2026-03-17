@@ -11,23 +11,63 @@ export const siteConfig = {
   zip: '75078',
 };
 
+export const nearbyCities = ['Celina', 'Frisco', 'McKinney', 'Little Elm', 'Aubrey'];
+
 export interface Category {
   name: string;
   slug: string;
+  urlPath: string;
   description: string;
+  longDescription: string;
+  metaDescription: string;
 }
 
 export const categories: Category[] = [
-  { name: 'Food & Fun', slug: 'food-fun', description: 'Restaurants, entertainment, and local eateries in Prosper, Texas.' },
-  { name: 'Health & Fitness', slug: 'health-fitness', description: 'Gyms, wellness centers, and health professionals in Prosper, Texas.' },
-  { name: 'Professionals', slug: 'professionals', description: 'Accountants, lawyers, real estate agents, and more in Prosper, Texas.' },
-  { name: 'Shop', slug: 'shop', description: 'Boutiques, retail stores, and unique shopping experiences in Prosper, Texas.' },
-  { name: 'Trades', slug: 'trades', description: 'Plumbers, electricians, contractors, and skilled tradespeople in Prosper, Texas.' },
+  {
+    name: 'Food & Fun',
+    slug: 'food-fun',
+    urlPath: 'food-and-fun',
+    description: 'Restaurants, entertainment, and local eateries in Prosper, Texas.',
+    longDescription: 'Prosper, Texas has quietly become one of the best dining destinations in Collin County. From specialty coffee shops brewing fresh pour-overs to authentic Tex-Mex joints and globally inspired kitchens, the local food scene reflects the diversity and pride of this growing community. Whether you are craving handmade sushi, Southern Indian favorites, or a perfectly crafted espresso after a Saturday morning walk, Prosper has something for every palate. These are the restaurants and eateries that neighbors recommend to each other — the kind of places where the owners know your name and the food keeps you coming back. Residents from nearby Celina, Frisco, and McKinney regularly make the drive to eat here, and once you try them, you will too.',
+    metaDescription: 'Discover the best restaurants, cafes, and eateries in Prosper, TX. Locally owned food spots recommended by your neighbors — from coffee to Tex-Mex to sushi.',
+  },
+  {
+    name: 'Health & Fitness',
+    slug: 'health-fitness',
+    urlPath: 'health-and-fitness',
+    description: 'Gyms, wellness centers, and health professionals in Prosper, Texas.',
+    longDescription: 'Staying active in Prosper, Texas means more than just hitting a treadmill — it means joining a community that pushes you to be your best. From high-intensity CrossFit boxes and functional training studios to results-driven personal training facilities, Prosper has fitness options for every level and goal. What makes these gyms special is the people behind them: coaches who learn your name, trainers who build programs around your life, and communities that celebrate every milestone with you. Residents across Prosper, Celina, and Frisco trust these fitness professionals to help them build strength, confidence, and lasting healthy habits.',
+    metaDescription: 'Find the best gyms, fitness studios, and wellness centers in Prosper, TX. CrossFit, personal training, group classes — trusted by the local community.',
+  },
+  {
+    name: 'Professionals',
+    slug: 'professionals',
+    urlPath: 'professionals',
+    description: 'Accountants, lawyers, real estate agents, and more in Prosper, Texas.',
+    longDescription: 'When you need an accountant, attorney, or financial advisor in Prosper, Texas, nothing beats working with someone who understands the local community. The professional service providers featured here have earned their reputation through years of dedicated work serving families and businesses across Prosper, Celina, Frisco, and the surrounding area. Whether you are planning your estate, navigating a real estate transaction, or looking for a CPA to manage your taxes, these professionals combine deep expertise with a personal, small-town approach. They are the kind of people your neighbors recommend at the soccer field or over the backyard fence.',
+    metaDescription: 'Find trusted lawyers, CPAs, and professional services in Prosper, TX. Estate planning, tax preparation, real estate law — recommended by your neighbors.',
+  },
+  {
+    name: 'Shop',
+    slug: 'shop',
+    urlPath: 'shop',
+    description: 'Boutiques, retail stores, and unique shopping experiences in Prosper, Texas.',
+    longDescription: 'Downtown Prosper is home to a growing collection of boutiques, gift shops, and specialty stores that make shopping here feel personal. From curated women\'s fashion and artisanal home decor to locally arranged flower bouquets, the shops in Prosper reflect the character and creativity of this community. Broadway Street and Main Street are the heart of the shopping scene, where you can browse unique finds, discover the perfect gift, and support small business owners who pour their hearts into their storefronts. Visitors from Frisco, McKinney, and Celina frequently make the trip to explore what downtown Prosper has to offer.',
+    metaDescription: 'Shop local boutiques, florists, and unique stores in Prosper, TX. Curated fashion, home decor, and gifts on Broadway Street — support small business.',
+  },
+  {
+    name: 'Trades',
+    slug: 'trades',
+    urlPath: 'trades',
+    description: 'Plumbers, electricians, contractors, and skilled tradespeople in Prosper, Texas.',
+    longDescription: 'Finding a reliable plumber, electrician, or contractor in Prosper, Texas should not feel like a gamble. The skilled tradespeople featured here have earned the trust of homeowners across Prosper, Little Elm, Frisco, and the surrounding communities through consistent, high-quality work. Whether you need an emergency plumbing repair at midnight, a panel upgrade for your new home, or routine HVAC maintenance, these professionals show up on time, do the job right, and stand behind their work. In a fast-growing area where new homes are going up every day, having a trusted tradesperson on speed dial is worth its weight in gold.',
+    metaDescription: 'Find trusted plumbers, electricians, and contractors serving Prosper, TX. 24/7 emergency service, honest pricing — recommended by local homeowners.',
+  },
 ];
 
 export const navigation = categories.map((c) => ({
   label: c.name,
-  href: `#${c.slug}`,
+  href: `/${c.urlPath}/`,
 }));
 
 export interface Business {
@@ -229,10 +269,50 @@ export const businesses: Business[] = [
   },
 ];
 
+// ── Helper functions ──
+
 export function getBusinessesByCategory(categorySlug: string): Business[] {
   return businesses.filter((b) => b.category === categorySlug);
 }
 
 export function getRecentBusinesses(count: number = 6): Business[] {
   return businesses.slice(0, count);
+}
+
+export function getCategoryBySlug(slug: string): Category | undefined {
+  return categories.find((c) => c.slug === slug);
+}
+
+export function getCategoryByUrlPath(urlPath: string): Category | undefined {
+  return categories.find((c) => c.urlPath === urlPath);
+}
+
+export function getBusinessBySlug(slug: string): Business | undefined {
+  return businesses.find((b) => b.slug === slug);
+}
+
+export function getCategoryUrl(category: Category): string {
+  return `/${category.urlPath}/`;
+}
+
+export function getBusinessUrl(business: Business): string {
+  const category = getCategoryBySlug(business.category);
+  return `/${category?.urlPath || business.category}/${business.slug}/`;
+}
+
+export function getCategoryDisplayName(slug: string): string {
+  const cat = getCategoryBySlug(slug);
+  return cat?.name || slug;
+}
+
+/** Map category slug to schema.org @type for individual business pages */
+export function getSchemaType(categorySlug: string): string {
+  const map: Record<string, string> = {
+    'food-fun': 'Restaurant',
+    'health-fitness': 'HealthAndBeautyBusiness',
+    'professionals': 'ProfessionalService',
+    'shop': 'Store',
+    'trades': 'HomeAndConstructionBusiness',
+  };
+  return map[categorySlug] || 'LocalBusiness';
 }
