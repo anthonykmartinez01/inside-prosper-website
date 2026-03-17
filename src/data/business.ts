@@ -50,7 +50,7 @@ export const businesses: Business[] = [
     phone: '(469) 598-1418',
     address: '1418 N Preston Rd, Prosper, TX 75078',
     hours: 'Mon\u2013Fri 6am\u20135pm, Sat\u2013Sun 7am\u20134pm',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80',
+    image: '/images/1418-coffee.png',
   },
   {
     name: 'Salsa Tex-Mex',
@@ -58,7 +58,7 @@ export const businesses: Business[] = [
     category: 'food-fun',
     shortDescription: 'Upbeat restaurant providing familiar Tex-Mex standards and margaritas in many flavors. A Prosper favorite since opening.',
     longDescription: 'Salsa Tex-Mex is an upbeat restaurant providing familiar Tex-Mex standards and margaritas in many flavors. A Prosper favorite since opening, we pride ourselves on great food, friendly service, and a welcoming atmosphere for families and friends.',
-    image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80',
+    image: '/images/salsa-tex-mex.png',
   },
   {
     name: "Prema's Kitchen",
@@ -66,7 +66,7 @@ export const businesses: Business[] = [
     category: 'food-fun',
     shortDescription: 'Authentic Indian restaurant offering traditional dishes, Indo-Chinese specialties, and Southern Indian favorites.',
     longDescription: "Prema's Kitchen is an authentic Indian restaurant offering traditional dishes, Indo-Chinese specialties, and Southern Indian favorites. Our recipes are crafted with care, bringing the rich flavors of India to the Prosper community.",
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80',
+    image: '/images/premas-kitchen.png',
   },
   {
     name: 'Sake Sushi & Hibachi',
@@ -74,7 +74,7 @@ export const businesses: Business[] = [
     category: 'food-fun',
     shortDescription: 'Japanese restaurant offering fresh sushi, sashimi, hibachi grills, and a full bar in a modern setting.',
     longDescription: 'Sake Sushi & Hibachi is a Japanese restaurant offering fresh sushi, sashimi, hibachi grills, and a full bar in a modern setting. We bring the art of Japanese cuisine to Prosper with quality ingredients and skilled chefs.',
-    image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&q=80',
+    image: '/images/sake-sushi-hibachi.png',
   },
   // Health & Fitness
   {
@@ -87,7 +87,7 @@ export const businesses: Business[] = [
     phone: '(469) 842-0667',
     address: 'Prosper, TX 75078',
     hours: 'Mon\u2013Sat 5am\u20139pm',
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80',
+    image: '/images/crossfit-prosper.png',
   },
   {
     name: 'Apex Fitness Prosper',
@@ -95,7 +95,7 @@ export const businesses: Business[] = [
     category: 'health-fitness',
     shortDescription: 'Results-based fitness facility with expert trainers, modern equipment, and a community-focused approach to wellness.',
     longDescription: 'Apex Fitness Prosper is a results-based fitness facility with expert trainers, modern equipment, and a community-focused approach to wellness. We help you build strength, confidence, and lasting healthy habits.',
-    image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80',
+    image: '/images/apex-fitness-prosper.png',
   },
   {
     name: 'F45 Training Prosper',
