@@ -59,29 +59,7 @@
   font-display: swap;
   src: url('/fonts/inter-400.woff2') format('woff2');
 }
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/inter-500.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/inter-600.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/inter-700.woff2') format('woff2');
-}
-
-/* Self-hosted Playfair Display (serif accent) */
+/* Self-hosted Playfair Display (serif accent — italic used for display text) */
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
@@ -95,13 +73,6 @@
   font-weight: 400;
   font-display: swap;
   src: url('/fonts/playfair-400-italic.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/playfair-700.woff2') format('woff2');
 }
 
 @layer base {
@@ -189,38 +160,39 @@
 .reveal-stagger > .reveal:nth-child(5) { transition-delay: 400ms; }
 .reveal-stagger > .reveal:nth-child(6) { transition-delay: 500ms; }
 
-/* Hero entrance animations — staggered cascade on page load */
+/* Hero entrance animations — staggered cascade on page load.
+   The H1 (LCP element) is excluded from animations to avoid render delay. */
 @keyframes hero-fade-up {
-  0% { opacity: 0 !important; transform: translateY(30px) !important; }
-  100% { opacity: 1 !important; transform: translateY(0) !important; }
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes hero-fade-down {
-  0% { opacity: 0 !important; transform: translateY(-20px) !important; }
-  100% { opacity: 1 !important; transform: translateY(0) !important; }
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes hero-fade-only {
-  0% { opacity: 0 !important; }
-  100% { opacity: 1 !important; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .hero-animate {
-  animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both !important;
+  animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }
 
 .hero-animate-slide-down {
-  animation-name: hero-fade-down !important;
+  animation-name: hero-fade-down;
 }
 
 .hero-animate-fade {
-  animation-name: hero-fade-only !important;
+  animation-name: hero-fade-only;
 }
 
-.hero-animate-delay-1 { animation-delay: 0.5s !important; }
-.hero-animate-delay-2 { animation-delay: 0.8s !important; }
-.hero-animate-delay-3 { animation-delay: 1.0s !important; }
-.hero-animate-delay-4 { animation-delay: 1.2s !important; }
+.hero-animate-delay-1 { animation-delay: 0.5s; }
+.hero-animate-delay-2 { animation-delay: 0.8s; }
+.hero-animate-delay-3 { animation-delay: 1.0s; }
+.hero-animate-delay-4 { animation-delay: 1.2s; }
 
 /* Card hover — scale + elevated shadow */
 .card-hover {

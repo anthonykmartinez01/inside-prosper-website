@@ -1,9 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Navbar from '../components/layout/Navbar.astro';
 import Footer from '../components/layout/Footer.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import { siteConfig } from '../data/business';
+import anthonyImage from '../assets/images/anthony-martinez.webp';
 
 const breadcrumbItems = [
   { name: 'Home', url: siteConfig.siteUrl },
@@ -116,12 +118,14 @@ const breadcrumbItems = [
           </div>
           <div class="lg:col-span-2 flex justify-center">
             <div class="overflow-hidden rounded-2xl shadow-lg" style="max-height: 480px;">
-              <img
-                src="/images/anthony-martinez.webp"
+              <Image
+                src={anthonyImage}
                 alt="Anthony Martinez, Content Director for Inside Prosper"
-                width="400"
-                height="540"
+                width={400}
+                height={540}
                 loading="lazy"
+                format="webp"
+                quality={70}
                 class="h-auto w-full max-w-sm object-cover object-top"
               />
             </div>

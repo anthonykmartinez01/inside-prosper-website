@@ -1,17 +1,21 @@
 ---
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/hero-prosper.jpg';
 ---
 
 <section class="relative min-h-screen overflow-hidden bg-bg-dark" data-hero-section>
   <!-- Layer 1: Full background image (sky + scene) -->
   <div class="absolute inset-0" data-hero-bg>
-    <img
-      src="/images/hero-prosper.jpg"
+    <Image
+      src={heroImage}
       alt="Sunset over Prosper, Texas — a small-town main street with American flags and grain silos"
       class="size-full object-cover"
       loading="eager"
       fetchpriority="high"
-      width="1920"
-      height="1080"
+      width={1920}
+      height={1080}
+      quality={75}
+      format="webp"
     />
   </div>
 
@@ -20,13 +24,15 @@
 
   <!-- Layer 3: Foreground cutout — same image with CSS mask revealing only bottom portion -->
   <div class="absolute inset-0 hero-foreground-mask" data-hero-fg>
-    <img
-      src="/images/hero-prosper.jpg"
+    <Image
+      src={heroImage}
       alt=""
       class="size-full object-cover"
       loading="eager"
-      width="1920"
-      height="1080"
+      width={1920}
+      height={1080}
+      quality={75}
+      format="webp"
     />
   </div>
 
@@ -43,8 +49,8 @@
         Prosper, Texas
       </div>
 
-      <!-- Heading — slides up from 30px below -->
-      <h1 data-hero-el="heading" class="hero-animate hero-animate-delay-1 font-heading text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+      <!-- Heading — NO entrance animation (LCP element must render immediately) -->
+      <h1 data-hero-el="heading" class="font-heading text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
         Discover The Best Local
         <span class="font-display italic text-primary">Businesses</span>
         in Prosper

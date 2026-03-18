@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import Navbar from '../../components/layout/Navbar.astro';
 import Footer from '../../components/layout/Footer.astro';
@@ -6,6 +8,8 @@ import BusinessCard from '../../components/ui/BusinessCard.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import BusinessSchema from '../../components/schema/BusinessSchema.astro';
 import { businesses, categories, getBusinessesByCategory, getCategoryBySlug, getCategoryUrl, getBusinessUrl, siteConfig, type Business, type Category } from '../../data/business';
+
+const localImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{png,jpg,jpeg,webp}', { eager: true });
 
 export function getStaticPaths() {
   return businesses.map((biz) => {
@@ -24,6 +28,11 @@ interface Props {
 const { business } = Astro.props;
 const category = getCategoryBySlug(business.category);
 const relatedBusinesses = getBusinessesByCategory(business.category).filter((b) => b.slug !== business.slug);
+
+// Resolve local image for optimization
+const isLocalImage = business.image.startsWith('/images/');
+const imageFilename = isLocalImage ? business.image.replace('/images/', '') : '';
+const resolvedImage = isLocalImage ? localImages[`/src/assets/images/${imageFilename}`]?.default : null;
 
 const breadcrumbItems = [
   { name: 'Home', url: siteConfig.siteUrl },
@@ -78,14 +87,27 @@ const breadcrumbItems = [
           <div class="lg:col-span-2">
             <!-- Image -->
             <div class="overflow-hidden rounded-2xl">
-              <img
-                src={business.image}
-                alt={`${business.name} — local business in Prosper, Texas`}
-                width="800"
-                height="500"
-                loading="eager"
-                class="w-full object-cover aspect-[16/10]"
-              />
+              {resolvedImage ? (
+                <Image
+                  src={resolvedImage}
+                  alt={`${business.name} — local business in Prosper, Texas`}
+                  width={800}
+                  height={500}
+                  loading="eager"
+                  format="webp"
+                  quality={75}
+                  class="w-full object-cover aspect-[16/10]"
+                />
+              ) : (
+                <img
+                  src={business.image}
+                  alt={`${business.name} — local business in Prosper, Texas`}
+                  width="800"
+                  height="500"
+                  loading="eager"
+                  class="w-full object-cover aspect-[16/10]"
+                />
+              )}
             </div>
 
             <!-- Description -->
