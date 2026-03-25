@@ -286,7 +286,7 @@ export const businesses: Business[] = [
     address: 'Serving Prosper, TX and surrounding areas',
     hours: 'Mon\u2013Sat 7am\u20136pm',
     image: '/images/the-red-roofer.jpg',
-    imagePosition: 'center 15%',
+    imagePosition: 'center 5%',
   },
   {
     name: 'Cody & Sons Plumbing, Heating & Air',
