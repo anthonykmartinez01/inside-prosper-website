@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+import { siteConfig } from '../data/business';
+---
+
+<BaseLayout
+  title="Privacy Policy — Inside Prosper | Prosper, TX Local Business Directory"
+  description="Privacy Policy for Inside Prosper, the local business directory for Prosper, Texas."
+>
+  <Navbar />
+  <main class="bg-bg-alt pt-32 pb-20">
+    <div class="mx-auto max-w-3xl px-6">
+      <h1 class="font-heading text-4xl font-bold text-text">Privacy Policy</h1>
+      <p class="mt-2 text-sm text-text-muted">Last updated: March 25, 2026</p>
+
+      <div class="mt-10 space-y-8 text-base leading-relaxed text-text-muted">
+        <section>
+          <h2 class="text-xl font-semibold text-text">Introduction</h2>
+          <p class="mt-3">{siteConfig.name} ("we," "us," or "our") operates the website at <a href={siteConfig.siteUrl} class="text-primary hover:underline">{siteConfig.siteUrl}</a>. This Privacy Policy explains how we collect, use, and protect your information when you visit our site.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-text">Information We Collect</h2>
+          <p class="mt-3">We may collect the following types of information:</p>
+          <ul class="mt-3 list-disc space-y-2 pl-6">
+            <li><strong>Usage Data:</strong> Pages visited, time on site, referring URLs, and browser/device information collected automatically through analytics tools.</li>
+            <li><strong>Contact Information:</strong> Name, email address, phone number, and business details you voluntarily provide when submitting a listing request or contacting us.</li>
+            <li><strong>Cookies:</strong> Small data files stored on your device to improve your browsing experience and help us understand site usage.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-text">How We Use Your Information</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-6">
+            <li>To operate and maintain the {siteConfig.name} directory</li>
+            <li>To respond to your inquiries and listing requests</li>
+            <li>To improve our website and user experience</li>
+            <li>To send occasional updates about {siteConfig.name} (only if you opt in)</li>
+            <li>To analyze site traffic and usage patterns</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-text">Third-Party Services</h2>
+          <p class="mt-3">We may use third-party services such as Google Analytics to help us understand how visitors use our site. These services may collect information sent by your browser as part of a web page request, including your IP address and cookies. Their use of this information is governed by their own privacy policies.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-text">Data Security</h2>
+          <p class="mt-3">We take reasonable measures to protect your personal information. However, no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-text">Your Rights</h2>
+          <p class="mt-3">You may request to access, correct, or delete any personal information we have collected. To make a request, contact us at <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-text">Changes to This Policy</h2>
+          <p class="mt-3">We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-text">Contact Us</h2>
+          <p class="mt-3">If you have questions about this Privacy Policy, contact us at:</p>
+          <p class="mt-2">
+            <a href={`mailto:${siteConfig.email}`} class="text-primary hover:underline">{siteConfig.email}</a><br />
+            <a href={`tel:${siteConfig.phoneRaw}`} class="text-primary hover:underline">{siteConfig.phone}</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

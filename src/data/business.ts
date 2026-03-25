@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'Inside Prosper',
   description: 'Discover the best local businesses in Prosper, Texas.',
   siteUrl: 'https://insideprosper.com',
-  email: 'anthonykmartinez01@gmail.com',
+  email: 'anthony@insideprosper.com',
   phone: '(818) 798-8966',
   phoneRaw: '+18187988966',
   location: 'Prosper, Texas',
