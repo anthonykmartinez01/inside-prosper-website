@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import heroImage from '../../assets/images/hero-prosper.jpg';
 ---
 
-<section class="relative min-h-screen overflow-hidden bg-bg-dark" data-hero-section>
+<section class="relative min-h-[85vh] overflow-hidden bg-bg-dark" data-hero-section>
   <!-- Layer 1: Full background image (sky + scene) -->
   <div class="absolute inset-0" data-hero-bg>
     <Image
@@ -41,7 +41,7 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
   <div class="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-[#0D0D0D]/15 to-[#0D0D0D]/95" data-hero-overlay></div>
 
   <!-- Layer 5: Foreground content -->
-  <div class="relative z-20 mx-auto max-w-7xl px-6 pt-40 pb-52 lg:pt-48 lg:pb-64" data-hero-content>
+  <div class="relative z-20 mx-auto max-w-7xl px-6 pt-40 pb-32 lg:pt-48 lg:pb-40" data-hero-content>
     <div class="max-w-2xl">
       <!-- Badge — slides down from above -->
       <div data-hero-el="badge" class="hero-animate hero-animate-slide-down mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm border border-white/10">
