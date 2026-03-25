@@ -9,9 +9,11 @@ interface Props {
   slug: string;
   category?: string;
   categoryUrlPath?: string;
+  imagePosition?: string;
 }
 
-const { name, description, image, slug, category, categoryUrlPath } = Astro.props;
+const { name, description, image, slug, category, categoryUrlPath, imagePosition } = Astro.props;
+const imgPosClass = imagePosition === 'top' ? ' object-top' : '';
 
 // Build the business URL: /category-url-path/slug/ if we have categoryUrlPath, else fallback
 const href = categoryUrlPath ? `/${categoryUrlPath}/${slug}/` : `/business/${slug}/`;
@@ -34,7 +36,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
         loading="lazy"
         format="webp"
         quality={85}
-        class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+        class={`size-full object-cover transition-transform duration-500 group-hover:scale-105${imgPosClass}`}
       />
     ) : (
       <img
@@ -43,7 +45,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
         width="400"
         height="300"
         loading="lazy"
-        class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+        class={`size-full object-cover transition-transform duration-500 group-hover:scale-105${imgPosClass}`}
       />
     )}
     {category && (

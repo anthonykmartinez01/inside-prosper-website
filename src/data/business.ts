@@ -83,6 +83,7 @@ export interface Business {
   address?: string;
   hours?: string;
   image: string;
+  imagePosition?: string;
 }
 
 export const businesses: Business[] = [
@@ -284,6 +285,7 @@ export const businesses: Business[] = [
     address: 'Serving Prosper, TX and surrounding areas',
     hours: 'Mon\u2013Sat 7am\u20136pm',
     image: '/images/the-red-roofer.jpg',
+    imagePosition: 'top',
   },
   {
     name: 'Cody & Sons Plumbing, Heating & Air',
