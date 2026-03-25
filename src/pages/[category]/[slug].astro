@@ -96,7 +96,7 @@ const breadcrumbItems = [
                   loading="eager"
                   format="webp"
                   quality={85}
-                  class="w-full object-cover aspect-[16/10]"
+                  class={`w-full object-cover aspect-[${business.imageAspect || '16/10'}]`}
                   style={business.imagePosition ? `object-position: ${business.imagePosition}` : ''}
                 />
               ) : (
@@ -106,7 +106,7 @@ const breadcrumbItems = [
                   width="800"
                   height="500"
                   loading="eager"
-                  class="w-full object-cover aspect-[16/10]"
+                  class={`w-full object-cover aspect-[${business.imageAspect || '16/10'}]`}
                   style={business.imagePosition ? `object-position: ${business.imagePosition}` : ''}
                 />
               )}
