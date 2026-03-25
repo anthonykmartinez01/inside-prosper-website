@@ -245,7 +245,7 @@ export const businesses: Business[] = [
     longDescription: 'The Red Roofer is a trusted, family-owned roofing contractor serving Prosper, TX and the surrounding DFW metroplex. Owner William Ferlet is known for honest inspections, transparent pricing, and quality workmanship on every roof repair, storm damage repair, and full roof replacement.',
     htmlDescription: `<h2>Meet William Ferlet, the Roofing Contractor in Prosper Who Actually Tells You the Truth</h2>
 
-<p>If you've ever called a roofing company and felt like you were being sold something you didn't need, that's exactly why The Red Roofer stands out. William Ferlet, the owner, is the kind of contractor who will climb up on your roof, take pictures of everything he finds, and then come back down and tell you straight: you don't need a new roof. Not as a sales tactic. Because it's actually the truth. He does this regularly, even when the easy sale is sitting right there in front of him.</p>
+<p>If you've ever called a roofing company and felt like you were being sold something you didn't need, that's exactly why <a href="https://theredroofer.com" target="_blank" rel="noopener noreferrer">The Red Roofer</a> stands out. William Ferlet, the owner, is the kind of contractor who will climb up on your roof, take pictures of everything he finds, and then come back down and tell you straight: you don't need a new roof. Not as a sales tactic. Because it's actually the truth. He does this regularly, even when the easy sale is sitting right there in front of him.</p>
 
 <p>William is not interested in convincing anyone to file an insurance claim they don't need. He won't dodge your questions or wave you off with "don't worry about it, I've got it." He believes every homeowner deserves to see exactly what he sees, know exactly what needs to be done, and understand exactly what they're paying for. If a roof just needs a quick repair or some sealant in the right spots, that's what he's going to recommend. Period.</p>
 
@@ -255,7 +255,7 @@ export const businesses: Business[] = [
 
 <p>That background shapes everything about how this company operates. When you call The Red Roofer, you're not dealing with a faceless operation or a storm chaser who blows through town looking for quick insurance payouts. You're talking to someone who understands what it feels like to need help and not be able to afford a mistake. That empathy shows up in every interaction, from the first phone call to the final cleanup.</p>
 
-<h2>What to Expect When You Hire The Red Roofer for Roof Repair in Prosper</h2>
+<h2>What to Expect When You Hire The Red Roofer for <a href="https://theredroofer.com/service/roof-repair" target="_blank" rel="noopener noreferrer">Roof Repair</a> in Prosper</h2>
 
 <p>Here's what the experience actually looks like. You reach out, and William responds. Quickly. He answers his phone, he returns texts, and he communicates clearly about scheduling and pricing. When he gives you a quote, that quote holds. The price he tells you is the price you pay. That alone separates him from a lot of roofing contractors in the Prosper area.</p>
 
