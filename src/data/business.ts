@@ -76,8 +76,10 @@ export interface Business {
   category: string;
   shortDescription: string;
   longDescription: string;
+  htmlDescription?: string;
   quote?: string;
   phone?: string;
+  website?: string;
   address?: string;
   hours?: string;
   image: string;
@@ -267,6 +269,55 @@ export const businesses: Business[] = [
     hours: 'Mon\u2013Fri 7am\u20138pm, Sat\u2013Sun 7am\u20135:30pm',
     image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&q=80',
   },
+  {
+    name: 'The Red Roofer',
+    slug: 'the-red-roofer',
+    category: 'trades',
+    shortDescription: 'Trusted roofing contractor serving Prosper, TX with honest inspections, transparent pricing, and quality roof repairs and replacements.',
+    longDescription: 'The Red Roofer is a trusted, family-owned roofing contractor serving Prosper, TX and the surrounding DFW metroplex. Owner William Ferlet is known for honest inspections, transparent pricing, and quality workmanship on every roof repair, storm damage repair, and full roof replacement.',
+    htmlDescription: `<h2>Meet William Ferlet, the Roofing Contractor in Prosper Who Actually Tells You the Truth</h2>
+
+<p>If you've ever called a roofing company and felt like you were being sold something you didn't need, that's exactly why The Red Roofer stands out. William Ferlet, the owner, is the kind of contractor who will climb up on your roof, take pictures of everything he finds, and then come back down and tell you straight: you don't need a new roof. Not as a sales tactic. Because it's actually the truth. He does this regularly, even when the easy sale is sitting right there in front of him.</p>
+
+<p>William is not interested in convincing anyone to file an insurance claim they don't need. He won't dodge your questions or wave you off with "don't worry about it, I've got it." He believes every homeowner deserves to see exactly what he sees, know exactly what needs to be done, and understand exactly what they're paying for. If a roof just needs a quick repair or some sealant in the right spots, that's what he's going to recommend. Period.</p>
+
+<h2>A Family Owned Roofing Company Built on Hard Work and Honesty</h2>
+
+<p>The Red Roofer is a family owned business, and that matters more than you might think. William and his wife built this company from the ground up, and when people say "from the ground up," in this case it's literal. William grew up on a small farm in Navarro County with no central heat and air. His wife grew up in a house with a hole in the roof. They moved to the DFW area, faced the grind of a first year in business where the total income was $16,000, and kept going.</p>
+
+<p>That background shapes everything about how this company operates. When you call The Red Roofer, you're not dealing with a faceless operation or a storm chaser who blows through town looking for quick insurance payouts. You're talking to someone who understands what it feels like to need help and not be able to afford a mistake. That empathy shows up in every interaction, from the first phone call to the final cleanup.</p>
+
+<h2>What to Expect When You Hire The Red Roofer for Roof Repair in Prosper</h2>
+
+<p>Here's what the experience actually looks like. You reach out, and William responds. Quickly. He answers his phone, he returns texts, and he communicates clearly about scheduling and pricing. When he gives you a quote, that quote holds. The price he tells you is the price you pay. That alone separates him from a lot of roofing contractors in the Prosper area.</p>
+
+<p>When the day of the job arrives, expect William to show up on time or early. He walks homeowners through exactly what he plans to do, makes sure everyone is on the same page, and then gets to work. Throughout the process, he explains each step so you're never left wondering what's happening on your own roof. If something unexpected comes up, you hear about it immediately, not after the invoice arrives.</p>
+
+<blockquote>"William quoted me a price for the project and that price didn't change. Many times this isn't the case with contractors. Communicating with him was easy. He answered calls and text promptly. He showed up on time."</blockquote>
+
+<h2>Transparent Roofing Inspections With Photos and Video</h2>
+
+<p>One of the things that stands out most about working with The Red Roofer is the transparency. William videos and photographs the entire inspection process so homeowners can see their roof the way he sees it. If there's damage, you'll see the picture before he even gets off the ladder. If there's no damage, he'll tell you that too, even if it means he doesn't get the job.</p>
+
+<p>That willingness to let homeowners in on everything is something his customers notice right away. He's been known to let people ride along to pick up materials, assist with the work if they want to, and ask as many questions as they need. That level of openness and confidence in his craft is rare, and it builds the kind of trust that turns a one time roof repair into a relationship that lasts for years.</p>
+
+<h2>Roofing Contractor Serving Prosper, Little Elm, Frisco, and Denton County</h2>
+
+<p>The Red Roofer serves Prosper, Little Elm, Providence Village, Frisco, Aubrey, Celina, McKinney, The Colony, Denton, Plano, Lewisville, and surrounding communities across the DFW metroplex. Whether you need a full roof replacement after a North Texas hailstorm or a targeted repair to stop a leak before it gets worse, William treats every job the same way: show up, communicate, do the work right, and leave the property better than he found it.</p>
+
+<p>His crew doesn't just clean up after themselves in the area where they worked. They clean up your entire driveway. They go above and beyond what was discussed, not to pad a bill, but because William genuinely wants to leave your home in better shape than he found it. That's not marketing language. That's what his customers say, unprompted, in their reviews.</p>
+
+<h2>Why Prosper Homeowners Trust The Red Roofer</h2>
+
+<p>At the end of the day, your home is probably your biggest investment, and trusting someone to work on your roof is a big deal. William gets that. He doesn't take it lightly. When you hire The Red Roofer, you're getting a roofing contractor who values integrity over a quick sale, who communicates openly instead of dodging hard questions, and who treats your home like it belongs to someone he actually cares about. Because, in his mind, it does.</p>
+
+<p>If you're looking for a roofer in the Prosper area who will be honest with you, show up when he says he will, and do the job right the first time, give The Red Roofer a call. You'll understand the difference the moment William picks up the phone.</p>`,
+    phone: '(940) 260-3197',
+    website: 'https://theredroofer.com',
+    address: 'Serving Prosper, TX and surrounding areas',
+    hours: 'Mon–Sat 7am–6pm',
+    image: '/images/the-red-roofer.jpg',
+  },
 ];
 
 // ── Helper functions ──
@@ -306,7 +357,10 @@ export function getCategoryDisplayName(slug: string): string {
 }
 
 /** Map category slug to schema.org @type for individual business pages */
-export function getSchemaType(categorySlug: string): string {
+export function getSchemaType(categorySlug: string, businessSlug?: string): string {
+  // Special overrides for specific businesses
+  if (businessSlug === 'the-red-roofer') return 'RoofingContractor';
+
   const map: Record<string, string> = {
     'food-fun': 'Restaurant',
     'health-fitness': 'HealthAndBeautyBusiness',

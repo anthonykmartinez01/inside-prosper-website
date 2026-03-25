@@ -112,16 +112,22 @@ const breadcrumbItems = [
 
             <!-- Description -->
             <div class="mt-10">
-              <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl">
-                About {business.name} in Prosper, Texas
-              </h2>
-              <p class="mt-4 text-base leading-relaxed text-text-muted">
-                {business.longDescription}
-              </p>
+              {business.htmlDescription ? (
+                <div class="prose prose-lg max-w-none text-text-muted [&>h2]:font-heading [&>h2]:text-2xl [&>h2]:font-extrabold [&>h2]:tracking-tight [&>h2]:text-text [&>h2]:mt-10 [&>h2]:mb-4 [&>h2:first-child]:mt-0 [&>p]:mt-4 [&>p]:text-base [&>p]:leading-relaxed [&>blockquote]:mt-8 [&>blockquote]:mb-8 [&>blockquote]:border-l-4 [&>blockquote]:border-primary [&>blockquote]:pl-6 [&>blockquote]:py-2 [&>blockquote]:text-lg [&>blockquote]:font-display [&>blockquote]:italic [&>blockquote]:text-text" set:html={business.htmlDescription} />
+              ) : (
+                <>
+                  <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl">
+                    About {business.name} in Prosper, Texas
+                  </h2>
+                  <p class="mt-4 text-base leading-relaxed text-text-muted">
+                    {business.longDescription}
+                  </p>
+                </>
+              )}
             </div>
 
             <!-- Quote -->
-            {business.quote && (
+            {business.quote && !business.htmlDescription && (
               <blockquote class="mt-10 border-l-4 border-primary pl-6 py-2">
                 <p class="text-lg font-display italic text-text">
                   &ldquo;{business.quote}&rdquo;
@@ -145,6 +151,20 @@ const breadcrumbItems = [
                       <p class="text-sm font-medium text-text">Phone</p>
                       <a href={`tel:${business.phone.replace(/[^\d+]/g, '')}`} class="text-sm text-primary hover:text-primary-dark transition-colors">
                         {business.phone}
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                {business.website && (
+                  <div class="flex items-start gap-3">
+                    <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-text">Website</p>
+                      <a href={business.website} target="_blank" rel="noopener noreferrer" class="text-sm text-primary hover:text-primary-dark transition-colors">
+                        {business.website.replace(/^https?:\/\//, '')}
                       </a>
                     </div>
                   </div>

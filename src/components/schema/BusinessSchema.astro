@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { business } = Astro.props;
-const schemaType = getSchemaType(business.category);
+const schemaType = getSchemaType(business.category, business.slug);
 const category = getCategoryBySlug(business.category);
 
 const businessSchema = {
@@ -16,6 +16,7 @@ const businessSchema = {
   "description": business.longDescription,
   "url": `${siteConfig.siteUrl}${getBusinessUrl(business)}`,
   ...(business.phone && { "telephone": business.phone }),
+  ...(business.website && { "sameAs": [business.website] }),
   ...(business.address && business.address !== 'Serving Prosper, TX and surrounding areas' && {
     "address": {
       "@type": "PostalAddress",
