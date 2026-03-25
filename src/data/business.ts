@@ -262,6 +262,7 @@ export const businesses: Business[] = [
 <p>When the day of the job arrives, expect William to show up on time or early. He walks homeowners through exactly what he plans to do, makes sure everyone is on the same page, and then gets to work. Throughout the process, he explains each step so you're never left wondering what's happening on your own roof. If something unexpected comes up, you hear about it immediately, not after the invoice arrives.</p>
 
 <blockquote>"William quoted me a price for the project and that price didn't change. Many times this isn't the case with contractors. Communicating with him was easy. He answered calls and text promptly. He showed up on time."</blockquote>
+<p style="margin-top: 0.75rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-style: normal; color: #6b7280;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span>Verified Review from Google</span></p>
 
 <h2>Transparent Roofing Inspections With Photos and Video</h2>
 
