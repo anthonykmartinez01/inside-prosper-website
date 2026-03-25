@@ -1,8 +1,12 @@
 ---
 import BusinessCard from '../ui/BusinessCard.astro';
-import { getRecentBusinesses, categories } from '../../data/business';
+import { businesses, categories } from '../../data/business';
 
-const recentBusinesses = getRecentBusinesses(6);
+// Featured businesses: The Red Roofer first, then fill with others
+const featuredSlugs = ['the-red-roofer', '1418-coffee', 'salsa-tex-mex', 'premas-kitchen', 'sake-sushi-hibachi', 'crossfit-prosper'];
+const recentBusinesses = featuredSlugs
+  .map(slug => businesses.find(b => b.slug === slug))
+  .filter(Boolean) as typeof businesses;
 ---
 
 <section id="businesses" class="bg-bg py-24 lg:py-36">
