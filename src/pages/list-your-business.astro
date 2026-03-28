@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { siteConfig } from '../data/business';
+
+const breadcrumbItems = [
+  { name: 'Home', url: siteConfig.siteUrl },
+  { name: 'List Your Business', url: `${siteConfig.siteUrl}/list-your-business/` },
+];
+
+const faqs = [
+  {
+    question: 'Is there a fee to be listed on Inside Prosper?',
+    answer: 'No. Listing your business on Inside Prosper is completely free. We believe great local businesses deserve exposure based on merit, not marketing budgets.',
+  },
+  {
+    question: 'How do you decide which businesses get featured?',
+    answer: 'We review every application to ensure the business is locally owned or locally operated, serves the Prosper community, and has a strong reputation. We look for businesses that neighbors would genuinely recommend.',
+  },
+  {
+    question: 'Does my business need to be physically located in Prosper?',
+    answer: 'Not necessarily. If you actively serve Prosper residents — whether you are based in Prosper, Celina, Frisco, McKinney, or elsewhere in the DFW area — you are welcome to apply.',
+  },
+  {
+    question: 'What happens after I submit the form?',
+    answer: 'We review applications within 3 business days. If approved, we will schedule a quick 15-minute call to learn about your business. No prep needed — just tell us your story. After the call, we write your profile and launch it on the site.',
+  },
+  {
+    question: 'Can I update my listing after it goes live?',
+    answer: 'Absolutely. Just email us at anthony@insideprosper.com with any changes to your hours, photos, description, or contact info and we will update it for you.',
+  },
+];
+---
+
+<BaseLayout
+  title="List Your Business on Inside Prosper | Free Prosper, TX Directory"
+  description="Get your Prosper, Texas business featured on Inside Prosper for free. Custom profile, local SEO visibility, and direct exposure to Prosper residents."
+>
+  <BreadcrumbSchema items={breadcrumbItems} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  })} />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="bg-bg-dark pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <div class="mx-auto max-w-7xl px-6">
+        <nav class="mb-8 flex items-center gap-2 text-sm text-white/40" aria-label="Breadcrumb">
+          <a href="/" class="transition-colors hover:text-primary">Home</a>
+          <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span class="text-white/70">List Your Business</span>
+        </nav>
+
+        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+          For Local Business Owners
+        </span>
+        <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Get Your Business <span class="font-display italic text-primary">Featured</span>
+        </h1>
+        <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
+          Inside Prosper highlights the best locally owned and operated businesses across Prosper, Texas. No ads, no gimmicks — just real businesses worth knowing about.
+        </p>
+      </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+            What's <span class="font-display italic text-primary">Included</span>
+          </h2>
+          <p class="mt-3 text-text-muted">Everything you get when your business is listed — at no cost.</p>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1 -->
+          <div class="rounded-2xl border border-border bg-bg-card p-8">
+            <div class="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
+              <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-text">Dedicated Business Profile</h3>
+            <p class="mt-2 text-sm leading-relaxed text-text-muted">
+              A custom page on Inside Prosper featuring your story, photos, contact info, hours, and a direct link to your website — written for you, optimized for Google.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="rounded-2xl border border-border bg-bg-card p-8">
+            <div class="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
+              <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-text">Local SEO Visibility</h3>
+            <p class="mt-2 text-sm leading-relaxed text-text-muted">
+              Your profile is built to rank in Google for Prosper-specific searches. When someone searches for your type of business in Prosper, TX — you show up.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div class="rounded-2xl border border-border bg-bg-card p-8">
+            <div class="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
+              <svg class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-text">Featured in the Community</h3>
+            <p class="mt-2 text-sm leading-relaxed text-text-muted">
+              Your business is showcased alongside other trusted Prosper businesses — on our homepage, category pages, and in our local guides.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl text-center mb-12">
+          What to <span class="font-display italic text-primary">Expect</span>
+        </h2>
+        <div class="space-y-8">
+          <div class="flex gap-5">
+            <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white font-bold">1</div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-text">Submit Your Application</h3>
+              <p class="mt-1 text-sm text-text-muted">Fill out the form below with your business details. Takes less than 2 minutes.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white font-bold">2</div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-text">We Review Within 3 Business Days</h3>
+              <p class="mt-1 text-sm text-text-muted">Our team reviews your application to make sure your business is a great fit for the Inside Prosper community.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white font-bold">3</div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-text">Quick 15-Minute Call</h3>
+              <p class="mt-1 text-sm text-text-muted">If approved, we schedule a short call to hear your story. No prep needed — just tell us about your business and why you love serving Prosper.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white font-bold">4</div>
+            <div>
+              <h3 class="font-heading text-lg font-bold text-text">Your Profile Goes Live</h3>
+              <p class="mt-1 text-sm text-text-muted">We write your profile, optimize it for local search, and publish it on the site. You start getting discovered by Prosper residents immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-2xl px-6">
+        <div class="text-center mb-10">
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+            Apply to Get <span class="font-display italic text-primary">Listed</span>
+          </h2>
+          <p class="mt-3 text-text-muted">Fill out the form below and we will be in touch within 3 business days.</p>
+        </div>
+
+        <form
+          action={`https://formsubmit.co/${siteConfig.email}`}
+          method="POST"
+          class="space-y-5"
+        >
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_subject" value="New Inside Prosper Listing Application" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value={`${siteConfig.siteUrl}/list-your-business/?submitted=true`} />
+          <input type="text" name="_honey" style="display:none" />
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="first-name" class="block text-sm font-medium text-text mb-1.5">First Name <span class="text-primary">*</span></label>
+              <input type="text" id="first-name" name="first_name" required class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder-text-muted/50 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary" placeholder="John" />
+            </div>
+            <div>
+              <label for="last-name" class="block text-sm font-medium text-text mb-1.5">Last Name <span class="text-primary">*</span></label>
+              <input type="text" id="last-name" name="last_name" required class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder-text-muted/50 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Smith" />
+            </div>
+          </div>
+
+          <div>
+            <label for="business-name" class="block text-sm font-medium text-text mb-1.5">Business Name <span class="text-primary">*</span></label>
+            <input type="text" id="business-name" name="business_name" required class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder-text-muted/50 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Prosper Plumbing Co." />
+          </div>
+
+          <div>
+            <label for="website" class="block text-sm font-medium text-text mb-1.5">Website</label>
+            <input type="url" id="website" name="website" class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder-text-muted/50 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary" placeholder="https://yourbusiness.com" />
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="email" class="block text-sm font-medium text-text mb-1.5">Email <span class="text-primary">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder-text-muted/50 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary" placeholder="john@business.com" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-text mb-1.5">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder-text-muted/50 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary" placeholder="(469) 555-0123" />
+            </div>
+          </div>
+
+          <div>
+            <label for="referral" class="block text-sm font-medium text-text mb-1.5">How did you hear about us?</label>
+            <select id="referral" name="referral_source" class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary">
+              <option value="">Select one...</option>
+              <option value="google">Google Search</option>
+              <option value="social-media">Social Media</option>
+              <option value="word-of-mouth">Word of Mouth</option>
+              <option value="another-business">Another Listed Business</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-text mb-1.5">Tell us about your business</label>
+            <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-border bg-bg-card px-4 py-3 text-sm text-text placeholder-text-muted/50 outline-none transition-colors focus:border-primary focus:ring-1 focus:ring-primary resize-none" placeholder="What does your business do? How long have you been serving the Prosper area?"></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-full bg-primary px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-primary-dark sm:w-auto"
+          >
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl text-center mb-12">
+          Frequently Asked <span class="font-display italic text-primary">Questions</span>
+        </h2>
+        <div class="space-y-6">
+          {faqs.map((faq) => (
+            <details class="group rounded-2xl border border-border bg-bg-card overflow-hidden">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left font-heading font-bold text-text transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
+                <span>{faq.question}</span>
+                <svg class="size-5 shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div class="px-6 pb-5 text-sm leading-relaxed text-text-muted">
+                {faq.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-bg-dark py-20">
+      <div class="mx-auto max-w-2xl px-6 text-center">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          Ready to Get <span class="text-primary">Started</span>?
+        </h2>
+        <p class="mt-4 text-base text-white/60">
+          Join 17+ trusted businesses already featured on Inside Prosper. It's free — and your neighbors are looking for you.
+        </p>
+        <a
+          href="#apply"
+          class="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3.5 font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
+        >
+          Apply Now
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
