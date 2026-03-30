@@ -24,6 +24,8 @@ const breadcrumbItems = [
   { name: 'Blog', url: `${siteConfig.siteUrl}/blog/` },
   { name: post.data.title, url: `${siteConfig.siteUrl}/blog/${post.id}/` },
 ];
+
+const faqs = post.data.faqs || [];
 ---
 
 <BaseLayout
@@ -31,7 +33,7 @@ const breadcrumbItems = [
   description={post.data.description}
 >
   <BreadcrumbSchema items={breadcrumbItems} />
-  {post.data.faqs && <FAQSchema faqs={post.data.faqs} />}
+  {faqs.length > 0 && <FAQSchema faqs={faqs} />}
   <ArticleSchema
     title={post.data.title}
     description={post.data.description}
@@ -67,7 +69,7 @@ const breadcrumbItems = [
 
         <div class="mt-6 flex items-center gap-4 text-sm text-white/50">
           <span>By {post.data.author}</span>
-          <span class="text-white/20">·</span>
+          <span class="text-white/20">&middot;</span>
           <time datetime={post.data.pubDate.toISOString()}>
             {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </time>
@@ -82,6 +84,46 @@ const breadcrumbItems = [
           <Content />
         </article>
 
+        <!-- FAQ Accordion -->
+        {faqs.length > 0 && (
+          <div class="mt-16">
+            <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl mb-6">
+              Frequently Asked Questions
+            </h2>
+            <div class="space-y-3" id="faq-accordion">
+              {faqs.map((faq: { question: string; answer: string }, i: number) => (
+                <div class="faq-item overflow-hidden rounded-xl border border-border bg-bg-card transition-colors">
+                  <button
+                    type="button"
+                    class="faq-trigger flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left text-base font-semibold text-text transition-colors hover:text-primary"
+                    aria-expanded="false"
+                    aria-controls={`faq-answer-${i}`}
+                    data-faq-index={i}
+                  >
+                    <span>{faq.question}</span>
+                    <svg class="faq-chevron size-5 shrink-0 text-text-muted transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div
+                    id={`faq-answer-${i}`}
+                    class="faq-answer"
+                    role="region"
+                    aria-labelledby={`faq-q-${i}`}
+                    style="display:grid;grid-template-rows:0fr;transition:grid-template-rows 300ms ease;"
+                  >
+                    <div class="overflow-hidden">
+                      <p class="px-6 pb-5 text-sm leading-relaxed text-text-muted">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <!-- Back to blog -->
         <div class="mt-16 border-t border-border pt-8">
           <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors">
@@ -94,3 +136,47 @@ const breadcrumbItems = [
   </main>
   <Footer />
 </BaseLayout>
+
+<script>
+  // FAQ Accordion — lightweight, no external dependencies
+  document.addEventListener('astro:page-load', () => {
+    const accordion = document.getElementById('faq-accordion');
+    if (!accordion) return;
+
+    accordion.addEventListener('click', (e) => {
+      const trigger = (e.target as HTMLElement).closest('.faq-trigger') as HTMLButtonElement | null;
+      if (!trigger) return;
+
+      const item = trigger.closest('.faq-item');
+      if (!item) return;
+
+      const answer = item.querySelector('.faq-answer') as HTMLElement;
+      const chevron = item.querySelector('.faq-chevron') as HTMLElement;
+      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Close all other items
+      accordion.querySelectorAll('.faq-item').forEach((other) => {
+        if (other === item) return;
+        const otherTrigger = other.querySelector('.faq-trigger') as HTMLButtonElement;
+        const otherAnswer = other.querySelector('.faq-answer') as HTMLElement;
+        const otherChevron = other.querySelector('.faq-chevron') as HTMLElement;
+        if (otherTrigger && otherAnswer && otherChevron) {
+          otherTrigger.setAttribute('aria-expanded', 'false');
+          otherAnswer.style.gridTemplateRows = '0fr';
+          otherChevron.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      // Toggle current item
+      if (isOpen) {
+        trigger.setAttribute('aria-expanded', 'false');
+        answer.style.gridTemplateRows = '0fr';
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        trigger.setAttribute('aria-expanded', 'true');
+        answer.style.gridTemplateRows = '1fr';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>
