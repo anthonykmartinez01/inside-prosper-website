@@ -10,6 +10,10 @@ const blog = defineCollection({
     author: z.string().default('Inside Prosper'),
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),
+    faqs: z.array(z.object({
+      question: z.string(),
+      answer: z.string(),
+    })).optional(),
   }),
 });
 

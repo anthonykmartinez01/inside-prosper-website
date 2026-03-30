@@ -72,6 +72,11 @@ const itemListItems = businesses.map((biz) => ({
       <div class="mx-auto max-w-7xl px-6">
         <div class="mx-auto max-w-3xl text-base leading-relaxed text-text-muted">
           <p>{category.longDescription}</p>
+          {category.slug === 'food-fun' && (
+            <p class="mt-4">
+              Looking for the best restaurants in Prosper? Check out our <a href="/blog/best-restaurants-in-prosper-tx/" class="font-semibold text-primary hover:text-primary-dark transition-colors">complete local restaurant guide</a>.
+            </p>
+          )}
         </div>
       </div>
     </section>

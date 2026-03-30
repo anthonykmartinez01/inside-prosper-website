@@ -136,6 +136,13 @@ const breadcrumbItems = [
               )}
             </div>
 
+            <!-- Featured in blog post -->
+            {business.slug === '1418-coffee' && (
+              <p class="mt-6 text-sm text-text-muted">
+                Featured in our guide to the <a href="/blog/best-restaurants-in-prosper-tx/" class="font-semibold text-primary hover:text-primary-dark transition-colors">best restaurants in Prosper TX</a>.
+              </p>
+            )}
+
             <!-- Quote -->
             {business.quote && !business.htmlDescription && (
               <blockquote class="mt-10 border-l-4 border-primary pl-6 py-2">
