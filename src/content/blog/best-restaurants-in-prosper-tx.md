@@ -17,11 +17,7 @@ faqs:
 
 **TL;DR:** The best restaurants in Prosper TX aren't the chains popping up at every new shopping center - they're the independent, owner-operated spots where the food has a story behind it. This guide covers 15+ local restaurants organized by cuisine type so you can find exactly what you're craving, whether that's hand-rolled sushi, slow-smoked brisket, or a plate of fresh pasta made by people who actually care.
 
-<!-- IMAGE PLACEHOLDER: Hero / Prosper dining scene | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-hero-dining.webp" alt="Best restaurants in Prosper TX - local independent dining scene" width="800" height="450" loading="eager" fetchpriority="high" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ## Why This Guide Only Features Independent Restaurants in Prosper TX
 
@@ -35,11 +31,7 @@ That's what this list is about. Every restaurant below is locally owned or indep
 
 ## Tex-Mex and Mexican
 
-<!-- IMAGE PLACEHOLDER: Tex-Mex and Mexican | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-texmex.webp" alt="Best Tex-Mex restaurants in Prosper TX - Mi Luna, Ernesto's, and LaLa's Taqueria" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### Mi Luna
 
@@ -61,11 +53,7 @@ If you want tacos that don't come with a side of pretension, LaLa's is your spot
 
 ## Italian
 
-<!-- IMAGE PLACEHOLDER: Italian | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-italian.webp" alt="Best Italian restaurants in Prosper TX - Salute and Roma's" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### Salute Italian Restaurant
 
@@ -81,11 +69,7 @@ Roma's flies under the radar, and that's part of its charm. The food is excellen
 
 ## American and Fine Dining
 
-<!-- IMAGE PLACEHOLDER: American and Fine Dining | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-fine-dining.webp" alt="Best fine dining restaurants in Prosper TX - The Gin, Trick Rider, and 1902" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### The Gin
 
@@ -109,11 +93,7 @@ The newest addition to downtown Prosper's dining scene, 1902 occupies the former
 
 ## Asian Cuisine
 
-<!-- IMAGE PLACEHOLDER: Asian Cuisine | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-asian.webp" alt="Best Asian restaurants in Prosper TX - Goyaki, Lao 9 Thai, Sushi Box, and Ginger & Spice" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### Goyaki (Korean)
 
@@ -141,11 +121,7 @@ Vietnamese food is hard to find done well in the Prosper-Celina corridor, which 
 
 ## BBQ
 
-<!-- IMAGE PLACEHOLDER: BBQ | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-bbq.webp" alt="Best BBQ in Prosper TX - Hutchins BBQ brisket and smoked meats" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### Hutchins BBQ
 
@@ -157,11 +133,7 @@ Hutchins started in McKinney and has expanded, but it still feels independently 
 
 ## Seafood
 
-<!-- IMAGE PLACEHOLDER: Seafood | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-seafood.webp" alt="Best seafood restaurants in Prosper TX - Fish City Grill" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### Fish City Grill
 
@@ -179,11 +151,7 @@ Spitz brings award-winning Mediterranean and Greek food to Prosper. Gyros, falaf
 
 ## Coffee and Breakfast
 
-<!-- IMAGE PLACEHOLDER: Coffee and Breakfast | Recommended: 800x450px, WebP format, quality 80, under 80KB -->
-<div style="width:100%;aspect-ratio:16/9;background:rgba(0,0,0,0.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:1.5rem 0;border:1px solid rgba(0,0,0,0.08);">
-  <svg style="width:48px;height:48px;stroke:rgba(0,0,0,0.15);fill:none;margin-bottom:0.5rem;" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-  <span style="color:rgba(0,0,0,0.25);font-size:0.85rem;">Photo coming soon</span>
-</div>
+<img src="/images/blog/blog-coffee.webp" alt="Best coffee shops and breakfast spots in Prosper TX - 1418 Coffee and Honeylu's" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### [1418 Coffee](/food-and-fun/1418-coffee/)
 

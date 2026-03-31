@@ -132,46 +132,47 @@ const faqs = post.data.faqs || [];
   <Footer />
 </BaseLayout>
 
-<script>
+<script is:inline>
   // FAQ Accordion — lightweight, no external dependencies
-  document.addEventListener('astro:page-load', () => {
-    const accordion = document.getElementById('faq-accordion');
+  function initFaqAccordion() {
+    var accordion = document.getElementById('faq-accordion');
     if (!accordion) return;
 
-    accordion.addEventListener('click', (e) => {
-      const btn = (e.target as HTMLElement).closest('.faq-question') as HTMLButtonElement | null;
-      if (!btn) return;
+    var buttons = accordion.querySelectorAll('.faq-question');
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var chevron = btn.querySelector('.faq-chevron');
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-      const item = btn.parentElement;
-      if (!item) return;
+        // Close all other items
+        var allItems = accordion.querySelectorAll('.faq-item');
+        allItems.forEach(function(other) {
+          if (other === item) return;
+          var otherBtn = other.querySelector('.faq-question');
+          var otherAnswer = other.querySelector('.faq-answer');
+          var otherChevron = other.querySelector('.faq-chevron');
+          if (otherBtn && otherAnswer && otherChevron) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherAnswer.style.maxHeight = '0';
+            otherChevron.style.transform = 'rotate(0deg)';
+          }
+        });
 
-      const answer = item.querySelector('.faq-answer') as HTMLElement;
-      const chevron = btn.querySelector('.faq-chevron') as HTMLElement;
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-      // Close all other items
-      accordion.querySelectorAll('.faq-item').forEach((other) => {
-        if (other === item) return;
-        const otherBtn = other.querySelector('.faq-question') as HTMLButtonElement;
-        const otherAnswer = other.querySelector('.faq-answer') as HTMLElement;
-        const otherChevron = other.querySelector('.faq-chevron') as HTMLElement;
-        if (otherBtn && otherAnswer && otherChevron) {
-          otherBtn.setAttribute('aria-expanded', 'false');
-          otherAnswer.style.maxHeight = '0';
-          otherChevron.style.transform = 'rotate(0deg)';
+        // Toggle current item
+        if (isOpen) {
+          btn.setAttribute('aria-expanded', 'false');
+          answer.style.maxHeight = '0';
+          chevron.style.transform = 'rotate(0deg)';
+        } else {
+          btn.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          chevron.style.transform = 'rotate(180deg)';
         }
       });
-
-      // Toggle current item
-      if (isOpen) {
-        btn.setAttribute('aria-expanded', 'false');
-        answer.style.maxHeight = '0';
-        chevron.style.transform = 'rotate(0deg)';
-      } else {
-        btn.setAttribute('aria-expanded', 'true');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-        chevron.style.transform = 'rotate(180deg)';
-      }
     });
-  });
+  }
+  document.addEventListener('DOMContentLoaded', initFaqAccordion);
+  if (document.readyState !== 'loading') initFaqAccordion();
 </script>
