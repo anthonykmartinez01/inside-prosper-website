@@ -45,9 +45,7 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={siteConfig.name} />
     <meta property="og:image" content={ogImageUrl} />
-    <meta property="og:image:width" content="1920" />
-    <meta property="og:image:height" content="1080" />
-    <meta property="og:image:alt" content="Inside Prosper — Discover the best local businesses in Prosper, Texas" />
+    <meta property="og:image:alt" content={title} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
