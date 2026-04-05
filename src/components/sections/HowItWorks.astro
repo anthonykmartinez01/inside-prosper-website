@@ -13,56 +13,40 @@ import { nearbyCities } from '../../data/business';
           About Inside Prosper
         </span>
         <h2 class="font-heading text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
-          How Inside <span class="font-display italic text-primary">Prosper</span> Works
+          Built for <span class="font-display italic text-primary">Prosper,</span> by Prosper
         </h2>
 
         <div class="mt-8 space-y-5 text-base leading-relaxed text-text-muted">
           <p>
-            The best local businesses aren't always the ones with the biggest ad budgets.
-            <strong class="text-text">Inside Prosper</strong> is the place to discover the local gems in our community.
+            Prosper, Texas is one of the fastest-growing towns in Collin and Denton counties — but growth doesn't mean losing what makes this place special. From Windsong Ranch to Star Trail, residents here still value community, quality, and supporting the people who live and work alongside them.
           </p>
           <p>
-            Our listings are <strong class="text-text">free, but invitation-only</strong>. This means you aren't seeing who paid the most to be here. You are seeing business owners who earned their spot because they are proud of what they do and are willing to stand behind their work.
+            That's exactly why <strong class="text-text">Inside Prosper</strong> exists. We spotlight the independent, locally owned businesses that make this town worth living in — the ones run by your neighbors, not corporate headquarters.
           </p>
           <p>
-            Knowing the people behind a business matters. When you connect with a neighbor who puts their heart into their business, you get a higher level of accountability.
+            Our listings are <strong class="text-text">free, but invitation-only</strong>. You won't see who paid the most to be here. You'll see business owners who earned their spot because they're proud of what they do and willing to stand behind their work.
           </p>
         </div>
 
-        <!-- Prosper community info -->
-        <div class="mt-10 border-t border-border pt-10">
-          <h3 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl">
-            A Growing Community With <span class="font-display italic text-primary">Small-Town</span> Heart
-          </h3>
-          <div class="mt-4 space-y-4 text-base leading-relaxed text-text-muted">
-            <p>
-              Prosper, Texas is one of the fastest-growing towns in Collin and Denton counties, located just north of Frisco along the 380 corridor. With master-planned communities like Windsong Ranch, Whitley Place, Star Trail, and the Gates of Prosper, the town has grown from a quiet farming community into a vibrant suburb — without losing its small-town character.
-            </p>
-            <p>
-              Residents here value quality, community, and supporting the people who live and work alongside them. That is exactly why Inside Prosper exists: to connect neighbors with the local businesses that make this town special.
-            </p>
-          </div>
-
-          <div class="mt-6 flex flex-wrap gap-2.5">
-            <span class="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Prosper</span>
-            {nearbyCities.map((city) => (
-              <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">
-                {city}
-              </span>
-            ))}
-            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Allen</span>
-            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Plano</span>
-            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Anna</span>
-          </div>
-
-          <a
-            href="/prosper-guide/"
-            class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
-          >
-            Read the full Prosper Guide
-            <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
+        <div class="mt-8 flex flex-wrap gap-2.5">
+          <span class="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Prosper</span>
+          {nearbyCities.map((city) => (
+            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">
+              {city}
+            </span>
+          ))}
+          <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Allen</span>
+          <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Plano</span>
+          <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Anna</span>
         </div>
+
+        <a
+          href="/prosper-guide/"
+          class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+        >
+          Read the full Prosper Guide
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
       </div>
 
       <!-- Photo -->
