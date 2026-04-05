@@ -1,12 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import anthonyImage from '../../assets/images/anthony-martinez.webp';
+import { nearbyCities } from '../../data/business';
 ---
 
 <section id="how-it-works" class="bg-bg-white py-24 lg:py-36">
   <div class="mx-auto max-w-7xl px-6">
     <div class="grid items-center gap-12 lg:grid-cols-5 lg:gap-20">
-      <!-- Text Content (wider column) -->
+      <!-- Text Content -->
       <div class="reveal lg:col-span-3">
         <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
           About Inside Prosper
@@ -26,32 +27,45 @@ import anthonyImage from '../../assets/images/anthony-martinez.webp';
           <p>
             Knowing the people behind a business matters. When you connect with a neighbor who puts their heart into their business, you get a higher level of accountability.
           </p>
-          <p>
-            We also like having fun. So, we regularly run <strong class="text-text">giveaways, raffles, and scavenger hunts</strong> to help you discover the best local businesses in Prosper.
-          </p>
         </div>
 
-        <!-- Email signup -->
-        <form class="mt-10 flex max-w-md flex-col gap-3 sm:flex-row" data-email-form>
-          <input
-            type="email"
-            placeholder="Email Address"
-            required
-            class="flex-1 rounded-full border border-border bg-bg-white px-5 py-3.5 text-sm text-text placeholder:text-text-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
-          />
-          <button
-            type="submit"
-            class="group whitespace-nowrap rounded-full bg-primary pl-6 pr-2 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-primary-dark inline-flex items-center gap-2"
+        <!-- Prosper community info -->
+        <div class="mt-10 border-t border-border pt-10">
+          <h3 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl">
+            A Growing Community With <span class="font-display italic text-primary">Small-Town</span> Heart
+          </h3>
+          <div class="mt-4 space-y-4 text-base leading-relaxed text-text-muted">
+            <p>
+              Prosper, Texas is one of the fastest-growing towns in Collin and Denton counties, located just north of Frisco along the 380 corridor. With master-planned communities like Windsong Ranch, Whitley Place, Star Trail, and the Gates of Prosper, the town has grown from a quiet farming community into a vibrant suburb — without losing its small-town character.
+            </p>
+            <p>
+              Residents here value quality, community, and supporting the people who live and work alongside them. That is exactly why Inside Prosper exists: to connect neighbors with the local businesses that make this town special.
+            </p>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-2.5">
+            <span class="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Prosper</span>
+            {nearbyCities.map((city) => (
+              <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">
+                {city}
+              </span>
+            ))}
+            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Allen</span>
+            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Plano</span>
+            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Anna</span>
+          </div>
+
+          <a
+            href="/prosper-guide/"
+            class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
           >
-            <span>Get News & Win Prizes</span>
-            <span class="flex size-8 items-center justify-center rounded-full bg-white/20">
-              <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </span>
-          </button>
-        </form>
+            Read the full Prosper Guide
+            <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
       </div>
 
-      <!-- Photo (narrower column) -->
+      <!-- Photo -->
       <div class="reveal flex justify-center lg:col-span-2 lg:justify-end">
         <div class="relative">
           <div class="overflow-hidden rounded-2xl shadow-lg" style="max-height: 480px;">

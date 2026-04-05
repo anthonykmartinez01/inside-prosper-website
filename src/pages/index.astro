@@ -5,7 +5,6 @@ import Hero from '../components/sections/Hero.astro';
 import HowItWorks from '../components/sections/HowItWorks.astro';
 import BusinessListings from '../components/sections/BusinessListings.astro';
 import PopularCategories from '../components/sections/PopularCategories.astro';
-import AboutProsper from '../components/sections/AboutProsper.astro';
 import EmailCTA from '../components/sections/EmailCTA.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
@@ -34,7 +33,6 @@ const featuredItems = businesses.slice(0, 6).map((biz) => ({
     <BusinessListings />
     <PopularCategories />
     <HowItWorks />
-    <AboutProsper />
     <EmailCTA />
   </main>
   <Footer />
