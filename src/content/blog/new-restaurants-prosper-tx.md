@@ -18,13 +18,13 @@ faqs:
 ---
 
 
-<img src="/images/blog/new-restaurants-prosper-tx-hero.webp" alt="New restaurants opening in Prosper TX in 2026 - local dining tracker" width="800" height="450" loading="eager" fetchpriority="high" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/new-restaurants-prosper-hero.webp" alt="Overhead view of a restaurant table with multiple dishes in Prosper Texas" width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 Prosper's food scene is heating up. If you're living in Windsong Ranch, Star Trail, or Gentle Creek, or just working off the Tollway near 380, there's always something new to try. We're keeping tabs on every confirmed restaurant opening in Prosper so you know exactly what's coming to your town and what's already worth a visit. This is the only local source that actually stays current.
 
 ## Now Open
 
-<img src="/images/blog/urban-cookhouse-prosper-tx-food.webp" alt="Urban Cookhouse farm-to-table restaurant now open in Prosper TX at Gates of Prosper" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/new-restaurants-prosper-now-open.webp" alt="Southern comfort food chicken and waffles at a new Prosper TX restaurant" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### 1. Urban Cookhouse at Gates of Prosper
 
@@ -38,7 +38,7 @@ Everything here emphasizes local sourcing, so you're getting North Texas produce
 
 ## Opening Soon
 
-<img src="/images/blog/1902-restaurant-prosper-tx-branding.webp" alt="1902 Restaurant and Mary Ann's Speakeasy coming to downtown Prosper TX in 2026" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/new-restaurants-prosper-opening-soon.webp" alt="Craft cocktails at a speakeasy bar similar to 1902 Restaurant opening in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### 2. 1902 Restaurant & Mary Ann's Speakeasy (Downtown Prosper)
 
@@ -63,11 +63,11 @@ We don't have a confirmed location yet, but keep an eye on any announcements fro
 **Expected Opening:** Late 2026
 **Status:** Under construction
 
-<img src="/images/blog/zaxbys-chicken-prosper-tx.webp" alt="Zaxby's chicken restaurant coming soon to Prosper TX" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/new-restaurants-prosper-coming-soon.webp" alt="Fried chicken tenders and fries similar to what Zaxbys will serve in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ## Under Development / Rumored
 
-<img src="/images/blog/downtown-prosper-tx-dining-development.webp" alt="New restaurant and retail development in Prosper TX along Dallas Parkway" width="800" height="450" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/new-restaurants-prosper-under-development.webp" alt="New restaurant building under development in a growing Texas suburb like Prosper" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### 4. Dallas Parkway & Frontier Parkway Retail Development
 
