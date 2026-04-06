@@ -9,7 +9,11 @@ import { getCollection, render } from 'astro:content';
 import { siteConfig } from '../../data/business';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  const posts = (await getCollection('blog')).filter(
+    (post) => post.data.pubDate <= now
+  );
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },

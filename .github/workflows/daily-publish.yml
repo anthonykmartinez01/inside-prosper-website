@@ -1,0 +1,15 @@
+name: Daily Blog Publish
+
+on:
+  schedule:
+    # Runs every day at 6:00 AM Central Time (11:00 UTC)
+    # Adjusts for CDT (UTC-5) — posts go live by morning in Texas
+    - cron: '0 11 * * *'
+  workflow_dispatch: # Allows you to manually trigger from GitHub if needed
+
+jobs:
+  trigger-netlify-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify Build
+        run: curl -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"
