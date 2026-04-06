@@ -146,4 +146,4 @@ The key is actually checking the [Prosper events calendar](/blog/prosper-tx-even
 
 And hey, if you know about a spot we missed, or you've got a favorite park or restaurant that deserves to be here, let us know. That's what Inside Prosper is all about. Real locals sharing what actually makes this community worth living in.
 
-Ready to make Prosper home? [List your business here](/list-your-business/) if you're a local owner, or [explore the full Prosper directory](/prosper-guide/) to find everything from [mechanics](/trades/) to [yoga studios](/health-and-fitness/).
+Ready to make Prosper home? [List your business here](/list-your-business/) if you're a local owner, or [explore the full Prosper directory](/prosper-guide/) to find everything from [mechanics](/trades/) to [fitness studios](/health-and-fitness/).
