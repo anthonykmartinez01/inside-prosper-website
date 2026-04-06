@@ -1,74 +1,28 @@
 ---
-import { Image } from 'astro:assets';
-import anthonyImage from '../../assets/images/anthony-martinez.webp';
-import { nearbyCities } from '../../data/business';
 ---
 
-<section id="how-it-works" class="bg-bg-white py-24 lg:py-36">
-  <div class="mx-auto max-w-7xl px-6">
-    <div class="grid items-center gap-12 lg:grid-cols-5 lg:gap-20">
-      <!-- Text Content -->
-      <div class="reveal lg:col-span-3">
-        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-          About Inside Prosper
-        </span>
-        <h2 class="font-heading text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
-          Built for <span class="font-display italic text-primary">Prosper,</span> by Prosper
-        </h2>
+<section id="how-it-works" class="bg-bg-alt py-24 lg:py-36">
+  <div class="mx-auto max-w-3xl px-6">
+    <h2 class="font-heading text-4xl font-black uppercase tracking-tight text-text sm:text-5xl lg:text-6xl text-center">
+      Discover Prosper's Best-Kept Secrets!
+    </h2>
 
-        <div class="mt-8 space-y-5 text-base leading-relaxed text-text-muted">
-          <p>
-            Prosper, Texas is one of the fastest-growing towns in Collin and Denton counties — but growth doesn't mean losing what makes this place special. From Windsong Ranch to Star Trail, residents here still value community, quality, and supporting the people who live and work alongside them.
-          </p>
-          <p>
-            That's exactly why <strong class="text-text">Inside Prosper</strong> exists. We spotlight the independent, locally owned businesses that make this town worth living in — the ones run by your neighbors, not corporate headquarters.
-          </p>
-          <p>
-            Our listings are <strong class="text-text">free, but invitation-only</strong>. You won't see who paid the most to be here. You'll see business owners who earned their spot because they're proud of what they do and willing to stand behind their work.
-          </p>
-        </div>
-
-        <div class="mt-8 flex flex-wrap gap-2.5">
-          <span class="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">Prosper</span>
-          {nearbyCities.map((city) => (
-            <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">
-              {city}
-            </span>
-          ))}
-          <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Allen</span>
-          <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Plano</span>
-          <span class="rounded-full border border-border px-4 py-2 text-sm font-medium text-text-muted">Anna</span>
-        </div>
-
-        <a
-          href="/prosper-guide/"
-          class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
-        >
-          Read the full Prosper Guide
-          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-      </div>
-
-      <!-- Photo -->
-      <div class="reveal flex justify-center lg:col-span-2 lg:justify-end">
-        <div class="relative">
-          <div class="overflow-hidden rounded-2xl shadow-lg" style="max-height: 480px;">
-            <Image
-              src={anthonyImage}
-              alt="Anthony Martinez, Content Director for Inside Prosper"
-              width={864}
-              height={1184}
-              loading="lazy"
-              format="webp"
-              quality={85}
-              class="h-auto w-full max-w-sm object-cover object-top"
-            />
-          </div>
-          <p class="mt-4 text-center text-sm italic text-text-muted">
-            I'm Anthony Martinez, the Content Director for Inside Prosper.
-          </p>
-        </div>
-      </div>
+    <div class="mt-12 space-y-6 text-lg leading-relaxed text-text-muted">
+      <p>
+        <strong class="text-text">Inside Prosper</strong> puts the best local businesses in Prosper, Texas on the map and makes it super easy for residents to find the real gems in our own backyard.
+      </p>
+      <p>
+        <strong class="text-text">We talk with every business owner</strong> so you can hear <em>their</em> story, in <em>their</em> words. No cookie-cutter directories, no "pay-to-play" B.S. - these are top-rated Prosper businesses doing amazing things.
+      </p>
+      <p>
+        <strong class="text-text">Listings are 100% free</strong> for business owners, but <span class="underline">invitation-only</span>. That guarantees that every business you find here is one that's genuinely proud of what they do and ready to back it up with outstanding service, incredible products and a track record of truly caring for their clients and customers.
+      </p>
+      <p>
+        <strong class="text-text">Invest in our community by shopping local!</strong>{' '}
+        <a href="/food-and-fun/" class="font-semibold text-primary hover:text-primary-dark transition-colors">Browse the businesses already repping Prosper</a>, and if you know a Prosper business that belongs here, quit keeping it a secret!{' '}
+        <a href="/contact/" class="font-semibold text-primary hover:text-primary-dark transition-colors">Drop us a note</a> and tell us about your favorites. If you're an owner,{' '}
+        <a href="/list-your-business/" class="font-semibold text-primary hover:text-primary-dark transition-colors">submit YOUR business</a> today!
+      </p>
     </div>
   </div>
 </section>

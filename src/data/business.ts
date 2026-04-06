@@ -86,6 +86,7 @@ export interface Business {
   imagePosition?: string;
   imageAspect?: string;
   verified?: boolean;
+  published?: boolean;
 }
 
 export const businesses: Business[] = [
@@ -313,6 +314,63 @@ export const businesses: Business[] = [
     image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80',
   },
   {
+    name: 'Prosper Painting',
+    slug: 'prosper-painting',
+    category: 'trades',
+    published: false,
+    shortDescription: 'Professional painting company in Prosper, TX offering interior and exterior painting, cabinet refinishing, and water damage restoration. Over 12 years serving the community.',
+    longDescription: 'Prosper Painting is a locally owned painting company led by Sean Henry, a lifelong craftsman who brought Northeast trade standards to Texas over 12 years ago. From interior and exterior painting to cabinet refinishing and water damage restoration, Sean and his team deliver flawless results with transparent communication and a three-step quality control process.',
+    htmlDescription: `<h2>A Prosper, TX Painting Company Built on Craftsmanship, Not Shortcuts</h2>
+
+<p>When you call <a href="https://prosperpainting.com/" target="_blank" rel="noopener noreferrer">Prosper Painting</a>, you're not getting some random crew with a truck and a couple of rollers. You're getting Sean Henry, a guy who grew up around painting and carpentry his entire life. His dad and uncles were all painters and carpenters back in Connecticut, where the trade actually requires licensing and certifications. Sean brought that whole Northeast craftsman mentality down to Texas when he started Prosper Painting over 12 years ago, and it shows in every single job his team touches.</p>
+
+<p>Sean lives right here in Prosper. This is his community. He's not some franchise operator managing things from a call center somewhere. He's the one answering your call, walking through your home, and making sure his crew delivers the kind of finish that he'd want in his own house. That level of personal investment is something you feel the moment you start working with him.</p>
+
+<h2>Interior and Exterior Painting in Prosper That Gets Done Right the First Time</h2>
+
+<p>One thing you'll notice almost immediately is the communication. From the very first estimate, Sean and his team are upfront about everything. If painting your baseboards is going to make that door next to them look worn out, they'll tell you before the job starts. No surprises, no sneaky change orders tacked on at the end. They plant the seed early so you can make the decision on your own terms. Customers rave about this. People talk about getting updates throughout the entire process and never feeling left in the dark about what's happening in their own home.</p>
+
+<p>The crew shows up on time. That might sound basic, but if you've ever hired a contractor who ghosted you for three days or showed up whenever they felt like it, you know how rare punctuality actually is. Sean is obsessive about scheduling. The only things that shift a timeline are weather, illness, or something you request as the homeowner. Everything else stays locked in.</p>
+
+<h2>Cabinet Refinishing and Custom Finishes in Prosper, TX</h2>
+
+<p>If you need cabinet refinishing, this is where Prosper Painting really shines. Sean's cabinet system involves a minimum of two coats of primer and two to three coats of paint, with sanding between every single coat. The goal is a factory finish that looks and feels like glass. Customers who have had their cabinets done talk about the results being "incredible" and looking brand new. This is not a slap and go operation. This is meticulous, patient work that produces a finish you'll run your hand across and wonder how they got it so smooth.</p>
+
+<p>Beyond cabinets, the team handles metallic finishes, Venetian plaster, wallpaper, carpentry, and all kinds of custom work that most painting companies won't even attempt. Sean works with custom builders on high end projects regularly, so the standard of quality never drops whether it's an accent wall in your living room or a full interior repaint of a two story home.</p>
+
+<h2>Prosper Painters Who Actually Clean Up After Themselves</h2>
+
+<p>Something that comes up again and again in reviews is how clean the crew leaves your home. Multiple homeowners have said the work area was cleaner when the team left than when they arrived. That's not an exaggeration. Sean trains his crews to treat your space with respect, and cleanliness is a non-negotiable part of every single project. You're not going to come home to paint drips on your floor or tape residue stuck to your trim. The team takes pride in leaving your home looking like they were never there, except for the beautiful new paint on your walls.</p>
+
+<h2>A Three-Step Quality Control Process You Won't Find Anywhere Else</h2>
+
+<p>Here's something that sets Prosper Painting apart from just about every other painter in the DFW area. They run a three-step closeout process on every job. First, a crew member goes through the entire project with tape, marking every spot that needs a touch-up. Once those are handled, the crew leader does his own walkthrough and marks anything else. Then Sean or his project lead does a final walkthrough with you, the homeowner, to make sure everything meets your expectations before they pack up.</p>
+
+<p>The result? They almost never have to come back for touch-ups. The job is done right before they leave your driveway. Customers talk about walking their entire house after the crew finished and not being able to find a single missed spot. That kind of thoroughness is rare, and it comes from a system Sean built specifically because he refuses to leave a homeowner hanging.</p>
+
+<h2>Water Damage Repair and Restoration Painting in Prosper</h2>
+
+<p>Prosper Painting isn't just about fresh coats of color. Sean and his team handle some serious restoration work too. Homeowners dealing with hailstorm damage, water leaks, ceiling repairs, and moisture issues have turned to Prosper Painting to make their homes whole again. One homeowner had severe water damage across two floors and got quotes from three different companies. Sean was the most detailed and honest of all of them, walking through the entire inspection process and explaining exactly what needed to happen. Another family dealing with a mystery moisture issue in their new build called Sean's team, and they not only fixed the damage but helped identify the source of the problem.</p>
+
+<p>When your home has been through something rough, you want someone who's going to be straight with you about what's going on and what it's going to take to fix it. That's exactly what you get here.</p>
+
+<h2>Why Prosper Homeowners Trust Sean Henry With Their Homes</h2>
+
+<p>At the end of the day, what makes Prosper Painting different is Sean himself. He's a craftsman in an industry flooded with people who picked up a brush last Tuesday. He grew up learning the trade the right way, with real standards and real accountability. He trains every crew member to his standard, and the guys who stick around are the ones willing to learn the craft and take pride in the work.</p>
+
+<p>Sean will tell you straight up: don't just go with the cheapest bid. There's a reason someone quotes you $200 when the job should cost $500. You get what you pay for, and with Prosper Painting, what you get is a team that communicates clearly, shows up when they say they will, delivers a finish that looks flawless, and stands behind their work with a 100% guarantee.</p>
+
+<p>Whether you need your whole house painted inside and out, cabinets refinished to a factory smooth finish, storm damage repaired, or a custom metallic accent wall that makes your guests stop and stare, Prosper Painting is the call to make. Sean and his team have been doing this in the Prosper community for over a decade, and they're not slowing down anytime soon.</p>
+
+<p>Looking for more trusted tradespeople in Prosper? Check out our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/blog/best-plumbers-prosper-tx/">plumbers</a>, and other contractors recommended by your neighbors.</p>`,
+    phone: '(972) 591-8936',
+    website: 'https://prosperpainting.com/',
+    address: 'Serving Prosper, TX and surrounding areas',
+    hours: 'Mon\u2013Fri 8am\u20135pm',
+    image: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80',
+    verified: true,
+  },
+  {
     name: 'Legacy Plumbing',
     slug: 'legacy-plumbing',
     category: 'trades',
@@ -323,12 +381,75 @@ export const businesses: Business[] = [
     hours: 'Mon\u2013Fri 7am\u20138pm, Sat\u2013Sun 7am\u20135:30pm',
     image: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&q=80',
   },
+  {
+    name: 'Impact Landscapes',
+    slug: 'impact-landscapes',
+    category: 'trades',
+    published: false,
+    shortDescription: 'Professional landscaping company serving Prosper, TX with honest pricing, quality hardscaping, outdoor living spaces, and full backyard transformations. Locally owned by Erik Davenport.',
+    longDescription: 'Impact Landscapes is a locally owned landscaping company led by Erik Davenport, serving the Prosper, TX area with everything from stone edging and French drains to full outdoor living spaces and backyard transformations. Known for honest pricing, punctual crews, and long-term customer relationships built on trust.',
+    htmlDescription: `<h2>What It's Really Like Working with Impact Landscapes in Prosper, TX</h2>
+
+<p>If you're looking for a landscaping company in the Prosper, Texas area, you've probably already scrolled through a dozen websites that all say the same thing. Great service. Quality work. Blah, blah, blah. So let me just tell you what actually happens when you reach out to <a href="https://impactlandscapes.net/" target="_blank" rel="noopener noreferrer">Impact Landscapes</a> and work with the owner, Erik Davenport.</p>
+
+<p>First, Erik picks up the phone. Or he texts you back. Fast. That alone already puts him ahead of half the landscaping companies in North Texas. From the moment you make contact, you're not dealing with a call center or some scheduler who doesn't know what a French drain is. You're talking directly to the guy who's going to walk your property, look at your yard, and give you an honest answer about what it's going to take to get the results you want.</p>
+
+<h2>Honest Pricing from a Prosper Landscaper Who Won't Cut Corners</h2>
+
+<p>Here's where Erik is different from a lot of contractors, and this is something you'll notice right away. He's not going to tell you what you want to hear just to win the job. If your budget doesn't match your vision, he'll tell you that upfront. No sugarcoating. No hidden charges that show up halfway through the project. Erik has a simple philosophy: he will never compromise quality to meet a budget. If the numbers don't line up, he'd rather be straight with you than deliver something he's not proud of.</p>
+
+<p>That might sound intimidating, but it's actually the opposite. It means you're never going to be blindsided by surprise costs or sloppy shortcuts. Erik is not the cheapest option out there, and he'll tell you that himself. But he's also not the most expensive. What he is, though, is someone who builds things the right way the first time so you don't end up paying twice. And that matters more than most people realize until they've already learned the hard way.</p>
+
+<h2>Quality Landscape Design and Hardscaping in North Texas</h2>
+
+<p>The range of work Impact Landscapes handles is impressive. Stone edging, flagstone patios, French drains, sod installation, turf, landscape lighting, grading, custom wood fencing, outdoor living spaces, putting greens, retaining walls, and full backyard transformations. Erik and his crew have tackled everything from simple flower bed borders to complete outdoor overhauls involving hardscaping, drainage rerouting, and custom design work around existing pools. One customer had them build a flagstone patio, reroute drainage, and move sprinkler heads all in one project. Another had them tear out a previous contractor's bad work and redo the entire job in about a day and a half.</p>
+
+<p>That last one is worth pausing on because it happens more than you'd think. People go with the cheaper bid, the work falls apart or looks wrong, and then they call Erik to fix it. At that point, you're paying more than you would have if you'd just gone with Impact from the start. Erik sees it constantly, and it's one of the reasons he's so upfront about pricing. He'd rather lose a job than deliver something that doesn't hold up.</p>
+
+<h2>A Landscaping Crew That Shows Up on Time and Communicates</h2>
+
+<p>When the crew shows up, they show up on time. That sounds like a basic expectation, but if you've ever hired a contractor for anything, you know how rare punctuality actually is. Erik's team arrives when they say they will, they work hard while they're there, and they clean up when the job is done. Multiple customers have specifically called out the cleanup as something that stood out to them. You're not going to come home to a yard full of debris and leftover materials. The crew treats your property with respect, and it shows.</p>
+
+<p>Communication throughout the project is another thing that consistently comes up. Erik stays in the loop with you from start to finish. If questions come up, he responds quickly. If there's an issue, he addresses it. You're never left wondering what's happening with your own yard.</p>
+
+<h2>Repeat Customers and Long-Term Relationships in Prosper Landscaping</h2>
+
+<p>One of the most telling things about Impact Landscapes is how many customers come back. Not just once, but over and over again. There are clients who have had Erik work on multiple homes. They'll have him redo the front yard, then the backyard, then they move to a new house and call him again. One family had him build a patio three years ago and just recently brought him back for an update and refresh. That kind of loyalty doesn't happen by accident. It happens because the work holds up, the experience is good, and the relationship is real.</p>
+
+<p>Erik genuinely enjoys building those long-term connections with his customers. He talks about repeat clients the way most people talk about old friends. When someone calls him back for a second or third project, that's the ultimate compliment in his eyes, and it's the foundation his entire business is built on.</p>
+
+<h2>Outdoor Living Spaces and Backyard Transformations in Prosper, TX</h2>
+
+<p>If you're dreaming about a full outdoor living space, that's where Erik really lights up. The projects he gets most excited about are the ones where he gets to touch every inch of the yard. A patio with a cover, an outdoor kitchen, landscape lighting, turf, the whole thing designed and built as one cohesive space. He's currently working on a project around an existing pool that includes a putting green, turf installation, rock work, and a full lighting package. These are the kinds of transformations that completely change how you use your backyard.</p>
+
+<p>But you don't need a massive project to work with Impact. Plenty of customers have started with something smaller, like stone edging around flower beds or a drainage fix, and then come back later for the bigger stuff. Erik actually plans for that. He'll help you figure out what makes sense to tackle now and what can wait for a future phase, so you're building toward something great even if you can't do it all at once.</p>
+
+<h2>Community Involvement and Trusted Prosper Landscape Contractor</h2>
+
+<p>Impact Landscapes isn't just about residential jobs, either. Erik and his team volunteered their time and skills to revitalize the butterfly garden at The Colony High School, removing dead plants, trimming bushes, and adding fresh mulch so the art room's garden could come back to life. That kind of community involvement says a lot about the character behind the company.</p>
+
+<p>Erik has also been recognized as the best landscaper in his area for multiple years running, along with several contractor awards. But he doesn't lean on accolades to sell his work. The reviews speak for themselves. Words like "honest," "professional," "responsive," and "trustworthy" show up again and again from real customers who have been through the process and came out the other side genuinely happy with the result.</p>
+
+<h2>What to Expect When You Call Impact Landscapes</h2>
+
+<p>So here's what you can actually expect. You'll talk to Erik directly. He'll come look at your property and give you an honest assessment. If your budget fits your vision, he'll lay out a plan and get to work. His crew will show up on time, do the job right, and leave your property cleaner than they found it. And when it's all done, you'll probably find yourself thinking about what you want them to do next. That's just how it goes with Impact Landscapes.</p>
+
+<p>When you're ready to stop gambling on the cheapest quote and start working with someone who actually cares about the outcome, give Erik a call. You'll be glad you did.</p>
+
+<p>Looking for more trusted tradespeople in Prosper? Browse our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/prosper-painting/">painters</a>, <a href="/trades/the-red-roofer/">roofers</a>, <a href="/blog/best-plumbers-prosper-tx/">plumbers</a>, and other contractors recommended by your neighbors. Thinking about what makes Prosper a great place to invest in your home? Check out our guide on <a href="/blog/cost-of-living-prosper-tx/">the cost of living in Prosper, TX</a>.</p>`,
+    website: 'https://impactlandscapes.net/',
+    image: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80',
+    verified: true,
+  },
 ];
 
 // ── Helper functions ──
 
+/** Only businesses that are published (published is undefined or true) */
+export const publishedBusinesses = businesses.filter((b) => b.published !== false);
+
 export function getBusinessesByCategory(categorySlug: string): Business[] {
-  return businesses.filter((b) => b.category === categorySlug);
+  return publishedBusinesses.filter((b) => b.category === categorySlug);
 }
 
 export function getRecentBusinesses(count: number = 6): Business[] {
@@ -365,6 +486,8 @@ export function getCategoryDisplayName(slug: string): string {
 export function getSchemaType(categorySlug: string, businessSlug?: string): string {
   // Special overrides for specific businesses
   if (businessSlug === 'the-red-roofer') return 'RoofingContractor';
+  if (businessSlug === 'prosper-painting') return 'HousePainter';
+  if (businessSlug === 'impact-landscapes') return 'LandscapingBusiness';
 
   const map: Record<string, string> = {
     'food-fun': 'Restaurant',

@@ -7,12 +7,12 @@ import Footer from '../../components/layout/Footer.astro';
 import BusinessCard from '../../components/ui/BusinessCard.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import BusinessSchema from '../../components/schema/BusinessSchema.astro';
-import { businesses, categories, getBusinessesByCategory, getCategoryBySlug, getCategoryUrl, getBusinessUrl, siteConfig, type Business, type Category } from '../../data/business';
+import { publishedBusinesses, categories, getBusinessesByCategory, getCategoryBySlug, getCategoryUrl, getBusinessUrl, siteConfig, type Business, type Category } from '../../data/business';
 
 const localImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{png,jpg,jpeg,webp}', { eager: true });
 
 export function getStaticPaths() {
-  return businesses.map((biz) => {
+  return publishedBusinesses.map((biz) => {
     const cat = getCategoryBySlug(biz.category);
     return {
       params: { category: cat?.urlPath || biz.category, slug: biz.slug },

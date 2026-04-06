@@ -9,9 +9,9 @@ import EmailCTA from '../components/sections/EmailCTA.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
 import ItemListSchema from '../components/schema/ItemListSchema.astro';
-import { businesses, siteConfig, getBusinessUrl } from '../data/business';
+import { publishedBusinesses, siteConfig, getBusinessUrl } from '../data/business';
 
-const featuredItems = businesses.slice(0, 6).map((biz) => ({
+const featuredItems = publishedBusinesses.slice(0, 6).map((biz) => ({
   name: biz.name,
   url: `${siteConfig.siteUrl}${getBusinessUrl(biz)}`,
 }));
@@ -31,8 +31,8 @@ const featuredItems = businesses.slice(0, 6).map((biz) => ({
   <main>
     <Hero />
     <BusinessListings />
-    <PopularCategories />
     <HowItWorks />
+    <PopularCategories />
     <EmailCTA />
   </main>
   <Footer />

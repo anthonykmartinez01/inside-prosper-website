@@ -1,12 +1,12 @@
 ---
 import BusinessCard from '../ui/BusinessCard.astro';
-import { businesses, categories } from '../../data/business';
+import { publishedBusinesses, categories } from '../../data/business';
 
 // Featured businesses: The Red Roofer first, then fill with others
 const featuredSlugs = ['the-red-roofer', '1418-coffee', 'salsa-tex-mex', 'premas-kitchen', 'sake-sushi-hibachi', 'crossfit-prosper'];
 const recentBusinesses = featuredSlugs
-  .map(slug => businesses.find(b => b.slug === slug))
-  .filter(Boolean) as typeof businesses;
+  .map(slug => publishedBusinesses.find(b => b.slug === slug))
+  .filter(Boolean) as typeof publishedBusinesses;
 ---
 
 <section id="businesses" class="bg-bg py-24 lg:py-36">
@@ -39,6 +39,7 @@ const recentBusinesses = featuredSlugs
               categoryUrlPath={cat?.urlPath}
               imagePosition={biz.imagePosition}
               imageAspect={biz.imageAspect}
+              verified={biz.verified}
             />
           </div>
         );
