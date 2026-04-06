@@ -31,6 +31,10 @@ const faqs = post.data.faqs || [];
 <BaseLayout
   title={`${post.data.title} | ${siteConfig.name}`}
   description={post.data.description}
+  ogType="article"
+  ogImage={post.data.image || undefined}
+  articleDate={post.data.pubDate.toISOString()}
+  articleAuthor={post.data.author}
 >
   <BreadcrumbSchema items={breadcrumbItems} />
   {faqs.length > 0 && <FAQSchema faqs={faqs} />}

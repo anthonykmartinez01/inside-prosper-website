@@ -4,6 +4,7 @@ description: "The best restaurants in Prosper TX for 2026 - organized by cuisine
 pubDate: 2026-03-29
 author: "Anthony Martinez"
 tags: ["restaurants", "prosper", "food", "local business", "dining"]
+image: "/images/blog/blog-hero-dining.webp"
 faqs:
   - question: "What is the best restaurant in Prosper TX?"
     answer: "It depends on what you're after, but The Gin consistently gets the most praise for its atmosphere, menu quality, and overall experience. For casual comfort food, Salute and Hutchins BBQ are hard to beat. There's no single 'best' - just the best for what you're in the mood for."

@@ -4,6 +4,7 @@ description: "The only regularly updated tracker of every confirmed restaurant o
 pubDate: 2026-04-05
 author: "Anthony Martinez"
 tags: ["restaurants", "prosper", "food", "new openings", "dining"]
+image: "/images/blog/new-restaurants-prosper-hero.webp"
 faqs:
   - question: "What new restaurants opened in Prosper in 2025?"
     answer: "Urban Cookhouse opened in August 2025 at Gates of Prosper on Preston Rd. It's the only confirmed new-to-market restaurant that opened last year, though Outback Steakhouse also launched a location at Gates of Prosper in summer 2025."
