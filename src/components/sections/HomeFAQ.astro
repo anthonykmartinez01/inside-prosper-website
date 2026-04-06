@@ -1,0 +1,64 @@
+---
+import FAQSchema from '../schema/FAQSchema.astro';
+
+const faqs = [
+  {
+    question: 'Which businesses do you feature?',
+    answer: 'We spotlight all kinds of businesses that serve Prosper, Texas and its surrounding areas. From restaurants and coffee shops to plumbers, roofers, fitness studios, and professional services. <a href="/food-and-fun/" class="text-primary hover:text-primary-dark font-semibold">Check out our current listings</a> for a sample!',
+  },
+  {
+    question: 'How can I get MY business listed?',
+    answer: 'Inside Prosper is invitation-only, but we love hearing from business owners who want to be featured. Head over to our <a href="/list-your-business/" class="text-primary hover:text-primary-dark font-semibold">List Your Business</a> page and tell us about what you do. If you are a good fit, we will reach out to schedule a conversation and build your profile.',
+  },
+  {
+    question: 'Can I suggest a business even if I don\'t own it?',
+    answer: 'Absolutely. If there is a local business in Prosper that you think deserves to be here, we want to hear about it. Send us the name of the business and why you think they are great. We will take it from there.',
+  },
+  {
+    question: 'What makes Inside Prosper different?',
+    answer: 'Most business directories let anyone pay to show up. Inside Prosper is the opposite. Every business here is hand-selected and personally interviewed. We talk to the owners, hear their story, and write their profile ourselves. No cookie-cutter templates, no pay-to-play. Just real Prosper businesses doing excellent work.',
+  },
+  {
+    question: 'Is it REALLY free? What\'s the catch?',
+    answer: 'Yes, listings are 100% free for business owners. There is no catch. We do not charge for placement, rankings, or visibility. Our goal is to build the most trusted local resource in Prosper, and that means keeping it honest and accessible for everyone.',
+  },
+  {
+    question: 'What\'s the VERIFIED badge and how do I get it?',
+    answer: 'The Verified badge means we have personally spoken with the business owner, confirmed their information, and written their profile based on a real conversation. It is our stamp of authenticity. If you are a business owner and want the Verified badge, <a href="/list-your-business/" class="text-primary hover:text-primary-dark font-semibold">submit your business</a> and we will set up a time to chat.',
+  },
+];
+
+const schemaFaqs = faqs.map(f => ({
+  question: f.question,
+  answer: f.answer.replace(/<[^>]*>/g, ''),
+}));
+---
+
+<FAQSchema faqs={schemaFaqs} />
+
+<section id="faq" class="bg-[#1e293b] py-24 lg:py-36">
+  <div class="mx-auto max-w-4xl px-6">
+    <h2 class="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl text-center mb-12">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="space-y-3">
+      {faqs.map((faq, i) => (
+        <details class="group rounded-lg bg-white/95" open={i === 0}>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-lg font-bold text-text transition-colors hover:text-primary">
+            {faq.question}
+            <svg
+              class="size-5 shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-base leading-relaxed text-text-muted" set:html={faq.answer} />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

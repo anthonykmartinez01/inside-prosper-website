@@ -6,6 +6,7 @@ import HowItWorks from '../components/sections/HowItWorks.astro';
 import BusinessListings from '../components/sections/BusinessListings.astro';
 import PopularCategories from '../components/sections/PopularCategories.astro';
 import EmailCTA from '../components/sections/EmailCTA.astro';
+import HomeFAQ from '../components/sections/HomeFAQ.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
 import ItemListSchema from '../components/schema/ItemListSchema.astro';
@@ -34,6 +35,7 @@ const featuredItems = publishedBusinesses.slice(0, 6).map((biz) => ({
     <HowItWorks />
     <PopularCategories />
     <EmailCTA />
+    <HomeFAQ />
   </main>
   <Footer />
 </BaseLayout>
