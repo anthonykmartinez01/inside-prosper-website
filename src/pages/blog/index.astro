@@ -6,10 +6,11 @@ import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '../../data/business';
 
+const isDev = import.meta.env.DEV;
 const now = new Date();
 now.setHours(0, 0, 0, 0);
-const posts = (await getCollection('blog'))
-  .filter((post) => post.data.pubDate <= now)
+const allPosts = await getCollection('blog');
+const posts = (isDev ? allPosts : allPosts.filter((post) => post.data.pubDate <= now))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const breadcrumbItems = [

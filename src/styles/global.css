@@ -240,3 +240,21 @@
     opacity: 1 !important;
   }
 }
+
+/* Blog post images — mobile optimized, prevent layout shift */
+.prose img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 640px) {
+  .prose img {
+    max-height: 300px;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+}
