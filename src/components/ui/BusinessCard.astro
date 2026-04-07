@@ -78,9 +78,9 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
         View Profile
         <svg class="size-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
       </a>
-      <span class="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-200 group-hover:bg-primary group-hover:text-white">
+      <a href={href} aria-label={`View ${name} profile`} class="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-200 group-hover:bg-primary group-hover:text-white">
         <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-      </span>
+      </a>
     </div>
   </div>
 </div>
