@@ -22,7 +22,7 @@ import { categories, getCategoryUrl, getBusinessesByCategory } from '../../data/
         return (
           <a
             href={getCategoryUrl(cat)}
-            class="reveal group rounded-2xl border border-border bg-bg-card p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1"
+            class="category-float reveal group rounded-2xl border border-border bg-bg-card p-6 transition-shadow duration-300 hover:border-primary/30 hover:shadow-lg"
           >
             <h3 class="font-heading text-lg font-bold text-text group-hover:text-primary transition-colors">
               {cat.name}
@@ -30,7 +30,7 @@ import { categories, getCategoryUrl, getBusinessesByCategory } from '../../data/
             <p class="mt-2 text-sm text-text-muted line-clamp-2">{cat.description}</p>
             <div class="mt-4 flex items-center justify-between">
               <span class="text-xs font-medium text-text-muted">{count} {count === 1 ? 'business' : 'businesses'}</span>
-              <span class="category-float flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-200 group-hover:bg-primary group-hover:text-white">
+              <span class="flex size-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-200 group-hover:bg-primary group-hover:text-white">
                 <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </span>
             </div>
@@ -44,22 +44,22 @@ import { categories, getCategoryUrl, getBusinessesByCategory } from '../../data/
 <style>
   @keyframes gentle-float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+    50% { transform: translateY(-8px); }
   }
 
   .category-float {
-    animation: gentle-float 3s ease-in-out infinite;
+    animation: gentle-float 4s ease-in-out infinite;
   }
 
-  /* Stagger each card's icon so they float out of sync */
-  a:nth-child(1) .category-float { animation-delay: 0s; }
-  a:nth-child(2) .category-float { animation-delay: 0.6s; }
-  a:nth-child(3) .category-float { animation-delay: 1.2s; }
-  a:nth-child(4) .category-float { animation-delay: 1.8s; }
-  a:nth-child(5) .category-float { animation-delay: 2.4s; }
+  /* Stagger each card so they float out of sync */
+  .category-float:nth-child(1) { animation-delay: 0s; }
+  .category-float:nth-child(2) { animation-delay: 0.8s; }
+  .category-float:nth-child(3) { animation-delay: 1.6s; }
+  .category-float:nth-child(4) { animation-delay: 2.4s; }
+  .category-float:nth-child(5) { animation-delay: 3.2s; }
 
   /* Pause animation on hover for a polished feel */
-  a:hover .category-float {
+  .category-float:hover {
     animation-play-state: paused;
   }
 </style>
