@@ -41,7 +41,7 @@ import { categories, getCategoryUrl, getBusinessesByCategory } from '../../data/
   </div>
 </section>
 
-<style>
+<style is:global>
   @keyframes gentle-float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
@@ -51,14 +51,12 @@ import { categories, getCategoryUrl, getBusinessesByCategory } from '../../data/
     animation: gentle-float 4s ease-in-out infinite;
   }
 
-  /* Stagger each card so they float out of sync */
   .category-float:nth-child(1) { animation-delay: 0s; }
   .category-float:nth-child(2) { animation-delay: 0.8s; }
   .category-float:nth-child(3) { animation-delay: 1.6s; }
   .category-float:nth-child(4) { animation-delay: 2.4s; }
   .category-float:nth-child(5) { animation-delay: 3.2s; }
 
-  /* Pause animation on hover for a polished feel */
   .category-float:hover {
     animation-play-state: paused;
   }
