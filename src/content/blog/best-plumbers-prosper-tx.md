@@ -26,7 +26,7 @@ If you're looking for other home services in your area, check out our [trades di
 
 ## Best for Emergency Calls
 
-<img src="/images/blog/plumbers-emergency.webp" alt="Home in Prosper TX needing emergency plumbing repair" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/plumbers-emergency.webp" alt="Professional plumber with pipe wrench ready for emergency plumbing repair in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 When disaster strikes (hello, burst pipes at midnight), speed matters. These plumbers in Prosper TX pride themselves on fast response times and 24/7 availability.
 
@@ -62,7 +62,7 @@ Plumbing Dynamics offers 24/7 emergency plumbing repair across the Dallas metro,
 
 ## Best for Whole-Home Remodels
 
-<img src="/images/blog/plumbers-remodel.webp" alt="Aerial view of Prosper TX homes for plumbing remodel services" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/plumbers-remodel.webp" alt="Modern bathroom remodel with glass shower and new fixtures in Prosper TX home" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 Thinking about a bathroom overhaul, kitchen renovation, or new water heater installation? These plumbers bring experience with larger projects and can handle complex systems.
 
@@ -98,7 +98,7 @@ Crown Plumbing has been family-owned and operated since 2006 and serves Prosper,
 
 ## Best Budget-Friendly Options
 
-<img src="/images/blog/plumbers-budget.webp" alt="New home construction plumbing installation in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/plumbers-budget.webp" alt="Plumber installing pipe fittings for affordable plumbing service in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 Plumbing emergencies and upgrades cost money. If you're watching your budget, these companies are known for fair pricing and honest assessments without unnecessary upsells.
 
