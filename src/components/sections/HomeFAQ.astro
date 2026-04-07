@@ -36,15 +36,15 @@ const schemaFaqs = faqs.map(f => ({
 
 <FAQSchema faqs={schemaFaqs} />
 
-<section id="faq" class="bg-[#1e293b] py-24 lg:py-36">
+<section id="faq" class="bg-bg-alt py-24 lg:py-36">
   <div class="mx-auto max-w-4xl px-6">
-    <h2 class="font-heading text-4xl font-black tracking-tight text-white sm:text-5xl text-center mb-12">
+    <h2 class="font-heading text-4xl font-black tracking-tight text-text sm:text-5xl text-center mb-12">
       Frequently Asked Questions
     </h2>
 
     <div class="space-y-3">
       {faqs.map((faq, i) => (
-        <details class="group rounded-lg bg-white/95" open={i === 0}>
+        <details class="group rounded-lg bg-white shadow-sm border border-border" open={i === 0}>
           <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-lg font-bold text-text transition-colors hover:text-primary">
             {faq.question}
             <svg
