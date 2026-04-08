@@ -42,7 +42,7 @@ Prosper sits about 35.7 miles north of Dallas but feels distinctly separate from
 
 ## Best Neighborhoods in Prosper
 
-<img src="/images/blog/moving-neighborhoods.webp" alt="Beautiful suburban homes in a sunny Prosper TX neighborhood" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/moving-neighborhoods.webp" alt="Town of Prosper TX water tower against a blue sky" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 **Windsong Ranch**
 
