@@ -18,7 +18,7 @@ faqs:
 image: "/images/blog/dentists-hero.webp"
 ---
 
-<img src="/images/blog/dentists-hero.webp" alt="Doctor examining young patient at Prosper TX dental office" width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/dentists-hero.webp" alt="Dentist in scrubs adjusting overhead light while caring for patient at Prosper TX dental office" width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 If you've just moved to Prosper or you're on the hunt for a new dentist, you know how overwhelming it can be to choose. There are plenty of dental offices around town, but finding one that's right for your family takes more than just picking the closest one. That's why we've put together this guide to the best dentist in Prosper TX by specialty, so you can find the exact fit your family needs.
 
@@ -26,7 +26,7 @@ Whether you need a dentist who's great with kids, someone who specializes in str
 
 ## Best for Families
 
-<img src="/images/blog/dentists-family.webp" alt="Family dentist examining child in Prosper TX clinic" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/dentists-family.webp" alt="Dental professional preparing instrument tray for family dental appointment in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### 1. Prosper Family Dentistry
 
@@ -46,7 +46,7 @@ Serving families across Prosper, Celina, Frisco, Plano, McKinney, Denton, and Al
 
 ## Best for Cosmetic Dentistry
 
-<img src="/images/blog/dentists-cosmetic.webp" alt="Cosmetic dentistry consultation in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/dentists-cosmetic.webp" alt="Dentist performing cosmetic dental procedure on patient in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### 1. Prosper Star Dental Co.
 
@@ -62,7 +62,7 @@ At Windsong Dental, cosmetic dentistry is part of their broader philosophy that 
 
 ## Best for Kids (Pediatric)
 
-<img src="/images/blog/dentists-kids.webp" alt="Pediatric dental care for kids in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/dentists-kids.webp" alt="Child smiling during pediatric dental visit in Prosper TX" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### 1. Prosper Kids' Dentists & Orthodontics
 
