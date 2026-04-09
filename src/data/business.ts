@@ -324,7 +324,7 @@ export const businesses: Business[] = [
 
 <p>When you call <a href="https://prosperpainting.com/" target="_blank" rel="noopener noreferrer">Prosper Painting</a>, you're not getting some random crew with a truck and a couple of rollers. You're getting Sean Henry, a guy who grew up around painting and carpentry his entire life. His dad and uncles were all painters and carpenters back in Connecticut, where the trade actually requires licensing and certifications. Sean brought that whole Northeast craftsman mentality down to Texas when he started Prosper Painting over 12 years ago, and it shows in every single job his team touches.</p>
 
-<p>Sean lives right here in Prosper. This is his community. He's not some franchise operator managing things from a call center somewhere. He's the one answering your call, walking through your home, and making sure his crew delivers the kind of finish that he'd want in his own house. That level of personal investment is something you feel the moment you start working with him.</p>
+<p>Sean lives right here in Prosper. This is his community. He's not some franchise operator managing things from a call center somewhere. He's personally involved in every project, whether that's giving you an honest estimate, checking in on the crew, or doing a final walkthrough to make sure everything meets his standard. His guys are trained to work the way he would, and he holds them to it. That's the kind of accountability you feel from the very first conversation.</p>
 
 <h2>Interior and Exterior Painting in Prosper That Gets Done Right the First Time</h2>
 
@@ -361,6 +361,10 @@ export const businesses: Business[] = [
 <p>Sean will tell you straight up: don't just go with the cheapest bid. There's a reason someone quotes you $200 when the job should cost $500. You get what you pay for, and with Prosper Painting, what you get is a team that communicates clearly, shows up when they say they will, delivers a finish that looks flawless, and stands behind their work with a 100% guarantee.</p>
 
 <p>Whether you need your whole house painted inside and out, cabinets refinished to a factory smooth finish, storm damage repaired, or a custom metallic accent wall that makes your guests stop and stare, Prosper Painting is the call to make. Sean and his team have been doing this in the Prosper community for over a decade, and they're not slowing down anytime soon.</p>
+
+<h2>Find Prosper Painting on Google</h2>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53376.97668700452!2d-96.81242424803946!3d33.26489419149891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3fc0da786dc9%3A0x3f48777f6007d3d!2sProsper%20Painting!5e0!3m2!1sen!2sus!4v1775757141625!5m2!1sen!2sus" width="100%" height="450" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <p>Looking for more trusted tradespeople in Prosper? Check out our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/blog/best-plumbers-prosper-tx/">plumbers</a>, and other contractors recommended by your neighbors.</p>`,
     phone: '(972) 591-8936',
