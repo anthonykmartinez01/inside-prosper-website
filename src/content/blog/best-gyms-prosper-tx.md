@@ -62,7 +62,7 @@ Texas Health Fitness Center at 1970 W. University Drive is part of the Texas Hea
 
 ## Best for Personal Training & Boutique Fitness
 
-<img src="/images/blog/gyms-yoga.webp" alt="Group fitness class at Prosper TX boutique studio" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
+<img src="/images/blog/gyms-yoga.webp" alt="Personal trainer coaching client with dumbbells at Prosper TX gym" width="1200" height="675" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0;" />
 
 ### 7. Apex Fitness
 
