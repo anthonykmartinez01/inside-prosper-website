@@ -386,13 +386,13 @@ export const businesses: Business[] = [
     slug: 'impact-landscapes',
     category: 'trades',
     published: false,
-    shortDescription: 'Professional landscaping company serving Prosper, TX with honest pricing, quality hardscaping, outdoor living spaces, and full backyard transformations. Locally owned by Erik Davenport.',
+    shortDescription: 'Professional landscaping company serving Prosper, TX with honest pricing, quality hardscaping, outdoor living spaces, and full front yard and backyard transformations. Locally owned by Erik Davenport.',
     longDescription: 'Impact Landscapes is a locally owned landscaping company led by Erik Davenport, serving the Prosper, TX area with everything from stone edging and French drains to full outdoor living spaces and backyard transformations. Known for honest pricing, punctual crews, and long-term customer relationships built on trust.',
     htmlDescription: `<h2>What It's Really Like Working with Impact Landscapes in Prosper, TX</h2>
 
 <p>So if you're out here looking for a landscaping company in the Prosper, Texas area, you've probably already scrolled through a ton of websites that all say the same exact thing. Great service. Quality work. You know, the usual stuff. So let me just tell you what actually happens when you reach out to <a href="https://impactlandscapes.net/" target="_blank" rel="noopener noreferrer">Impact Landscapes</a> and work with the owner, Erik Davenport.</p>
 
-<p>First thing, someone picks up the phone. Or they text you back. Fast. Whether it's Erik himself or one of his team members, that alone already puts them ahead of so many landscaping companies out here in North Texas. From the moment you make contact, you're not dealing with some call center or a scheduler who doesn't even know what a French drain is. You're talking to someone who actually knows the work and can give you an honest answer about what it's going to take to get the results you want. And that's huge.</p>
+<p>First thing, you're getting a call back within twenty-four hours. Whether it's Erik himself or his wife picking up the phone or texting you back, that alone already puts them ahead of so many landscaping companies out here in North Texas. From the moment you make contact, you're not dealing with some call center or a scheduler who doesn't even know what a French drain is. You're talking to someone who actually knows the work and can give you an honest answer about what it's going to take to get the results you want. And that's huge.</p>
 
 <h2>Honest Pricing from a Prosper Landscaper Who Won't Cut Corners</h2>
 
@@ -438,7 +438,7 @@ export const businesses: Business[] = [
 
 <p>Looking for more trusted tradespeople in Prosper? Browse our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/prosper-painting/">painters</a>, <a href="/trades/the-red-roofer/">roofers</a>, <a href="/blog/best-plumbers-prosper-tx/">plumbers</a>, and other contractors recommended by your neighbors. Thinking about what makes Prosper a great place to invest in your home? Check out our guide on <a href="/blog/cost-of-living-prosper-tx/">the cost of living in Prosper, TX</a>.</p>`,
     website: 'https://impactlandscapes.net/',
-    phone: '(972) 846-8780',
+    phone: '(972) 849-6443',
     address: 'Serving Prosper, TX and surrounding areas',
     hours: 'Mon–Fri 9am–4pm, Sat–Sun Closed',
     image: '/images/impact-landscapes.webp',
