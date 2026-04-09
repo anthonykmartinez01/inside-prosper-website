@@ -389,7 +389,7 @@ export const businesses: Business[] = [
     name: 'Impact Landscapes',
     slug: 'impact-landscapes',
     category: 'trades',
-    published: false,
+    published: true,
     shortDescription: 'Professional landscaping company serving Prosper, TX with honest pricing, quality hardscaping, outdoor living spaces, and full front yard and backyard transformations. Locally owned by Erik Davenport.',
     longDescription: 'Impact Landscapes is a locally owned landscaping company led by Erik Davenport, serving the Prosper, TX area with everything from stone edging and French drains to full outdoor living spaces and backyard transformations. Known for honest pricing, punctual crews, and long-term customer relationships built on trust.',
     htmlDescription: `<h2>What It's Really Like Working with Impact Landscapes in Prosper, TX</h2>
