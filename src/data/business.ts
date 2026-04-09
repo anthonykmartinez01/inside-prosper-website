@@ -369,7 +369,7 @@ export const businesses: Business[] = [
 <p>Looking for more trusted tradespeople in Prosper? Check out our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/blog/best-plumbers-prosper-tx/">plumbers</a>, and other contractors recommended by your neighbors.</p>`,
     phone: '(972) 591-8936',
     website: 'https://prosperpainting.com/',
-    address: 'Serving Prosper, TX and surrounding areas',
+    address: '1912 Univ Business Dr #415, McKinney, TX 75071',
     hours: 'Mon\u2013Fri 8am\u20135pm',
     image: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80',
     verified: true,
