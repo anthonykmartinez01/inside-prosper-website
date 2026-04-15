@@ -79,6 +79,7 @@ export interface Business {
   htmlDescription?: string;
   quote?: string;
   phone?: string;
+  email?: string;
   website?: string;
   address?: string;
   hours?: string;
@@ -588,6 +589,7 @@ export const businesses: Business[] = [
 
 <p>Looking for more trusted local services? Check out our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/trades/truclean-power-washing/">power washing</a>, and other professionals recommended by your neighbors.</p>`,
     phone: '(469) 269-0534',
+    email: 'contact@theplaygroundstandard.com',
     website: 'https://theplaygroundstandard.com/',
     address: 'Serving Prosper, TX and surrounding areas',
     image: '/images/the-playground-standard.webp',
