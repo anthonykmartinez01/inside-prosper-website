@@ -2,8 +2,8 @@
 import BusinessCard from '../ui/BusinessCard.astro';
 import { publishedBusinesses, categories } from '../../data/business';
 
-// Featured businesses: The Red Roofer first, then fill with others
-const featuredSlugs = ['the-red-roofer', 'impact-landscapes', '1418-coffee', 'salsa-tex-mex', 'premas-kitchen', 'sake-sushi-hibachi'];
+// Featured businesses: Playground Standard first, then others
+const featuredSlugs = ['the-playground-standard', 'the-red-roofer', 'impact-landscapes', '1418-coffee', 'salsa-tex-mex', 'sake-sushi-hibachi'];
 const recentBusinesses = featuredSlugs
   .map(slug => publishedBusinesses.find(b => b.slug === slug))
   .filter(Boolean) as typeof publishedBusinesses;

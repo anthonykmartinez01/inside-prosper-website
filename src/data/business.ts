@@ -448,6 +448,151 @@ export const businesses: Business[] = [
     image: '/images/impact-landscapes.webp',
     verified: true,
   },
+  {
+    name: 'TruClean Power Washing',
+    slug: 'truclean-power-washing',
+    category: 'trades',
+    published: true,
+    shortDescription: 'Professional power washing and window cleaning serving Prosper, TX and surrounding areas. Over 75 five-star reviews in seven months. Owned and operated by Tyler Fisher.',
+    longDescription: 'TruClean Power Washing LLC is a locally owned power washing and window cleaning company led by Tyler Fisher, serving Prosper and all surrounding areas. Known for honest communication, attention to detail, and the kind of service that earns five-star reviews from real customers.',
+    htmlDescription: `<h2>Meet Tyler Fisher: The Guy Behind TruClean Power Washing in Prosper</h2>
+
+<p>So here's the thing about hiring somebody to come clean your house, your driveway, your windows, whatever it is. You're letting a stranger onto your property. And that can be weird, right? You don't know if they're going to show up on time, if they're going to do a good job, or if they're even going to show up at all. That's just the reality of hiring contractors sometimes.</p>
+
+<p>Tyler Fisher is not that guy. Not even close.</p>
+
+<p>Tyler runs <a href="https://trucleanpw.com/" target="_blank" rel="noopener noreferrer">TruClean Power Washing LLC</a>, serving the Prosper area and all the surrounding communities. And when I say he runs it, I mean he's the one actually doing the work. He's not sitting in some office dispatching random people to your house. Tyler is the one showing up with the equipment, doing the cleaning, and making sure everything looks right before he leaves. That matters. That matters a lot.</p>
+
+<h2>Honest Communication Before the Pressure Washing Even Starts</h2>
+
+<p>One of the biggest things you're going to notice about Tyler is how he communicates. And I don't just mean that he texts you back fast, although he absolutely does that too. It's more about how he sets expectations before he even touches your property. If you've got a big oil stain on your driveway and you're expecting it to disappear completely, Tyler is going to tell you straight up that's not going to happen. He'll let you know what's realistic and what's not. No sugarcoating, no telling you what you want to hear just to close the deal.</p>
+
+<p>That's huge. Because how many times have you hired somebody and then been disappointed because the result didn't match what was in your head? Tyler eliminates that. He tells you exactly what to expect so there are no surprises. You know what you're getting before the job even starts.</p>
+
+<h2>75 Five Star Reviews in Seven Months Says Everything</h2>
+
+<p>So let's talk about the reviews for a second because this is where it gets real. TruClean has over 75 five star reviews on Google, and they did that in about seven months. That's not luck. That's not buying fake reviews like some companies out there do. That's 75 real people who were happy enough with the work that they took time out of their day to go leave a review. And if you know anything about getting people to leave reviews, you know that's not easy to do.</p>
+
+<p>When you read through those reviews, you start seeing the same things come up over and over again. People talk about how professional Tyler is. They talk about how punctual he is. They talk about the attention to detail. One customer said their windows looked like they did the day they were installed. Another one said their windows were literally invisible after Tyler cleaned them. That's the kind of result people are getting.</p>
+
+<h2>Window Cleaning and Pressure Washing That Actually Delivers</h2>
+
+<p>TruClean does a lot of different things. Driveway cleaning, house washing, gutter cleaning, patio cleaning, window cleaning, commercial dumpster pad cleaning. But if you look at the reviews, you'll notice that a ton of people are calling Tyler specifically for windows. And they keep coming back. One customer said she's going to have her windows cleaned regularly now because Tyler did such a good job the first time. Another customer hired him to help prep their home to sell and said the results were outstanding.</p>
+
+<p>The thing that keeps coming up is that Tyler doesn't just do the job. He goes above and beyond. Multiple customers have mentioned that he took care of extra things while he was already on site. He's not watching the clock trying to get out of there as fast as possible. He's making sure everything is done right.</p>
+
+<h2>What TruClean Power Washing Offers</h2>
+
+<ul>
+<li><strong>Driveway &amp; Concrete Cleaning</strong> — oil stains, dirt buildup, and weathering</li>
+<li><strong>House Washing</strong> — full exterior soft wash to remove mold, mildew, and grime</li>
+<li><strong>Window Cleaning</strong> — interior and exterior, the service customers rave about most</li>
+<li><strong>Gutter Cleaning</strong> — debris removal and exterior gutter brightening</li>
+<li><strong>Patio &amp; Deck Cleaning</strong> — restore outdoor living spaces</li>
+<li><strong>Commercial Dumpster Pad Cleaning</strong> — for businesses and property managers</li>
+</ul>
+
+<p>Need a free estimate? Call or text Tyler directly at <a href="tel:+15743703974">(574) 370-3974</a> or email <a href="mailto:info@trucleanpw.com">info@trucleanpw.com</a>. He responds fast.</p>
+
+<h2>Why You Shouldn't Just Go With the Cheapest Quote</h2>
+
+<p>And look, this is something that Tyler is really passionate about and honestly it applies to pretty much every trade out there. Don't just go with the cheapest quote. Your home is probably the biggest investment you're ever going to make. So when somebody comes in with a super low price, you have to ask yourself why. Are they insured? Do they know what they're doing? Because if they mess something up and they're not insured, you're stuck. You're dealing with that mess on your own and that cheap price just became really expensive.</p>
+
+<p>Tyler is insured. Tyler knows what he's doing. And Tyler is going to treat your property like it's his own. That's not just something on a website. That's what people are actually saying in their reviews.</p>
+
+<h2>The Dad Jokes Are Free of Charge</h2>
+
+<p>One more thing. Tyler is genuinely a fun person to have around. He's got this sarcastic sense of humor and he is absolutely a self proclaimed dad joke connoisseur. His wife says he's not funny. He disagrees. He's the kind of guy who will crack a joke with you even if he just met you five minutes ago, and honestly that makes the whole experience of having somebody at your house way more comfortable. He's not some stiff, robotic contractor. He's a real dude who happens to be really, really good at what he does.</p>
+
+<p>He started this business for two reasons. One, he didn't want to work for somebody else for the rest of his life. And two, he wanted to build something he could hand down to his son someday. That's the kind of motivation that shows up in the work. When somebody is building something for their family's future, they're not cutting corners. They're not phoning it in.</p>
+
+<h2>Book TruClean Power Washing and See for Yourself</h2>
+
+<p>TruClean Power Washing serves Prosper and all the surrounding areas. Monday through Friday, 8 to 5, and weekends by appointment. You can call or text Tyler at (574) 370-3974 or email info@trucleanpw.com. Free estimates, honest pricing, and the kind of service that makes you actually want to leave a five star review when it's done.</p>
+
+<h2>Find TruClean Power Washing on Google</h2>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53512.31430086604!2d-96.99697082867101!3d33.04278362937013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885871fb3a7766b%3A0x9af75ac9bfbc83a1!2sTruClean%20Power%20Washing%20LLC!5e0!3m2!1sen!2sus!4v1776018742978!5m2!1sen!2sus" width="100%" height="450" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<p>Looking for more trusted tradespeople? Check out our full <a href="/trades/">trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/blog/best-plumbers-prosper-tx/">plumbers</a>, and other contractors recommended by your neighbors.</p>`,
+    phone: '(574) 370-3974',
+    website: 'https://trucleanpw.com/',
+    address: 'Serving Prosper, TX and surrounding areas',
+    hours: 'Mon–Fri 8am–5pm, Weekends by appointment',
+    image: '/images/truclean-power-washing.webp',
+    verified: true,
+  },
+  {
+    name: 'The Playground Standard',
+    slug: 'the-playground-standard',
+    category: 'trades',
+    shortDescription: 'Professional playground deep cleaning and sanitation serving Prosper, TX and surrounding areas. Child-safe, eco-friendly products. Serving HOAs, cities, schools, daycares, and churches across Collin and Denton County.',
+    longDescription: 'The Playground Standard is a professional playground deep cleaning and sanitation service based in Aubrey and serving communities throughout Prosper, Frisco, Celina, and McKinney. Owned by Jennifer and Tre Davis, the company uses child-safe, eco-friendly products and delivers detailed before-and-after reports with every job.',
+    htmlDescription: `<h2>When Two Parents Decided Playgrounds Deserved Better</h2>
+
+<p>When you work with Jennifer and Tre Davis, the first thing you'll notice is that they actually care. Not in a corporate "we value our customers" kind of way, but in the way two parents of three young kids care about where those kids put their hands and what ends up in their mouths.</p>
+
+<p><a href="https://theplaygroundstandard.com/" target="_blank" rel="noopener noreferrer">The Playground Standard</a> is a professional playground deep cleaning and sanitation service based in Aubrey and serving communities throughout the Prosper, Frisco, Celina, and McKinney areas. Jennifer and Tre started this business because they were tired of bringing their kids to playgrounds that, frankly, nobody was taking care of. And instead of just complaining about it, they did something about it.</p>
+
+<h2>Deep Cleaning That Goes Way Beyond the Surface</h2>
+
+<p>What sets them apart is the level of detail. Think of it like the difference between running your car through an automatic wash versus getting a full detail. They scrub every inch of a playground, including the spots most people would never think to touch. They use child safe, eco friendly cleaning products because, as Jennifer puts it, kids touch surfaces and then put their hands right in their mouths. Bleach has no place in that equation.</p>
+
+<p>When the job is done, you get a full report with before and after photos plus a breakdown of any safety concerns they spotted along the way, like missing bolts or cracks in the equipment. That kind of thoroughness is rare.</p>
+
+<h2>See the Difference for Yourself</h2>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;">
+<div style="text-align:center;">
+<img src="/images/playground-slide-before.webp" alt="Playground slide before deep cleaning by The Playground Standard" width="600" height="450" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+<p style="margin-top:0.5rem;font-weight:700;color:#ef4444;font-size:0.9rem;">BEFORE</p>
+</div>
+<div style="text-align:center;">
+<img src="/images/playground-slide-after.webp" alt="Playground slide after deep cleaning by The Playground Standard" width="600" height="450" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+<p style="margin-top:0.5rem;font-weight:700;color:#22c55e;font-size:0.9rem;">AFTER</p>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;">
+<div style="text-align:center;">
+<img src="/images/playground-climbing-before.webp" alt="Playground climbing equipment before cleaning" width="600" height="450" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+<p style="margin-top:0.5rem;font-weight:700;color:#ef4444;font-size:0.9rem;">BEFORE</p>
+</div>
+<div style="text-align:center;">
+<img src="/images/playground-climbing-after-1.webp" alt="Playground climbing equipment after deep cleaning by The Playground Standard" width="600" height="450" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+<p style="margin-top:0.5rem;font-weight:700;color:#22c55e;font-size:0.9rem;">AFTER</p>
+</div>
+</div>
+
+<h2>What The Playground Standard Offers</h2>
+
+<ul>
+<li><strong>Full Playground Deep Cleaning</strong> — every surface scrubbed, top to bottom</li>
+<li><strong>Sanitation with Child-Safe Products</strong> — eco-friendly, no bleach, no harsh chemicals</li>
+<li><strong>Safety Inspection Reports</strong> — missing bolts, cracks, and hazards flagged</li>
+<li><strong>Before &amp; After Documentation</strong> — full photo report with every job</li>
+<li><strong>Recurring Maintenance Plans</strong> — keep playgrounds safe year-round</li>
+</ul>
+
+<h2>Who They Serve Across Collin and Denton County</h2>
+
+<p>They serve HOAs, municipalities, schools, daycares, and churches throughout Collin and Denton County. If your community has a playground that families depend on, Jennifer and Tre are the ones to call.</p>
+
+<p>Think about the last time you took your kids to the neighborhood playground. Did you wonder when that equipment was last cleaned? Most people do. The problem is, most communities don't have a plan for it. The Playground Standard exists to fix that. Whether it's a one-time deep clean or a recurring maintenance schedule, Jennifer and Tre make sure the places where your kids play are actually safe and clean.</p>
+
+<h2>Why Prosper Communities Trust The Playground Standard</h2>
+
+<p>Jennifer and Tre aren't some big corporate cleaning franchise. They're local parents who built this business because they saw a problem nobody else was solving. Every playground they clean is one their own kids could end up playing on. That's the standard they hold themselves to, and it shows in every single job.</p>
+
+<p>If you're on an HOA board, run a daycare, manage a school facility, work for a Parks and Rec department, or oversee a church playground, reach out to The Playground Standard. Call <a href="tel:+14692690534">(469) 269-0534</a> or email <a href="mailto:contact@theplaygroundstandard.com">contact@theplaygroundstandard.com</a>. You'll get an honest assessment, a thorough cleaning, and the peace of mind that comes from knowing the job was done right by people who genuinely care about keeping kids safe.</p>
+
+<p>Looking for more trusted local services? Check out our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/trades/truclean-power-washing/">power washing</a>, and other professionals recommended by your neighbors.</p>`,
+    phone: '(469) 269-0534',
+    website: 'https://theplaygroundstandard.com/',
+    address: 'Serving Prosper, TX and surrounding areas',
+    image: '/images/the-playground-standard.webp',
+    verified: true,
+  },
 ];
 
 // ── Helper functions ──
