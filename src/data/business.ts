@@ -319,41 +319,35 @@ export const businesses: Business[] = [
     slug: 'prosper-painting',
     category: 'trades',
     published: false,
-    shortDescription: 'Professional painting company in Prosper, TX offering interior and exterior painting, cabinet refinishing, and water damage restoration. Over 12 years serving the community.',
-    longDescription: 'Prosper Painting is a locally owned painting company led by Sean Henry, a lifelong craftsman who brought Northeast trade standards to Texas over 12 years ago. From interior and exterior painting to cabinet refinishing and water damage restoration, Sean and his team deliver flawless results with transparent communication and a three-step quality control process.',
+    shortDescription: 'Professional painting company in Prosper, TX offering interior and exterior painting, cabinet refinishing, and custom finishes. Over 12 years serving the community.',
+    longDescription: 'Prosper Painting is a locally owned painting company led by Sean Henry, a lifelong craftsman who brought Northeast trade standards to Texas over 12 years ago. From interior and exterior painting to cabinet refinishing and custom finishes, Sean and his team deliver flawless results with transparent communication and a three-step quality control process.',
     htmlDescription: `<h2>A Prosper, TX Painting Company Built on Craftsmanship, Not Shortcuts</h2>
 
-<p>When you call <a href="https://prosperpainting.com/" target="_blank" rel="noopener noreferrer">Prosper Painting</a>, you're not getting some random crew with a truck and a couple of rollers. You're getting Sean Henry, a guy who grew up around painting and carpentry his entire life. His dad and uncles were all painters and carpenters back in Connecticut, where the trade actually requires licensing and certifications. Sean brought that whole Northeast craftsman mentality down to Texas when he started Prosper Painting over 12 years ago, and it shows in every single job his team touches.</p>
+<p>When you call <a href="https://prosperpainting.com/" target="_blank" rel="noopener noreferrer">Prosper Painting</a>, you're not getting a random crew with a truck and a couple of rollers. You're getting a company built by Sean Henry, a guy who grew up around painting and carpentry his entire life. His dad and uncles were all painters and carpenters back in Connecticut, where the trade actually requires licensing and certifications. Sean brought that whole Northeast craftsman mentality down to Texas when he started Prosper Painting over 12 years ago, and it shows in every single job his team touches.</p>
 
-<p>Sean lives right here in Prosper. This is his community. He's not some franchise operator managing things from a call center somewhere. He's personally involved in every project, whether that's giving you an honest estimate, checking in on the crew, or doing a final walkthrough to make sure everything meets his standard. His guys are trained to work the way he would, and he holds them to it. That's the kind of accountability you feel from the very first conversation.</p>
+<p>Sean lives here in Prosper. Prosper Painting isn't a franchise managing things from a call center somewhere. Sean is involved in every project behind the scenes, whether that's giving you an honest estimate, checking in with the crew, or making sure every job meets his standard before it's done. His guys are trained to work the way he would, and he holds them to it.</p>
 
 <h2>Interior and Exterior Painting in Prosper That Gets Done Right the First Time</h2>
 
-<p>One thing you'll notice almost immediately is the communication. From the very first estimate, Sean and his team are upfront about everything. If painting your baseboards is going to make that door next to them look worn out, they'll tell you before the job starts. No surprises, no sneaky change orders tacked on at the end. They plant the seed early so you can make the decision on your own terms. Customers rave about this. People talk about getting updates throughout the entire process and never feeling left in the dark about what's happening in their own home.</p>
+<p>One thing you'll notice almost immediately is the communication. From the very first estimate, the Prosper Painting team is upfront about everything. If painting your baseboards is going to make the door next to them look worn out, they'll tell you before the job starts. No surprises or sneaky order changes tacked on at the end. They're upfront and set proper expectations so you can make the decision on your own terms. Many customers talk about getting updates throughout the entire process and never feeling left in the dark about what's happening in their own home.</p>
 
-<p>The crew shows up on time. That might sound basic, but if you've ever hired a contractor who ghosted you for three days or showed up whenever they felt like it, you know how rare punctuality actually is. Sean is obsessive about scheduling. The only things that shift a timeline are weather, illness, or something you request as the homeowner. Everything else stays locked in.</p>
+<p>The crew shows up on time. That might sound basic, but if you've ever hired a contractor who ghosted you for three days or showed up whenever they felt like it, you know how rare punctuality actually is. Prosper Painting is consistent with its clients' scheduling. The only things that shift a timeline are weather, illness, or something you request as the homeowner. Everything else stays locked in.</p>
 
 <h2>Cabinet Refinishing and Custom Finishes in Prosper, TX</h2>
 
-<p>If you need cabinet refinishing, this is where Prosper Painting really shines. Sean's cabinet system involves a minimum of two coats of primer and two to three coats of paint, with sanding between every single coat. The goal is a factory finish that looks and feels like glass. Customers who have had their cabinets done talk about the results being "incredible" and looking brand new. This is not a slap and go operation. This is meticulous, patient work that produces a finish you'll run your hand across and wonder how they got it so smooth.</p>
+<p>If you need cabinet refinishing, this is where Prosper Painting really shines. The cabinet system Sean built involves a minimum of two coats of primer and two to three coats of paint, with sanding between every single coat. The goal is a factory finish that looks and feels like glass. Customers who have had their cabinets done talk about the results being "incredible" and looking brand new.</p>
 
-<p>Beyond cabinets, the team handles metallic finishes, Venetian plaster, wallpaper, carpentry, and all kinds of custom work that most painting companies won't even attempt. Sean works with custom builders on high end projects regularly, so the standard of quality never drops whether it's an accent wall in your living room or a full interior repaint of a two story home.</p>
+<p>Beyond cabinets, the team handles metallic finishes, Venetian plaster, wallpaper, carpentry, and all kinds of custom work that most painting companies won't even attempt. Prosper Painting works with custom builders on high end projects regularly, so the standard of quality never drops whether it's an accent wall in your living room or a full interior repaint of a two story home.</p>
 
 <h2>Prosper Painters Who Actually Clean Up After Themselves</h2>
 
-<p>Something that comes up again and again in reviews is how clean the crew leaves your home. Multiple homeowners have said the work area was cleaner when the team left than when they arrived. That's not an exaggeration. Sean trains his crews to treat your space with respect, and cleanliness is a non-negotiable part of every single project. You're not going to come home to paint drips on your floor or tape residue stuck to your trim. The team takes pride in leaving your home looking like they were never there, except for the beautiful new paint on your walls.</p>
+<p>Something that comes up again and again in reviews is how clean the crew leaves your home. Multiple homeowners have said the work area was cleaner when the team left than when they arrived. The Prosper Painting crew is trained to treat your space with respect, and cleanliness is a non-negotiable part of every single project. You're not going to come home to paint drips on your floor or tape residue stuck to your trim. The team takes pride in leaving your home looking like they were never there, except for the beautiful new paint on your walls.</p>
 
 <h2>A Three-Step Quality Control Process You Won't Find Anywhere Else</h2>
 
-<p>Here's something that sets Prosper Painting apart from just about every other painter in the DFW area. They run a three-step closeout process on every job. First, a crew member goes through the entire project with tape, marking every spot that needs a touch-up. Once those are handled, the crew leader does his own walkthrough and marks anything else. Then Sean or his project lead does a final walkthrough with you, the homeowner, to make sure everything meets your expectations before they pack up.</p>
+<p>Here's something that sets Prosper Painting apart from just about every other painter in the DFW area. They run a three-step closeout process on every job. First, a crew member goes through the entire project with tape, marking every spot that needs a touch-up. Once those are handled, the crew leader does his own walkthrough and marks anything else. Then the project lead does a final walkthrough with you, the homeowner, to make sure everything meets your expectations before they pack up.</p>
 
-<p>The result? They almost never have to come back for touch-ups. The job is done right before they leave your driveway. Customers talk about walking their entire house after the crew finished and not being able to find a single missed spot. That kind of thoroughness is rare, and it comes from a system Sean built specifically because he refuses to leave a homeowner hanging.</p>
-
-<h2>Water Damage Repair and Restoration Painting in Prosper</h2>
-
-<p>Prosper Painting isn't just about fresh coats of color. Sean and his team handle some serious restoration work too. Homeowners dealing with hailstorm damage, water leaks, ceiling repairs, and moisture issues have turned to Prosper Painting to make their homes whole again. One homeowner had severe water damage across two floors and got quotes from three different companies. Sean was the most detailed and honest of all of them, walking through the entire inspection process and explaining exactly what needed to happen. Another family dealing with a mystery moisture issue in their new build called Sean's team, and they not only fixed the damage but helped identify the source of the problem.</p>
-
-<p>When your home has been through something rough, you want someone who's going to be straight with you about what's going on and what it's going to take to fix it. That's exactly what you get here.</p>
+<p>This is why Prosper Painting almost never has to come back for touch-ups. The job is done right before the crew leaves your driveway. Customers talk about walking their entire house after the team finished and not being able to find a single missed spot. That kind of thoroughness is rare, and it comes from a system Sean built specifically because he refuses to leave a homeowner hanging.</p>
 
 <h2>Why Prosper Homeowners Trust Sean Henry With Their Homes</h2>
 
@@ -361,18 +355,18 @@ export const businesses: Business[] = [
 
 <p>Sean will tell you straight up: don't just go with the cheapest bid. There's a reason someone quotes you $200 when the job should cost $500. You get what you pay for, and with Prosper Painting, what you get is a team that communicates clearly, shows up when they say they will, delivers a finish that looks flawless, and stands behind their work with a 100% guarantee.</p>
 
-<p>Whether you need your whole house painted inside and out, cabinets refinished to a factory smooth finish, storm damage repaired, or a custom metallic accent wall that makes your guests stop and stare, Prosper Painting is the call to make. Sean and his team have been doing this in the Prosper community for over a decade, and they're not slowing down anytime soon.</p>
+<p>Whether you need your whole house painted inside and out, cabinets refinished to a factory smooth finish, or a custom metallic accent wall that makes your guests stop and stare, Prosper Painting is the call to make. The team has been doing this in the Prosper community for over a decade, and they're not slowing down anytime soon.</p>
 
 <h2>Find Prosper Painting on Google</h2>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53376.97668700452!2d-96.81242424803946!3d33.26489419149891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3fc0da786dc9%3A0x3f48777f6007d3d!2sProsper%20Painting!5e0!3m2!1sen!2sus!4v1775757141625!5m2!1sen!2sus" width="100%" height="450" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <p>Looking for more trusted tradespeople in Prosper? Check out our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/blog/best-plumbers-prosper-tx/">plumbers</a>, and other contractors recommended by your neighbors.</p>`,
-    phone: '(972) 591-8936',
+    phone: '(972) 346-5202',
     website: 'https://prosperpainting.com/',
     address: '1912 Univ Business Dr #415, McKinney, TX 75071',
     hours: 'Mon\u2013Fri 8am\u20135pm',
-    image: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80',
+    image: '/images/prosper-painting.webp',
     verified: true,
   },
   {
@@ -594,6 +588,157 @@ export const businesses: Business[] = [
     address: 'Serving Prosper, TX and surrounding areas',
     image: '/images/the-playground-standard.webp',
     verified: true,
+  },
+  {
+    name: 'Elite Integrated Performance',
+    slug: 'elite-integrated-performance',
+    category: 'health-fitness',
+    published: true,
+    shortDescription: 'Performance training, nutrition programming, and medical optimization all under one roof in Prosper, TX. Founded by veteran and coach Chris Hatch with over 25 years of experience.',
+    longDescription: 'Elite Integrated Performance combines personalized training, data-driven nutrition, and medical optimization including peptide programs, TRT, and IV therapy. Founded by veteran Chris Hatch, the facility serves Prosper, Frisco, and Celina with a structured, results-focused approach.',
+    htmlDescription: `<h2>Not a Gym. A System Built for Real Results.</h2>
+
+<p>Chris Hatch built this business from the ground up. He's a veteran, spent a decade in the military, then years running large scale manufacturing operations. When he moved his family back to Texas and decided to turn his lifelong passion for training into a business, he didn't just open a facility. He created a process that shaped the journey for every person that he works with. When you walk into <a href="https://eliteintegratedperformance.net/" target="_blank" rel="noopener noreferrer">Elite Integrated Performance</a>, you're not signing up for a gym. You're stepping into a system, and that's exactly what makes this place different from anything else in the Prosper area.</p>
+
+<h2>Data-Driven Training and Nutrition That Actually Works</h2>
+
+<p>Your first experience starts with an InBody scan. The team learns your body composition, how many calories you actually burn, and builds your nutrition plan and training program around real numbers. Nothing is generic. Your workouts are built on percentages, your nutrition shifts with each phase, and the programming runs on a three phase annual cycle: 16 weeks of cutting, 16 weeks of performance work, and 16 weeks of building through the holidays when you're eating more anyway. It's designed to work with your actual life.</p>
+
+<h2>Medical Optimization Nobody Else in Prosper Is Offering</h2>
+
+<p>What nobody else in Prosper is doing is the medical side. Elite has a Chief Nursing Officer on staff and a team of doctors backing the operation. Peptide programs, testosterone replacement therapy, IV therapy, comprehensive bloodwork — all of it runs through certified pharmacies with real medical evaluations. You're not buying something off the internet and hoping for the best.</p>
+
+<h2>What Elite Integrated Performance Offers</h2>
+
+<ul>
+<li><strong>Personalized Training Programs</strong> — built on your InBody data, not cookie-cutter templates</li>
+<li><strong>Custom Nutrition Planning</strong> — calorie and macro targets based on real numbers, adjusted each phase</li>
+<li><strong>Three-Phase Annual Programming</strong> — 16 weeks cutting, 16 weeks performance, 16 weeks building</li>
+<li><strong>Peptide Programs &amp; TRT</strong> — medically supervised through certified pharmacies</li>
+<li><strong>IV Therapy</strong> — recovery and optimization protocols</li>
+<li><strong>Comprehensive Bloodwork</strong> — real medical evaluations, not guesswork</li>
+</ul>
+
+<h2>25 Years of Coaching Experience Behind Every Program</h2>
+
+<p>Chris has over 25 years of coaching experience, and the way he runs this place reflects that. It's structured, personal, and genuinely focused on whether you're making progress. This isn't a headcount operation. They know every client, they track everything, and they care about outcomes.</p>
+
+<p>If you're in Prosper, Frisco, or Celina and you want training, nutrition, and medical optimization all working together under one roof, Elite Integrated Performance is definitely worth a shot.</p>
+
+<p>Looking for more health and fitness options in the area? Check out our <a href="/health-and-fitness/">Prosper health and fitness directory</a> to find <a href="/health-and-fitness/crossfit-prosper/">CrossFit</a>, <a href="/health-and-fitness/apex-fitness-prosper/">personal training</a>, and other fitness professionals recommended by your neighbors.</p>`,
+    phone: '(469) 584-5524',
+    website: 'https://eliteintegratedperformance.net/',
+    address: '850 Mike Howard Ln #40, Prosper, TX 75078',
+    hours: 'Mon–Fri 5am–7:30pm, Sat 7–10am, Sun Closed',
+    image: '/images/elite-integrated-performance.webp',
+    verified: true,
+  },
+  // Shop — Kids Activities
+  {
+    name: 'A Joyful Mess Art Studio',
+    slug: 'a-joyful-mess-art-studio',
+    category: 'shop',
+    published: true,
+    shortDescription: 'Kids art studio in downtown Prosper, TX offering classes for toddlers through 8th grade, birthday parties, summer camps, and homeschool art taught by certified art educators.',
+    longDescription: 'A Joyful Mess Art Studio is a kids art studio in downtown Prosper, TX founded by Alycia Trotter, a former elementary art teacher with 14 years of classroom experience. The studio offers Mommy and Me classes, homeschool art, after-school programs, birthday parties, and summer camps for ages preschool through 8th grade, all led by a team of seven certified art educators.',
+    htmlDescription: `<h2>A Joyful Mess Art Studio Brings Creativity to Life in Prosper, TX</h2>
+
+<p>A Joyful Mess Art Studio has been running art classes for kids in downtown Prosper for about seven years. Alycia Trotter opened the studio after fourteen years teaching art in Prosper elementary schools, and today her team of seven certified art educators runs classes, camps, and workshops for kids from preschool through eighth grade.</p>
+
+<h2>A Kids Art Studio Built by a Real Art Teacher</h2>
+
+<p>Alycia spent fourteen years as an elementary art teacher in Prosper before she ever unlocked the doors of the studio. She started small, running summer art camps out of her garage because she noticed something simple but important. Kids in Prosper had plenty of options for music and sports, but creative kids were getting left behind. Those garage camps filled up, then filled up again, and the story grew from there. Seven years ago, she opened her downtown studio, and that same heart for creative kids is still driving every class on the schedule. When you meet Alycia, you are not meeting a business owner who happened to pick art. You are meeting an educator who has been teaching children to express themselves through color and shape for most of her adult life.</p>
+
+<h2>Classes for Every Age and Every Kind of Creative Kid</h2>
+
+<p>One of the things that makes A Joyful Mess special is how many different kinds of families find a fit here. Toddlers and preschoolers come in with mom for Mommy and Me sessions, where creative centers invite the littlest hands to explore textures and colors without pressure. Homeschool families build their week around the dedicated homeschool art classes, and parents keep saying the same thing in review after review. Their children look forward to it. Afternoon classes for school aged kids fill up fast, and the summer and holiday camps are the kind of thing families talk about for months. All of the programming runs from preschool age all the way through eighth grade, so your child can grow up inside this studio and never outgrow it.</p>
+
+<h2>Certified Art Educators Who Actually Love Kids</h2>
+
+<p>Alycia is very intentional about who teaches inside her studio. The team of seven educators is made up of certified art teachers, with the Mommy and Me program led by a former elementary classroom teacher. One of the current teachers started as a summer camp intern while he was still in college and stayed for all four years before becoming part of the full team. That kind of loyalty tells you something about the culture. When families talk about the staff, they use words like sweet, talented, and patient. Class sizes are kept small on purpose, which means every child gets real attention and real feedback. Parents consistently say it feels calm, personal, and focused, which is not always easy to find in a kids activity.</p>
+
+<h2>Birthday Parties, Camps, and Workshops Families Keep Coming Back To</h2>
+
+<p>If you are thinking about a birthday party for your child, A Joyful Mess has become a favorite in Prosper for exactly that. Families describe the party experience as the best they have ever had. The same goes for the mini camps on random school off days and the full summer camp lineup. Kids leave holding finished artwork that ends up on refrigerators and bedroom walls, learning about real artists and real techniques along the way. The curriculum is developed in house by certified art educators who understand what is developmentally appropriate for each age group, and that shows up in the quality of what children bring home.</p>
+
+<h2>A Local Business That Truly Belongs to Prosper</h2>
+
+<p>Alycia and her family have been in Prosper since her oldest was in kindergarten, and her roots in this community run deep. A Joyful Mess is not a chain or a franchise. It is a local studio run by someone who lives here, who raised her kids here, and who genuinely cares about the families who walk through the door. Her mission is simple. Joyful art experiences that inspire creativity in kids. When you sign your child up, you are stepping into a studio where the owner knows your name, the teachers know what your kid is working on, and your child walks out already asking when they get to come back.</p>
+
+<h2>Find A Joyful Mess Art Studio on Google</h2>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.1464176193717!2d-96.80513632294277!3d33.236467360362155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3f0fb8891f99%3A0x58caf3d6be12db7b!2sA%20Joyful%20Mess!5e0!3m2!1sen!2sus!4v1776371853321!5m2!1sen!2sus" width="100%" height="450" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<p>Looking for more local businesses in downtown Prosper? Check out our <a href="/shop/">Prosper shop directory</a> to find <a href="/shop/lily-claire/">boutiques</a>, <a href="/shop/prosper-blooms/">florists</a>, and other locally owned favorites recommended by your neighbors.</p>`,
+    phone: '(972) 963-9662',
+    email: 'Info@AJoyfulMessArtStudio.com',
+    website: 'https://www.ajoyfulmessartstudio.com/',
+    address: '108 W Broadway St, Prosper, TX 75078',
+    image: '/images/a-joyful-mess-art-studio.webp',
+    imagePosition: 'top',
+    verified: true,
+  },
+  // Professionals — Home Inspections
+  {
+    name: 'Stonebriar Property Inspections',
+    slug: 'stonebriar-property-inspections',
+    category: 'professionals',
+    published: false,
+    shortDescription: 'Owner-operated home inspector serving Prosper, Frisco, and the DFW area. Keith Boggs has over 460 five-star reviews and 20 years of experience, offering thermal imaging, sewer scoping, drone roof inspections, and more.',
+    longDescription: 'Stonebriar Property Inspections is a locally owned home inspection service led by Keith Boggs, serving Prosper, Frisco, and the Dallas Fort Worth area since 2005. Keith runs every inspection himself and offers wood destroying insect inspections, thermal imaging, foundation measurements, pool inspections, drone roof inspections, and sewer scoping.',
+    htmlDescription: `<h2>Meet Keith Boggs, the Inspector Behind Stonebriar Property Inspections</h2>
+
+<p>If you are buying a home in Frisco or Prosper and you want an inspector you can actually trust, Keith Boggs at Stonebriar Property Inspections is your guy. He has built this business on doing the job the right way, treating every client like they are the only client, and telling people the truth whether the news is easy to hear or not. Honestly, that is pretty rare in this business, and it is exactly what you want when you are about to make one of the biggest purchases of your life.</p>
+
+<h2>A Home Inspector in Frisco Who Actually Cares About Getting It Right</h2>
+
+<p>Keith has been doing this since 2005, and it shows in the consistent work he does for his clients. He has a 4.9 star rating across more than 460 reviews, and he has held that for 20 straight years. That is not something that happens by chance, it happens because Keith genuinely cares whether you end up in the right house. Not whether the deal closes, not whether the realtor is happy, just whether you are going to be good in the house you are about to buy. That's the reason people keep sending him their friends, their family, and anybody they know who is about to buy a place.</p>
+
+<h2>Peace of Mind for First Time Home Buyers in Prosper and Frisco</h2>
+
+<p>Buying a house is stressful, and if it is your first time doing it, it can feel like a lot. The thing people keep saying after working with Keith is that he takes the stress right out of it. He walks you through everything in plain language, answers every question you have, and never makes you feel rushed. First time buyers talk about feeling calm and actually confident by the time the inspection wraps up. Repeat clients keep coming back because they already know what to expect, and they just trust him. When you are putting down that kind of money on a house, that trust is really everything.</p>
+
+<h2>Independent From Realtors, Which Is Exactly What You Want</h2>
+
+<p>Here is something that really sets Keith apart. Most home inspectors get the bulk of their business from realtor referrals, which sounds fine until you think about what that actually means. It means there is quiet pressure on the inspector to not mess up the deal. Keith built his business the opposite way on purpose. Less than five percent of his work comes from realtors. The rest comes from direct referrals, repeat customers, and word of mouth from people he actually helped. That independence is a big deal. It means he is not worried about keeping an agent happy. He is worried about keeping you out of a money pit. That is the kind of inspector you want on your side.</p>
+
+<h2>More Than a Standard Home Inspection</h2>
+
+<p>Stonebriar Property Inspections does way more than a basic walk through. Keith is certified for wood destroying insect and termite inspections, thermal imaging, foundation measurements, pool inspections, and drone roof inspections. He is also doing sewer scoping on almost every job now, and honestly, that one has been eye opening. He finds issues almost every single day, even in brand new construction and multimillion dollar homes. Sewer repairs can easily hit five figures, sometimes way more, and catching that before you close is the difference between moving into your dream home and moving into a really expensive headache. It is one of the smartest things a buyer can add to an inspection right now.</p>
+
+<h2>What Stonebriar Property Inspections Offers</h2>
+
+<ul>
+<li><strong>Full Home Inspections</strong> — thorough walkthroughs for buyers, sellers, and homeowners</li>
+<li><strong>Wood Destroying Insect &amp; Termite Inspections</strong> — certified inspector with detailed reporting</li>
+<li><strong>Thermal Imaging</strong> — catch moisture, insulation, and electrical issues invisible to the eye</li>
+<li><strong>Foundation Measurements</strong> — precise evaluation of slab and structural movement</li>
+<li><strong>Pool Inspections</strong> — full assessment of pool equipment, safety, and condition</li>
+<li><strong>Drone Roof Inspections</strong> — safe, detailed roof analysis with aerial imaging</li>
+<li><strong>Sewer Scoping</strong> — catch costly pipe issues before you close on the house</li>
+</ul>
+
+<h2>A Home Inspection Report You Can Actually Read and Understand</h2>
+
+<p>Another thing people always bring up is how easy the reports are to read. You are not getting some massive document full of jargon that leaves you more confused than you were before. Keith explains every finding, includes clear photos, and separates the cosmetic stuff from the actual issues you need to know about. And if you still have questions after you look it over, he will pick up the phone and walk you through it again. That kind of follow up is just not common in this business, and it is a big part of why people trust him the way they do.</p>
+
+<h2>Why Stonebriar Property Inspections Keeps Earning Referrals in North Texas</h2>
+
+<p>After more than 20 years doing this, the pattern is pretty clear. People walk away from Keith's inspections feeling informed, respected, and actually confident in the decision they are about to make. They send him to their family. They send him to their friends. They call him again when it is time to buy the next house. And when they leave reviews, they almost always mention the same three things. He is thorough, he is professional, and he genuinely cares. For a service that literally exists to protect one of the biggest purchases of your life, that is exactly what you want in your corner.</p>
+
+<h2>Book Your Home Inspection With Stonebriar Property Inspections</h2>
+
+<p>If you are buying a home in Frisco, Prosper, or anywhere across the Dallas Fort Worth area, Stonebriar Property Inspections is the one to call. Keith answers his own phone, runs every inspection himself, and stands behind every report he delivers. If you want somebody who is actually going to look out for you and not just chase the next deal, this is your guy. Reach out when you are ready.</p>
+
+<h2>Find Stonebriar Property Inspections on Google</h2>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107040.8928894238!2d-96.91179086312958!3d33.02939534671301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3b5e49817cf7%3A0x4c5ba4996ca4e705!2sStonebriar%20Property%20Inspections!5e0!3m2!1sen!2sus!4v1776952389783!5m2!1sen!2sus" width="100%" height="450" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<p>Looking for more trusted local professionals? Check out our <a href="/professionals/">Prosper professionals directory</a> to find <a href="/professionals/greg-hall-law/">estate planning attorneys</a>, <a href="/professionals/henry-peters-cpas/">CPAs</a>, and other professional services recommended by your neighbors.</p>`,
+    phone: '(469) 535-6299',
+    address: '1575 Foard Dr, Frisco, TX 75034',
+    hours: 'Daily 7am–11pm',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80',
   },
 ];
 
