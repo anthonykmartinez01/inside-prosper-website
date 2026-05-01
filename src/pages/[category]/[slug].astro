@@ -242,6 +242,29 @@ const breadcrumbItems = [
       </div>
     </section>
 
+    <!-- Map -->
+    {business.mapEmbedUrl && (
+      <section class="bg-bg pb-16 lg:pb-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <h2 class="font-heading text-2xl font-extrabold tracking-tight text-text sm:text-3xl mb-8">
+            Find {business.name}
+          </h2>
+          <div class="overflow-hidden rounded-2xl border border-border shadow-sm">
+            <iframe
+              src={business.mapEmbedUrl}
+              title={`Map showing ${business.name} location`}
+              width="600"
+              height="450"
+              class="w-full aspect-[16/9] border-0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    )}
+
     <!-- Related businesses -->
     {relatedBusinesses.length > 0 && (
       <section class="bg-bg-white py-16 lg:py-24">

@@ -83,6 +83,7 @@ export interface Business {
   website?: string;
   address?: string;
   hours?: string;
+  mapEmbedUrl?: string;
   image: string;
   imagePosition?: string;
   imageAspect?: string;
@@ -775,6 +776,7 @@ export const businesses: Business[] = [
     website: 'https://bobcatsautomotive.com/',
     address: '1922 Choate Pkwy #146, Celina, TX 75009',
     hours: 'Mon–Fri 8am–5pm, Sat 8am–12pm, Sun Closed',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6669.98507200561!2d-96.75442592294156!3d33.29285825744343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c4175f59bd74d%3A0x7be8f79477cb77ab!2sBobcats%20Automotive!5e0!3m2!1sen!2sus!4v1777668348164!5m2!1sen!2sus',
     image: '/images/bobcats-automotive.jpg',
     verified: true,
   },
