@@ -745,47 +745,36 @@ export const businesses: Business[] = [
     name: 'Bobcats Automotive',
     slug: 'bobcats-automotive',
     category: 'trades',
-    published: false,
+    published: true,
     shortDescription: 'Honest, owner-operated auto repair shop in Celina, TX serving Prosper and surrounding areas. Lahcen brings 35 years of experience, fair pricing, and a 24-month/24,000-mile NAPA Auto Care nationwide warranty on every repair.',
     longDescription: 'Bobcats Automotive is a small, locally owned auto repair shop in Celina, TX run by Lahcen, a master technician with nearly 35 years of experience. From oil changes and brakes to engine diagnostics, transmission work, A/C repair, suspension, and electrical, Bobcats services all makes and models with dealership-quality work, transparent pricing, and a 24-month/24,000-mile nationwide NAPA Auto Care warranty.',
-    htmlDescription: `<h2>Meet Lahcen, the Honest Mechanic Behind Bobcats Automotive in Celina, TX</h2>
+    htmlDescription: `<h2>Meet Lahcen, the Mechanic Behind Bobcats Automotive in Celina, TX</h2>
 
-<p>Walk into Bobcats Automotive and the first thing you notice is that this place feels different. It's not a flashy chain shop with a waiting room full of upsell brochures and a service writer pushing a laundry list of repairs you didn't come in for. It's a small, clean, well organized garage run by a guy named Lahcen who has been turning wrenches for nearly 35 years. Originally from Morocco, with stops in France, Chicago, and California along the way, Lahcen landed in the Celina area in 2016 and opened Bobcats Automotive a little over a year ago. Everything about the shop reflects the way he believes auto repair should feel: small town, personal, and built on trust.</p>
+<p>When you walk into Bobcats Automotive, you'll figure out pretty quickly that this isn't your typical repair shop. Most people have a story about a repair shop that quoted them way more than the job was worth. Bobcats Automotive exists because Lahcen got tired of seeing that happen to people who didn't know better. It's a small, clean, well organized shop run by an expert who has been repairing vehicles for nearly 35 years. Originally from Morocco, with stops in France, Chicago, and California along the way, Lahcen landed in the Celina area in 2016 and opened Bobcats Automotive a little over a year ago. Everything about the shop reflects the way he believes auto repair should feel: small town, personal, and built on trust.</p>
 
 <h2>What to Expect From a Local Auto Repair Shop That Treats You Like a Neighbor</h2>
 
-<p>The experience here starts with a real conversation. If your check engine light is on or your car is making a noise you can't quite describe, Lahcen will actually take the time to listen. He's been known to hop in the passenger seat and go for a drive with customers just to hear what they're hearing. There's no intimidation factor, no eye rolling when you don't know what a control arm is, and no pressure to commit to anything before you understand what's going on. Customers describe him as straightforward, kind, and genuinely interested in helping people, not just collecting tickets.</p>
+<p>The experience with Lahcen and Bobcats Automotive starts with a real conversation. If your check engine light is on or your car is making a noise you can't really describe, Lahcen will actually take the time to listen. He's been known to hop in the passenger seat and go for a drive with customers just to hear what they're hearing. There's no feeling like you're about to get taken advantage of, no eye rolling when you don't know what a car part is, and no pressure to commit to anything before you understand what's going on. Customers describe him as straightforward, kind, and genuinely interested in helping people, not just collecting tickets.</p>
 
 <h2>Honest Diagnostics and Fair Pricing You Can Actually Trust</h2>
 
-<p>The story you hear over and over from people who bring their cars here sounds almost identical. Someone gets quoted a small fortune at a dealership or a big chain, decides to get a second opinion at Bobcats, and walks out paying a fraction of the price for the actual repair that was needed. One customer shared that an O2 sensor diagnosis and replacement cost less than half of what other shops were quoting. Another said their coolant issue was diagnosed correctly, fixed quickly, and priced fairly with zero pressure to add on extra services. Lahcen will mention if something looks like it might need attention down the road, but he's not the type to tell you your car is going to kill you over a slightly leaky shock. If it doesn't need to be done, it doesn't get done.</p>
+<p>The story you hear over and over from people who bring their cars into the shop sounds almost identical. Someone gets quoted a price that doesn't feel right at a dealership or a big chain, decides to get a second opinion at Bobcats, and walks out paying a fraction of the price for the actual repair that was needed. One customer shared that an O2 sensor diagnosis and replacement cost less than half of what other shops were quoting. Another said their coolant issue was diagnosed correctly, fixed quickly, and priced fairly with zero pressure to add on extra services. Lahcen will mention if something looks like it might need attention down the road, but he's not the type of person to talk you into a panic over a slightly leaky shock. If it doesn't need to be done, it doesn't get done.</p>
 
 <h2>Quality Work Backed by a Two Year Nationwide Warranty</h2>
 
-<p>One of the newer things going on at the shop is a partnership with NAPA Auto Care, which means every repair done at Bobcats is now covered by a 24 month, 24,000 mile nationwide warranty. If something goes wrong within 25 miles of the shop, Lahcen takes care of it himself. If you're farther away, you can take it to any NAPA Auto Care location in the country and it's covered, towing included. That kind of peace of mind matters, especially for families sending kids off to college in cars that need to be dependable. Speaking of which, Lahcen works on a lot of those: parents, kids, grandparents, all coming to the same shop because once one family member trusts him, the rest tend to follow.</p>
+<p>One of the newer things going on at the shop is a partnership with NAPA Auto Care, which means every repair done at Bobcats is now covered by a 24 month, 24,000 mile nationwide warranty. If something goes wrong within 25 miles of the shop, Lahcen takes care of it himself. If you're farther away, you can take it to any NAPA Auto Care location in the country and it's covered, towing included. That's like a weight off your shoulders, especially for families sending kids off to college in cars that need to be dependable. Speaking of which, Lahcen works on a lot of those: parents, kids, grandparents, all coming to the same shop because once one family member trusts him, the rest tend to follow.</p>
 
 <h2>A Celina Auto Shop That Services All Makes and Models</h2>
 
-<p>From oil changes and brake jobs to engine diagnostics, transmission work, A/C recharges, suspension repairs, level kits, and electrical issues, Bobcats handles passenger vehicles and light commercial trucks up to a ton and a half. Whether you drive a Jeep, an Audi, a Yukon, a Trail Boss, or your everyday commuter, you're going to get dealership quality work without the dealership runaround. The shop has already been recognized as a CARFAX Top Rated Service Center and named one of Celina's top newcomers by Google, which tracks with the kind of five star reviews that keep stacking up.</p>
-
-<h2>What Bobcats Automotive Offers</h2>
-
-<ul>
-<li><strong>Oil Changes &amp; Routine Maintenance</strong> — keep your vehicle running its best</li>
-<li><strong>Brake Service &amp; Repair</strong> — pads, rotors, calipers, and full brake jobs</li>
-<li><strong>Engine Diagnostics</strong> — check engine lights and computer scans</li>
-<li><strong>Transmission Work</strong> — service, repair, and diagnosis</li>
-<li><strong>A/C Recharge &amp; Repair</strong> — stay cool through North Texas summers</li>
-<li><strong>Suspension &amp; Steering</strong> — shocks, struts, control arms, alignments</li>
-<li><strong>Level Kits &amp; Light Truck Work</strong> — passenger vehicles and trucks up to 1.5 tons</li>
-<li><strong>Electrical Diagnostics &amp; Repair</strong> — batteries, alternators, wiring</li>
-</ul>
+<p>From oil changes and brake jobs to engine diagnostics, transmission work, A/C recharges, suspension repairs, level kits, and electrical issues, Bobcats handles passenger vehicles and light commercial trucks up to a ton and a half. Whether you drive a Jeep, an Audi, a Yukon, a Trail Boss, or your everyday commuter, you're going to get dealership quality work without the dealership runaround. The shop has already been recognized as a CARFAX Top Rated Service Center and named one of Celina's top newcomers by Google, with a track record of great 5 stars reviews.</p>
 
 <h2>Why Locals Are Quietly Telling Their Neighbors About This Shop</h2>
 
-<p>What you're really getting at Bobcats Automotive is something that's gotten harder and harder to find: a mechanic who treats your money like it's his own, who explains what's wrong in plain language, and who would rather build a long term relationship than squeeze every dollar out of a single visit. Lahcen takes pride in the fact that he can put his own kid, his wife, or his sister in any car that leaves his bay and not think twice about it. That's the standard. If you've been searching for an honest, fair, no nonsense auto repair shop in Celina, this is the one your neighbors are quietly telling each other about.</p>
-
-<p>Looking for more trusted tradespeople in the Prosper and Celina area? Check out our full <a href="/trades/">Prosper trades directory</a> to find <a href="/trades/the-red-roofer/">roofers</a>, <a href="/trades/impact-landscapes/">landscapers</a>, <a href="/trades/truclean-power-washing/">power washing</a>, and other professionals recommended by your neighbors.</p>`,
+<p>What you're really getting at Bobcats Automotive is something that's gotten harder and harder to find: a mechanic who treats your money like it's his own, who explains what's wrong in plain language, and who would rather build a long term relationship than squeeze every dollar out of a single visit. Lahcen takes pride in the fact that when a car leaves his shop, he does not think twice about it. That's the standard. If you've been searching for an honest, fair, no nonsense auto repair shop in Celina, this is definitely the shop for you.</p>`,
+    phone: '(469) 202-3018',
+    website: 'https://bobcatsautomotive.com/',
+    address: '1922 Choate Pkwy #146, Celina, TX 75009',
+    hours: 'Mon–Fri 8am–5pm, Sat 8am–12pm, Sun Closed',
     image: '/images/bobcats-automotive.jpg',
   },
 ];
