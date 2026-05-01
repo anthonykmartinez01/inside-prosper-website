@@ -776,6 +776,7 @@ export const businesses: Business[] = [
     address: '1922 Choate Pkwy #146, Celina, TX 75009',
     hours: 'Mon–Fri 8am–5pm, Sat 8am–12pm, Sun Closed',
     image: '/images/bobcats-automotive.jpg',
+    verified: true,
   },
 ];
 
