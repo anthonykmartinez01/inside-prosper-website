@@ -4,7 +4,7 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
 ---
 
 <section class="relative min-h-[45vh] lg:min-h-[70vh] overflow-hidden bg-bg-dark" data-hero-section>
-  <!-- Layer 1: Full background image (sky + scene) -->
+  <!-- Layer 1: Full background image (sky + scene) — LCP element -->
   <div class="absolute inset-0" data-hero-bg>
     <Image
       src={heroImage}
@@ -12,6 +12,7 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
       class="size-full object-cover"
       loading="eager"
       fetchpriority="high"
+      decoding="sync"
       width={1264}
       height={842}
       quality={90}
@@ -22,13 +23,19 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
   <!-- Layer 2: Spacer (giant text removed) -->
   <div class="pointer-events-none absolute inset-0" data-hero-text></div>
 
-  <!-- Layer 3: Foreground cutout — same image with CSS mask revealing only bottom portion -->
+  <!-- Layer 3: Foreground cutout — same image with CSS mask revealing only bottom portion.
+       Decorative duplicate of Layer 1 — same file (deduped by browser cache),
+       just decoded and painted with the gradient mask. Marked low priority + async
+       decode so it doesn't compete with the LCP image. -->
   <div class="absolute inset-0 hero-foreground-mask" data-hero-fg>
     <Image
       src={heroImage}
       alt=""
+      aria-hidden="true"
       class="size-full object-cover"
       loading="eager"
+      fetchpriority="low"
+      decoding="async"
       width={1264}
       height={842}
       quality={90}

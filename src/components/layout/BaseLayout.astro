@@ -68,6 +68,10 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <slot />
 
     <script>
+      // Defer all non-critical JS until the browser is idle.
+      // This keeps Total Blocking Time low without changing the visual experience —
+      // reveal animations and hero scroll effects kick in after first paint.
+      const initEnhancements = () => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       // ── Section reveal observer (works for all motion preferences) ──
@@ -211,6 +215,14 @@ const ogImageUrl = new URL(ogImage, Astro.site);
 
         // Set initial state immediately (don't wait for first scroll)
         updateHeroAnimations();
+      }
+      };
+
+      // Run after first paint so the main thread isn't blocked during LCP.
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(initEnhancements, { timeout: 200 });
+      } else {
+        setTimeout(initEnhancements, 1);
       }
     </script>
   </body>

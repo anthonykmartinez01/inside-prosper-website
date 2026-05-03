@@ -37,6 +37,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
         width={400}
         height={300}
         loading="lazy"
+        decoding="async"
         format="webp"
         quality={85}
         class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -49,6 +50,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
         width="400"
         height="300"
         loading="lazy"
+        decoding="async"
         class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
         style={imgStyle}
       />
