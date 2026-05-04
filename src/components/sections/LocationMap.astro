@@ -1,0 +1,60 @@
+---
+import { siteConfig } from '../../data/business';
+
+interface Props {
+  /** Google Maps embed URL (the src= value from the iframe). */
+  embedUrl: string;
+  /** Section eyebrow label. */
+  eyebrow?: string;
+  /** Section heading. */
+  heading?: string;
+  /** Section subheading. */
+  subheading?: string;
+}
+
+const {
+  embedUrl,
+  eyebrow = 'Find Us',
+  heading = 'Visit Inside Prosper',
+  subheading = `Based in ${siteConfig.city}, ${siteConfig.state} — proudly serving the local community.`,
+} = Astro.props;
+
+const fullAddress = `${siteConfig.street}, ${siteConfig.city}, ${siteConfig.state} ${siteConfig.zip}`;
+const mapTitle = `${siteConfig.name} location on Google Maps`;
+---
+
+<section class="bg-bg-alt py-20 lg:py-28">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+        {eyebrow}
+      </span>
+      <h2 class="font-heading text-4xl font-extrabold tracking-tight text-text sm:text-5xl">
+        {heading}
+      </h2>
+      <p class="mx-auto mt-4 max-w-lg text-base leading-relaxed text-text-muted">
+        {subheading}
+      </p>
+      <address class="mt-4 text-sm not-italic text-text-muted">
+        {fullAddress} &middot;{' '}
+        <a href={`tel:${siteConfig.phoneRaw}`} class="font-medium text-primary hover:underline">
+          {siteConfig.phone}
+        </a>
+      </address>
+    </div>
+
+    <div class="mt-12 overflow-hidden rounded-2xl border border-border shadow-md">
+      <iframe
+        src={embedUrl}
+        title={mapTitle}
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="h-[450px] w-full"
+      ></iframe>
+    </div>
+  </div>
+</section>

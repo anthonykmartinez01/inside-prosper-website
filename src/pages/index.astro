@@ -7,6 +7,7 @@ import BusinessListings from '../components/sections/BusinessListings.astro';
 import PopularCategories from '../components/sections/PopularCategories.astro';
 import EmailCTA from '../components/sections/EmailCTA.astro';
 import HomeFAQ from '../components/sections/HomeFAQ.astro';
+import LocationMap from '../components/sections/LocationMap.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
 import ItemListSchema from '../components/schema/ItemListSchema.astro';
@@ -35,6 +36,7 @@ const featuredItems = publishedBusinesses.slice(0, 6).map((biz) => ({
     <HowItWorks />
     <PopularCategories />
     <HomeFAQ />
+    <LocationMap embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.374103195625!2d-96.7741919!3d33.2566971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c413a3b41c387%3A0x6960df8b478b8bef!2sInside%20Prosper!5e0!3m2!1sen!2sus!4v1777924774626!5m2!1sen!2sus" />
     <EmailCTA />
   </main>
   <Footer />
