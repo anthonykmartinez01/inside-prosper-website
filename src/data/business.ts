@@ -6,6 +6,7 @@ export const siteConfig = {
   phone: '(469) 481-1395',
   phoneRaw: '+14694811395',
   location: 'Prosper, Texas',
+  street: '1591 Blue Forest Drive',
   city: 'Prosper',
   state: 'TX',
   zip: '75078',
@@ -780,6 +781,33 @@ export const businesses: Business[] = [
     image: '/images/bobcats-automotive.jpg',
     verified: true,
   },
+  {
+    name: 'Puddle Pool Services',
+    slug: 'puddle-pool-services',
+    category: 'trades',
+    shortDescription: 'Owner-operated pool and hot tub service in Prosper, TX. Certified Pool Professionals offering weekly maintenance, equipment repair, remodels, and renovations across Prosper, McKinney, Frisco, and Celina.',
+    longDescription: 'Puddle Pool Services is a locally owned pool and hot tub service company serving Prosper, McKinney, Frisco, and Celina. Founded by Marla and Gary Burns, both Certified Pool Professionals, the company offers weekly maintenance, chemical balancing, equipment repair, and full pool remodels. With over 40 years of combined business and landscape architecture experience, Marla and Gary bring a personal, knowledgeable approach to every backyard they service.',
+    htmlDescription: `<h2>Local Pool Service in Prosper and McKinney With a Personal Touch</h2>
+
+<p>If you've ever owned a pool or hot tub in North Texas, you already know the struggle. Keeping it clean, balanced, and running right is a full time job all on its own. Between the different seasons and weather, your backyard can quickly start feeling like a chore. That is exactly the gap Marla and Gary Burns set out to fill when they launched Puddle Pool Services for the Prosper, McKinney, and Frisco area. After Marla spent more than forty years in the business world, including time at JCPenney that brought her to Frisco back in 2009, and Gary spent over thirty years as a landscape architect designing and building backyards across North Dallas, the two of them put their experience together and built something that feels less like a service company and more like having a knowledgeable friend on ready to help you.</p>
+
+<h2>What to Expect From the Owners Behind Puddle Pools</h2>
+
+<p>The first thing you notice when you reach out is how easy it is to actually talk to a real person. Marla answers the phone herself a lot of the time, and she genuinely loves it. Every conversation feels like a chance to figure out what you actually need, whether that is weekly maintenance, a hot tub that just will not heat right, or a bigger renovation project. Both Marla and Gary are Certified Pool Professionals, which means when something complicated comes up, they are not calling some random subcontractor. The owner himself shows up to take a look. Marla and Gary now make their home in the historic Rail District of Frisco, which means the people running this business actually live in the community they serve.</p>
+
+<h2>Meet the Team Keeping Your Pool in Top Shape</h2>
+
+<p>Once you start service, you will most likely meet Bradley, the senior pool technician with more than fifteen years of hands on experience. If you read through the reviews on Google, his name appears in nearly every single one for a reason. Customers describe him as professional, friendly, and the kind of person who actually takes time to explain what he is doing and why. Anna Bennett mentioned how he proactively addresses small issues before they turn into expensive repairs. Marcey Davie called working with him a blessing because of how clearly he communicates the small details. Mercedes Smith pointed out that her pool and spa look fantastic after every visit, and that Bradley happily answers questions about what to do on the days he is not there. Daniel Camacho noted how he walked through the whole maintenance process without ever pushing a sale or trying to sneak in upgrades. Working alongside Bradley is Noah, the second technician on the team who brings the same care and friendliness to every visit. Together they handle chemical balancing, equipment repair, water management, and every small detail that keeps a pool sparkling through a North Texas summer.</p>
+
+<h2>Pool Remodels and Renovations With Decades of Experience</h2>
+
+<p>Where Puddle Pools really stands apart from the average pool company in the area is on the remodel and renovation side. Most pool service companies that get a renovation request have to call around to find someone who can handle it. Here, Gary himself has spent more than 30 years doing exactly that work. Trained as a landscape architect with a long career in fences, patio construction, outdoor living spaces, and pool design, he brings a level of expertise to backyard projects which is honestly hard to find anywhere else. Whether you want to refresh your existing pool, redesign the whole backyard, or finally tackle that water feature that has been on your wish list, the answer comes from one of the people who actually owns the company.</p>
+
+<h2>Why Prosper and McKinney Homeowners Trust Puddle Pools</h2>
+
+<p>What you really get when you hire Puddle Pools is the feeling that someone genuinely cares whether your summer goes well. Marla often says her favorite part of every day is the moment a customer reaches out and she gets to figure out how to set them up for a happy, fun summer with a pool that is in great shape. The trucks are clean and easy to spot, the technicians are uniformed and friendly, and every visit ends with a detailed report that shows exactly what was done, what chemicals were used, and where your levels stand. If you have been looking for a pool service in the Prosper, McKinney, Celina, or Frisco area that treats your backyard the way you would, this is the team to call.</p>`,
+    image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&h=600&fit=crop',
+  },
 ];
 
 // ── Helper functions ──
@@ -827,6 +855,7 @@ export function getSchemaType(categorySlug: string, businessSlug?: string): stri
   if (businessSlug === 'the-red-roofer') return 'RoofingContractor';
   if (businessSlug === 'prosper-painting') return 'HousePainter';
   if (businessSlug === 'impact-landscapes') return 'LandscapingBusiness';
+  if (businessSlug === 'puddle-pool-services') return 'HomeAndConstructionBusiness';
 
   const map: Record<string, string> = {
     'food-fun': 'Restaurant',

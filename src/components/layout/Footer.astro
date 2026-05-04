@@ -15,6 +15,7 @@ import { siteConfig, categories, getCategoryUrl } from '../../data/business';
           Discover the best local businesses in Prosper, Texas. Curated by the community, for the community.
         </p>
         <address class="mt-4 flex flex-col gap-1.5 text-sm not-italic text-white/50">
+          <span>{siteConfig.street}</span>
           <span>{siteConfig.city}, {siteConfig.state} {siteConfig.zip}</span>
           <a href={`tel:${siteConfig.phoneRaw}`} class="transition-colors hover:text-primary">{siteConfig.phone}</a>
           <a href={`mailto:${siteConfig.email}`} class="transition-colors hover:text-primary">{siteConfig.email}</a>

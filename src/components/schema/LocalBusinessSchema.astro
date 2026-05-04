@@ -12,9 +12,10 @@ import { siteConfig } from '../../data/business';
   "telephone": siteConfig.phone,
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Prosper",
-    "addressRegion": "TX",
-    "postalCode": "75078",
+    "streetAddress": siteConfig.street,
+    "addressLocality": siteConfig.city,
+    "addressRegion": siteConfig.state,
+    "postalCode": siteConfig.zip,
     "addressCountry": "US"
   },
   "areaServed": [
