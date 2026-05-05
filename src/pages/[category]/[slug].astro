@@ -38,13 +38,16 @@ const imageFilename = isLocalImage ? business.image.replace('/images/', '') : ''
 const resolvedImage = isLocalImage ? localImages[`/src/assets/images/${imageFilename}`]?.default : null;
 
 // Hero image aspect handling: honor imageAspect from data, default to 16/10 landscape.
-// Portrait images (height > width) get constrained max-width so they don't dominate the column.
+// Anything narrower than ~1.4:1 (portrait OR near-square) gets a constrained
+// max-width so it doesn't dominate the column and force endless scrolling.
 const heroAspect = business.imageAspect || '16/10';
 const [aspectW, aspectH] = heroAspect.split('/').map(Number);
-const isPortrait = aspectW && aspectH ? aspectW < aspectH : false;
+const aspectRatio = aspectW && aspectH ? aspectW / aspectH : 1.6;
+const isPortrait = aspectRatio < 1; // strict portrait
+const isNarrow = aspectRatio < 1.4; // portrait OR near-square
 const heroAspectStyle = `aspect-ratio: ${heroAspect};`;
-const heroWrapperClass = isPortrait
-  ? 'mx-auto max-w-sm overflow-hidden rounded-2xl bg-bg-alt'
+const heroWrapperClass = isNarrow
+  ? 'mx-auto max-w-md overflow-hidden rounded-2xl bg-bg-alt'
   : 'overflow-hidden rounded-2xl';
 // Tailwind safelist: aspect-[16/10] aspect-[3/4] aspect-[4/5]
 
@@ -114,12 +117,12 @@ const breadcrumbItems = [
                 <Image
                   src={resolvedImage}
                   alt={`${business.name} — local business in Prosper, Texas`}
-                  width={isPortrait ? 768 : 1600}
-                  height={isPortrait ? Math.round(768 * (aspectH / aspectW)) : Math.round(1600 * (aspectH / aspectW))}
+                  width={isNarrow ? 896 : 1600}
+                  height={isNarrow ? Math.round(896 * (aspectH / aspectW)) : Math.round(1600 * (aspectH / aspectW))}
                   loading="eager"
                   format="webp"
                   quality={85}
-                  class={isPortrait ? 'w-full object-contain' : 'w-full object-cover'}
+                  class={isNarrow ? 'w-full object-contain' : 'w-full object-cover'}
                   style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
                 />
               ) : (
@@ -127,9 +130,9 @@ const breadcrumbItems = [
                   src={business.image}
                   alt={`${business.name} — local business in Prosper, Texas`}
                   width="800"
-                  height={isPortrait ? Math.round(800 * (aspectH / aspectW)) : 500}
+                  height={isNarrow ? Math.round(800 * (aspectH / aspectW)) : 500}
                   loading="eager"
-                  class={isPortrait ? 'w-full object-contain' : 'w-full object-cover'}
+                  class={isNarrow ? 'w-full object-contain' : 'w-full object-cover'}
                   style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
                 />
               )}
