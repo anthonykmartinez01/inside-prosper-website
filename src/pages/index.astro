@@ -2,7 +2,6 @@
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Navbar from '../components/layout/Navbar.astro';
 import Hero from '../components/sections/Hero.astro';
-import BrandIntro from '../components/sections/BrandIntro.astro';
 import HowItWorks from '../components/sections/HowItWorks.astro';
 import BusinessListings from '../components/sections/BusinessListings.astro';
 import PopularCategories from '../components/sections/PopularCategories.astro';
@@ -33,7 +32,6 @@ const featuredItems = publishedBusinesses.slice(0, 6).map((biz) => ({
   <Navbar />
   <main>
     <Hero />
-    <BrandIntro />
     <BusinessListings />
     <HowItWorks />
     <PopularCategories />
