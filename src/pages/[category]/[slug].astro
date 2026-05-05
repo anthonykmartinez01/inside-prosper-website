@@ -27,7 +27,10 @@ interface Props {
 
 const { business } = Astro.props;
 const category = getCategoryBySlug(business.category);
-const relatedBusinesses = getBusinessesByCategory(business.category).filter((b) => b.slug !== business.slug);
+// Sort verified businesses first, preserving original order within each group
+const relatedBusinesses = getBusinessesByCategory(business.category)
+  .filter((b) => b.slug !== business.slug)
+  .sort((a, b) => Number(Boolean(b.verified)) - Number(Boolean(a.verified)));
 
 // Resolve local image for optimization
 const isLocalImage = business.image.startsWith('/images/');

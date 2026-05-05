@@ -19,7 +19,10 @@ interface Props {
 }
 
 const { category } = Astro.props;
-const businesses = getBusinessesByCategory(category.slug);
+// Sort verified businesses first, preserving original order within each group
+const businesses = [...getBusinessesByCategory(category.slug)].sort((a, b) => {
+  return Number(Boolean(b.verified)) - Number(Boolean(a.verified));
+});
 const otherCategories = categories.filter((c) => c.slug !== category.slug);
 
 const breadcrumbItems = [
