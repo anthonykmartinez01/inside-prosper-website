@@ -34,6 +34,17 @@ const isLocalImage = business.image.startsWith('/images/');
 const imageFilename = isLocalImage ? business.image.replace('/images/', '') : '';
 const resolvedImage = isLocalImage ? localImages[`/src/assets/images/${imageFilename}`]?.default : null;
 
+// Hero image aspect handling: honor imageAspect from data, default to 16/10 landscape.
+// Portrait images (height > width) get constrained max-width so they don't dominate the column.
+const heroAspect = business.imageAspect || '16/10';
+const [aspectW, aspectH] = heroAspect.split('/').map(Number);
+const isPortrait = aspectW && aspectH ? aspectW < aspectH : false;
+const heroAspectStyle = `aspect-ratio: ${heroAspect};`;
+const heroWrapperClass = isPortrait
+  ? 'mx-auto max-w-sm overflow-hidden rounded-2xl bg-bg-alt'
+  : 'overflow-hidden rounded-2xl';
+// Tailwind safelist: aspect-[16/10] aspect-[3/4] aspect-[4/5]
+
 const breadcrumbItems = [
   { name: 'Home', url: siteConfig.siteUrl },
   ...(category ? [{ name: category.name, url: `${siteConfig.siteUrl}${getCategoryUrl(category)}` }] : []),
@@ -95,28 +106,28 @@ const breadcrumbItems = [
           <!-- Main content -->
           <div class="lg:col-span-2">
             <!-- Image -->
-            <div class="overflow-hidden rounded-2xl">
+            <div class={heroWrapperClass}>
               {resolvedImage ? (
                 <Image
                   src={resolvedImage}
                   alt={`${business.name} — local business in Prosper, Texas`}
-                  width={800}
-                  height={500}
+                  width={isPortrait ? 768 : 1600}
+                  height={isPortrait ? Math.round(768 * (aspectH / aspectW)) : Math.round(1600 * (aspectH / aspectW))}
                   loading="eager"
                   format="webp"
                   quality={85}
-                  class="w-full object-cover aspect-[16/10]"
-                  style={business.imagePosition ? `object-position: ${business.imagePosition}` : ''}
+                  class={isPortrait ? 'w-full object-contain' : 'w-full object-cover'}
+                  style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
                 />
               ) : (
                 <img
                   src={business.image}
                   alt={`${business.name} — local business in Prosper, Texas`}
                   width="800"
-                  height="500"
+                  height={isPortrait ? Math.round(800 * (aspectH / aspectW)) : 500}
                   loading="eager"
-                  class="w-full object-cover aspect-[16/10]"
-                  style={business.imagePosition ? `object-position: ${business.imagePosition}` : ''}
+                  class={isPortrait ? 'w-full object-contain' : 'w-full object-cover'}
+                  style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
                 />
               )}
             </div>
@@ -222,6 +233,58 @@ const breadcrumbItems = [
                     <div>
                       <p class="text-sm font-medium text-text">Hours</p>
                       <p class="text-sm text-text-muted">{business.hours}</p>
+                    </div>
+                  </div>
+                )}
+
+                {(business.socials?.facebook || business.socials?.instagram || business.socials?.nextdoor) && (
+                  <div class="flex items-start gap-3">
+                    <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" /></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-text">Follow</p>
+                      <div class="mt-1.5 flex items-center gap-2">
+                        {business.socials?.facebook && (
+                          <a
+                            href={business.socials.facebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${business.name} on Facebook`}
+                            class="group inline-flex size-9 items-center justify-center rounded-full border border-border bg-bg text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                              <path d="M13.5 21.5v-8.25h2.75l.41-3.19h-3.16V8.02c0-.92.26-1.55 1.58-1.55h1.69V3.62c-.29-.04-1.29-.12-2.46-.12-2.43 0-4.1 1.48-4.1 4.21v2.35H7.46v3.19h2.75V21.5h3.29z" />
+                            </svg>
+                          </a>
+                        )}
+                        {business.socials?.instagram && (
+                          <a
+                            href={business.socials.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${business.name} on Instagram`}
+                            class="group inline-flex size-9 items-center justify-center rounded-full border border-border bg-bg text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                              <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 00-2.13 1.38A5.86 5.86 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.86 5.86 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 002.13-1.38 5.86 5.86 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 00-1.38-2.13A5.86 5.86 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.41-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+                            </svg>
+                          </a>
+                        )}
+                        {business.socials?.nextdoor && (
+                          <a
+                            href={business.socials.nextdoor}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${business.name} on Nextdoor`}
+                            class="group inline-flex size-9 items-center justify-center rounded-full border border-border bg-bg text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                              <path d="M12 2.25c-2.45 0-4.6 1.27-5.84 3.18-.4-.39-1.13-1.05-1.84-1.05-1.16 0-2.07.91-2.07 2.06v3.41c0 .58.47 1.05 1.05 1.05.58 0 1.05-.47 1.05-1.05V6.44c0-.04.04-.04.07-.01.43.43 1.07 1.04 1.41 1.34-.45.97-.7 2.05-.7 3.19v9.78c0 .58.47 1.05 1.05 1.05h3.5c.58 0 1.05-.47 1.05-1.05v-5.92c0-.92.74-1.66 1.66-1.66h.71c.92 0 1.66.74 1.66 1.66v5.92c0 .58.47 1.05 1.05 1.05h3.5c.58 0 1.05-.47 1.05-1.05v-9.78c0-4.27-3.46-7.71-7.73-7.71z"/>
+                            </svg>
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 )}

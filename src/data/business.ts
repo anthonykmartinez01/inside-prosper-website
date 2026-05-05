@@ -90,6 +90,11 @@ export interface Business {
   imageAspect?: string;
   verified?: boolean;
   published?: boolean;
+  socials?: {
+    facebook?: string;
+    instagram?: string;
+    nextdoor?: string;
+  };
 }
 
 export const businesses: Business[] = [
@@ -807,6 +812,56 @@ export const businesses: Business[] = [
 
 <p>What you really get when you hire Puddle Pools is the feeling that someone genuinely cares whether your summer goes well. Marla often says her favorite part of every day is the moment a customer reaches out and she gets to figure out how to set them up for a happy, fun summer with a pool that is in great shape. The trucks are clean and easy to spot, the technicians are uniformed and friendly, and every visit ends with a detailed report that shows exactly what was done, what chemicals were used, and where your levels stand. If you have been looking for a pool service in the Prosper, McKinney, Celina, or Frisco area that treats your backyard the way you would, this is the team to call.</p>`,
     image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&h=600&fit=crop',
+  },
+  {
+    name: 'Chosen Appliance Repair',
+    slug: 'chosen-appliance-repair',
+    category: 'trades',
+    shortDescription: 'Owner-operated appliance repair serving Celina, Prosper, Aubrey, and surrounding North Texas. 700+ Facebook recommendations, 1,000+ Nextdoor reviews, and 2 years running Neighborhood Favorite (2024, 2025).',
+    longDescription: 'Chosen Appliance Repair is a family-run appliance repair business serving Celina, Prosper, Aubrey, Oak Point, Little Elm, Allen, Plano, Denton, and Pilot Point. Owner Mina Soliman is an electrical engineer by training with about 13 years of hands-on appliance repair experience. He services refrigerators, freezers, ranges, ovens, cooktops, microwaves, dishwashers, washers, dryers, garbage disposals, kitchen sinks, and dryer vent cleaning across all major brands including Samsung, Whirlpool, Frigidaire, and LG.',
+    htmlDescription: `<h2>Chosen Appliance Repair: Honest, Skilled Appliance Service in Prosper, TX</h2>
+
+<p>Mina Soliman has become a familiar name across Celina, Prosper, Aubrey, and the surrounding North Texas communities. As the owner of Chosen Appliance Repair, he has spent years building one of the most trusted appliance repair businesses in the area, earning over 700 Facebook recommendations, more than 1,000 Nextdoor reviews and 1,200+ Nextdoor Faves, plus 2 years running Neighborhood Favorite recognition in 2024 and 2025.</p>
+
+<h2>What to Expect When You Call This Local Celina Appliance Repair Pro</h2>
+
+<p>The first thing you notice about working with Chosen Appliance Repair is how quickly Mina responds. Most service calls are handled the same day or the next day, even when you reach out on a Sunday morning about a fridge that isn't working. Send a text, and you usually get a fast reply with a clear plan for the visit. There is no automated system, no dispatcher, and no guessing about when someone might actually arrive. You get to talk directly to the person who is actually going to fix the appliance.</p>
+
+<p>All of this is possible because Mina is a one man show, with his wife helping behind the scenes on parts, invoices, and scheduling. Together, they run the entire operation as a true family business. When you book a repair, you are not getting a rotating cast of technicians. You are getting the same skilled hands every single time.</p>
+
+<h2>A Background That Sets Chosen Appliance Repair Apart</h2>
+
+<p>Mina is originally from Egypt, where he trained as an electrical engineer before moving to the United States. He spent three to four years working for an established appliance repair company, then launched Chosen Appliance Repair on his own. With roughly 13 years of hands on experience and an engineering background, you get someone who understands appliances from the inside out. He does not guess. He diagnoses, explains, and fixes. Customers on Nextdoor constantly describe him as knowledgeable, thorough, and genuinely interested in solving the problem rather than upselling a new appliance.</p>
+
+<h2>Honest Diagnostics and Fair Pricing You Can Trust</h2>
+
+<p>One of the most common themes in the reviews is honesty. Mina has a reputation for repairing rather than replacing whenever possible, often saving customers hundreds of dollars on Samsung, Whirlpool, Frigidaire, LG, and other major brands. He explains what is actually wrong, walks you through your options, and gives you the information you need to make a smart decision for your home. If a repair does not make financial sense, he will tell you. If a part is still under warranty, he will track down the manual and the manufacturer phone number for you so you can save money.</p>
+
+<h2>Quality Work That Gets Done Right the First Time</h2>
+
+<p>Mina takes a one and done approach to every repair. He has been known to stay until 10 or 11 at night to make sure the job is finished correctly, because he would rather invest the extra time on the front end than have a customer call back in a month with the same issue. He documents everything along the way, sending before and after photos when you are not home, especially helpful for the families who leave a key under the mat or share a door code while they are at work. The integrity behind Chosen Appliance Repair is something customers continue to mention.</p>
+
+<h2>Full Service Appliance Repair for Kitchen and Laundry</h2>
+
+<p>Chosen Appliance Repair handles all major kitchen and laundry appliances, including refrigerators, freezers, ranges, ovens, cooktops, microwaves, dishwashers, washers, dryers, garbage disposals, and kitchen sink repairs. Dryer vent cleaning is another important service Mina offers, and it is one he takes seriously because a backed up dryer vent is a real fire hazard. He will take photos, show you exactly what is going on inside, and make sure you understand what needs to happen to keep your home safe.</p>
+
+<h2>The Person Behind Chosen Appliance Repair</h2>
+
+<p>Outside of work, Mina is a serious pickleball player who plays once or twice a week at Raymond Park in Celina, French Park in McKinney, and around downtown Celina. His wife threw him a pickleball birthday party at Raymond Park last March that pulled in 35 friends for an all day session. He also loves volleyball and ping pong. That same passion carries directly into how he approaches his work.</p>
+
+<h2>Why Celina and Prosper Neighbors Choose Chosen Appliance Repair</h2>
+
+<p>When your washer floods the laundry room or the freezer stops freezing the night before guests arrive, you do not want a giant national chain. You want someone local, someone who shows up when they say they will, and most importantly someone who actually cares whether the job gets done right. That is exactly what you get from Mina at Chosen Appliance Repair. Call or text (469) 614-9538 and you will see why so many neighbors across Celina, Prosper, Aubrey, Oak Point, Little Elm, Allen, Plano, Denton, and Pilot Point keep his number saved in their phones.</p>`,
+    phone: '(469) 614-9538',
+    address: 'Serving Prosper, TX and surrounding areas',
+    image: '/images/chosen-appliance-repair.webp',
+    imageAspect: '16/9',
+    verified: true,
+    socials: {
+      facebook: 'https://www.facebook.com/p/Chosen-Appliance-Repair-61558736296338/',
+      instagram: 'https://www.instagram.com/chosenappliancerepair',
+      nextdoor: 'https://nextdoor.com/page/mina-soliman-wylie-tx',
+    },
   },
 ];
 
