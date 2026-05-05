@@ -2,6 +2,7 @@
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Navbar from '../components/layout/Navbar.astro';
 import Hero from '../components/sections/Hero.astro';
+import BrandIntro from '../components/sections/BrandIntro.astro';
 import HowItWorks from '../components/sections/HowItWorks.astro';
 import BusinessListings from '../components/sections/BusinessListings.astro';
 import PopularCategories from '../components/sections/PopularCategories.astro';
@@ -20,8 +21,8 @@ const featuredItems = publishedBusinesses.slice(0, 6).map((biz) => ({
 ---
 
 <BaseLayout
-  title="Best Local Businesses in Prosper, TX — Inside Prosper Directory"
-  description="Prosper, TX local business directory — discover the best restaurants, gyms, shops, and services in Prosper, Texas. Curated and invitation-only."
+  title="Inside Prosper | Discover the Best Local Businesses in Prosper, TX"
+  description="Inside Prosper helps you discover the best local restaurants, shops, and services in Prosper, TX. Curated and invitation-only — no pay-to-play."
 >
   <LocalBusinessSchema />
   <ItemListSchema
@@ -32,6 +33,7 @@ const featuredItems = publishedBusinesses.slice(0, 6).map((biz) => ({
   <Navbar />
   <main>
     <Hero />
+    <BrandIntro />
     <BusinessListings />
     <HowItWorks />
     <PopularCategories />

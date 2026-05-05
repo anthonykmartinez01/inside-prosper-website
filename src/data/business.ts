@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Inside Prosper',
-  description: 'Discover the best local businesses in Prosper, Texas.',
+  description: 'Inside Prosper is where neighbors discover the best local businesses in Prosper, Texas. Curated and invitation-only.',
   siteUrl: 'https://insideprosper.com',
   email: 'anthony@insideprosper.com',
   phone: '(469) 481-1395',
@@ -847,7 +847,7 @@ export const businesses: Business[] = [
 
 <h2>The Person Behind Chosen Appliance Repair</h2>
 
-<p>Outside of work, Mina is a serious pickleball player who plays once or twice a week at Raymond Park in Celina, French Park in McKinney, and around downtown Celina. His wife threw him a pickleball birthday party at Raymond Park last March that pulled in 35 friends for an all day session. He also loves volleyball and ping pong. That same passion carries directly into how he approaches his work.</p>
+<p>Outside of work, Mina is a serious pickleball player who plays once or twice a week at Raymond Park in Celina, French Park in McKinney, and around downtown Celina. His wife threw him a pickleball birthday party at Raymond Park last March that pulled in 35 friends for an all day session. He also loves soccer, volleyball, and ping pong. That same passion carries directly into how he approaches his work.</p>
 
 <h2>Why Celina and Prosper Neighbors Choose Chosen Appliance Repair</h2>
 
