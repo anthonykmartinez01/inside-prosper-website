@@ -690,7 +690,7 @@ export const businesses: Business[] = [
     name: 'Stonebriar Property Inspections',
     slug: 'stonebriar-property-inspections',
     category: 'professionals',
-    published: false,
+    published: true,
     shortDescription: 'Owner-operated home inspector serving Prosper, Frisco, and the DFW area. Keith Boggs has over 460 five-star reviews and 20 years of experience, offering thermal imaging, sewer scoping, drone roof inspections, and more.',
     longDescription: 'Stonebriar Property Inspections is a locally owned home inspection service led by Keith Boggs, serving Prosper, Frisco, and the Dallas Fort Worth area since 2005. Keith runs every inspection himself and offers wood destroying insect inspections, thermal imaging, foundation measurements, pool inspections, drone roof inspections, and sewer scoping.',
     htmlDescription: `<h2>Meet Keith Boggs, the Inspector Behind Stonebriar Property Inspections</h2>
@@ -707,7 +707,7 @@ export const businesses: Business[] = [
 
 <h2>Independent From Realtors, Which Is Exactly What You Want</h2>
 
-<p>Here is something that really sets Keith apart. Most home inspectors get the bulk of their business from realtor referrals, which sounds fine until you think about what that actually means. It means there is quiet pressure on the inspector to not mess up the deal. Keith built his business the opposite way on purpose. Less than five percent of his work comes from realtors. The rest comes from direct referrals, repeat customers, and word of mouth from people he actually helped. That independence is a big deal. It means he is not worried about keeping an agent happy. He is worried about keeping you out of a money pit. That is the kind of inspector you want on your side.</p>
+<p>Here is something that really sets Keith apart. Most home inspectors get the bulk of their business from realtor referrals, and while there are great realtors out there, that referral pipeline can sometimes create unspoken pressure on the inspector. Keith built his business a different way on purpose. Less than 5% of his work comes from realtors. The rest comes from direct referrals, repeat customers, and word of mouth from people he has actually helped. That shows his only focus during your inspection is you and the house, not the deal around it, which is not easy to find in this industry.</p>
 
 <h2>More Than a Standard Home Inspection</h2>
 
@@ -727,11 +727,13 @@ export const businesses: Business[] = [
 
 <h2>A Home Inspection Report You Can Actually Read and Understand</h2>
 
-<p>Another thing people always bring up is how easy the reports are to read. You are not getting some massive document full of jargon that leaves you more confused than you were before. Keith explains every finding, includes clear photos, and separates the cosmetic stuff from the actual issues you need to know about. And if you still have questions after you look it over, he will pick up the phone and walk you through it again. That kind of follow up is just not common in this business, and it is a big part of why people trust him the way they do.</p>
+<p>Another thing people always bring up is how easy the reports are to read. You are not getting some massive document that leaves you more confused than you were before. Keith explains every finding, includes clear photos, and separates the cosmetic stuff from the actual issues you need to know about. And if you still have questions after you look it over, he will pick up the phone and walk you through it again. That is a big part of why people trust him the way they do.</p>
+
+<p>Keith is also known for how quickly he gets back to people. Clients reach out 365 days a year, and unless something truly unexpected comes up, he replies within 24 hours, often much sooner. It is not unusual to get a text or email back from him on a weekend, during a holiday, or even at 3 in the morning. He is working most of the day, so an instant reply is not always possible, but you will hear back. Keith's consistent communication is part of what keeps people sending their friends and family his way.</p>
 
 <h2>Why Stonebriar Property Inspections Keeps Earning Referrals in North Texas</h2>
 
-<p>After more than 20 years doing this, the pattern is pretty clear. People walk away from Keith's inspections feeling informed, respected, and actually confident in the decision they are about to make. They send him to their family. They send him to their friends. They call him again when it is time to buy the next house. And when they leave reviews, they almost always mention the same three things. He is thorough, he is professional, and he genuinely cares. For a service that literally exists to protect one of the biggest purchases of your life, that is exactly what you want in your corner.</p>
+<p>After more than 20 years in this business, there is an extremely clear pattern. People walk away from Keith's inspections feeling informed, respected, and genuinely confident in the decision they are about to make. They send him to their family, friends, and when it comes time to buy the next house... they call him again. The reviews almost always mention the same three things: he is thorough, he is professional, and he genuinely cares. For a service whose purpose is to protect one of the biggest purchases of your life, that is exactly who you want in your corner.</p>
 
 <h2>Book Your Home Inspection With Stonebriar Property Inspections</h2>
 
@@ -745,7 +747,9 @@ export const businesses: Business[] = [
     phone: '(469) 535-6299',
     address: '1575 Foard Dr, Frisco, TX 75034',
     hours: 'Daily 7am–11pm',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80',
+    image: '/images/stonebriar-property-inspections.webp',
+    imageAspect: '1200/1106',
+    verified: true,
   },
   // Trades — Auto Repair
   {

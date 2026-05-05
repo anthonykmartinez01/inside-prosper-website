@@ -13,10 +13,15 @@ import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro'
 import ItemListSchema from '../components/schema/ItemListSchema.astro';
 import { publishedBusinesses, siteConfig, getBusinessUrl } from '../data/business';
 
-const featuredItems = publishedBusinesses.slice(0, 6).map((biz) => ({
-  name: biz.name,
-  url: `${siteConfig.siteUrl}${getBusinessUrl(biz)}`,
-}));
+// Keep this in sync with the featured slugs in BusinessListings.astro
+const featuredSlugs = ['bobcats-automotive', 'elite-integrated-performance', 'a-joyful-mess-art-studio', 'the-playground-standard', 'the-red-roofer', 'impact-landscapes', 'stonebriar-property-inspections'];
+const featuredItems = featuredSlugs
+  .map((slug) => publishedBusinesses.find((b) => b.slug === slug))
+  .filter((b): b is NonNullable<typeof b> => Boolean(b))
+  .map((biz) => ({
+    name: biz.name,
+    url: `${siteConfig.siteUrl}${getBusinessUrl(biz)}`,
+  }));
 ---
 
 <BaseLayout
