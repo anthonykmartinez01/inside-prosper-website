@@ -893,7 +893,7 @@ export const businesses: Business[] = [
 
 <h2>The Person Behind Chosen Appliance Repair</h2>
 
-<p>Outside of work, Mina is a serious pickleball player who plays once or twice a week at Raymond Park in Celina, French Park in McKinney, and around downtown Celina. His wife threw him a pickleball birthday party at Raymond Park last March that pulled in 35 friends for an all day session. He also loves soccer, volleyball, and ping pong. That same passion carries directly into how he approaches his work.</p>
+<p>Outside of work, Mina is a serious pickleball player who plays once or twice a week at Raymond Park in Celina, Finch Park in McKinney, and around downtown Celina. His wife threw him a pickleball birthday party at Raymond Park last March that pulled in 35 of friends and family for an all day session. He also loves soccer, volleyball, and ping pong. That same passion carries directly into how he approaches his work.</p>
 
 <h2>Why Celina and Prosper Neighbors Choose Chosen Appliance Repair</h2>
 
