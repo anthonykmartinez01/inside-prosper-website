@@ -789,6 +789,7 @@ export const businesses: Business[] = [
 
 <p>Looking for more trusted local professionals? Check out our <a href="/professionals/">Prosper professionals directory</a> to find <a href="/professionals/greg-hall-law/">estate planning attorneys</a>, <a href="/professionals/henry-peters-cpas/">CPAs</a>, and other professional services recommended by your neighbors.</p>`,
     phone: '(214) 923-7304',
+    website: 'https://www.stonebriarpropertyinspections.com',
     address: '1575 Foard Dr, Frisco, TX 75034',
     hours: 'Daily 7am–11pm',
     image: '/images/stonebriar-property-inspections.webp',
