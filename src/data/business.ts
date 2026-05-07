@@ -839,7 +839,7 @@ export const businesses: Business[] = [
     name: 'Puddle Pool Services',
     slug: 'puddle-pool-services',
     category: 'trades',
-    shortDescription: 'Owner-operated pool and hot tub service in Prosper, TX. Certified Pool Professionals offering weekly maintenance, equipment repair, remodels, and renovations across Prosper, McKinney, Frisco, and Celina.',
+    shortDescription: 'Family-operated pool and hot tub service in Prosper, TX. Certified Pool Professionals offering weekly maintenance, equipment repair, remodels, and renovations across Prosper, McKinney, Frisco, and Celina.',
     longDescription: 'Puddle Pool Services is a locally owned pool and hot tub service company serving Prosper, McKinney, Frisco, and Celina. Founded by Marla and Gary Burns, both Certified Pool Professionals, the company offers weekly maintenance, chemical balancing, equipment repair, and full pool remodels. With over 40 years of combined business and landscape architecture experience, Marla and Gary bring a personal, knowledgeable approach to every backyard they service.',
     htmlDescription: `<h2>Local Pool Service in Prosper and McKinney With a Personal Touch</h2>
 
