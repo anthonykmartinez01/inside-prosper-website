@@ -173,7 +173,18 @@ const breadcrumbItems = [
 
           <!-- Sidebar -->
           <aside class="lg:col-span-1">
-            <div class="sticky top-28 rounded-2xl border border-border bg-bg-card p-6 shadow-sm">
+            <div class="sticky top-28 space-y-6">
+              {business.logo && (
+                <div class="flex items-center justify-center rounded-2xl border border-border bg-bg-card p-6 shadow-sm">
+                  <img
+                    src={business.logo}
+                    alt={`${business.name} logo`}
+                    loading="lazy"
+                    class="h-auto w-full max-w-[220px] object-contain"
+                  />
+                </div>
+              )}
+              <div class="rounded-2xl border border-border bg-bg-card p-6 shadow-sm">
               <h3 class="font-heading text-lg font-bold text-text">Business Info</h3>
 
               <div class="mt-6 space-y-5">
@@ -305,6 +316,7 @@ const breadcrumbItems = [
                   Call Now
                 </a>
               )}
+              </div>
             </div>
           </aside>
         </div>
@@ -346,7 +358,7 @@ const breadcrumbItems = [
               <BusinessCard
                 name={biz.name}
                 description={biz.shortDescription}
-                image={biz.image}
+                image={biz.cardImage || biz.image}
                 slug={biz.slug}
                 category={category?.name}
                 categoryUrlPath={category?.urlPath}

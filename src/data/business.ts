@@ -89,6 +89,8 @@ export interface Business {
   /** Optional override used by listing cards (homepage, category pages, related lists). Falls back to image if not set. */
   cardImage?: string;
   cardImageAspect?: string;
+  /** Optional logo shown above the Business Info sidebar on the detail page. */
+  logo?: string;
   imagePosition?: string;
   imageAspect?: string;
   verified?: boolean;
@@ -900,6 +902,7 @@ export const businesses: Business[] = [
 <p>When your washer floods the laundry room or the freezer stops freezing the night before guests arrive, you do not want a giant national chain. You want someone local, someone who shows up when they say they will, and most importantly someone who actually cares whether the job gets done right. That is exactly what you get from Mina at Chosen Appliance Repair. Call or text (469) 614-9538 and you will see why so many neighbors across Celina, Prosper, Aubrey, Oak Point, Little Elm, Allen, Plano, Denton, and Pilot Point keep his number saved in their phones.</p>`,
     phone: '(469) 614-9538',
     address: 'Serving Prosper, TX and surrounding areas',
+    logo: '/images/chosen-appliance-repair-logo.webp',
     image: '/images/chosen-appliance-repair.webp',
     imageAspect: '16/9',
     verified: true,
