@@ -330,7 +330,7 @@ export const businesses: Business[] = [
     name: 'Prosper Painting',
     slug: 'prosper-painting',
     category: 'trades',
-    published: false,
+    published: true,
     shortDescription: 'Professional painting company in Prosper, TX offering interior and exterior painting, cabinet refinishing, and custom finishes. Over 12 years serving the community.',
     longDescription: 'Prosper Painting is a locally owned painting company led by Sean Henry, a lifelong craftsman who brought Northeast trade standards to Texas over 12 years ago. From interior and exterior painting to cabinet refinishing and custom finishes, Sean and his team deliver flawless results with transparent communication and a three-step quality control process.',
     htmlDescription: `<h2>A Prosper, TX Painting Company Built on Craftsmanship, Not Shortcuts</h2>
