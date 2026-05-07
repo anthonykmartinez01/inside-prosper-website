@@ -788,7 +788,7 @@ export const businesses: Business[] = [
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107040.8928894238!2d-96.91179086312958!3d33.02939534671301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3b5e49817cf7%3A0x4c5ba4996ca4e705!2sStonebriar%20Property%20Inspections!5e0!3m2!1sen!2sus!4v1776952389783!5m2!1sen!2sus" width="100%" height="450" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <p>Looking for more trusted local professionals? Check out our <a href="/professionals/">Prosper professionals directory</a> to find <a href="/professionals/greg-hall-law/">estate planning attorneys</a>, <a href="/professionals/henry-peters-cpas/">CPAs</a>, and other professional services recommended by your neighbors.</p>`,
-    phone: '(469) 535-6299',
+    phone: '(214) 923-7304',
     address: '1575 Foard Dr, Frisco, TX 75034',
     hours: 'Daily 7am–11pm',
     image: '/images/stonebriar-property-inspections.webp',
