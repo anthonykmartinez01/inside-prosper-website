@@ -836,14 +836,14 @@ export const businesses: Business[] = [
     verified: true,
   },
   {
-    name: 'Puddle Pool Services',
+    name: 'Puddle Pools Prosper McKinney',
     slug: 'puddle-pool-services',
     category: 'trades',
     shortDescription: 'Family-operated pool and hot tub service in Prosper, TX. Certified Pool Professionals offering weekly maintenance, equipment repair, remodels, and renovations across Prosper, McKinney, Frisco, and Celina.',
-    longDescription: 'Puddle Pool Services is a locally owned pool and hot tub service company serving Prosper, McKinney, Frisco, and Celina. Founded by Marla and Gary Burns, both Certified Pool Professionals, the company offers weekly maintenance, chemical balancing, equipment repair, and full pool remodels. With over 40 years of combined business and landscape architecture experience, Marla and Gary bring a personal, knowledgeable approach to every backyard they service.',
+    longDescription: 'Puddle Pools Prosper McKinney is a locally owned pool and hot tub service company serving Prosper, McKinney, Frisco, and Celina. Founded by Marla and Gary Burns, both Certified Pool Professionals, the company offers weekly maintenance, chemical balancing, equipment repair, and full pool remodels. With over 40 years of combined business and landscape architecture experience, Marla and Gary bring a personal, knowledgeable approach to every backyard they service.',
     htmlDescription: `<h2>Local Pool Service in Prosper and McKinney With a Personal Touch</h2>
 
-<p>If you've ever owned a pool or hot tub in North Texas, you already know the struggle. Keeping it clean, balanced, and running right is a full time job all on its own. Between the different seasons and weather, your backyard can quickly start feeling like a chore. That is exactly the gap Marla and Gary Burns set out to fill when they launched Puddle Pool Services for the Prosper, McKinney, and Frisco area. After Marla spent more than forty years in the business world, including time at JCPenney that brought her to Frisco back in 2009, and Gary spent over thirty years as a landscape architect designing and building backyards across North Dallas, the two of them put their experience together and built something that feels less like a service company and more like having a knowledgeable friend ready to help you.</p>
+<p>If you've ever owned a pool or hot tub in North Texas, you already know the struggle. Keeping it clean, balanced, and running right is a full time job all on its own. Between the different seasons and weather, your backyard can quickly start feeling like a chore. That is exactly the gap Marla and Gary Burns set out to fill when they launched Puddle Pools Prosper McKinney to serve the Prosper, McKinney, and Frisco area. After Marla spent more than forty years in the business world, including time at JCPenney that brought her to Frisco back in 2009, and Gary spent over thirty years as a landscape architect designing and building backyards across North Dallas, the two of them put their experience together and built something that feels less like a service company and more like having a knowledgeable friend ready to help you.</p>
 
 <h2>What to Expect From the Owners Behind Puddle Pools</h2>
 
