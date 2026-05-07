@@ -86,6 +86,9 @@ export interface Business {
   hours?: string;
   mapEmbedUrl?: string;
   image: string;
+  /** Optional override used by listing cards (homepage, category pages, related lists). Falls back to image if not set. */
+  cardImage?: string;
+  cardImageAspect?: string;
   imagePosition?: string;
   imageAspect?: string;
   verified?: boolean;
@@ -685,6 +688,45 @@ export const businesses: Business[] = [
     imagePosition: 'top',
     verified: true,
   },
+  // Professionals — Henna / Mehndi Artist
+  {
+    name: "Sheetal's Henna Designs",
+    slug: 'sheetal-henna-artist',
+    category: 'professionals',
+    published: false,
+    shortDescription: 'Dallas-based bridal henna and mehndi artist serving Prosper, Frisco, and the entire DFW Metroplex. Custom designs, deep long-lasting natural stain, and nearly 20 years of professional experience.',
+    longDescription: 'Sheetal is a Dallas mehndi and henna artist with close to 20 years of professional work, serving brides and clients across the entire DFW Metroplex. She specializes in custom bridal mehndi, engagement and Karwa Chauth gatherings, corporate events, and private home studio appointments. Sheetal mixes her own 100% natural henna for a deep, long-lasting stain and works closely with brides on completely custom designs.',
+    htmlDescription: `<h2>Booking a Trusted Dallas Henna Artist</h2>
+<p>Finding the right henna artist for your wedding or event is one of those decisions that feels small until the day arrives and your artist has your hands in theirs for the next 8 hours. Sheetal makes that decision an easy one. Henna has been a part of her life since she was a kid in a joint family in India, sketching practice designs with leftover cones from her cousins, and close to 20 years of professional work. She finds the challenging designs fun, talks about wanting to make every client's day, and pours that energy into all of her art. You are not booking someone going through the motions. Instead, you are booking someone who genuinely loves the craft and wants your design to be one of the best pieces she has ever done.</p>
+
+<h2>Custom Bridal Mehndi Designs Made for You</h2>
+<p>Sheetal is not the kind of artist who has the same process for every bride. If you scroll through her work, you will see skylines, portraits, figure work, bride and groom scenes, and ceremony specific motifs woven into hands and feet. You can bring her a bunch of Pinterest screenshots and she will put the vision you have together into a custom piece of art. Brides have asked her to blend Indian and American cultural touches, add tributes to family pets, and reflect the specific ceremonies of their wedding week, and she handles all of it with care. She also makes sure your hands match your hands, and your feet match your feet.</p>
+
+<h2>Deep, Dark, Long Lasting Henna Stain</h2>
+<p>The stain is the part everyone talks about. Sheetal mixes her own 100 percent natural henna, and the color develops the way it is supposed to develop, deep burgundy and dark brown that keeps maturing over the first 48 hours. Brides regularly mention their henna lasting more than two weeks past the wedding and still showing rich color in every photo. Part of that comes from her recipe, and part comes from the pre care and post care instructions she walks you through so the design has the best chance to stain dark. She tells you when to do your manicure, what to avoid before sitting down, how long to keep the paste on, and how to take it off with coconut oil instead of water. She follows up to make sure you actually do it, because she cares about the result just as much as you do.</p>
+
+<h2>A Calm Bridal Henna Experience From Start to Finish</h2>
+<p>A full bridal session can run 6 to 8 hours, and sitting still for that long sounds intimidating until you actually do it with her. Brides describe the time as conversational, relaxed, and sometimes laugh out loud fun. She is patient with you when you fidget, she guides you on how to hold your hands so nothing smudges, and she paces the work so she stays on schedule for the rest of the day. If you have family and friends who also want henna, she brings additional artists from her team so the whole event runs on time and no one is left waiting. By the time you stand up and stretch, you walk away with a stain that still needs a day or two to reach its full color and a feeling that the longest part of your wedding week was actually one of the most enjoyable.</p>
+
+<h2>Bridal, Engagement, Karwa Chauth, and Event Henna in Dallas</h2>
+<p>Whether you are planning a full bridal mehndi session, an engagement, a Karwa Chauth gathering, a corporate event, or a small home studio appointment for a personal design, Sheetal handles it. She serves the entire DFW Metroplex and, as a freelancer, travels for the right event. Her pricing is consistently described as fair for the level of detail and customization you receive, and she manages last minute requests like schedule changes or extra artists without making you feel like a problem. Local wedding planners send brides her way all the time, and once you sit with her for a session you understand why she is recommended so much.</p>
+
+<h2>What to Expect When You Book Sheetal's Henna Designs</h2>
+<p>Plan on a vendor who answers your messages, shows up on time, brings her own supplies, and listens closely to what you actually want. Plan on a stain that keeps deepening for two days and lingering for two weeks. Plan on someone who is easy to talk to, who genuinely loves what she does, and who treats your celebration with the kind of attention that makes you feel like the only client she has. If you are looking for a Dallas mehndi artist who delivers stunning, intricate, beautifully stained henna without the stress that often comes with wedding planning, Sheetal is definitely the right person!</p>`,
+    phone: '(202) 330-1412',
+    email: 'sheetalshennadesign@gmail.com',
+    address: '6480 Aldridge Dr, Frisco, TX 75035',
+    image: '/images/sheetal-henna-artist.webp',
+    imageAspect: '874/691',
+    cardImage: '/images/sheetal-henna-artist-card.webp',
+    cardImageAspect: '546/720',
+    imagePosition: 'top',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.1179673547786!2d-96.73858552289711!3d33.132265265744074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c17cd9028b873%3A0xc811a96e7b4251e0!2sSheetal\'s%20Henna%20Designs%20LLC!5e0!3m2!1sen!2sus!4v1778164402483!5m2!1sen!2sus',
+    socials: {
+      facebook: 'https://www.facebook.com/Sheetalshennadesigns/',
+      instagram: 'https://www.instagram.com/sheetals_henna_designs_dallas/',
+    },
+  },
   // Professionals — Home Inspections
   {
     name: 'Stonebriar Property Inspections',
@@ -822,10 +864,10 @@ export const businesses: Business[] = [
     slug: 'chosen-appliance-repair',
     category: 'trades',
     shortDescription: 'Owner-operated appliance repair serving Celina, Prosper, Aubrey, and surrounding North Texas. 700+ Facebook recommendations, 1,000+ Nextdoor reviews, and 2 years running Neighborhood Favorite (2024, 2025).',
-    longDescription: 'Chosen Appliance Repair is a family-run appliance repair business serving Celina, Prosper, Aubrey, Oak Point, Little Elm, Allen, Plano, Denton, and Pilot Point. Owner Mina Soliman is an electrical engineer by training with about 13 years of hands-on appliance repair experience. He services refrigerators, freezers, ranges, ovens, cooktops, microwaves, dishwashers, washers, dryers, garbage disposals, kitchen sinks, and dryer vent cleaning across all major brands including Samsung, Whirlpool, Frigidaire, and LG.',
+    longDescription: 'Chosen Appliance Repair is a family-run appliance repair business serving Celina, Prosper, Aubrey, Oak Point, Little Elm, Allen, Plano, Denton, and Pilot Point. Owner Mina Samuel is an electrical engineer by training with about 13 years of hands-on appliance repair experience. He services refrigerators, freezers, ranges, ovens, cooktops, microwaves, dishwashers, washers, dryers, garbage disposals, kitchen sinks, and dryer vent cleaning across all major brands including Samsung, Whirlpool, Frigidaire, and LG.',
     htmlDescription: `<h2>Chosen Appliance Repair: Honest, Skilled Appliance Service in Prosper, TX</h2>
 
-<p>Mina Soliman has become a familiar name across Celina, Prosper, Aubrey, and the surrounding North Texas communities. As the owner of Chosen Appliance Repair, he has spent years building one of the most trusted appliance repair businesses in the area, earning over 700 Facebook recommendations, more than 1,000 Nextdoor reviews and 1,200+ Nextdoor Faves, plus 2 years running Neighborhood Favorite recognition in 2024 and 2025.</p>
+<p>Mina Samuel has become a familiar name across Celina, Prosper, Aubrey, and the surrounding North Texas communities. As the owner of Chosen Appliance Repair, he has spent years building one of the most trusted appliance repair businesses in the area, earning over 700 Facebook recommendations, more than 1,000 Nextdoor reviews and 1,200+ Nextdoor Faves, plus 2 years running Neighborhood Favorite recognition in 2024 and 2025.</p>
 
 <h2>What to Expect When You Call This Local Celina Appliance Repair Pro</h2>
 
