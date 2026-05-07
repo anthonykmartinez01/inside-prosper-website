@@ -28,7 +28,7 @@ const filename = isLocal ? image.replace('/images/', '') : '';
 const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.default : null;
 ---
 
-<div class="card-hover group overflow-hidden rounded-2xl bg-bg-card shadow-sm">
+<div class="card-hover group flex h-full flex-col overflow-hidden rounded-2xl bg-bg-card shadow-sm">
   <div class={`relative ${aspectClass} overflow-hidden`}>
     {resolvedImage ? (
       <Image
@@ -61,7 +61,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
       </span>
     )}
   </div>
-  <div class="p-5">
+  <div class="flex flex-1 flex-col p-5">
     <div class="flex items-center gap-2">
       <h3 class="font-heading text-lg font-bold text-text">{name}</h3>
       {verified && (
@@ -72,7 +72,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
       )}
     </div>
     <p class="mt-2 text-sm leading-relaxed text-text-muted line-clamp-2">{description}</p>
-    <div class="mt-4 flex items-center justify-between">
+    <div class="mt-auto flex items-center justify-between pt-4">
       <a
         href={href}
         class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"

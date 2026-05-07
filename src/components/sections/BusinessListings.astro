@@ -29,7 +29,7 @@ const recentBusinesses = featuredSlugs
       {recentBusinesses.map((biz) => {
         const cat = categories.find(c => c.slug === biz.category);
         return (
-          <div class="reveal">
+          <div class="reveal h-full">
             <BusinessCard
               name={biz.name}
               description={biz.shortDescription}
