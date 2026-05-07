@@ -866,6 +866,7 @@ export const businesses: Business[] = [
     hours: 'Daily 7am–7pm',
     image: '/images/puddle-pool-services.webp',
     imageAspect: '16/9',
+    verified: true,
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.1179673547786!2d-96.73858552289711!3d33.132265265744074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f1f7c444f97653f%3A0x337e543056c70c71!2sPuddle%20Pools%20Prosper%20McKinney!5e0!3m2!1sen!2sus!4v1778173008030!5m2!1sen!2sus',
     socials: {
       facebook: 'https://www.facebook.com/people/Puddle-Pool-Services/61579789027182/',
