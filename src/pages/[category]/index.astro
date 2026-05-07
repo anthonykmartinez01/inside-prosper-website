@@ -97,12 +97,12 @@ const itemListItems = businesses.map((biz) => ({
               <BusinessCard
                 name={biz.name}
                 description={biz.shortDescription}
-                image={biz.image}
+                image={biz.cardImage || biz.image}
                 slug={biz.slug}
                 category={category.name}
                 categoryUrlPath={category.urlPath}
                 imagePosition={biz.imagePosition}
-                imageAspect={biz.imageAspect}
+                imageAspect={biz.cardImageAspect}
                 verified={biz.verified}
               />
             </div>
