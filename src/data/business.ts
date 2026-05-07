@@ -864,7 +864,7 @@ export const businesses: Business[] = [
     website: 'https://puddlepools.com/locations/mckinney-tx/',
     hours: 'Daily 7am–7pm',
     image: '/images/puddle-pool-services.webp',
-    imageAspect: '4/3',
+    imageAspect: '16/9',
     socials: {
       facebook: 'https://www.facebook.com/people/Puddle-Pool-Services/61579789027182/',
       instagram: 'https://www.instagram.com/puddlepoolsprospermckinney',
