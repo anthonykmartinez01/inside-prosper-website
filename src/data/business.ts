@@ -862,6 +862,7 @@ export const businesses: Business[] = [
 <p>What you really get when you hire Puddle Pools is the feeling that someone genuinely cares whether your summer goes well. Marla often says her favorite part of every day is the moment a customer reaches out and she gets to figure out how to set them up for a happy, fun summer with a pool that is in great shape. The trucks are clean and easy to spot, the technicians are uniformed and friendly, and every visit ends with a detailed report that shows exactly what was done, what chemicals were used, and where your levels stand. If you have been looking for a pool service in the Prosper, McKinney, Celina, or Frisco area that treats your backyard the way you would, this is the team to call.</p>`,
     phone: '(888) 282-2590',
     website: 'https://puddlepools.com/locations/mckinney-tx/',
+    address: 'Serves Prosper, McKinney, Frisco area',
     hours: 'Daily 7am–7pm',
     image: '/images/puddle-pool-services.webp',
     imageAspect: '16/9',
