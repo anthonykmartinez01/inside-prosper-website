@@ -929,7 +929,7 @@ export const businesses: Business[] = [
     name: 'Zero Streaks Window Cleaning',
     slug: 'zero-streaks-window-cleaning',
     category: 'trades',
-    published: false,
+    published: true,
     shortDescription: 'Family-owned window cleaning, gutter cleaning, pressure washing, and permanent outdoor lighting installation serving Celina, Prosper, and the surrounding North Texas communities.',
     longDescription: "Zero Streaks Window Cleaning is a family-owned service company based in Celina, TX, founded by Ronnie after relocating from Michigan. Services include detailed window cleaning, hand-cleared gutter cleaning, pressure washing for homes and commercial buildings, Christmas light installation, and permanent outdoor Heaven Lights. Ronnie is known for treating every property like his own, supporting local causes, and delivering one job at a time without ever cutting corners.",
     htmlDescription: `<h2>What Working with Zero Streaks Window Cleaning Feels Like</h2>
