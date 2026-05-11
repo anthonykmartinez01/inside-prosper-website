@@ -99,6 +99,7 @@ export interface Business {
     facebook?: string;
     instagram?: string;
     nextdoor?: string;
+    youtube?: string;
   };
 }
 
@@ -692,10 +693,10 @@ export const businesses: Business[] = [
   },
   // Professionals — Henna / Mehndi Artist
   {
-    name: "Sheetal's Henna Designs",
+    name: "Sheetal's Henna Designs LLC",
     slug: 'sheetal-henna-artist',
     category: 'professionals',
-    published: false,
+    published: true,
     shortDescription: 'Dallas-based bridal henna and mehndi artist serving Prosper, Frisco, and the entire DFW Metroplex. Custom designs, deep long-lasting natural stain, and nearly 20 years of professional experience.',
     longDescription: 'Sheetal is a Dallas mehndi and henna artist with close to 20 years of professional work, serving brides and clients across the entire DFW Metroplex. She specializes in custom bridal mehndi, engagement and Karwa Chauth gatherings, corporate events, and private home studio appointments. Sheetal mixes her own 100% natural henna for a deep, long-lasting stain and works closely with brides on completely custom designs.',
     htmlDescription: `<h2>Booking a Trusted Dallas Henna Artist</h2>
@@ -710,7 +711,7 @@ export const businesses: Business[] = [
 <h2>A Calm Bridal Henna Experience From Start to Finish</h2>
 <p>A full bridal session can run 6 to 8 hours, and sitting still for that long sounds intimidating until you actually do it with her. Brides describe the time as conversational, relaxed, and sometimes laugh out loud fun. She is patient with you when you fidget, she guides you on how to hold your hands so nothing smudges, and she paces the work so she stays on schedule for the rest of the day. If you have family and friends who also want henna, she brings additional artists from her team so the whole event runs on time and no one is left waiting. By the time you stand up and stretch, you walk away with a stain that still needs a day or two to reach its full color and a feeling that the longest part of your wedding week was actually one of the most enjoyable.</p>
 
-<h2>Bridal, Engagement, Karwa Chauth, and Event Henna in Dallas</h2>
+<h2>Bridal, Engagement, Karwa Chauth, and Corporate Event Henna in Dallas</h2>
 <p>Whether you are planning a full bridal mehndi session, an engagement, a Karwa Chauth gathering, a corporate event, or a small home studio appointment for a personal design, Sheetal handles it. She serves the entire DFW Metroplex and, as a freelancer, travels for the right event. Her pricing is consistently described as fair for the level of detail and customization you receive, and she manages last minute requests like schedule changes or extra artists without making you feel like a problem. Local wedding planners send brides her way all the time, and once you sit with her for a session you understand why she is recommended so much.</p>
 
 <h2>What to Expect When You Book Sheetal's Henna Designs</h2>
@@ -922,6 +923,52 @@ export const businesses: Business[] = [
       facebook: 'https://www.facebook.com/p/Chosen-Appliance-Repair-61558736296338/',
       instagram: 'https://www.instagram.com/chosenappliancerepair',
       nextdoor: 'https://nextdoor.com/page/mina-soliman-wylie-tx',
+    },
+  },
+  {
+    name: 'Zero Streaks Window Cleaning',
+    slug: 'zero-streaks-window-cleaning',
+    category: 'trades',
+    published: false,
+    shortDescription: 'Family-owned window cleaning, gutter cleaning, pressure washing, and permanent outdoor lighting installation serving Celina, Prosper, and the surrounding North Texas communities.',
+    longDescription: "Zero Streaks Window Cleaning is a family-owned service company based in Celina, TX, founded by Ronnie after relocating from Michigan. Services include detailed window cleaning, hand-cleared gutter cleaning, pressure washing for homes and commercial buildings, Christmas light installation, and permanent outdoor Heaven Lights. Ronnie is known for treating every property like his own, supporting local causes, and delivering one job at a time without ever cutting corners.",
+    htmlDescription: `<h2>What Working with Zero Streaks Window Cleaning Feels Like</h2>
+
+<p>Ronnie and his family relocated to the Celina area from Michigan, where he ran a similar business for years. The values he brings to every job come from a simple order of priorities: faith, family, and business. The way Ronnie treats his clients shows the same values he believes in. Zero Streaks supports the Cancer Tumor Foundation based in Prosper, sponsors Field Day at Vasquez Elementary School, and backs the Celina ISD Cheerleading Team. Choosing this company means working with someone who cares about the experience just as much as the result, and someone who loves giving back to the community his customers live in.</p>
+
+<h2>A Celina TX Window Cleaner Who Treats Your Home Like His Own</h2>
+
+<p>When Ronnie shows up to your property, the first thing you notice is how careful he is with everything. Ladders never rest on gutters because he knows the damage it can cost homeowners years down the road. Shoes come off at the door or shoe covers go on. The crew works the same way because that is the standard he sets. You will see in your own home something most companies skip past, which is respecting someone else's property just like it's your own.</p>
+
+<h2>Detailed Window Cleaning That Actually Removes the Grime</h2>
+
+<p>You would be surprised by how much builds up on glass in a single year. Construction dust, silicone residue, hard water spots, caulk remnants, all of it adds up to a fog you stop noticing until it is gone. Once Ronnie finishes, your windows are spotless and look brand new all over again. Tracks and screens get cleaned too, which makes a noticeable difference in how the whole home feels.</p>
+
+<h2>Gutter Cleaning Done with Care and Full Transparency</h2>
+
+<p>If your gutters have not been cleared in years, you are in good hands. Ronnie walks the entire roofline, digs out the buildup by hand, clears the downspouts, and often records video so you can see exactly what was done while he was up there. Water flows the way it is supposed to, debris is gone, and you get to avoid the bigger repair bills that come from neglected gutters.</p>
+
+<h2>Pressure Washing and Christmas Lighting for North Texas Homes</h2>
+
+<p>Beyond windows and gutters, Zero Streaks also handles pressure washing for homes and commercial buildings, including algae and moss removal. Christmas light installation and permanent outdoor lighting using Heaven Lights are part of the lineup as well. Heaven Lights can be configured for game day colors when your team wins, holiday themes throughout the year, awareness colors for causes like cancer support, and everyday security lighting. They blend into your home so cleanly that HOA communities rarely even notice they are installed.</p>
+
+<h2>Why Local Homeowners Keep Coming Back to Zero Streaks</h2>
+
+<p>Talk to anyone who has booked Zero Streaks and a pattern is consistent. Customers in reviews use words like professional, kind, and perfectionist. They say the results are spotless and mention how Ronnie does whatever it takes to finish a job right and never rushes through it. One house at a time, one window at a time, is the approach of the business. Even if 3 or 4 jobs could be done in a day, that would mean cutting corners somewhere… and that is not how this company runs.</p>
+
+<h2>Booking Zero Streaks Window Cleaning</h2>
+
+<p>If you want clean windows, gutters that actually drain, and a service provider who treats your home like his own, Ronnie is your guy. Expect a calm, no pressure conversation up front, a service appointment that runs on time, and a finished result that makes you happy.</p>`,
+    phone: '(469) 202-7388',
+    website: 'https://zerostreakswindowcleaning.com/contact/',
+    image: '/images/zero-streaks-window-cleaning.webp',
+    imageAspect: '1/1',
+    cardImage: '/images/zero-streaks-window-cleaning-card.webp',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d427979.2227528253!2d-97.17264951300217!3d33.06732048744239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x242d341d16bd2085%3A0xb9dd6fa6c943a43b!2sZero%20Streaks%20Window%20Cleaning!5e0!3m2!1sen!2sus!4v1778265181393!5m2!1sen!2sus',
+    socials: {
+      facebook: 'https://www.facebook.com/people/Zero-Streaks-Window-Cleaning/61574114001491/',
+      instagram: 'https://www.instagram.com/zeros_treaks?igsh=eTcwbXJzcm1ra2dy',
+      youtube: 'https://www.youtube.com/@ZeroStreaksWindowCleaning',
     },
   },
 ];
