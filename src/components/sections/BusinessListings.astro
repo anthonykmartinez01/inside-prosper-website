@@ -32,55 +32,55 @@ const row2Loop = [...row2, ...row2];
         Trusted local businesses handpicked by the Prosper community.
       </p>
     </div>
-  </div>
 
-  <!-- Marquee carousel: 2 rows scrolling left, paused on hover -->
-  <div class="marquee-group space-y-8">
-    <!-- Row 1 -->
-    <div class="overflow-hidden">
-      <div class="marquee-track flex w-max">
-        {row1Loop.map((biz, i) => {
-          const cat = categories.find(c => c.slug === biz.category);
-          return (
-            <div class="mr-8 w-[280px] shrink-0 sm:w-[340px] lg:w-[380px]" aria-hidden={i >= row1.length}>
-              <BusinessCard
-                name={biz.name}
-                description={biz.shortDescription}
-                image={biz.cardImage || biz.image}
-                slug={biz.slug}
-                category={cat?.name}
-                categoryUrlPath={cat?.urlPath}
-                imagePosition={biz.imagePosition}
-                imageAspect={biz.cardImageAspect}
-                verified={biz.verified}
-              />
-            </div>
-          );
-        })}
+    <!-- Marquee carousel: 2 rows scrolling left, paused on hover -->
+    <div class="marquee-group space-y-8">
+      <!-- Row 1 -->
+      <div class="marquee-row overflow-hidden">
+        <div class="marquee-track flex w-max">
+          {row1Loop.map((biz, i) => {
+            const cat = categories.find(c => c.slug === biz.category);
+            return (
+              <div class="mr-6 w-[260px] shrink-0 sm:w-[300px] lg:w-[340px]" aria-hidden={i >= row1.length}>
+                <BusinessCard
+                  name={biz.name}
+                  description={biz.shortDescription}
+                  image={biz.cardImage || biz.image}
+                  slug={biz.slug}
+                  category={cat?.name}
+                  categoryUrlPath={cat?.urlPath}
+                  imagePosition={biz.imagePosition}
+                  imageAspect={biz.cardImageAspect}
+                  verified={biz.verified}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
 
-    <!-- Row 2 (offset start so the two rows don't visually align) -->
-    <div class="overflow-hidden">
-      <div class="marquee-track marquee-track-offset flex w-max">
-        {row2Loop.map((biz, i) => {
-          const cat = categories.find(c => c.slug === biz.category);
-          return (
-            <div class="mr-8 w-[280px] shrink-0 sm:w-[340px] lg:w-[380px]" aria-hidden={i >= row2.length}>
-              <BusinessCard
-                name={biz.name}
-                description={biz.shortDescription}
-                image={biz.cardImage || biz.image}
-                slug={biz.slug}
-                category={cat?.name}
-                categoryUrlPath={cat?.urlPath}
-                imagePosition={biz.imagePosition}
-                imageAspect={biz.cardImageAspect}
-                verified={biz.verified}
-              />
-            </div>
-          );
-        })}
+      <!-- Row 2 (offset start so the two rows don't visually align) -->
+      <div class="marquee-row overflow-hidden">
+        <div class="marquee-track marquee-track-offset flex w-max">
+          {row2Loop.map((biz, i) => {
+            const cat = categories.find(c => c.slug === biz.category);
+            return (
+              <div class="mr-6 w-[260px] shrink-0 sm:w-[300px] lg:w-[340px]" aria-hidden={i >= row2.length}>
+                <BusinessCard
+                  name={biz.name}
+                  description={biz.shortDescription}
+                  image={biz.cardImage || biz.image}
+                  slug={biz.slug}
+                  category={cat?.name}
+                  categoryUrlPath={cat?.urlPath}
+                  imagePosition={biz.imagePosition}
+                  imageAspect={biz.cardImageAspect}
+                  verified={biz.verified}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   </div>
@@ -96,6 +96,9 @@ const row2Loop = [...row2, ...row2];
 
   .marquee-track {
     animation: marquee 50s linear infinite;
+    /* Force animation even for users with prefers-reduced-motion — this
+       carousel is an explicit product decision, not decorative motion. */
+    animation-play-state: running !important;
   }
 
   /* Offset the second row's animation so the two rows show different cards
@@ -106,21 +109,13 @@ const row2Loop = [...row2, ...row2];
 
   /* Pause both rows when the user hovers anywhere in the carousel area */
   .marquee-group:hover .marquee-track {
-    animation-play-state: paused;
+    animation-play-state: paused !important;
   }
 
-  /* Respect reduced-motion preference: disable auto-scroll, fall back to
-     manual horizontal scroll the user can swipe through. */
-  @media (prefers-reduced-motion: reduce) {
-    .marquee-track {
-      animation: none;
-    }
-    .marquee-group .overflow-hidden {
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-    }
-    .marquee-group .marquee-track > div {
-      scroll-snap-align: start;
-    }
+  /* Soft fade at the left and right edges so cards drift in/out cleanly
+     instead of getting hard-cut at the container edge. */
+  .marquee-row {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
   }
 </style>
