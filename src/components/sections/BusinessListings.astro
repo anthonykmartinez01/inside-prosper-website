@@ -41,7 +41,7 @@ const row2Loop = [...row2, ...row2];
           {row1Loop.map((biz, i) => {
             const cat = categories.find(c => c.slug === biz.category);
             return (
-              <div class="mr-6 w-[260px] shrink-0 sm:w-[300px] lg:w-[340px]" aria-hidden={i >= row1.length}>
+              <div class="mr-8 w-[280px] shrink-0 sm:w-[340px] lg:w-[400px]" aria-hidden={i >= row1.length}>
                 <BusinessCard
                   name={biz.name}
                   description={biz.shortDescription}
@@ -65,7 +65,7 @@ const row2Loop = [...row2, ...row2];
           {row2Loop.map((biz, i) => {
             const cat = categories.find(c => c.slug === biz.category);
             return (
-              <div class="mr-6 w-[260px] shrink-0 sm:w-[300px] lg:w-[340px]" aria-hidden={i >= row2.length}>
+              <div class="mr-8 w-[280px] shrink-0 sm:w-[340px] lg:w-[400px]" aria-hidden={i >= row2.length}>
                 <BusinessCard
                   name={biz.name}
                   description={biz.shortDescription}
