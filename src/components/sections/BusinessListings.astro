@@ -7,21 +7,12 @@ const featuredSlugs = ['zero-streaks-window-cleaning', 'chosen-appliance-repair'
 const recentBusinesses = featuredSlugs
   .map(slug => publishedBusinesses.find(b => b.slug === slug))
   .filter(Boolean) as typeof publishedBusinesses;
-
-// Split into two rows so users see ~6 cards at once (3 visible per row × 2 rows)
-const half = Math.ceil(recentBusinesses.length / 2);
-const row1 = recentBusinesses.slice(0, half);
-const row2 = recentBusinesses.slice(half);
-
-// Each row is duplicated so the marquee loops seamlessly via translateX(-50%)
-const row1Loop = [...row1, ...row1];
-const row2Loop = [...row2, ...row2];
 ---
 
 <section id="businesses" class="bg-bg pt-24 pb-12 lg:pt-36 lg:pb-16">
   <div class="mx-auto max-w-7xl px-6">
     <!-- Section header -->
-    <div class="reveal mb-12 text-center">
+    <div class="reveal mb-16 text-center">
       <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
         Local Favorites
       </span>
@@ -33,103 +24,26 @@ const row2Loop = [...row2, ...row2];
       </p>
     </div>
 
-    <!-- Marquee carousel: 2 rows scrolling left, paused on hover -->
-    <div class="marquee-group space-y-8">
-      <!-- Row 1 -->
-      <div class="marquee-row overflow-hidden">
-        <div class="marquee-track flex w-max">
-          {row1Loop.map((biz, i) => {
-            const cat = categories.find(c => c.slug === biz.category);
-            return (
-              <div class="mr-8 w-[280px] shrink-0 sm:w-[340px] lg:w-[400px]" aria-hidden={i >= row1.length}>
-                <BusinessCard
-                  name={biz.name}
-                  description={biz.shortDescription}
-                  image={biz.cardImage || biz.image}
-                  slug={biz.slug}
-                  category={cat?.name}
-                  categoryUrlPath={cat?.urlPath}
-                  imagePosition={biz.imagePosition}
-                  imageAspect={biz.cardImageAspect}
-                  verified={biz.verified}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      <!-- Row 2 (offset start so the two rows don't visually align) -->
-      <div class="marquee-row overflow-hidden">
-        <div class="marquee-track marquee-track-offset flex w-max">
-          {row2Loop.map((biz, i) => {
-            const cat = categories.find(c => c.slug === biz.category);
-            return (
-              <div class="mr-8 w-[280px] shrink-0 sm:w-[340px] lg:w-[400px]" aria-hidden={i >= row2.length}>
-                <BusinessCard
-                  name={biz.name}
-                  description={biz.shortDescription}
-                  image={biz.cardImage || biz.image}
-                  slug={biz.slug}
-                  category={cat?.name}
-                  categoryUrlPath={cat?.urlPath}
-                  imagePosition={biz.imagePosition}
-                  imageAspect={biz.cardImageAspect}
-                  verified={biz.verified}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
+    <!-- Business cards grid -->
+    <div class="reveal-stagger grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {recentBusinesses.map((biz) => {
+        const cat = categories.find(c => c.slug === biz.category);
+        return (
+          <div class="reveal h-full">
+            <BusinessCard
+              name={biz.name}
+              description={biz.shortDescription}
+              image={biz.cardImage || biz.image}
+              slug={biz.slug}
+              category={cat?.name}
+              categoryUrlPath={cat?.urlPath}
+              imagePosition={biz.imagePosition}
+              imageAspect={biz.cardImageAspect}
+              verified={biz.verified}
+            />
+          </div>
+        );
+      })}
     </div>
   </div>
 </section>
-
-<style>
-  /* Continuous left-scroll marquee. Translate by -50% lands exactly on the
-     start of the duplicated set, creating a seamless loop. */
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
-  .marquee-track {
-    /* Mobile: faster cycle so users see more businesses scroll past
-       (since only ~1 card is visible at a time). */
-    animation: marquee 25s linear infinite;
-    /* Force animation even for users with prefers-reduced-motion — this
-       carousel is an explicit product decision, not decorative motion. */
-    animation-play-state: running !important;
-  }
-
-  /* Desktop: slower so users have time to read each card (3 visible at once). */
-  @media (min-width: 1024px) {
-    .marquee-track {
-      animation-duration: 45s;
-    }
-  }
-
-  /* Offset the second row by half its cycle so the two rows show different
-     cards at any given moment — feels more dynamic than perfectly synced. */
-  .marquee-track-offset {
-    animation-delay: -12.5s;
-  }
-  @media (min-width: 1024px) {
-    .marquee-track-offset {
-      animation-delay: -22.5s;
-    }
-  }
-
-  /* Pause both rows when the user hovers anywhere in the carousel area */
-  .marquee-group:hover .marquee-track {
-    animation-play-state: paused !important;
-  }
-
-  /* Soft fade at the left and right edges so cards drift in/out cleanly
-     instead of getting hard-cut at the container edge. */
-  .marquee-row {
-    -webkit-mask-image: linear-gradient(to right, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
-  }
-</style>
