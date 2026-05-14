@@ -91,6 +91,8 @@ export interface Business {
   cardImageAspect?: string;
   /** Optional logo shown above the Business Info sidebar on the detail page. */
   logo?: string;
+  /** Optional override for the city label in the detail page H1 (defaults to "Prosper, TX"). */
+  locationLabel?: string;
   imagePosition?: string;
   imageAspect?: string;
   verified?: boolean;
@@ -970,6 +972,112 @@ export const businesses: Business[] = [
       facebook: 'https://www.facebook.com/people/Zero-Streaks-Window-Cleaning/61574114001491/',
       instagram: 'https://www.instagram.com/zeros_treaks?igsh=eTcwbXJzcm1ra2dy',
       youtube: 'https://www.youtube.com/@ZeroStreaksWindowCleaning',
+    },
+  },
+  {
+    name: '360 IV Infusion and Wellness',
+    slug: '360-iv-infusion-wellness',
+    category: 'health-fitness',
+    published: false,
+    shortDescription: '360 IV Infusion and Wellness is a premier IV hydration lounge in Prosper, TX offering physician supervised IV therapy, Hydrafacial, massage with red light therapy, and compression therapy under the care of Dr. Oge Ogundu.',
+    longDescription: '360 IV Infusion and Wellness is a boutique wellness studio in Prosper, TX, owned by Dr. Oge Ogundu, who brings a background in optometry and nursing to every detail of the experience. Services include physician-supervised IV hydration therapy with FDA-approved bags, Hydrafacial with red light therapy, massage paired with red light cell rejuvenation, and compression therapy in a calm, modern, boutique space designed to feel less like a clinic and more like a quiet retreat.',
+    htmlDescription: `<h2>A Calm, Boutique IV Hydration Lounge in the Heart of Prosper TX</h2>
+
+<p>360 IV Infusion and Wellness does not look or feel like the IV bars you have probably scrolled past on Instagram. It does not feel like a clinic, and it does not feel like a typical day spa either. Instead there is a calm, modern, boutique space that was intentionally built around what someone actually wants when they walk in tired, run down, or just needing to feel refreshed. Clients keep mentioning one word in their online reviews, and that word is welcomed. Even the chairs are the kind that make you forget you came in for a treatment in the first place.</p>
+
+<h2>Meet Dr. Oge, The Heart Behind 360 IV Infusion and Wellness</h2>
+
+<p>This boutique is owned by Dr. Oge Ogundu, who brings her background in both optometry and nursing into every detail of the experience. Originally from Nigeria, she built her career in healthcare across the country before planting roots in Prosper. Her approach is shaped by something she noticed during years of bedside and insurance work: that people often think about their health only after something has already gone wrong. 360 IV Infusion and Wellness was created so you can be proactive with your wellness inside a space that feels safe, supervised, and personal. Dr. Oge is also a mother of two, a wife, and a traveler at heart, with a vision of one day using a portion of the proceeds to support scholarships for young girls.</p>
+
+<h2>IV Hydration Therapy You Can Actually Trust in Prosper</h2>
+
+<p>IV hydration is everywhere right now, and that is exactly why where you choose to get it matters more than ever. The team behind 360 IV Infusion and Wellness has been delivering IV infusions across DFW and East Texas long before the boutique opened its doors. Every bag is sourced from an FDA approved facility, every treatment is physician supervised, and nothing is rushed or improvised. Clients who arrive feeling depleted often describe leaving with the kind of energy that makes the rest of the day feel possible again. The team here proudly calls themselves vein whisperers, so even clients with tricky veins tend to be surprised by how easy the whole process feels.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/360-iv-iv-chairs.webp" alt="IV infusion chairs at 360 IV Infusion and Wellness in Prosper, TX" loading="lazy" width="1600" height="2844" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Hydrafacial and Esthetician Services for Glowing, Healthy Skin</h2>
+
+<p>The skincare side of the boutique runs through a powerful Hydrafacial machine with multiple treatment heads, paired with red light therapy for the face. The esthetician walks you through every step of the process, which is one of the most common compliments in the reviews. People describe leaving brighter, smoother, and noticeably more refreshed, with helpful recommendations for what to keep using at home. It is the kind of facial where the results show up not only instantly, but days after you walk out the door too.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/360-iv-hydrafacial.webp" alt="Hydrafacial treatment room with branded blanket at 360 IV Infusion and Wellness" loading="lazy" width="1600" height="2844" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Massage Therapy Combined With Red Light Cell Rejuvenation</h2>
+
+<p>The massage experience here does something a little different. Each session is paired with red light therapy, which supports cell rejuvenation and helps soften the look of fine lines. So you are not just decompressing, your skin is also working on itself at the same time. Clients consistently mention in reviews how warm and attentive the team is, and how easy it is to actually relax in this space rather than counting down the minutes until your session ends.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/360-iv-massage-redlight.webp" alt="Massage room with red light therapy equipment at 360 IV Infusion and Wellness" loading="lazy" width="1600" height="2844" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Compression Therapy and the Art of Slowing Down</h2>
+
+<p>The compression therapy room has become one of the most loved services 360 IV Infusion and Wellness offers. Most people who book it end up falling asleep mid session, which is the entire point. It's not common to work with a wellness business that wants you to leave restored rather than upsold. You will not be flipped out of your chair to make room for the next appointment here. Every guest is treated as the only guest in the building, even when the schedule is full.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/360-iv-compression.webp" alt="Compression therapy recliners with blue compression suits at 360 IV Infusion and Wellness" loading="lazy" width="1600" height="2844" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Compliance, Safety, and Why It Matters in Wellness</h2>
+
+<p>One of the strongest themes you will hear from Dr. Oge is compliance. In an industry that has exploded in popularity, she has chosen to protect quality rather than chase numbers. Supplies are sourced carefully, expirations are tracked, and protocols are followed exactly the way they should be. You are getting your IV from skilled nurses who treat your safety as the first priority, not a footnote. That alone separates this boutique from many of the pop up wellness options across North Texas.</p>
+
+<h2>What to Expect On Your First Visit to 360 IV Infusion and Wellness</h2>
+
+<p>When you walk in, you can expect to be greeted, listened to, and guided through every service before anything begins. You can expect a space that is clean, equipment that is new and comfortable, and a team that is happy to answer every question without making you feel rushed. You can expect to leave lighter, brighter, and feeling a little more like yourself. If you have been looking for a place in Prosper that takes wellness seriously without making you feel like just another appointment on a calendar, 360 IV Infusion and Wellness is definitely your answer.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/360-iv-hero.webp" alt="360 IV Infusion and Wellness reception desk in Prosper, TX" loading="lazy" width="1600" height="2844" class="w-full rounded-2xl shadow-md" /></figure>`,
+    phone: '(469) 762-9411',
+    address: '1630 W Prosper Trail #110, Prosper, TX 75078',
+    image: '/images/360-iv-storefront.webp',
+    imageAspect: '1600/2844',
+    cardImage: '/images/360-iv-card.webp',
+    verified: true,
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d294.9220278022713!2d-96.8251628272779!3d33.2491611670489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3fd1b65944b7%3A0x319e13b57a4e73a9!2s360%20IV%20Infusion%20and%20Wellness!5e0!3m2!1sen!2sus!4v1778694033209!5m2!1sen!2sus',
+    socials: {
+      facebook: 'https://www.facebook.com/p/360-IV-Infusion-and-Wellness-61585533975561/',
+      instagram: 'https://www.instagram.com/360_ivinfusionandwellness/',
+    },
+  },
+  {
+    name: 'Lucky Nails & Spa',
+    slug: 'lucky-nails-spa',
+    category: 'health-fitness',
+    published: true,
+    locationLabel: 'Frisco, TX',
+    shortDescription: 'Lucky Nails & Spa is a brand new family-friendly nail salon in Frisco, TX serving the Prosper community. Owner Holly Nguyen brings 30 years of acrylic artistry, a calm sanitary space, and a focus on healthy nails.',
+    longDescription: "Lucky Nails & Spa is a family-friendly nail salon in Frisco, TX, just a short drive from Prosper. Owner Holly Nguyen has 30 years of experience and is known for hand-shaped acrylics, strict sanitation, mommy and me appointments, and a calm welcoming atmosphere designed with neurodivergent families in mind. Students, teachers, veterans, and cancer patients receive a discount.",
+    htmlDescription: `<h2>A Warm Welcome at Frisco's Newest Nail Spa</h2>
+
+<p>Holly Nguyen has spent most of her life around nails, and Lucky Nails & Spa is the salon she has been building toward for years. Located in Frisco, just a short drive from our Prosper community, the salon opened very recently (April 3rd, 2026) and already feels like a salon that has been part of the community for years. Guests notice it right away. The salon is clean, calm, beautifully designed, and free of the harsh chemical smell that most salons have.</p>
+
+<h2>Three Decades of Nail Artistry in Frisco</h2>
+
+<p>Holly has been working with nails since she was around 15 years old, helping out in her parents' salon back in the mid 1990s. 30 years later, acrylic work is still the part of her craft that feels most personal to her. While the rest of the industry has shifted toward gel and dip powder, Holly genuinely loves the craft of shaping acrylics by hand, because it gives her complete control over the final look. Clients consistently mention that she takes one look at their hands and already knows the shape that will suit them best, even when they have a hard time describing what they want.</p>
+
+<h2>A Clean and Comfortable Nail Salon Experience</h2>
+
+<p>Cleanliness is something Holly refuses to outsource. Pedicure stations are scrubbed and disinfected with disposable liners for every guest, tools are sanitized in an autoclave, and at the end of each day she goes back over the chairs herself rather than leaving that step to anyone else. She keeps written records of the disinfection process because she takes it that seriously. Guests have written about how the salon feels noticeably fresh and clean, and that comes directly from how strict Holly is about sanitation. If you have ever walked out of a nail appointment worrying about your nail health, this is the kind of salon that will take that worry away.</p>
+
+<h2>Healthy Nails Are the Priority</h2>
+
+<p>One of the things that sets Holly apart is the way she treats your nails as something that needs to stay healthy long after you walk out the door. She avoids drilling too deeply into the nail bed, works carefully with clients who have brittle nails or a history of biting, and takes time to explain what to look for between visits. She will even show you the simple trick of running your nail through your hair to check whether the polish is still bonded properly. This kind of education is not common at most nail salons, and is part of the reason why so many first time clients make Lucky Nails & Spa their go to salon.</p>
+
+<h2>A Family Friendly Nail Spa for Every Generation</h2>
+
+<p>The salon is set up for mommy and me appointments, with kids' pedicure chairs designed for the little ones who want their own moment to feel grown up. Families raising a child with autism will find a particularly thoughtful welcome here. Holly has a child with autism herself, and she built this salon with those families in mind, creating a calm and quiet atmosphere where everyone can relax. The vibe inside is warm rather than overly luxurious, which is exactly the point. It feels like home.</p>
+
+<h2>Giving Back to the Frisco Community</h2>
+
+<p>Holly believes that life is about giving before you receive, and she has built that philosophy directly into how the salon operates. Students, teachers, veterans, and cancer patients all receive a discount because Holly wants beautiful nails to be within reach for the people she most admires. As the business grows, her goal is to expand into charity work and help even more people in the Frisco, Prosper, and McKinney area. This goes to show the reason so many reviewers describe Holly as genuine, sweet, and someone who clearly cares.</p>
+
+<h2>What to Expect on Your First Visit</h2>
+
+<p>Expect to be greeted warmly, seated in a beautiful chair, and treated like the most important person in the room. Expect honest advice about what will look best and what will keep your nails strong. Most of all, expect to leave thinking about when you can come back again in the future.</p>`,
+    phone: '(214) 407-7406',
+    address: '10710 Eldorado Pkwy #120, Frisco, TX 75035',
+    image: '/images/lucky-nails-spa.webp',
+    imageAspect: '1/1',
+    cardImage: '/images/lucky-nails-spa-card.webp',
+    verified: true,
+    socials: {
+      facebook: 'https://www.facebook.com/people/Lucky-Nails-and-Spa/61583992166163/',
+      instagram: 'https://www.instagram.com/luckynails_and_spa_frisco',
     },
   },
 ];

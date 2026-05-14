@@ -47,7 +47,7 @@ const isPortrait = aspectRatio < 1; // strict portrait
 const isNarrow = aspectRatio < 1.4; // portrait OR near-square
 const heroAspectStyle = `aspect-ratio: ${heroAspect};`;
 const heroWrapperClass = isNarrow
-  ? 'mx-auto max-w-md overflow-hidden rounded-2xl bg-bg-alt'
+  ? 'mx-auto max-w-md overflow-hidden rounded-2xl shadow-md'
   : 'overflow-hidden rounded-2xl';
 // Tailwind safelist: aspect-[16/10] aspect-[3/4] aspect-[4/5]
 
@@ -97,7 +97,7 @@ const breadcrumbItems = [
           )}
         </div>
         <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-          {business.name} <span class="text-white/40">—</span> <span class="font-display italic text-primary">Prosper, TX</span>
+          {business.name} <span class="text-white/40">—</span> <span class="font-display italic text-primary">{business.locationLabel || 'Prosper, TX'}</span>
         </h1>
         <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
           {business.shortDescription}
@@ -112,31 +112,59 @@ const breadcrumbItems = [
           <!-- Main content -->
           <div class="lg:col-span-2">
             <!-- Image -->
-            <div class={heroWrapperClass}>
-              {resolvedImage ? (
-                <Image
-                  src={resolvedImage}
-                  alt={`${business.name} — local business in Prosper, Texas`}
-                  width={isNarrow ? 896 : 1600}
-                  height={isNarrow ? Math.round(896 * (aspectH / aspectW)) : Math.round(1600 * (aspectH / aspectW))}
-                  loading="eager"
-                  format="webp"
-                  quality={85}
-                  class={isNarrow ? 'w-full object-contain' : 'w-full object-cover'}
-                  style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
-                />
-              ) : (
-                <img
-                  src={business.image}
-                  alt={`${business.name} — local business in Prosper, Texas`}
-                  width="800"
-                  height={isNarrow ? Math.round(800 * (aspectH / aspectW)) : 500}
-                  loading="eager"
-                  class={isNarrow ? 'w-full object-contain' : 'w-full object-cover'}
-                  style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
-                />
-              )}
-            </div>
+            {isNarrow ? (
+              <figure class="my-0 mx-auto max-w-md">
+                {resolvedImage ? (
+                  <Image
+                    src={resolvedImage}
+                    alt={`${business.name} — local business in Prosper, Texas`}
+                    width={1600}
+                    height={Math.round(1600 * (aspectH / aspectW))}
+                    loading="eager"
+                    format="webp"
+                    quality={85}
+                    class="w-full max-h-[300px] sm:max-h-[500px] object-cover rounded-2xl shadow-md"
+                    style={business.imagePosition ? `object-position: ${business.imagePosition}` : ''}
+                  />
+                ) : (
+                  <img
+                    src={business.image}
+                    alt={`${business.name} — local business in Prosper, Texas`}
+                    width="1600"
+                    height={Math.round(1600 * (aspectH / aspectW))}
+                    loading="eager"
+                    class="w-full max-h-[300px] sm:max-h-[500px] object-cover rounded-2xl shadow-md"
+                    style={business.imagePosition ? `object-position: ${business.imagePosition}` : ''}
+                  />
+                )}
+              </figure>
+            ) : (
+              <div class="overflow-hidden rounded-2xl">
+                {resolvedImage ? (
+                  <Image
+                    src={resolvedImage}
+                    alt={`${business.name} — local business in Prosper, Texas`}
+                    width={1600}
+                    height={Math.round(1600 * (aspectH / aspectW))}
+                    loading="eager"
+                    format="webp"
+                    quality={85}
+                    class="w-full object-cover"
+                    style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
+                  />
+                ) : (
+                  <img
+                    src={business.image}
+                    alt={`${business.name} — local business in Prosper, Texas`}
+                    width="800"
+                    height={500}
+                    loading="eager"
+                    class="w-full object-cover"
+                    style={`${heroAspectStyle}${business.imagePosition ? ` object-position: ${business.imagePosition};` : ''}`}
+                  />
+                )}
+              </div>
+            )}
 
             <!-- Description -->
             <div class="mt-10">
@@ -254,7 +282,7 @@ const breadcrumbItems = [
                   </div>
                 )}
 
-                {(business.socials?.facebook || business.socials?.instagram || business.socials?.nextdoor) && (
+                {(business.socials?.facebook || business.socials?.instagram || business.socials?.nextdoor || business.socials?.youtube) && (
                   <div class="flex items-start gap-3">
                     <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                       <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" /></svg>
@@ -298,6 +326,19 @@ const breadcrumbItems = [
                           >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
                               <path d="M12 2.25c-2.45 0-4.6 1.27-5.84 3.18-.4-.39-1.13-1.05-1.84-1.05-1.16 0-2.07.91-2.07 2.06v3.41c0 .58.47 1.05 1.05 1.05.58 0 1.05-.47 1.05-1.05V6.44c0-.04.04-.04.07-.01.43.43 1.07 1.04 1.41 1.34-.45.97-.7 2.05-.7 3.19v9.78c0 .58.47 1.05 1.05 1.05h3.5c.58 0 1.05-.47 1.05-1.05v-5.92c0-.92.74-1.66 1.66-1.66h.71c.92 0 1.66.74 1.66 1.66v5.92c0 .58.47 1.05 1.05 1.05h3.5c.58 0 1.05-.47 1.05-1.05v-9.78c0-4.27-3.46-7.71-7.73-7.71z"/>
+                            </svg>
+                          </a>
+                        )}
+                        {business.socials?.youtube && (
+                          <a
+                            href={business.socials.youtube}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${business.name} on YouTube`}
+                            class="group inline-flex size-9 items-center justify-center rounded-full border border-border bg-bg text-text-muted transition-all duration-200 hover:border-primary hover:bg-primary hover:text-white"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                             </svg>
                           </a>
                         )}
