@@ -1075,9 +1075,68 @@ export const businesses: Business[] = [
     imageAspect: '1/1',
     cardImage: '/images/lucky-nails-spa-card.webp',
     verified: true,
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.487475977397!2d-96.78956082289623!3d33.17507976353443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3f00543f7bbd%3A0xa98492df7f661e4e!2sLucky%20Nails%20%26%20Spa!5e0!3m2!1sen!2sus!4v1778735558317!5m2!1sen!2sus',
     socials: {
       facebook: 'https://www.facebook.com/people/Lucky-Nails-and-Spa/61583992166163/',
       instagram: 'https://www.instagram.com/luckynails_and_spa_frisco',
+    },
+  },
+  {
+    name: 'Backyard Movie Theater',
+    slug: 'backyard-movie-theater',
+    category: 'food-fun',
+    published: false,
+    shortDescription: 'Backyard Movie Theater turns Prosper, TX yards into cinematic experiences with a 20-ft industrial-grade screen, custom pre-show reels, indoor inflatable theater, LED dance floor, and gaming lounge options. Owned by Derek Sharp.',
+    longDescription: "Backyard Movie Theater is a full-service movie night and party experience company serving Prosper and the surrounding North Texas area. Founded by Derek Sharp after a Christmas gift to his own family turned into a community favorite, Backyard Movie Theater offers a 20-foot industrial-grade outdoor screen, an air-conditioned indoor inflatable theater, an inflatable nightclub setup, a gaming lounge with multiple TV screens, and an LED dance floor — all paired with custom pre-show reels that turn any event into a real theater experience.",
+    htmlDescription: `<h2>A Backyard Movie Theater Experience in Prosper, TX That Goes Beyond a Simple Movie Night</h2>
+
+<p>If you have ever wondered what it would feel like to turn your own backyard into a memory you will talk about for years, Derek Sharp and his Backyard Movie Theater setup are exactly what you are looking for. What started as a Christmas gift for his own family quickly grew into a full service experience after neighbors caught on to how special a good movie night can really feel. Now Derek brings that same energy to families, schools, and groups all across Prosper and the surrounding North Texas area.</p>
+
+<h2>What to Expect When You Book Derek for Your Backyard Movie Night</h2>
+
+<p>The first thing you notice when you reach out to Derek is how easy he makes the whole process. Communication is quick, his questions are thoughtful, and he genuinely wants to understand what you are trying to create before he ever shows up with equipment. Whether it is a kid's birthday party, a wedding reception, a Super Bowl gathering, or a Father's Day surprise, he treats your event like it matters, because it really does to him.</p>
+
+<p>On the day of your event, Derek arrives early. Not just on time, but early enough that everything is tested, dialed in, and ready well before your guests start showing up. He brings a 20 foot industrial grade screen built to handle Texas wind, crisp sound that fills the entire yard, and the attention to detail that makes the difference between a rented projector and an actual cinematic experience.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-setup-ready.webp" alt="Backyard Movie Theater outdoor setup with rows of inflatable couches ready for a Prosper, TX event" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>A Custom Movie Reel That Makes the Whole Night Feel Like a Real Theater</h2>
+
+<p>One of the things that sets this service apart is the pre show experience Derek puts together for you. Instead of just pressing play on a movie, he builds a custom reel ahead of time. That can include your child's favorite YouTube videos, a music playlist that matches the vibe of the night, and coming attractions that roll right into the main feature. By the time the movie starts, your guests are already settled in and feeling like they walked into a private theater under the stars.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-indoor-theater.webp" alt="Indoor inflatable theater interior with movie playing — Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Indoor Movie Theater, LED Dance Floor, and Gaming Lounge Options</h2>
+
+<p>Derek has expanded what is possible far beyond the traditional outdoor setup. For families with younger kids who need an earlier start time, there is a fully air conditioned indoor inflatable theater complete with carpeting, LED perimeter lighting, and four AC units to keep things cool. That same space transforms into an inflatable nightclub with fog machines, lights, velvet ropes, and a red carpet, or into a gaming lounge with multiple TV screens for tournaments and group play. The newest addition is an LED dance floor that pairs perfectly with the big screen, turning the back half of any party into a full on concert once the movie wraps up.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-nightclub.webp" alt="Inflatable nightclub setup with red lighting and projection screen — Backyard Movie Theater" loading="lazy" width="1000" height="1333" class="w-full rounded-2xl shadow-md" /></figure>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-gaming-lounge.webp" alt="Gaming lounge with multiple TV screens and arcade machines at Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-led-dance-floor.webp" alt="Indoor LED dance floor with movie projection — Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Why Families and Schools in Prosper Keep Coming Back</h2>
+
+<p>If you read through the reviews about Backyard Movie Rental, you'll see a clear pattern showing up over and over again. Parents talk about how their kids called it the best birthday ever. PTA organizers describe the smoothest school movie night they have ever hosted. Couples mention how Derek made their wedding reception unforgettable by playing their elopement video on the big screen. The common thread is that Derek does not just deliver equipment. He shows up, takes ownership of the experience, makes adjustments when weather or logistics throw a curveball, and quietly disappears so your event feels completely yours.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-outdoor-led.webp" alt="Outdoor rainbow LED dance floor under the movie screen — Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Booking Backyard Movie Theater for Your Next Event</h2>
+
+<p>If you are planning a birthday, a school function, a holiday gathering, a corporate event, or any celebration where you want guests walking away saying they have never seen anything like it, this is the setup to book. Derek puts real care into every event he takes on, from the picture quality to the way he interacts with your guests. You are not booking a rental. You are booking a night that turns into a core memory for the people you love.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-outdoor-setup.webp" alt="Outdoor inflatable theater setup with lounge seating and red carpet — Backyard Movie Theater" loading="lazy" width="1000" height="1333" class="w-full rounded-2xl shadow-md" /></figure>`,
+    phone: '(424) 209-9087',
+    website: 'https://backyardmovietheater.com/',
+    address: 'Serving Prosper and surrounding areas',
+    image: '/images/backyard-movie-hero.webp',
+    imageAspect: '4/3',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428260.1916730566!2d-97.18138828742497!3d33.00950275324331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa8b663bd528c74ab%3A0x9dde517a1e557b2b!2sBackyard%20Movie%20Theater!5e0!3m2!1sen!2sus!4v1778735187002!5m2!1sen!2sus',
+    socials: {
+      facebook: 'https://www.facebook.com/backyardmovietheater/',
+      instagram: 'https://www.instagram.com/backyardmovietheatertexas',
+      youtube: 'https://www.youtube.com/@backyardmovietheater',
     },
   },
 ];
