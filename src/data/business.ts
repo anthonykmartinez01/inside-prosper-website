@@ -1020,7 +1020,7 @@ export const businesses: Business[] = [
 
 <h2>What to Expect On Your First Visit to 360 IV Infusion and Wellness</h2>
 
-<p>When you walk in, you can expect to be greeted, listened to, and guided through every service before anything begins. You can expect a space that is clean, equipment that is new and comfortable, and a team that is happy to answer every question without making you feel rushed. You can expect to leave lighter, brighter, and feeling a little more like yourself. If you have been looking for a place in Prosper that takes wellness seriously without making you feel like just another appointment on a calendar, 360 IV Infusion and Wellness is definitely your answer.</p>
+<p>When you walk in, you can expect to be greeted, listened to, and guided through every service before anything begins. You can expect a space that is clean, equipment that is new and comfortable, and a team that is happy to answer every question without making you feel rushed. You can expect to leave lighter, brighter, and feeling a little more like yourself. If you have been looking for a place in Prosper that takes wellness seriously without making you feel like just another appointment on a calendar, <a href="https://www.360ivinfusionandwellness.com/" target="_blank" rel="noopener noreferrer">360 IV Infusion and Wellness</a> is definitely your answer.</p>
 
 <figure class="my-8 mx-auto max-w-md"><img src="/images/360-iv-hero.webp" alt="360 IV Infusion and Wellness reception desk in Prosper, TX" loading="lazy" width="1600" height="2844" class="w-full rounded-2xl shadow-md" /></figure>`,
     phone: '(469) 762-9411',
