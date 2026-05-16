@@ -1134,6 +1134,7 @@ export const businesses: Business[] = [
     address: 'Serving Prosper and surrounding areas',
     image: '/images/backyard-movie-hero.webp',
     imageAspect: '4/3',
+    verified: true,
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428260.1916730566!2d-97.18138828742497!3d33.00950275324331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa8b663bd528c74ab%3A0x9dde517a1e557b2b!2sBackyard%20Movie%20Theater!5e0!3m2!1sen!2sus!4v1778735187002!5m2!1sen!2sus',
     socials: {
       facebook: 'https://www.facebook.com/backyardmovietheater/',
