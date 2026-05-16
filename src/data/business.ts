@@ -727,6 +727,7 @@ export const businesses: Business[] = [
     cardImageAspect: '546/720',
     imagePosition: 'top',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.1179673547786!2d-96.73858552289711!3d33.132265265744074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c17cd9028b873%3A0xc811a96e7b4251e0!2sSheetal\'s%20Henna%20Designs%20LLC!5e0!3m2!1sen!2sus!4v1778164402483!5m2!1sen!2sus',
+    verified: true,
     socials: {
       facebook: 'https://www.facebook.com/Sheetalshennadesigns/',
       instagram: 'https://www.instagram.com/sheetals_henna_designs_dallas/',
