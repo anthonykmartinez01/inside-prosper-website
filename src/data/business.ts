@@ -979,7 +979,7 @@ export const businesses: Business[] = [
     name: '360 IV Infusion and Wellness',
     slug: '360-iv-infusion-wellness',
     category: 'health-fitness',
-    published: false,
+    published: true,
     shortDescription: '360 IV Infusion and Wellness is a premier IV hydration lounge in Prosper, TX offering physician supervised IV therapy, Hydrafacial, massage with red light therapy, and compression therapy under the care of Dr. Oge Ogundu.',
     longDescription: '360 IV Infusion and Wellness is a boutique wellness studio in Prosper, TX, owned by Dr. Oge Ogundu, who brings a background in optometry and nursing to every detail of the experience. Services include physician-supervised IV hydration therapy with FDA-approved bags, Hydrafacial with red light therapy, massage paired with red light cell rejuvenation, and compression therapy in a calm, modern, boutique space designed to feel less like a clinic and more like a quiet retreat.',
     htmlDescription: `<h2>A Calm, Boutique IV Hydration Lounge in the Heart of Prosper TX</h2>
@@ -1024,6 +1024,7 @@ export const businesses: Business[] = [
 
 <figure class="my-8 mx-auto max-w-md"><img src="/images/360-iv-hero.webp" alt="360 IV Infusion and Wellness reception desk in Prosper, TX" loading="lazy" width="1600" height="2844" class="w-full rounded-2xl shadow-md" /></figure>`,
     phone: '(469) 762-9411',
+    website: 'https://www.360ivinfusionandwellness.com/',
     address: '1630 W Prosper Trail #110, Prosper, TX 75078',
     image: '/images/360-iv-storefront.webp',
     imageAspect: '1600/2844',
