@@ -980,15 +980,15 @@ export const businesses: Business[] = [
     slug: '360-iv-infusion-wellness',
     category: 'health-fitness',
     published: true,
-    shortDescription: '360 IV Infusion and Wellness is a premier IV Hydration and Wellness Lounge in Prosper, TX offering physician supervised IV therapy, Hydrafacial, massage with red light therapy, and compression therapy under the care of Dr. Oge Ogundu, DNP, MSN, RN.',
-    longDescription: '360 IV Infusion and Wellness is an IV Hydration and Wellness Lounge in Prosper, TX, owned by Dr. Oge Ogundu, DNP, MSN, RN, who brings a background in podiatry and nursing to every detail of the experience. Services include physician-supervised IV hydration therapy with FDA-approved bags, Hydrafacial with red light therapy, massage paired with red light cell rejuvenation, and compression therapy in a calm, modern, boutique space designed to feel less like a clinic and more like a quiet retreat.',
+    shortDescription: '360 IV Infusion and Wellness is a premier IV Hydration and Wellness Lounge in Prosper, TX offering physician supervised IV therapy, Hydrafacial, massage with red light therapy, and compression therapy under the care of Oge Ogundu, DNP, MSN, RN.',
+    longDescription: '360 IV Infusion and Wellness is an IV Hydration and Wellness Lounge in Prosper, TX, owned by Oge Ogundu, DNP, MSN, RN, who brings a background in podiatry and nursing to every detail of the experience. Services include physician-supervised IV hydration therapy with FDA-approved bags, Hydrafacial with red light therapy, massage paired with red light cell rejuvenation, and compression therapy in a calm, modern, boutique space designed to feel less like a clinic and more like a quiet retreat.',
     htmlDescription: `<h2>A Calm, IV Hydration and Wellness Lounge in the Heart of Prosper TX</h2>
 
 <p>360 IV Infusion and Wellness does not look or feel like the IV bars you have probably scrolled past on Instagram. It does not feel like a clinic, and it does not feel like a typical day spa either. Instead there is a calm, modern, boutique space that was intentionally built around what someone actually wants when they walk in tired, run down, or just needing to feel refreshed. Clients keep mentioning one word in their online reviews, and that word is welcomed. Even the chairs are the kind that make you forget you came in for a treatment in the first place.</p>
 
-<h2>Meet Dr. Oge Ogundu, DNP, MSN, RN — The Heart Behind 360 IV Infusion and Wellness</h2>
+<h2>Meet Oge Ogundu, DNP, MSN, RN — The Heart Behind 360 IV Infusion and Wellness</h2>
 
-<p>This IV Hydration and Wellness Lounge is owned by Dr. Oge Ogundu, DNP, MSN, RN, who brings her background in both podiatry and nursing into every detail of the experience. Originally from Nigeria, she built her career in healthcare across the country before planting roots in Prosper. Her approach is shaped by something she noticed during years of bedside and insurance work: that people often think about their health only after something has already gone wrong. 360 IV Infusion and Wellness was created so you can be proactive with your wellness inside a space that feels safe, supervised, and personal. Dr. Oge is also a mother of two, a wife, and a traveler at heart, with a vision of one day using a portion of the proceeds to support scholarships for young girls.</p>
+<p>This IV Hydration and Wellness Lounge is owned by Oge Ogundu, DNP, MSN, RN, who brings her background in both podiatry and nursing into every detail of the experience. Originally from Nigeria, she built her career in healthcare across the country before planting roots in Prosper. Her approach is shaped by something she noticed during years of bedside and insurance work: that people often think about their health only after something has already gone wrong. 360 IV Infusion and Wellness was created so you can be proactive with your wellness inside a space that feels safe, supervised, and personal. Oge is also a mother of two, a wife, and a traveler at heart, with a vision of one day using a portion of the proceeds to support scholarships for young girls.</p>
 
 <h2>IV Hydration Therapy You Can Actually Trust in Prosper</h2>
 
@@ -1016,7 +1016,7 @@ export const businesses: Business[] = [
 
 <h2>Compliance, Safety, and Why It Matters in Wellness</h2>
 
-<p>One of the strongest themes you will hear from Dr. Oge is compliance. In an industry that has exploded in popularity, she has chosen to protect quality rather than chase numbers. Supplies are sourced carefully, expirations are tracked, and protocols are followed exactly the way they should be. You are getting your IV from skilled nurses who treat your safety as the first priority, not a footnote. That alone separates this boutique from many of the pop up wellness options across North Texas.</p>
+<p>One of the strongest themes you will hear from Oge is compliance. In an industry that has exploded in popularity, she has chosen to protect quality rather than chase numbers. Supplies are sourced carefully, expirations are tracked, and protocols are followed exactly the way they should be. You are getting your IV from skilled nurses who treat your safety as the first priority, not a footnote. That alone separates this boutique from many of the pop up wellness options across North Texas.</p>
 
 <h2>What to Expect On Your First Visit to 360 IV Infusion and Wellness</h2>
 
