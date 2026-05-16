@@ -1087,7 +1087,7 @@ export const businesses: Business[] = [
     name: 'Backyard Movie Theater',
     slug: 'backyard-movie-theater',
     category: 'food-fun',
-    published: false,
+    published: true,
     shortDescription: 'Backyard Movie Theater turns Prosper, TX yards into cinematic experiences with a 20-ft industrial-grade screen, custom pre-show reels, indoor inflatable theater, LED dance floor, and gaming lounge options. Owned by Derek Sharp.',
     longDescription: "Backyard Movie Theater is a full-service movie night and party experience company serving Prosper and the surrounding North Texas area. Founded by Derek Sharp after a Christmas gift to his own family turned into a community favorite, Backyard Movie Theater offers a 20-foot industrial-grade outdoor screen, an air-conditioned indoor inflatable theater, an inflatable nightclub setup, a gaming lounge with multiple TV screens, and an LED dance floor — all paired with custom pre-show reels that turn any event into a real theater experience.",
     htmlDescription: `<h2>A Backyard Movie Theater Experience in Prosper, TX That Goes Beyond a Simple Movie Night</h2>
