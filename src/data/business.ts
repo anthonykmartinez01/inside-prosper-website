@@ -1185,7 +1185,7 @@ export const businesses: Business[] = [
     phone: '(972) 992-8644',
     website: 'https://closeautomaticgaragedoortx.com/',
     address: 'Serving Little Elm, Frisco, Prosper, and McKinney, TX',
-    image: '/images/close-garage-door-wood-door.webp',
+    image: '/images/close-garage-door-hero.webp',
     imageAspect: '4/3',
   },
 ];
