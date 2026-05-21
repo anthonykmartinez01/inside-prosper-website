@@ -1140,6 +1140,54 @@ export const businesses: Business[] = [
       youtube: 'https://www.youtube.com/@backyardmovietheater',
     },
   },
+  // Trades — Garage Door Repair
+  {
+    name: 'Close Automatic Garage Door',
+    slug: 'close-automatic-garage-door',
+    category: 'trades',
+    published: true,
+    locationLabel: 'Little Elm, TX',
+    shortDescription: 'Close Automatic Garage Door is a husband-and-wife-owned garage door repair and installation company serving Little Elm, Frisco, Prosper, and McKinney. Owner Darrell Close brings 25 years of experience from the Overhead Door Company, handling residential and commercial garage door service, repairs, and installations.',
+    longDescription: 'Close Automatic Garage Door is owned and operated by Darrell and Leah Close, serving the Little Elm, Frisco, Prosper, and McKinney area. Darrell has over 25 years of garage door experience spanning installation, service, technician work, and electrical, with roots at the Overhead Door Company out of Washington DC. Services include broken spring repair, off-track doors, opener replacements, sensor issues, full door installations, high lift conversions, commercial roll-up doors, dock doors, and more.',
+    htmlDescription: `<h2>Meet Darrell and Leah Close of Close Automatic Garage Door</h2>
+
+<p>Darrell and Leah Close are the husband and wife team behind Close Automatic Garage Door, running the company together out of the corner where Little Elm, Frisco, and Prosper all meet. Darrell has been working on garage doors since 1999. He started out as a carpenter in the 90s and spent roughly 25 years with the Overhead Door Company out of Washington DC before relocating to Texas. He has done installation, service, technician work, and even handled the electrical side, which means he has touched just about every corner of the garage door industry over the course of his career.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-wood-door.webp" alt="Beautiful wood garage door installation by Close Automatic Garage Door in the Prosper, TX area" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>What to Expect From Their Garage Door Repair Service</h2>
+
+<p>The first thing most people notice is how quickly Darrell picks up the phone. Customers consistently describe him as responsive, fast to schedule, and willing to come out the same day, even late in the evening or in the middle of a winter storm. One family reached out on Christmas Day with a broken door and Darrell responded that same evening and arrived the next morning. Another customer had a spring snap late at night and was up and running by the following morning. If you have an urgent issue, you are not going to sit around waiting three days for a callback.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-residential.webp" alt="Residential garage door repair completed by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Honest, Upfront Pricing and Free Estimates</h2>
+
+<p>Once Darrell arrives, his process is straightforward. He looks at the system, gives you a free estimate, and walks you through exactly what he sees. He explains how the parts work, why something broke, and what your options are. Plenty of reviews mention this specifically, and it is the kind of thing you only really appreciate after you have been burned by a different company. You leave the appointment understanding your garage door better than you did before he showed up.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-carriage-style.webp" alt="Carriage style garage door with decorative hardware installed by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Quality Workmanship Backed by 25 Years of Experience</h2>
+
+<p>Darrell takes safety seriously, and for good reason. Garage doors carry enormous tension in their springs, and he has watched people get badly hurt trying to fix things themselves. So when he repairs a door, he is also checking the rest of the system, making adjustments, and making sure the door is operating safely and quietly before he leaves. Several customers mention that he checked their other doors too, even when only one was broken, just to make sure everything was in good shape. He is OSHA certified, fire door safety certified, and carries full commercial liability insurance.</p>
+
+<h2>Residential and Commercial Garage Door Services</h2>
+
+<p>Close Automatic Garage Door is genuinely a one stop shop. On the residential side, Darrell handles broken springs, off track doors, opener repairs and replacements, sensor issues, full door installations, and high lift conversions with jackshaft openers. On the commercial side, he works on roll up doors, dock doors, dock levelers, scissor lifts, automatic sliding gates, automatic sliding doors, and freezer doors. He even works on wood doors, which a surprising number of service technicians in this area will not touch. If it opens and closes automatically, Darrell can fix it.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-modern-install.webp" alt="Modern garage doors with glass panels installed by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>The Kind of Local Business You Want to Support</h2>
+
+<p>What really sets Darrell and Leah apart is how they treat people. Leah loves networking and bringing people together, and Darrell is the friendly, easygoing type who builds real relationships with the customers he serves. Two of their customers actually ended up joining Darrell on a recent fishing trip. When you hire <a href="https://closeautomaticgaragedoortx.com/" target="_blank" rel="noopener noreferrer">Close Automatic Garage Door</a>, you are not just getting a quick fix. You are getting someone you can call for the next 10 years, who remembers your name, who shows up when he says he will, and who treats your home like it matters. For anyone in Little Elm, Frisco, Prosper, or McKinney who has been waiting for a garage door company they can actually trust, this is the one.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-commercial.webp" alt="Commercial glass garage doors installed by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>`,
+    phone: '(972) 992-8644',
+    website: 'https://closeautomaticgaragedoortx.com/',
+    address: 'Serving Little Elm, Frisco, Prosper, and McKinney, TX',
+    image: '/images/close-garage-door-wood-door.webp',
+    imageAspect: '4/3',
+  },
 ];
 
 // ── Helper functions ──
