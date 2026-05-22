@@ -1177,6 +1177,10 @@ export const businesses: Business[] = [
 
 <figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-modern-install.webp" alt="Modern garage doors with glass panels installed by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
 
+<h2>Trusted by Local Roofing Companies and Property Managers</h2>
+
+<p>Darrell has built strong working relationships with local roofing companies in the area who regularly refer him when their clients need garage door work done right. He also works with Norris Property Management, handling garage door service across their portfolio of properties. Close Automatic Garage Door offers preventative maintenance services for apartment complexes, rental properties, and warehouses, keeping doors running safely and reliably so property managers are not fielding emergency calls down the road.</p>
+
 <h2>The Kind of Local Business You Want to Support</h2>
 
 <p>What really sets Darrell and Leah apart is how they treat people. Leah loves networking and bringing people together, and Darrell is the friendly, easygoing type who builds real relationships with the customers he serves. Two of their customers actually ended up joining Darrell on a recent fishing trip. When you hire <a href="https://closeautomaticgaragedoortx.com/" target="_blank" rel="noopener noreferrer">Close Automatic Garage Door</a>, you are not just getting a quick fix. You are getting someone you can call for the next 10 years, who remembers your name, who shows up when he says he will, and who treats your home like it matters. For anyone in Little Elm, Frisco, Prosper, or McKinney who has been waiting for a garage door company they can actually trust, this is the one.</p>
