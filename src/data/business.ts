@@ -1187,7 +1187,7 @@ export const businesses: Business[] = [
 
 <p>What really sets Darrell and Leah apart is how they treat people. Leah loves networking and bringing people together, and Darrell is the friendly, easygoing type who builds real relationships with the customers he serves. Two of their customers actually ended up joining Darrell on a recent fishing trip. When you hire <a href="https://closeautomaticgaragedoortx.com/" target="_blank" rel="noopener noreferrer">Close Automatic Garage Door</a>, you are not just getting a quick fix. You are getting someone you can call for the next 10 years, who remembers your name, who shows up when he says he will, and who treats your home like it matters. For anyone in Little Elm, Frisco, Prosper, or McKinney who has been waiting for a garage door company they can actually trust, this is the one.</p>
 
-<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-commercial.webp" alt="Commercial glass garage doors installed by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>`,
+<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-commercial.webp" alt="Commercial glass garage doors installed by Close Automatic Garage Door at The Gin in Prosper, TX" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /><figcaption class="mt-2 text-center text-sm text-text-muted">Commercial garage doors installed at The Gin, a popular restaurant in Prosper, TX</figcaption></figure>`,
     phone: '(972) 992-8644',
     website: 'https://closeautomaticgaragedoortx.com/',
     address: 'Serving Little Elm, Frisco, Prosper, and McKinney, TX',
