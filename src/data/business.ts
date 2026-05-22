@@ -1183,7 +1183,7 @@ export const businesses: Business[] = [
 
 <h2>Trusted by Local Roofing Companies and Property Managers</h2>
 
-<p>Darrell has built strong working relationships with local roofing companies in the area who regularly refer him when their clients need garage door work done right. He also works with Norris Property Management, handling garage door service across their portfolio of properties. Close Automatic Garage Door offers preventative maintenance services for apartment complexes, rental properties, and warehouses, keeping doors running safely and reliably so property managers are not fielding emergency calls down the road.</p>
+<p>Darrell has built strong working relationships with local roofing companies in the area who regularly refer him when their clients need garage door work done right. He also works with numerous property management companies in the area, handling garage door service across their portfolios of properties. Close Automatic Garage Door offers preventative maintenance services for apartment complexes, rental properties, and warehouses, keeping doors running safely and reliably so property managers are not fielding emergency calls down the road.</p>
 
 <h2>The Kind of Local Business You Want to Support</h2>
 
