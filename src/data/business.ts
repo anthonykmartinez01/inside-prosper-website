@@ -1175,6 +1175,8 @@ export const businesses: Business[] = [
 
 <p>Close Automatic Garage Door is genuinely a one stop shop. On the residential side, Darrell handles broken springs, off track doors, opener repairs and replacements, sensor issues, full door installations, and high lift conversions with jackshaft openers. On the commercial side, he works on roll up doors, dock doors, dock levelers, scissor lifts, automatic sliding gates, automatic sliding doors, and freezer doors. He even works on wood doors, which a surprising number of service technicians in this area will not touch. If it opens and closes automatically, Darrell can fix it.</p>
 
+<figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-commercial-repair.webp" alt="Commercial garage door repair by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+
 <figure class="my-8 mx-auto max-w-md"><img src="/images/close-garage-door-modern-install.webp" alt="Modern garage doors with glass panels installed by Close Automatic Garage Door" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
 
 <h2>Trusted by Local Roofing Companies and Property Managers</h2>
