@@ -3,7 +3,7 @@ import BusinessCard from '../ui/BusinessCard.astro';
 import { publishedBusinesses, categories } from '../../data/business';
 
 // Featured businesses
-const featuredSlugs = ['lucky-nails-spa', 'backyard-movie-theater', '360-iv-infusion-wellness', 'sheetal-henna-artist', 'zero-streaks-window-cleaning', 'chosen-appliance-repair', 'puddle-pool-services', 'stonebriar-property-inspections', 'prosper-painting', 'bobcats-automotive', 'elite-integrated-performance', 'a-joyful-mess-art-studio', 'the-playground-standard', 'the-red-roofer', 'impact-landscapes'];
+const featuredSlugs = ['close-automatic-garage-door', 'lucky-nails-spa', 'backyard-movie-theater', '360-iv-infusion-wellness', 'sheetal-henna-artist', 'zero-streaks-window-cleaning', 'chosen-appliance-repair', 'puddle-pool-services', 'stonebriar-property-inspections', 'prosper-painting', 'bobcats-automotive', 'elite-integrated-performance', 'a-joyful-mess-art-studio', 'the-playground-standard', 'the-red-roofer', 'impact-landscapes'];
 const recentBusinesses = featuredSlugs
   .map(slug => publishedBusinesses.find(b => b.slug === slug))
   .filter(Boolean) as typeof publishedBusinesses;
