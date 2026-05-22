@@ -1092,6 +1092,8 @@ export const businesses: Business[] = [
 
 <p>If you have ever wondered what it would feel like to turn your own backyard into a memory you will talk about for years, Derek Sharp and his Backyard Movie Theater setup are exactly what you are looking for. What started as a Christmas gift for his own family quickly grew into a full service experience after neighbors caught on to how special a good movie night can really feel. Now Derek brings that same energy to families, schools, and groups all across Prosper and the surrounding North Texas area.</p>
 
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-derek-sharp.webp" alt="Derek Sharp, owner of Backyard Movie Theater in Prosper, TX" loading="lazy" width="600" height="800" class="w-full rounded-2xl shadow-md" /></figure>
+
 <h2>What to Expect When You Book Derek for Your Backyard Movie Night</h2>
 
 <p>The first thing you notice when you reach out to Derek is how easy he makes the whole process. Communication is quick, his questions are thoughtful, and he genuinely wants to understand what you are trying to create before he ever shows up with equipment. Whether it is a kid's birthday party, a wedding reception, a Super Bowl gathering, or a Father's Day surprise, he treats your event like it matters, because it really does to him.</p>
