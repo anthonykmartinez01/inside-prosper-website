@@ -1195,6 +1195,7 @@ export const businesses: Business[] = [
     address: 'Serving Little Elm, Frisco, Prosper, and McKinney, TX',
     image: '/images/close-garage-door-hero.webp',
     imageAspect: '4/3',
+    verified: true,
   },
 ];
 
