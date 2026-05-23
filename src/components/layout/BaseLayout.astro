@@ -11,6 +11,7 @@ interface Props {
   ogType?: string;
   articleDate?: string;
   articleAuthor?: string;
+  noindex?: boolean;
 }
 
 const { title, description, ogImage = '/images/hero-prosper.jpg', ogType = 'website', articleDate, articleAuthor } = Astro.props;
@@ -39,7 +40,7 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={Astro.props.noindex ? 'noindex, nofollow' : 'index, follow'} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
