@@ -113,15 +113,17 @@ const breadcrumbItems = [
 
             <!-- Rank Map -->
             <div class="mt-8 overflow-hidden rounded-xl border border-border">
-              <object
-                data="/images/results-rankmap.pdf"
-                type="application/pdf"
+              <iframe
+                src="/images/results-rankmap.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+                title="Inside Prosper Google Maps Rank Map"
                 width="100%"
                 height="700"
-                class="w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[700px]"
-              >
+                class="w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[700px] border-0"
+                loading="lazy"
+              ></iframe>
+              <noscript>
                 <div class="flex flex-col items-center justify-center gap-4 p-8 text-center">
-                  <p class="text-text-muted">Your browser does not support embedded PDFs.</p>
+                  <p class="text-text-muted">Unable to display the rank map.</p>
                   <a
                     href="/images/results-rankmap.pdf"
                     target="_blank"
@@ -132,7 +134,7 @@ const breadcrumbItems = [
                     <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                   </a>
                 </div>
-              </object>
+              </noscript>
             </div>
 
             <p class="mt-6 text-sm text-text-muted italic">
