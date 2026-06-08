@@ -927,6 +927,42 @@ export const businesses: Business[] = [
     },
   },
   {
+    name: 'Clear Services Appliance Repair',
+    slug: 'clear-services-appliance-repair',
+    category: 'trades',
+    published: true,
+    verified: true,
+    shortDescription: 'Family-owned, factory-certified appliance repair serving Prosper, Celina, McKinney, Frisco, Plano, Allen, and the surrounding Collin County area. Owner-operated by Fabio with nearly 15 years of experience, same-day service, honest pricing, and warrantied work.',
+    longDescription: 'Clear Services Appliance Repair is a family-owned business led by owner and lead technician Fabio, serving Prosper, Celina, McKinney, Frisco, Plano, Allen, and the surrounding Collin County area. With nearly 15 years in the trade, Fabio is factory certified, licensed, and insured, holding certifications with high-end brands like Dacor, commercial refrigeration through Cool Summit, Speed Queen, and more. When you call, you reach a real person, and more often than not the owner himself answers the phone. Customers consistently describe the experience as honest and low-pressure. Fabio starts with the least costly path first, walks you through original versus universal parts, and will tell you when replacing an appliance makes more sense than repairing it. Same-day and weekend service is common, and his wife handles dispatching so he arrives prepared.',
+    htmlDescription: `<h2>Meet Fabio: The Appliance Repair Expert Behind Clear Services in Collin County</h2>
+<p>When something breaks down in your kitchen or laundry room, the last thing you want is a stranger in your home who you cannot trust. That stress is real, and Fabio knows it. He is the owner and lead technician at Clear Services Appliance Repair, a family owned business serving Prosper, Celina, McKinney, Frisco, Plano, Allen, and the surrounding Collin County area. When you call, you reach a real person who actually listens, usually Fabio's wife, who handles dispatching and takes the time to understand your problem before a technician is ever sent out.</p>
+
+<h2>15 Years of Factory Certified Appliance Repair</h2>
+<p>Fabio is not someone who picked up a YouTube video last week and decided to call himself a technician. He has spent nearly 15 years in this trade, and he is factory certified, licensed, and insured. He holds certifications with high end brands like Dacor, with commercial refrigeration through Cool Summit, with Speed Queen, and more. This means the person walking through your door actually understands what is happening inside your appliance, not just what the manual says. He sees the parts and the build quality that most people never get to look at, and he uses that knowledge to steer you in the right direction.</p>
+
+<h2>Honest Pricing With No Pressure to Overspend</h2>
+<p>One thing customers mention again and again is how honest the experience feels. Fabio does not push unnecessary repairs or rush to sell you a brand new appliance when a simpler fix will do. He starts with the least costly path first, checking whether a part can be cleaned or repaired before he ever orders a replacement. If a repair does make sense, he walks you through your options, original parts versus more affordable universal ones, so you are never stuck with a single take it or leave it price. And if you are better off replacing the appliance, he will tell you that too, along with which brands to avoid and where to find a quality unit for less. People trust him so much that some call just to ask what he recommends buying.</p>
+
+<h2>Same Day Service When You Need It Most</h2>
+<p>Appliance failures rarely happen at convenient times. A fridge going out, a washer flooding the laundry closet, a dryer dying right before a busy week. Customers describe calling Clear Services and getting a technician out within hours, sometimes the same day, even on a Friday afternoon or over the weekend. Fabio and his team show up on time, diagnose the issue quickly, and often have the right part already on the truck. When a part needs to be ordered, he is back the next day to finish the job. For families who simply cannot afford to be down for a week waiting on a big name company, that responsiveness is a genuine relief.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/clear-services-dryer-vent-before-after.jpg" alt="Before and after of a dryer vent line repair completed by Clear Services Appliance Repair in Collin County, TX" loading="lazy" width="1080" height="1080" class="w-full rounded-2xl shadow-md" /><figcaption class="mt-2 text-center text-sm text-text-muted">Before and after: a dryer vent line repaired and properly secured by Clear Services Appliance Repair</figcaption></figure>
+
+<h2>A Repair Experience Built on Trust and Education</h2>
+<p>What truly sets Fabio apart is how he treats the visit itself. He is not there only to fix the appliance, take payment, and disappear. He explains what went wrong, why it happened, and how to keep it from happening again. He breaks the tension the moment he walks in, and by the time he leaves, you understand your appliance better than you did before. This is why his customers stick with him for years, refer their friends and family, and treat him less like a contractor and more like someone they are glad to know. Reviewers describe him as friendly, honest, dependable, and reasonable, and they consistently say he has become their go to for anything that breaks.</p>
+
+<h2>A Family Business That Cares About the Community</h2>
+<p>Clear Services is run by Fabio alongside his wife, who handles dispatching and gathers the details of your problem ahead of time so he arrives prepared. This is a small, dedicated operation that genuinely cares about the people it serves. Fabio has been known to help customers in tough situations, fixing what needs fixing and working with them on payment when life is hard, because he remembers what it is like to need a hand. That heart, combined with real expertise, is what you can expect when you call.</p>
+
+<h2>What You Can Expect When You Call Clear Services Appliance Repair</h2>
+<p>From the first phone call to the finished repair, Clear Services makes a frustrating situation feel manageable. A certified technician arrives at your door, often the same day, and gets to work understanding the problem rather than rushing to the most expensive fix. You get honest options, fair pricing, clear explanations of what went wrong, and a warranty that stands behind the work. More than that, you get someone you will be glad to call the next time something breaks. In a field where it is hard to know who to trust, Fabio has built a reputation on doing things the right way, and that is exactly what you can expect when you work with Clear Services Appliance Repair.</p>`,
+    phone: '(469) 318-9918',
+    website: 'https://clearservicesappliancerepair.com/',
+    address: 'Serving Prosper, Celina, McKinney, Frisco, Plano, Allen, and the surrounding Collin County area',
+    image: '/images/clear-services-appliance-repair.jpg',
+    imageAspect: '7/15',
+  },
+  {
     name: 'Zero Streaks Window Cleaning',
     slug: 'zero-streaks-window-cleaning',
     category: 'trades',
