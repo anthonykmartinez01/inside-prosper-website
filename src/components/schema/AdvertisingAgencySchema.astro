@@ -1,0 +1,65 @@
+---
+import { siteConfig } from '../../data/business';
+
+interface Props {
+  /** Service names offered, rendered into the OfferCatalog. */
+  services: string[];
+  /** Business description for this page's schema. */
+  description: string;
+  /** Geo coordinates for the business location. */
+  geo?: { lat: number; lng: number };
+}
+
+const {
+  services,
+  description,
+  geo = { lat: 33.2567272, lng: -96.7738816 },
+} = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${siteConfig.siteUrl}/#business`,
+  name: siteConfig.name,
+  url: `${siteConfig.siteUrl}/`,
+  telephone: siteConfig.phone,
+  description,
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: geo.lat,
+    longitude: geo.lng,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: siteConfig.street,
+    addressLocality: siteConfig.city,
+    addressRegion: siteConfig.state,
+    postalCode: siteConfig.zip,
+    addressCountry: 'US',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: siteConfig.city,
+  },
+  sameAs: [
+    'https://www.facebook.com/people/InsideProsper/61574519054783/',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Advertising Agency Services',
+    itemListElement: services.map((name) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name,
+        areaServed: {
+          '@type': 'City',
+          name: siteConfig.city,
+        },
+      },
+    })),
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
