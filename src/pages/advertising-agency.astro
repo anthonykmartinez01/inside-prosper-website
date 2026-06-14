@@ -4,12 +4,11 @@ import Navbar from '../components/layout/Navbar.astro';
 import Footer from '../components/layout/Footer.astro';
 import InlineCTA from '../components/sections/InlineCTA.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import FAQSchema from '../components/schema/FAQSchema.astro';
 import AdvertisingAgencySchema from '../components/schema/AdvertisingAgencySchema.astro';
 import { siteConfig } from '../data/business';
 
 const pageDescription =
-  'Inside Prosper is a full-service advertising agency in Prosper, TX, offering a comprehensive range of digital marketing services — from Google Ads and Local SEO to website design and review generation — tailored to help local businesses grow in Prosper’s fast-expanding market.';
+  'A local advertising agency in Prosper, TX that actually picks up the phone. Local Business Spotlights, Meta Ads, and Google Ads management built around your Google Business Profile.';
 
 const breadcrumbItems = [
   { name: 'Home', url: siteConfig.siteUrl },
@@ -17,150 +16,59 @@ const breadcrumbItems = [
 ];
 
 const services = [
-  'Google Ads',
+  'Local Business Spotlight',
   'Meta Ads',
+  'Google Ads',
   'Local SEO',
   'Google Business Profile Optimization',
-  'Website Design',
-  'Landing Page Design',
-  'Review Generation',
 ];
 
 const trustPoints = [
-  'Locally owned and operated in Prosper',
-  'Invitation-only',
-  'Never paid placement',
-  'Not pay-to-play',
+  'Local marketing agency in Prosper',
+  'No handoffs — you work with me directly',
+  'I pick up the phone',
+  'Results obsessed',
 ];
 
 // Shared prose styling so section bodies match the rest of the site.
 const proseClass =
   'prose prose-lg max-w-none text-text-muted [&>p]:mt-4 [&>p]:text-base [&>p]:leading-relaxed [&_a]:font-semibold [&_a]:text-primary [&_a:hover]:text-primary-dark';
 
-// Content sections, grouped to mirror the CTA banner cadence.
-const sectionGroups = [
-  [
-    {
-      id: 'google-ads-management',
-      title: 'Google Ads Management',
-      html: `
-<p>For businesses in Prosper, Texas, Google Ads management is one of the most powerful tools available to drive immediate, measurable results. Unlike organic search strategies that can take months to gain traction, a well-managed Google Ads campaign can place your business at the top of search results within hours of launch. Our team understands the unique dynamics of this rapidly growing North Texas community, from the influx of new families moving into master-planned developments like Windsong Ranch and Star Trail to the thriving commercial corridors along Preston Road and Highway 380.</p>
-<p>Effective Google Ads management goes far beyond simply setting up a campaign and letting it run. Professional agencies conduct thorough keyword research tailored to the Prosper market, identifying high-intent search terms that local customers actually use. A Prosper-based dental practice might benefit from targeting phrases like "family dentist near Prosper TX," "emergency dental care 75078," or "pediatric dentist Celina Prosper area." An experienced agency will also implement negative keyword strategies to eliminate wasted spend, ensuring your budget isn't drained by irrelevant clicks from users searching for services you don't offer or locations you don't serve.</p>
-<p>Geo-targeting is particularly critical for Prosper businesses. Campaigns can be configured to reach potential customers within specific radius targets or zip codes, including neighboring communities like Celina, McKinney, Frisco, and Little Elm. This precision targeting ensures that every dollar of your advertising budget reaches people who can realistically become paying customers. Advanced agencies also implement dayparting strategies, scheduling ads to appear during peak business hours or times when conversion rates are historically highest for your specific industry.</p>
-<p>Landing page optimization is another essential component of professional Google Ads management. Driving traffic to your website is only half the equation. Converting that traffic into leads and sales requires dedicated landing pages that align with the ad's messaging, feature compelling calls to action, and load quickly on both desktop and mobile devices. Prosper's demographic skews toward tech-savvy, affluent professionals who expect seamless digital experiences, so a poorly designed landing page can undermine even the most well-crafted ad campaign.</p>
-<p>Transparent, data-driven reporting tracks key performance indicators such as cost-per-click, click-through rates, conversion rates, quality scores, and return on ad spend. Regular performance reviews allow for continuous optimization, adjusting bids, refining ad copy, testing new audience segments, and reallocating budget toward the campaigns delivering the strongest ROI. Many agencies also leverage remarketing campaigns to re-engage visitors who previously interacted with your website but didn't convert, keeping your brand top-of-mind as they continue their decision-making process.</p>
-<p>Whether you're a local restaurant looking to fill seats during weekday lunch hours, a home services company targeting new construction neighborhoods, or a professional services firm competing for high-value clients across the DFW metroplex, Google Ads management from a Prosper-based agency provides the local market expertise and hands-on attention that national agencies simply cannot match. The combination of hyperlocal knowledge, strategic campaign architecture, and ongoing optimization creates a powerful engine for sustainable business growth in one of Texas's fastest-growing communities.</p>`,
-    },
-    {
-      id: 'meta-ads-management',
-      title: 'Meta Ads Management',
-      html: `<p>Facebook and Instagram ads put your Prosper business in front of the right people. We build and manage Meta ads that actually bring in leads.</p>`,
-    },
-    {
-      id: 'local-seo',
-      title: 'Local SEO',
-      html: `<p>Local SEO is how Prosper businesses show up when neighbors search for help nearby. We handle the work so you rank where it counts.</p>`,
-    },
-  ],
-  [
-    {
-      id: 'google-business-profile-optimization',
-      title: 'Google Business Profile Optimization',
-      html: `<p>Your Google Business Profile is often the first thing Prosper customers see. We make sure it works hard for you.</p>`,
-    },
-    {
-      id: 'local-business-website-design',
-      title: 'Local Business Website Design',
-      html: `<p>Your website's the first thing Prosper customers see. We build sites that load fast and actually bring in calls.</p>`,
-    },
-    {
-      id: 'landing-page-design',
-      title: 'Landing Page Design',
-      html: `<p>A landing page has one job. Get the click, get the call. We build landing pages in Prosper that do exactly that.</p>`,
-    },
-  ],
-  [
-    {
-      id: 'review-generation',
-      title: 'Review Generation',
-      html: `
-<p>In a thriving community like Prosper, Texas, where local businesses compete for attention among a rapidly growing population, online reviews have become one of the most powerful tools for building credibility and attracting new customers. Review generation isn't just about asking customers to leave feedback. It's about creating a systematic, strategic approach that consistently produces authentic, positive reviews across platforms like Google Business Profile, Yelp, Facebook, and industry-specific directories.</p>
-<p>The importance of reviews for Prosper businesses cannot be overstated. When residents search for services in the 75078 area, whether they're looking for a restaurant near the Prosper Town Center, a dentist along Preston Road, or a home contractor serving the Windsong Ranch and Star Trail neighborhoods, they almost always check reviews before making a decision. Studies consistently show that over 90% of consumers read online reviews before visiting a business, and the majority trust those reviews as much as personal recommendations from friends and family. For businesses operating in Prosper's competitive landscape, a strong review profile can be the difference between landing a new customer and losing them to a competitor.</p>
-<p>A professional advertising agency specializing in review generation will implement several key strategies tailored to the Prosper market. First, they'll establish automated review request systems that trigger personalized emails or text messages shortly after a customer interaction. Timing is critical. Reaching out within 24 to 48 hours of a positive experience dramatically increases the likelihood that a customer will follow through and leave a review. These messages are crafted to feel genuine and personal rather than generic, often referencing the specific service provided or the customer's name to create a more meaningful connection.</p>
-<p>Beyond automation, experienced agencies in Prosper help businesses train their front-line staff to naturally incorporate review requests into everyday customer interactions. A local Prosper salon might coach stylists to say, "If you loved your experience today, we'd really appreciate a quick Google review. It helps other families in Prosper find us." This human touch, combined with digital follow-up systems, creates a multi-channel approach that maximizes review volume without feeling pushy or intrusive.</p>
-<p>Review generation also involves strategic reputation monitoring and response management. A competent agency will set up real-time alerts so that business owners in Prosper are immediately notified when new reviews appear. They'll craft thoughtful, professional responses to both positive and negative feedback. Responding to positive reviews reinforces customer loyalty and shows potential customers that the business values its community relationships. Handling negative reviews with grace and a genuine desire to resolve issues can actually turn a dissatisfied customer into a loyal advocate, and it demonstrates to prospective clients browsing those reviews that the business takes accountability seriously.</p>
-<p>Another critical component is review diversification. While Google reviews tend to carry the most weight for local SEO rankings in the Prosper area, a well-rounded agency will ensure reviews are distributed across multiple platforms relevant to the business's industry. A Prosper-based medical practice might focus on Healthgrades and Zocdoc in addition to Google, while a home services company might prioritize Angi, HomeAdvisor, and the Better Business Bureau. This diversified approach not only strengthens the business's online presence but also captures potential customers who prefer specific platforms over others.</p>
-<p>Local advertising agencies in Prosper also leverage review content as powerful marketing material. Compelling customer testimonials can be repurposed for social media posts, website landing pages, email campaigns, and even print advertising distributed throughout the Prosper community. A glowing five-star review from a satisfied customer in Lakes of Prosper or Whitley Place carries significant social proof that resonates with neighbors who share similar values and expectations. Agencies often create visually appealing review graphics or short video testimonials that amplify the impact of this user-generated content across digital channels.</p>
-<p>It's worth noting that ethical review generation practices are essential. Reputable advertising agencies in Prosper will never engage in purchasing fake reviews, incentivizing reviews with discounts or gifts in exchange for positive ratings, or posting reviews from fictitious accounts. These practices violate the terms of service of major review platforms and can result in severe penalties, including account suspension and permanent loss of existing reviews. Google's algorithms have become increasingly sophisticated at detecting fraudulent review activity, and the consequences for Prosper businesses caught engaging in these tactics can be devastating to both their online visibility and their reputation within the close-knit community.</p>
-<p>Ultimately, a well-executed review generation strategy creates a virtuous cycle: more positive reviews lead to higher local search rankings, which drive more traffic and customers, who in turn generate more positive reviews. For businesses looking to establish themselves as trusted leaders in Prosper's booming economy, investing in professional review generation services is one of the highest-return marketing decisions they can make.</p>`,
-    },
-    {
-      id: 'lead-followup-and-appointment-booking',
-      title: 'Lead Follow-Up and Appointment Booking',
-      html: `
-<p>In the fast-growing Prosper, Texas market, where new businesses and residential developments are constantly reshaping the competitive landscape, having a robust lead follow-up and appointment booking system isn't just a nice-to-have. It's the difference between thriving and barely surviving. Generating leads is only half the battle. The real revenue is captured in the critical window between when a prospect first expresses interest and when they actually sit down for a consultation or make a purchase decision. Studies consistently show that businesses responding to leads within the first five minutes are 21 times more likely to convert compared to those that wait 30 minutes or longer.</p>
-<p>An experienced Prosper advertising agency will implement multi-channel follow-up sequences that combine automated email drip campaigns, SMS text messaging, phone call cadences, and retargeting ads across social media platforms. A local dental practice along Preston Road or a real estate agent serving the Prosper ISD community might benefit from an automated system that instantly sends a personalized text message when someone fills out a contact form, followed by a phone call within minutes, and then a series of nurturing emails over the following days. This layered approach ensures that no lead falls through the cracks, which is especially important in a competitive North Texas market where consumers are simultaneously evaluating multiple service providers.</p>
-<p>Appointment booking technology has evolved dramatically, and the best advertising agencies in Prosper leverage tools like Calendly, HubSpot, or custom-built CRM integrations that allow prospects to self-schedule appointments directly from landing pages, email campaigns, or even Google Business Profile listings. This frictionless booking experience is particularly valuable for Prosper-area businesses like med spas, financial advisors, home service contractors, and attorneys who rely on consultations as their primary conversion mechanism. By embedding scheduling widgets directly into ad campaigns and follow-up communications, agencies eliminate the back-and-forth that often causes potential customers to lose interest or choose a competitor instead.</p>
-<p>Beyond the technology, a quality advertising agency will also help Prosper businesses develop lead scoring systems that prioritize follow-up efforts based on prospect behavior and engagement levels. Not every lead deserves the same level of attention. Someone who visited your pricing page three times, opened every email, and clicked on a scheduling link but didn't complete the booking is a far hotter prospect than someone who casually downloaded a free guide. By categorizing leads into tiers, hot, warm, and cold, your team can allocate time and energy more effectively, focusing personal outreach on the prospects most likely to convert while keeping automated nurture sequences running for those who need more time.</p>
-<p>Local context matters tremendously in Prosper's unique market. The town has experienced explosive population growth, jumping from roughly 9,000 residents in 2010 to well over 35,000 today, with projections continuing upward. This means the customer base is constantly refreshed with new residents who are actively searching for service providers, from HVAC companies to orthodontists to financial planners. An advertising agency that understands Prosper's demographics can craft follow-up messaging that resonates with these newcomers, referencing local landmarks like the Prosper Town Center, nearby communities such as Celina and McKinney, or even tapping into the strong community pride surrounding Prosper Eagles athletics.</p>
-<p>Speed-to-lead metrics should be tracked religiously. A reputable Prosper advertising agency will provide transparent reporting dashboards showing average response times, follow-up completion rates, appointment show rates, and ultimately, the cost per booked appointment. These metrics allow business owners to see exactly where their advertising dollars are going and identify bottlenecks in the conversion process. If data reveals that 40% of booked appointments result in no-shows, the agency might implement appointment reminder sequences via text and email, or introduce a small deposit requirement to increase commitment levels.</p>
-<p>Ultimately, the most successful businesses in Prosper treat lead follow-up not as an afterthought but as a core component of their advertising strategy. When you partner with an agency that builds follow-up and booking systems into every campaign from the start, you transform your marketing spend from a hopeful expense into a predictable revenue engine. Whether you're a startup opening your doors on Broadway Street or an established business looking to scale in the greater Prosper area, investing in professional lead management systems will consistently deliver stronger returns than simply increasing your ad budget without addressing what happens after the click.</p>`,
-    },
-    {
-      id: 'onpage-seo',
-      title: 'On-Page SEO',
-      html: `<p>On-page SEO is how your website talks to Google. We fix title tags, headers, and content so search engines actually understand what your Prosper business does.</p>`,
-    },
-  ],
-  [
-    {
-      id: 'local-business-spotlight-in-prosper',
-      title: 'Local Business Spotlight in Prosper',
-      html: `<p>We help Prosper businesses get noticed by the neighbors who need them most. Real stories, real visibility. The professionals who manage advertising campaigns and marketing strategy for local businesses are part of a specialized field — the U.S. Bureau of Labor Statistics provides detailed guidance on <a href="https://www.bls.gov/ooh/management/advertising-promotions-and-marketing-managers.htm" target="_blank" rel="noopener">advertising and marketing management career standards</a> that shapes how agencies are structured and staffed.</p>`,
-    },
-  ],
+const intro = [
+  `If you run a business here in Prosper, you already know how it goes. You're great at what you do, but getting people to actually see you online feels like a different language. I get it. I'm Inside Prosper, and I'm a local marketing agency right here in the area, not some big corporation that's gonna hand your account off to a virtual assistant in another country.`,
+  `Here's the honest truth about working with an advertising agency in Prosper. Most of them ghost you. I've heard it over and over from business owners who came to me after getting burned. They couldn't even get their old agency on the phone. That's not how I do things. There's no big team under me. It's just me, doing the work, overseeing everything, and answering when you reach out.`,
+  `The whole goal is simple. Get your business showing up when people in Prosper search for what you do. I've got a really good process around getting you into the Map Pack, and a big part of that is advertising done the right way for a local business. Not a national blog style approach that doesn't work anymore. Hyper local, focused on this area, built around your Google Business Profile so everything works together and builds trust with Google.`,
 ];
 
-const tocItems = sectionGroups.flat().map((s) => ({ id: s.id, label: s.title }));
-
-const faqs = [
+// The main advertising services, in the order they're introduced.
+const sections = [
   {
-    id: 'faq-0',
-    question: 'How do I know which advertising service my Prosper business actually needs?',
-    answer:
-      'Start with where your customers are searching. If people are actively looking for your service, Google Ads gets you in front of them fast. If you want to build brand awareness among Prosper families in neighborhoods like Windsong Ranch or Star Trail, Meta Ads work better. A good agency will ask about your goals before recommending anything.',
+    id: 'local-business-spotlight',
+    title: 'Local Business Spotlight',
+    html: `
+<p>This is where a lot of folks first find me. The Local Business Spotlight is exactly what it sounds like. I write an article about your business, get to know you a little, learn what makes you different, and share your business with the local community for free. Sometimes I sit down with the owner and we go through it together. It's a real way to get your name out there in Prosper without it feeling like a sales pitch.</p>
+<p>What I like about the Spotlight is that it's genuine. People in the area get to actually know your story, not just see another ad. And it puts you in front of the exact people who live and shop around here. If you've ever wondered how to get more local eyes on your business without spending a fortune, this is a great place to start.</p>`,
   },
   {
-    id: 'faq-1',
-    question: 'When should a Prosper business hire an advertising agency instead of doing it in-house?',
-    answer:
-      'Hire an agency when your time or results are suffering. Managing Google Ads, Meta campaigns, Local SEO, and review generation at the same time is a full-time job. Prosper’s market is growing fast, and businesses along Preston Road and Highway 380 are competing hard. An agency keeps campaigns optimized while you run your business.',
+    id: 'meta-ads-management',
+    title: 'Meta Ads Management',
+    html: `
+<p>Facebook and Instagram ads can move the needle fast when they're set up right, and they can also burn through your budget when they're not. That's the part most business owners don't see coming. Meta Ads management is about making every dollar count, targeting the right people in Prosper and the surrounding area, and watching what's actually working so we can do more of it.</p>
+<p>I take a hands on approach here. I'm not setting it and forgetting it. I'm watching how your ads perform, who's clicking, and adjusting as we go. The point is to get you real leads from people nearby who actually need what you offer, not just likes that don't pay the bills. For a local business, that local targeting is everything.</p>`,
   },
   {
-    id: 'faq-2',
-    question: 'Does my Prosper business need both a website and a landing page?',
-    answer:
-      'Yes, they serve different purposes. Your website covers everything about your business. A landing page has one focused goal — get a call or form fill from a specific ad. If you’re running Google Ads or Meta Ads in Prosper, sending traffic to your homepage wastes money. A dedicated landing page converts much better.',
-  },
-  {
-    id: 'faq-3',
-    question: 'How important are online reviews for businesses in Prosper specifically?',
-    answer:
-      'Reviews matter more here than in many markets. Prosper is growing quickly, and most residents are new to the area. They don’t have years of word-of-mouth to rely on. When someone searches for a dentist or contractor near Prosper Town Center, they go straight to reviews. A weak review profile sends customers to your competitors.',
-  },
-  {
-    id: 'faq-4',
-    question: 'What’s the difference between Local SEO and Google Business Profile optimization?',
-    answer:
-      'They overlap but aren’t the same. Google Business Profile optimization focuses on your GBP listing — photos, categories, services, and reviews. Local SEO is broader and includes your website, local citations, and how you rank across all local searches. Both matter for Prosper businesses that want neighbors to find them first.',
-  },
-  {
-    id: 'faq-5',
-    question: 'Can a Prosper advertising agency help businesses that serve surrounding cities like Celina or McKinney?',
-    answer:
-      'Yes, and that’s a real advantage of working locally. Campaigns can target specific zip codes and radius areas covering Celina, McKinney, Frisco, and Little Elm. A Prosper-based agency knows the local geography and growth patterns, so your budget reaches people who can actually become customers — not just anyone in North Texas.',
+    id: 'google-ads-management',
+    title: 'Google Ads Management',
+    html: `
+<p>When somebody in Prosper pulls out their phone and searches for your service right now, they're ready to buy. Google Ads puts you right at the top of that search the moment they're looking. That's the power of it. The trouble is, Google Ads gets expensive quick if it's run sloppy, and a lot of businesses give up on it because nobody managed it properly.</p>
+<p>Google Ads management with me means your budget goes toward the searches that actually bring in customers. I keep an eye on what's converting, cut what's wasting money, and keep your ads pointed at the people most likely to call you. Paired with everything else we do to rank you locally, it's a strong way to fill your pipeline while the longer term local SEO work builds up underneath it.</p>`,
   },
 ];
+
+const whyChooseHtml = `
+<p>Here's what makes me different. I'm a local business myself. I've met plenty of owners around here in person, sat down with them, built real relationships. A lot of agencies are just online now and don't do anything face to face. I'd rather meet you, build that trust, and treat this like a partnership instead of just a number on an invoice.</p>
+<p>I'm also not the cheapest, and I won't pretend to be. But I keep it reasonable for local businesses because I know what it's like. Paying thousands and thousands every month to an agency while keeping a small business afloat isn't easy, and I'm not gonna charge you an arm and a leg.</p>
+<p>And I'm results obsessed. That's just how I'm wired. When I take something on, I want to be the best at it, and that goes double for what I do for my clients. A good example is Rankin Waste Management. We took them from 10 reviews to over 250 five star Google reviews in about a month. That's the kind of obsession I bring to every business I work with.</p>`;
 ---
 
 <BaseLayout
@@ -168,7 +76,6 @@ const faqs = [
   description={pageDescription}
 >
   <AdvertisingAgencySchema services={services} description={pageDescription} />
-  <FAQSchema faqs={faqs.map((f) => ({ question: f.question, answer: f.answer }))} />
   <BreadcrumbSchema items={breadcrumbItems} />
   <Navbar />
   <main>
@@ -182,13 +89,13 @@ const faqs = [
         </nav>
 
         <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-          Digital Marketing
+          Local Marketing Agency
         </span>
         <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-          Advertising Agency in <span class="font-display italic text-primary">Prosper</span>
+          Advertising Agency in Prosper That Actually <span class="font-display italic text-primary">Gets You Found</span>
         </h1>
         <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
-          Discover the best local businesses in Prosper, Texas — and the digital marketing that helps them grow.
+          A local marketing agency that picks up the phone, knows the area, and actually cares whether you win.
         </p>
 
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -218,73 +125,44 @@ const faqs = [
       </div>
     </section>
 
-    <!-- Table of contents -->
-    <section class="bg-bg py-12 lg:py-16">
-      <div class="mx-auto max-w-4xl px-6">
-        <div class="rounded-2xl border border-border bg-bg-card p-6 shadow-sm sm:p-8">
-          <p class="font-heading text-lg font-extrabold tracking-tight text-text">
-            What's Covered on This Page
-          </p>
-          <ul class="mt-5 grid gap-x-8 gap-y-1 sm:grid-cols-2">
-            {tocItems.map((item) => (
-              <li>
-                <a href={`#${item.id}`} class="flex items-start gap-2 py-1.5 text-base text-text-muted transition-colors hover:text-primary">
-                  <svg class="mt-1 size-4 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+    <!-- Intro -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <div class="space-y-5 text-base leading-relaxed text-text-muted">
+          {intro.map((para) => <p>{para}</p>)}
         </div>
+        <p class="mt-8 font-heading text-lg font-bold text-text">
+          Below are the main advertising services I help local businesses with.
+        </p>
       </div>
     </section>
 
-    <InlineCTA heading="Need an advertising agency?" subheading="Explore Businesses. Call Inside Prosper now." />
-
-    <!-- Content sections -->
-    {sectionGroups.map((group, groupIndex) => (
-      <>
-        <section class="bg-bg-white py-16 lg:py-24">
-          <div class="mx-auto max-w-3xl space-y-16 px-6">
-            {group.map((s) => (
-              <div id={s.id} class="scroll-mt-28">
-                <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
-                  {s.title}
-                </h2>
-                <div class={`mt-6 ${proseClass}`} set:html={s.html} />
-              </div>
-            ))}
+    <!-- Services -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl space-y-16 px-6">
+        {sections.map((s) => (
+          <div id={s.id} class="scroll-mt-28">
+            <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+              {s.title}
+            </h2>
+            <div class={`mt-6 ${proseClass}`} set:html={s.html} />
           </div>
-        </section>
-        {groupIndex < sectionGroups.length - 1 && (
-          <InlineCTA heading="Need help with advertising agency?" subheading="Explore Businesses. Inside Prosper is ready to help." />
-        )}
-      </>
-    ))}
+        ))}
+      </div>
+    </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="bg-bg py-20 lg:py-28">
-      <div class="mx-auto max-w-4xl px-6">
-        <h2 class="text-center font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
-          Frequently Asked Questions
+    <InlineCTA heading="Need an advertising agency that picks up the phone?" subheading="Call Inside Prosper and talk to the person doing the work." />
+
+    <!-- Why choose -->
+    <section id="why-inside-prosper" class="scroll-mt-28 bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+          Why Local Businesses Pick Inside Prosper
         </h2>
-        <p class="mx-auto mt-3 max-w-xl text-center text-base text-text-muted">
-          Common questions about advertising agency services in Prosper.
+        <div class={`mt-6 ${proseClass}`} set:html={whyChooseHtml} />
+        <p class="mt-6 text-lg font-semibold text-text">
+          If you want an advertising agency in Prosper that picks up the phone, knows the area, and actually cares whether you win, that's me.
         </p>
-
-        <div class="mt-12 space-y-3">
-          {faqs.map((faq, i) => (
-            <details id={faq.id} class="group scroll-mt-28 rounded-lg border border-border bg-white shadow-sm" open={i === 0}>
-              <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 text-lg font-bold text-text transition-colors hover:text-primary">
-                {faq.question}
-                <svg class="size-5 shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </summary>
-              <div class="px-6 pb-5 text-base leading-relaxed text-text-muted">{faq.answer}</div>
-            </details>
-          ))}
-        </div>
       </div>
     </section>
 
@@ -292,10 +170,10 @@ const faqs = [
     <section class="bg-bg-dark py-20 text-center">
       <div class="mx-auto max-w-2xl px-6">
         <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          Ready to Get <span class="text-primary">Started</span>?
+          Ready to Get <span class="text-primary">Found</span>?
         </h2>
         <p class="mt-4 text-base text-white/60">
-          Explore Businesses. Call {siteConfig.phone} today.
+          Talk to the person who'll actually do the work. Call {siteConfig.phone} today.
         </p>
         <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
           <a
