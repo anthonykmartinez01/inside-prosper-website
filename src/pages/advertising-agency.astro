@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Navbar from '../components/layout/Navbar.astro';
 import Footer from '../components/layout/Footer.astro';
@@ -7,6 +8,11 @@ import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import FAQSchema from '../components/schema/FAQSchema.astro';
 import AdvertisingAgencySchema from '../components/schema/AdvertisingAgencySchema.astro';
 import { siteConfig } from '../data/business';
+import heroImg from '../assets/images/advertising-agency-hero.webp';
+import spotlightImg from '../assets/images/advertising-agency-local-business-spotlight.webp';
+import metaImg from '../assets/images/advertising-agency-meta-ads.webp';
+import googleImg from '../assets/images/advertising-agency-google-ads.webp';
+import whyImg from '../assets/images/advertising-agency-why-inside-prosper.webp';
 
 const pageDescription =
   'A local advertising agency in Prosper, TX that actually picks up the phone. Local Business Spotlights, Meta Ads, and Google Ads management built around your Google Business Profile.';
@@ -44,16 +50,19 @@ const sections = [
   {
     id: 'local-business-spotlight',
     title: 'Local Business Spotlight',
+    img: spotlightImg,
     html: `<p>This is how a lot of owners first meet me. I write a real article about your business, learn what makes you different, and share your story with the local community for free. Sometimes I sit down with you in person and we build it together. It isn't an ad and it doesn't read like one, which is exactly why people actually pay attention to it.</p>`,
   },
   {
     id: 'meta-ads-management',
     title: 'Meta Ads Management',
+    img: metaImg,
     html: `<p>Facebook and Instagram ads are the fastest way to drain a budget when nobody's watching them, and most small accounts fail for that exact reason. I manage yours hands-on, checking what's converting and cutting what isn't, instead of setting it up and walking away. The goal is real leads from people nearby, not likes that never turn into a paying customer.</p>`,
   },
   {
     id: 'google-ads-management',
     title: 'Google Ads Management',
+    img: googleImg,
     html: `<p>When someone searches for your service right now, they're ready to hire. Google Ads puts you at the top of that exact moment, but the budget disappears fast when it's run sloppy, which is why so many owners quit on it. I keep your spend pointed only at the searches that bring in real calls, and I pair it with the longer-term work that ranks you for free underneath it.</p>`,
   },
 ];
@@ -158,9 +167,22 @@ const faqs = [
       </div>
     </section>
 
-    <!-- Intro -->
+    <!-- Hero banner image + intro -->
     <section class="bg-bg py-16 lg:py-24">
-      <div class="mx-auto max-w-3xl px-6">
+      <div class="mx-auto max-w-5xl px-6">
+        <Image
+          src={heroImg}
+          alt="Advertising Agency in Prosper, TX signage — Inside Prosper"
+          width={1758}
+          height={894}
+          loading="eager"
+          fetchpriority="high"
+          format="webp"
+          quality={82}
+          class="w-full rounded-2xl shadow-md"
+        />
+      </div>
+      <div class="mx-auto mt-12 max-w-3xl px-6">
         <div class="space-y-5 text-base leading-relaxed text-text-muted">
           {intro.map((para) => <p>{para}</p>)}
         </div>
@@ -172,13 +194,27 @@ const faqs = [
 
     <!-- Services -->
     <section class="bg-bg-white py-16 lg:py-24">
-      <div class="mx-auto max-w-3xl space-y-16 px-6">
-        {sections.map((s) => (
-          <div id={s.id} class="scroll-mt-28">
-            <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
-              {s.title}
-            </h2>
-            <div class={`mt-6 ${proseClass}`} set:html={s.html} />
+      <div class="mx-auto max-w-6xl space-y-16 px-6 lg:space-y-24">
+        {sections.map((s, i) => (
+          <div id={s.id} class="grid scroll-mt-28 items-center gap-8 lg:grid-cols-2 lg:gap-14">
+            <div class={i % 2 === 1 ? 'lg:order-2' : ''}>
+              <Image
+                src={s.img}
+                alt={`${s.title} — Inside Prosper advertising agency in Prosper, TX`}
+                width={1672}
+                height={941}
+                loading="lazy"
+                format="webp"
+                quality={82}
+                class="w-full rounded-2xl shadow-md"
+              />
+            </div>
+            <div class={i % 2 === 1 ? 'lg:order-1' : ''}>
+              <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+                {s.title}
+              </h2>
+              <div class={`mt-4 ${proseClass}`} set:html={s.html} />
+            </div>
           </div>
         ))}
       </div>
@@ -189,6 +225,16 @@ const faqs = [
     <!-- Why choose -->
     <section id="why-inside-prosper" class="scroll-mt-28 bg-bg-white py-16 lg:py-24">
       <div class="mx-auto max-w-3xl px-6">
+        <Image
+          src={whyImg}
+          alt="Why Local Businesses Pick Inside Prosper — advertising agency in Prosper, TX"
+          width={1672}
+          height={941}
+          loading="lazy"
+          format="webp"
+          quality={82}
+          class="mb-8 w-full rounded-2xl shadow-md"
+        />
         <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
           Why Local Businesses Pick Inside Prosper
         </h2>
