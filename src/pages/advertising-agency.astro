@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar.astro';
 import Footer from '../components/layout/Footer.astro';
 import InlineCTA from '../components/sections/InlineCTA.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import FAQSchema from '../components/schema/FAQSchema.astro';
 import AdvertisingAgencySchema from '../components/schema/AdvertisingAgencySchema.astro';
 import { siteConfig } from '../data/business';
 
@@ -35,9 +36,7 @@ const proseClass =
   'prose prose-lg max-w-none text-text-muted [&>p]:mt-4 [&>p]:text-base [&>p]:leading-relaxed [&_a]:font-semibold [&_a]:text-primary [&_a:hover]:text-primary-dark';
 
 const intro = [
-  `If you run a business here in Prosper, you already know how it goes. You're great at what you do, but getting people to actually see you online feels like a different language. I get it. I'm Inside Prosper, and I'm a local marketing agency right here in the area, not some big corporation that's gonna hand your account off to a virtual assistant in another country.`,
-  `Here's the honest truth about working with an advertising agency in Prosper. Most of them ghost you. I've heard it over and over from business owners who came to me after getting burned. They couldn't even get their old agency on the phone. That's not how I do things. There's no big team under me. It's just me, doing the work, overseeing everything, and answering when you reach out.`,
-  `The whole goal is simple. Get your business showing up when people in Prosper search for what you do. I've got a really good process around getting you into the Map Pack, and a big part of that is advertising done the right way for a local business. Not a national blog style approach that doesn't work anymore. Hyper local, focused on this area, built around your Google Business Profile so everything works together and builds trust with Google.`,
+  `If you run a business here and you've worked with an agency before, you may already know the worst part. They go quiet. You can't get them on the phone, and you have no idea what you're paying for. That's the thing I hear most from owners who come to me, and it's the thing I refuse to do. There's no big team here passing your account to a virtual assistant. It's me doing the work and answering when you reach out. Everything I run is built around your Google Business Profile so your ads, your listing, and your website all point the same direction and build real trust with Google. That's what gets you showing up when people search.`,
 ];
 
 // The main advertising services, in the order they're introduced.
@@ -45,30 +44,63 @@ const sections = [
   {
     id: 'local-business-spotlight',
     title: 'Local Business Spotlight',
-    html: `
-<p>This is where a lot of folks first find me. The Local Business Spotlight is exactly what it sounds like. I write an article about your business, get to know you a little, learn what makes you different, and share your business with the local community for free. Sometimes I sit down with the owner and we go through it together. It's a real way to get your name out there in Prosper without it feeling like a sales pitch.</p>
-<p>What I like about the Spotlight is that it's genuine. People in the area get to actually know your story, not just see another ad. And it puts you in front of the exact people who live and shop around here. If you've ever wondered how to get more local eyes on your business without spending a fortune, this is a great place to start.</p>`,
+    html: `<p>This is how a lot of owners first meet me. I write a real article about your business, learn what makes you different, and share your story with the local community for free. Sometimes I sit down with you in person and we build it together. It isn't an ad and it doesn't read like one, which is exactly why people actually pay attention to it.</p>`,
   },
   {
     id: 'meta-ads-management',
     title: 'Meta Ads Management',
-    html: `
-<p>Facebook and Instagram ads can move the needle fast when they're set up right, and they can also burn through your budget when they're not. That's the part most business owners don't see coming. Meta Ads management is about making every dollar count, targeting the right people in Prosper and the surrounding area, and watching what's actually working so we can do more of it.</p>
-<p>I take a hands on approach here. I'm not setting it and forgetting it. I'm watching how your ads perform, who's clicking, and adjusting as we go. The point is to get you real leads from people nearby who actually need what you offer, not just likes that don't pay the bills. For a local business, that local targeting is everything.</p>`,
+    html: `<p>Facebook and Instagram ads are the fastest way to drain a budget when nobody's watching them, and most small accounts fail for that exact reason. I manage yours hands-on, checking what's converting and cutting what isn't, instead of setting it up and walking away. The goal is real leads from people nearby, not likes that never turn into a paying customer.</p>`,
   },
   {
     id: 'google-ads-management',
     title: 'Google Ads Management',
-    html: `
-<p>When somebody in Prosper pulls out their phone and searches for your service right now, they're ready to buy. Google Ads puts you right at the top of that search the moment they're looking. That's the power of it. The trouble is, Google Ads gets expensive quick if it's run sloppy, and a lot of businesses give up on it because nobody managed it properly.</p>
-<p>Google Ads management with me means your budget goes toward the searches that actually bring in customers. I keep an eye on what's converting, cut what's wasting money, and keep your ads pointed at the people most likely to call you. Paired with everything else we do to rank you locally, it's a strong way to fill your pipeline while the longer term local SEO work builds up underneath it.</p>`,
+    html: `<p>When someone searches for your service right now, they're ready to hire. Google Ads puts you at the top of that exact moment, but the budget disappears fast when it's run sloppy, which is why so many owners quit on it. I keep your spend pointed only at the searches that bring in real calls, and I pair it with the longer-term work that ranks you for free underneath it.</p>`,
   },
 ];
 
 const whyChooseHtml = `
-<p>Here's what makes me different. I'm a local business myself. I've met plenty of owners around here in person, sat down with them, built real relationships. A lot of agencies are just online now and don't do anything face to face. I'd rather meet you, build that trust, and treat this like a partnership instead of just a number on an invoice.</p>
-<p>I'm also not the cheapest, and I won't pretend to be. But I keep it reasonable for local businesses because I know what it's like. Paying thousands and thousands every month to an agency while keeping a small business afloat isn't easy, and I'm not gonna charge you an arm and a leg.</p>
-<p>And I'm results obsessed. That's just how I'm wired. When I take something on, I want to be the best at it, and that goes double for what I do for my clients. A good example is Rankin Waste Management. We took them from 10 reviews to over 250 five star Google reviews in about a month. That's the kind of obsession I bring to every business I work with.</p>`;
+<p>Here's what makes me different. I'm a local business myself. I've met plenty of owners around here in person, sat down with them, and built real relationships, and I'd rather work that way than be one more agency you only know through email. I treat this like a partnership, not a number on an invoice.</p>
+<p>I'm not the cheapest, and I won't pretend to be. But I keep it reasonable, because I know what it's like to keep a small business afloat while writing a big check to an agency every month. I won't charge you an arm and a leg.</p>
+<p>And I'm results obsessed. That's just how I'm wired. A good example is Rankin Waste Management. We took them from 10 reviews to over 250 five star Google reviews in about a month. That's the obsession I bring to every business I work with.</p>`;
+
+const faqs = [
+  {
+    id: 'faq-0',
+    question: 'How do I know which advertising service my Prosper business actually needs?',
+    answer:
+      'Start with where your customers are searching. If people are actively looking for your service, Google Ads gets you in front of them fast. If you want to build brand awareness among Prosper families in neighborhoods like Windsong Ranch or Star Trail, Meta Ads work better. A good agency will ask about your goals before recommending anything.',
+  },
+  {
+    id: 'faq-1',
+    question: 'When should a Prosper business hire an advertising agency instead of doing it in-house?',
+    answer:
+      'Hire an agency when your time or results are suffering. Managing Google Ads, Meta campaigns, Local SEO, and review generation at the same time is a full-time job. Prosper’s market is growing fast, and businesses along Preston Road and Highway 380 are competing hard. An agency keeps campaigns optimized while you run your business.',
+  },
+  {
+    id: 'faq-2',
+    question: 'Does my Prosper business need both a website and a landing page?',
+    answer:
+      'Yes, they serve different purposes. Your website covers everything about your business. A landing page has one focused goal — get a call or form fill from a specific ad. If you’re running Google Ads or Meta Ads in Prosper, sending traffic to your homepage wastes money. A dedicated landing page converts much better.',
+  },
+  {
+    id: 'faq-3',
+    question: 'How important are online reviews for businesses in Prosper specifically?',
+    answer:
+      'Reviews matter more here than in many markets. Prosper is growing quickly, and most residents are new to the area. They don’t have years of word-of-mouth to rely on. When someone searches for a dentist or contractor near Prosper Town Center, they go straight to reviews. A weak review profile sends customers to your competitors.',
+  },
+  {
+    id: 'faq-4',
+    question: 'What’s the difference between Local SEO and Google Business Profile optimization?',
+    answer:
+      'They overlap but aren’t the same. Google Business Profile optimization focuses on your GBP listing — photos, categories, services, and reviews. Local SEO is broader and includes your website, local citations, and how you rank across all local searches. Both matter for Prosper businesses that want neighbors to find them first.',
+  },
+  {
+    id: 'faq-5',
+    question: 'Can a Prosper advertising agency help businesses that serve surrounding cities like Celina or McKinney?',
+    answer:
+      'Yes, and that’s a real advantage of working locally. Campaigns can target specific zip codes and radius areas covering Celina, McKinney, Frisco, and Little Elm. A Prosper-based agency knows the local geography and growth patterns, so your budget reaches people who can actually become customers — not just anyone in North Texas.',
+  },
+];
 ---
 
 <BaseLayout
@@ -76,6 +108,7 @@ const whyChooseHtml = `
   description={pageDescription}
 >
   <AdvertisingAgencySchema services={services} description={pageDescription} />
+  <FAQSchema faqs={faqs.map((f) => ({ question: f.question, answer: f.answer }))} />
   <BreadcrumbSchema items={breadcrumbItems} />
   <Navbar />
   <main>
@@ -161,8 +194,34 @@ const whyChooseHtml = `
         </h2>
         <div class={`mt-6 ${proseClass}`} set:html={whyChooseHtml} />
         <p class="mt-6 text-lg font-semibold text-text">
-          If you want an advertising agency in Prosper that picks up the phone, knows the area, and actually cares whether you win, that's me.
+          If you want an advertising agency that picks up the phone, knows the area, and actually cares whether you win, that's me.
         </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-bg py-20 lg:py-28">
+      <div class="mx-auto max-w-4xl px-6">
+        <h2 class="text-center font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+          Frequently Asked Questions
+        </h2>
+        <p class="mx-auto mt-3 max-w-xl text-center text-base text-text-muted">
+          Common questions about advertising agency services in Prosper.
+        </p>
+
+        <div class="mt-12 space-y-3">
+          {faqs.map((faq, i) => (
+            <details id={faq.id} class="group scroll-mt-28 rounded-lg border border-border bg-white shadow-sm" open={i === 0}>
+              <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 text-lg font-bold text-text transition-colors hover:text-primary">
+                {faq.question}
+                <svg class="size-5 shrink-0 text-text-muted transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-5 text-base leading-relaxed text-text-muted">{faq.answer}</div>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
 
