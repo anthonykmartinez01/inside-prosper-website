@@ -225,24 +225,30 @@ const faqs = [
 
     <!-- Why choose -->
     <section id="why-inside-prosper" class="scroll-mt-28 bg-bg-white py-16 lg:py-24">
-      <div class="mx-auto max-w-3xl px-6">
-        <Image
-          src={whyImg}
-          alt="Why Local Businesses Pick Inside Prosper — advertising agency in Prosper, TX"
-          width={1672}
-          height={941}
-          loading="lazy"
-          format="webp"
-          quality={82}
-          class="mb-8 w-full rounded-2xl shadow-md"
-        />
-        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
-          Why Local Businesses Pick Inside Prosper
-        </h2>
-        <div class={`mt-6 ${proseClass}`} set:html={whyChooseHtml} />
-        <p class="mt-6 text-lg font-semibold text-text">
-          If you want an advertising agency that picks up the phone, knows the area, and actually cares whether you win, that's me.
-        </p>
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
+          <div class="lg:order-2">
+            <Image
+              src={whyImg}
+              alt="Why Local Businesses Pick Inside Prosper — advertising agency in Prosper, TX"
+              width={1672}
+              height={941}
+              loading="lazy"
+              format="webp"
+              quality={82}
+              class="w-full rounded-2xl shadow-md"
+            />
+          </div>
+          <div class="lg:order-1">
+            <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+              Why Local Businesses Pick Inside Prosper
+            </h2>
+            <div class={`mt-4 ${proseClass}`} set:html={whyChooseHtml} />
+            <p class="mt-6 text-lg font-semibold text-text">
+              If you want an advertising agency that picks up the phone, knows the area, and actually cares whether you win, that's me.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
