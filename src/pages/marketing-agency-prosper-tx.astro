@@ -1,0 +1,271 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+import InlineCTA from '../components/sections/InlineCTA.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import AdvertisingAgencySchema from '../components/schema/AdvertisingAgencySchema.astro';
+import { siteConfig } from '../data/business';
+import heroImg from '../assets/images/marketing-agency-hero.webp';
+import localSeoImg from '../assets/images/marketing-agency-local-seo.webp';
+import reviewImg from '../assets/images/marketing-agency-review-generation.webp';
+import leadImg from '../assets/images/marketing-agency-lead-follow-up.webp';
+import referralImg from '../assets/images/marketing-agency-referral-generation.webp';
+import costImg from '../assets/images/marketing-agency-what-it-costs.webp';
+
+const pageDescription =
+  'A hands-on marketing agency in Prosper, TX run by one local owner — Local SEO, review generation, lead follow-up, and referral systems built around your Google Business Profile.';
+
+const breadcrumbItems = [
+  { name: 'Home', url: siteConfig.siteUrl },
+  { name: 'Marketing Agency', url: `${siteConfig.siteUrl}/marketing-agency-prosper-tx/` },
+];
+
+const services = [
+  'Local SEO',
+  'Review Generation',
+  'Lead Follow-Up and Appointment Booking',
+  'Referral Generation',
+  'Google Business Profile Optimization',
+];
+
+const trustPoints = [
+  'Local Business Owner in Prosper',
+  'You Work Directly With Me',
+  'I Pick Up the Phone',
+  'Results Obsessed',
+];
+
+// Shared prose styling so section bodies match the rest of the site.
+const proseClass =
+  'prose prose-lg max-w-none text-text-muted [&>p]:mt-4 [&>p]:text-base [&>p]:leading-relaxed [&_a]:font-semibold [&_a]:text-primary [&_a:hover]:text-primary-dark';
+
+const intro = [
+  `If you've ever paid an agency every month and had no idea what you were getting for it, you already know the problem I built <a href="/">Inside Prosper</a> to fix. When you work with me, you work with me. Not a virtual assistant, not a handoff to some team you'll never meet. I'm Anthony, I'm a local business owner myself, and I take a hands-on approach to every client because I treat this like a partnership, not an invoice. I get results because I'm obsessed with them, and I run the exact same systems on my own business that I set up for you.`,
+];
+
+// Service sections, in the order they're introduced.
+const sections = [
+  {
+    id: 'local-seo',
+    title: 'Local SEO',
+    img: localSeoImg,
+    html: `
+<p>Here's the thing most agencies get wrong about local SEO. They write national-style blog content that has nothing to do with your town, then wonder why your Google business profile isn't ranking. That doesn't work anymore.</p>
+<p>My whole approach is hyper local. The content on your website is focused on the community you actually serve, which is what gets your Google business profile showing up in the Map Pack when someone nearby searches for what you do.</p>
+<p>The big idea behind my process is simple. Your Google business profile and your website have to go hand in hand. The profile is the base for everything. I make sure it's filled out right, with the correct primary and secondary categories and all your services organized properly. Then I build your website around it so the structure matches.</p>
+<p>When your website matches your Google business profile, it shows Google your business is exactly what it says it is. That builds trust, and that trust is what pushes your profile up the rankings so people actually find you. I did this for my own business too. My fresh Google business profile went from basically invisible to ranking in the top three, and it happened fast.</p>`,
+  },
+  {
+    id: 'review-generation',
+    title: 'Review Generation',
+    img: reviewImg,
+    html: `
+<p>Reviews are one of the biggest things holding local businesses back, and most of them know it. You finish a great job, the customer is happy, and then they just never leave a review. You're stuck asking manually and it feels awkward.</p>
+<p>I built a system that fixes that. After you complete a job, it automatically sends your customer a text asking for a review. What makes it different is how personalized it is. The message includes an image with your customer's actual name inside it. People respond to that far more than a generic "please review us" text.</p>
+<p>It doesn't stop there. The system follows up for you. I can see who clicked the link and who didn't, so the follow-up is smart. Most folks leave a review after that first or second message, and you never have to chase anyone down yourself.</p>
+<p>Does it work? Rankin Waste Management is a good example. I took them from 10 reviews to over 250 five-star Google reviews in about a month. That kind of volume changes how a business shows up and how much people trust you before they even call.</p>`,
+  },
+  {
+    id: 'lead-follow-up-and-appointment-booking',
+    title: 'Lead Follow-Up & Appointment Booking',
+    img: leadImg,
+    html: `
+<p>Getting the lead is only half the battle. So many local businesses lose good customers because nobody followed up fast enough, or the lead slipped through the cracks while they were out on a job.</p>
+<p>I set up systems that follow up with your leads automatically so that doesn't happen. The same way my review system follows up with customers, your leads get worked too. That means more of the people who reach out actually turn into booked appointments instead of going quiet and calling your competitor.</p>
+<p>For a local business this is huge. You work hard to get the phone to ring. The follow-up and booking piece makes sure that effort doesn't go to waste, and it takes the manual chasing off your plate so you can focus on the actual work.</p>`,
+  },
+  {
+    id: 'referral-generation',
+    title: 'Referral Generation',
+    img: referralImg,
+    html: `
+<p>Your happiest customers are your best marketing, and a lot of business owners never tap into that. Word of mouth is powerful in a local community, where people actually ask around before hiring someone.</p>
+<p>I help you turn your existing customers into a steady source of referrals. When you already have systems generating reviews and following up automatically, referrals become a natural extension of that. Your satisfied customers send you more business, and your local reputation snowballs over time.</p>
+<p>This ties back into everything else. Strong reviews, solid follow-up, and a Google business profile that ranks all feed each other. Referrals are what happen when the whole thing works together the way it should.</p>`,
+  },
+];
+
+const costHtml = `
+<p>I'll be straight with you. I'm not the cheapest agency out there, and I'm not the most expensive either. I'm a local business myself, so I know it's not easy to pay thousands of dollars every month to an agency and keep a small business afloat. Most clients land in the $300–$1,200 per month range depending on scope. I'll give you an exact number after we talk, with no surprises and nothing locked behind a long contract.</p>
+<p>Starting is simple. We talk first so I understand your business and what you're trying to grow. From there I audit your Google business profile and website, map out the categories and services, and put the plan in front of you before any work begins. Many businesses start seeing movement in the first 30 days once the profile and site structure are aligned.</p>`;
+
+const whyHtml = `
+<p>What you get is someone responsive, hands-on, and obsessed with results. There's no big team here handing your work off. It's me overseeing everything and doing the work. The biggest thing might be this: I actually practice what I preach. Every system I set up for you, I run on my own business first. I followed my own blueprint and it took my profile from invisible to the top three. I'll do the same exact things for you.</p>`;
+---
+
+<BaseLayout
+  title="Marketing Agency in Prosper, TX | Inside Prosper"
+  description={pageDescription}
+>
+  <AdvertisingAgencySchema services={services} description={pageDescription} />
+  <BreadcrumbSchema items={breadcrumbItems} />
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-bg-dark pt-32 pb-16 lg:pt-40 lg:pb-20">
+      <Image
+        src={heroImg}
+        alt=""
+        aria-hidden="true"
+        width={1759}
+        height={894}
+        loading="eager"
+        fetchpriority="high"
+        format="webp"
+        quality={82}
+        class="absolute inset-0 size-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-bg-dark/80"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-bg-dark/90 via-bg-dark/70 to-bg-dark/50"></div>
+      <div class="relative z-10 mx-auto max-w-7xl px-6">
+        <nav class="mb-8 flex items-center gap-2 text-sm text-white/40" aria-label="Breadcrumb">
+          <a href="/" class="transition-colors hover:text-primary">Home</a>
+          <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span class="text-white/70">Marketing Agency</span>
+        </nav>
+
+        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+          Local Marketing Agency
+        </span>
+        <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Marketing Agency in Prosper That Actually <span class="font-display italic text-primary">Picks Up the Phone</span>
+        </h1>
+        <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
+          One local owner, hands-on with every client. No handoffs, no virtual assistants — just the systems that get you found and keep your phone ringing.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={`tel:${siteConfig.phoneRaw}`}
+            class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-primary-dark"
+          >
+            <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" /></svg>
+            Call Now {siteConfig.phone}
+          </a>
+          <a
+            href="/"
+            class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            Explore Businesses
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          {trustPoints.map((point) => (
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm">
+              <svg class="size-4 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+              {point}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <div class="space-y-5 text-base leading-relaxed text-text-muted [&_a]:font-semibold [&_a]:text-primary [&_a:hover]:text-primary-dark">
+          {intro.map((para) => <p set:html={para} />)}
+        </div>
+        <p class="mt-8 font-heading text-lg font-bold text-text">
+          Here's everything I help local businesses with under one roof.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-6xl space-y-16 px-6 lg:space-y-24">
+        {sections.map((s, i) => (
+          <div id={s.id} class="grid scroll-mt-28 items-center gap-8 lg:grid-cols-2 lg:gap-14">
+            <div class={i % 2 === 1 ? 'lg:order-2' : ''}>
+              <Image
+                src={s.img}
+                alt={`${s.title} — Inside Prosper marketing agency in Prosper, TX`}
+                loading="lazy"
+                format="webp"
+                quality={82}
+                class="w-full rounded-2xl shadow-md"
+              />
+            </div>
+            <div class={i % 2 === 1 ? 'lg:order-1' : ''}>
+              <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+                {s.title}
+              </h2>
+              <div class={`mt-4 ${proseClass}`} set:html={s.html} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <InlineCTA heading="Want to see what this looks like for your business?" subheading="Call Inside Prosper and talk to the person doing the work." />
+
+    <!-- What it costs -->
+    <section id="what-it-costs" class="scroll-mt-28 bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <Image
+              src={costImg}
+              alt="What it costs and how we start with Inside Prosper — marketing agency in Prosper, TX"
+              loading="lazy"
+              format="webp"
+              quality={82}
+              class="w-full rounded-2xl shadow-md"
+            />
+          </div>
+          <div>
+            <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+              What It Costs and How We Start
+            </h2>
+            <div class={`mt-4 ${proseClass}`} set:html={costHtml} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why work with me -->
+    <section id="why-work-with-me" class="scroll-mt-28 bg-bg py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+          Why Local Businesses Work With Me
+        </h2>
+        <div class={`mt-6 ${proseClass}`} set:html={whyHtml} />
+        <p class="mt-6 text-lg font-semibold text-text">
+          If you want an agency that picks up the phone, treats you like a partner, and gets you showing up on Google, I'd love to meet you and figure out how I can help your business grow.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="bg-bg-dark py-20 text-center">
+      <div class="mx-auto max-w-2xl px-6">
+        <h2 class="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          Let's Grow Your <span class="text-primary">Business</span>
+        </h2>
+        <p class="mt-4 text-base text-white/60">
+          Talk to the person who'll actually do the work. Call {siteConfig.phone} today.
+        </p>
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
+          <a
+            href={`tel:${siteConfig.phoneRaw}`}
+            class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
+          >
+            <svg class="size-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" /></svg>
+            Call Now {siteConfig.phone}
+          </a>
+          <a
+            href="/"
+            class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/25 px-8 py-3.5 font-semibold text-white transition-all duration-200 hover:bg-white/10"
+          >
+            Explore Businesses
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
