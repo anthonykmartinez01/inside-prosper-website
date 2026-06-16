@@ -963,6 +963,40 @@ export const businesses: Business[] = [
     imageAspect: '7/15',
   },
   {
+    name: 'New Look Remodeling',
+    slug: 'new-look-remodeling',
+    category: 'trades',
+    published: true,
+    verified: true,
+    shortDescription: 'Family-owned kitchen, bathroom, and full-home remodeling serving Prosper, Celina, Frisco, Plano, Allen, and the DFW Metroplex. Run by Sevario and Michelle Campobasso with 30+ years of craftsmanship since 1999.',
+    longDescription: 'New Look Remodeling is a family-owned remodeling company founded by Sevario and Michelle Campobasso, based in Celina and serving Prosper, Frisco, Plano, Allen, and the broader Dallas–Fort Worth Metroplex since 1999. With more than thirty years of craftsmanship, the team handles kitchens, bathrooms, custom cabinets and countertops, painting, tile, flooring, plumbing, electrical, roofing, home additions, and outdoor living spaces including patios, outdoor kitchens, pergolas, and custom pools. Homeowners describe them as honest, communicative, respectful, and reliable — a full-service team that keeps every part of the project in-house and treats your home like their own.',
+    htmlDescription: `<h2>Meet the Family Behind New Look Remodeling in Prosper and the DFW Area</h2>
+<p>When you call New Look Remodeling, you are not getting a faceless company or a crew that disappears after the deposit clears. You are getting a family owned business built on more than thirty years of craftsmanship, run by Sevario and Michelle Campobasso, a husband and wife who treat this work as personal. It started when Sevario came to this country, learned the language on his own, earned his citizenship, and built something real from the ground up. That story matters because it shows up in the work. You can expect someone who knows what it means to do things the right way, to show up when he says he will, and to treat your home the way he would treat his own.</p>
+
+<h2>Trusted Kitchen and Bathroom Remodeling Built on Real Experience</h2>
+<p>This is a team that has been remodeling homes since 1999 and serving the Dallas Fort Worth area ever since. Based in Celina and proudly serving Prosper, Frisco, Plano, Allen, and the broader Metroplex, they offer the kind of longevity that is rare in an industry full of overnight operations that vanish the moment something goes wrong. What you will notice right away is the depth of experience. Whether you are dreaming about a modern kitchen with smart functionality, a fresh bathroom, new flooring, or a full home transformation, you are working with people who have done it countless times and still care about getting every detail right. One homeowner shared how the team took a dated 1990 kitchen and turned it into something that felt completely current, with quality work that left them so pleased they came right back for a new patio.</p>
+
+<h2>A Full Service Remodeling Team That Covers Every Project</h2>
+<p>One of the things you will appreciate most is that you do not have to juggle five different contractors. From custom cabinets and countertops to painting, tile, flooring, plumbing, electrical, roofing, home additions, and outdoor living spaces like patios, outdoor kitchens, pergolas, and even custom pools, this team keeps its hands in every part of the project so you do not have to chase down anyone else. Customers describe craftsmanship that is top tier and painting that looks crisp and clean. When one family was left stranded by their original general contractor, New Look Remodeling stepped in, installed all of their custom cabinetry, and delivered results they called absolutely stunning. They said the difference was night and day, and that the team truly saved their project.</p>
+
+<h2>Honest, Communicative, and Respectful From Start to Finish</h2>
+<p>If you have ever been burned by a contractor before, you will understand why this matters so much. Expect clear communication, fair pricing without gouging, and a process that keeps you informed every step of the way. This is a team that walks you through your options, explains what is cost effective for what you actually need, and follows up in a timely manner. Homeowners consistently use the same words to describe the experience: respectful, efficient, kind, mindful, competent, and trustworthy. They show up reliably and treat your home with genuine care. One customer marveled that the entire job was finished in a single day and the house was left as clean as they found it.</p>
+
+<h2>Creative Vision That Brings Your Ideas to Life</h2>
+<p>What sets this work apart is Sevario's eye for design. Expect someone who can look at a blank wall and see the finished space, then work alongside skilled local designers to find the perfect balance between what you envision and what fits your budget and your life. The process starts with understanding what you want, moves into a concept, and often includes renderings so you can see your project before a single tool comes out. From framing and tiling to the final installation, the attention to detail comes through. One homeowner described a fireplace project where the team handled everything from the framing to the tile to the mantle and left them thrilled with the final product. This personalized approach, refusing the one size fits all shortcut, is exactly why the company earned recognition as the best in the McKinney area.</p>
+
+<h2>A Local Business That Truly Gives Back to the Prosper Community</h2>
+<p>This is a family that is woven into the fabric of Prosper and the surrounding communities. They sponsor youth sports, support community events, and partner with other local businesses because they believe in lifting up the place they call home. When you work with New Look Remodeling, you are supporting neighbors who show up for the community, not a distant corporation. That local presence also means accountability. They have built their reputation one satisfied homeowner at a time, and they intend to keep it that way.</p>
+
+<h2>What You Can Expect When You Work With New Look Remodeling</h2>
+<p>You can expect a team that is honest, dependable, on time, and easy to talk to. You can expect quality work that holds up and a crew that respects your space and your investment. You can expect to be treated like a person rather than a transaction, with the patience to walk you through every decision or the confidence to handle it all if you would rather just hand over the keys and trust the process. After more than three decades, this is a family business that has figured out the right combination of skill, integrity, and genuine care. When you are ready to transform your house into a home that truly reflects you, you will be glad you called.</p>`,
+    phone: '(469) 688-3498',
+    address: 'Serving Prosper, Celina, Frisco, Plano, Allen, and the DFW Metroplex',
+    image: '/images/new-look-remodeling.webp',
+    imageAspect: '2/3',
+    logo: '/images/new-look-remodeling-logo.webp',
+  },
+  {
     name: 'Zero Streaks Window Cleaning',
     slug: 'zero-streaks-window-cleaning',
     category: 'trades',
