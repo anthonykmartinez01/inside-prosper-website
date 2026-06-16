@@ -991,6 +991,7 @@ export const businesses: Business[] = [
 <h2>What You Can Expect When You Work With New Look Remodeling</h2>
 <p>You can expect a team that is honest, dependable, on time, and easy to talk to. You can expect quality work that holds up and a crew that respects your space and your investment. You can expect to be treated like a person rather than a transaction, with the patience to walk you through every decision or the confidence to handle it all if you would rather just hand over the keys and trust the process. After more than three decades, this is a family business that has figured out the right combination of skill, integrity, and genuine care. When you are ready to transform your house into a home that truly reflects you, you will be glad you called.</p>`,
     phone: '(469) 688-3498',
+    website: 'https://www.nlremodeling.com/',
     address: 'Serving Prosper, Celina, Frisco, Plano, Allen, and the DFW Metroplex',
     image: '/images/new-look-remodeling.webp',
     imageAspect: '2/3',
