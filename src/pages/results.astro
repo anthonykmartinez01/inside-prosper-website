@@ -40,6 +40,83 @@ const breadcrumbItems = [
       </div>
     </section>
 
+    <!-- Client Testimonial Video -->
+    <section class="bg-bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="mb-12 text-center">
+          <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
+            Client Testimonial
+          </span>
+          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+            Hear It From <span class="font-display italic text-primary">Rankin Waste Management</span>
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-muted">
+            We took Rankin Waste Management from 10 Google reviews to over 250 five-star reviews in about a month, and that volume changed how customers find and trust them. Here is the team in their own words.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="mx-auto mb-10 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">
+          <div class="rounded-xl bg-bg-alt p-4 text-center">
+            <p class="font-heading text-2xl font-extrabold text-text">10</p>
+            <p class="mt-1 text-sm text-text-muted">Starting Reviews</p>
+          </div>
+          <div class="rounded-xl bg-bg-alt p-4 text-center">
+            <p class="font-heading text-2xl font-extrabold text-green-600">250+</p>
+            <p class="mt-1 text-sm text-text-muted">5-Star Reviews</p>
+          </div>
+          <div class="rounded-xl bg-bg-alt p-4 text-center">
+            <p class="font-heading text-2xl font-extrabold text-primary">~30 Days</p>
+            <p class="mt-1 text-sm text-text-muted">Time Frame</p>
+          </div>
+          <div class="rounded-xl bg-bg-alt p-4 text-center">
+            <p class="font-heading text-2xl font-extrabold text-green-600">5.0★</p>
+            <p class="mt-1 text-sm text-text-muted">Average Rating</p>
+          </div>
+        </div>
+
+        <!-- Video facade: loads YouTube only on click to keep the page fast -->
+        <div class="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl border border-border shadow-lg" data-yt-facade>
+          <button
+            type="button"
+            class="group absolute inset-0 size-full cursor-pointer"
+            data-yt-id="DHOF5f5HNMU"
+            aria-label="Play the Rankin Waste Management testimonial video"
+          >
+            <img
+              src="https://i.ytimg.com/vi/DHOF5f5HNMU/maxresdefault.jpg"
+              alt="Rankin Waste Management testimonial video"
+              width="1280"
+              height="720"
+              loading="lazy"
+              class="size-full object-cover"
+            />
+            <span class="absolute inset-0 bg-black/25 transition-colors group-hover:bg-black/35"></span>
+            <span class="absolute left-1/2 top-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary shadow-lg transition-transform duration-200 group-hover:scale-110">
+              <svg class="ml-1 size-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll('[data-yt-facade]').forEach((facade) => {
+        const btn = facade.querySelector('[data-yt-id]');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-yt-id');
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+          iframe.title = 'Rankin Waste Management testimonial';
+          iframe.className = 'absolute inset-0 size-full';
+          iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+          iframe.setAttribute('allowfullscreen', '');
+          facade.replaceChildren(iframe);
+        });
+      });
+    </script>
+
     <!-- Intro -->
     <section class="bg-bg py-16 lg:py-24">
       <div class="mx-auto max-w-3xl px-6">
@@ -130,83 +207,6 @@ const breadcrumbItems = [
         </div>
       </div>
     </section>
-
-    <!-- Client Testimonial Video -->
-    <section class="bg-bg-white py-16 lg:py-24">
-      <div class="mx-auto max-w-5xl px-6">
-        <div class="mb-12 text-center">
-          <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-primary">
-            Client Testimonial
-          </span>
-          <h2 class="font-heading text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
-            Hear It From <span class="font-display italic text-primary">Rankin Waste Management</span>
-          </h2>
-          <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-muted">
-            We took Rankin Waste Management from 10 Google reviews to over 250 five-star reviews in about a month, and that volume changed how customers find and trust them. Here is the team in their own words.
-          </p>
-        </div>
-
-        <!-- Stats -->
-        <div class="mx-auto mb-10 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">
-          <div class="rounded-xl bg-bg-alt p-4 text-center">
-            <p class="font-heading text-2xl font-extrabold text-text">10</p>
-            <p class="mt-1 text-sm text-text-muted">Starting Reviews</p>
-          </div>
-          <div class="rounded-xl bg-bg-alt p-4 text-center">
-            <p class="font-heading text-2xl font-extrabold text-green-600">250+</p>
-            <p class="mt-1 text-sm text-text-muted">5-Star Reviews</p>
-          </div>
-          <div class="rounded-xl bg-bg-alt p-4 text-center">
-            <p class="font-heading text-2xl font-extrabold text-primary">~30 Days</p>
-            <p class="mt-1 text-sm text-text-muted">Time Frame</p>
-          </div>
-          <div class="rounded-xl bg-bg-alt p-4 text-center">
-            <p class="font-heading text-2xl font-extrabold text-green-600">5.0★</p>
-            <p class="mt-1 text-sm text-text-muted">Average Rating</p>
-          </div>
-        </div>
-
-        <!-- Video facade: loads YouTube only on click to keep the page fast -->
-        <div class="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl border border-border shadow-lg" data-yt-facade>
-          <button
-            type="button"
-            class="group absolute inset-0 size-full cursor-pointer"
-            data-yt-id="DHOF5f5HNMU"
-            aria-label="Play the Rankin Waste Management testimonial video"
-          >
-            <img
-              src="https://i.ytimg.com/vi/DHOF5f5HNMU/maxresdefault.jpg"
-              alt="Rankin Waste Management testimonial video"
-              width="1280"
-              height="720"
-              loading="lazy"
-              class="size-full object-cover"
-            />
-            <span class="absolute inset-0 bg-black/25 transition-colors group-hover:bg-black/35"></span>
-            <span class="absolute left-1/2 top-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary shadow-lg transition-transform duration-200 group-hover:scale-110">
-              <svg class="ml-1 size-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-            </span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <script>
-      document.querySelectorAll('[data-yt-facade]').forEach((facade) => {
-        const btn = facade.querySelector('[data-yt-id]');
-        if (!btn) return;
-        btn.addEventListener('click', () => {
-          const id = btn.getAttribute('data-yt-id');
-          const iframe = document.createElement('iframe');
-          iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
-          iframe.title = 'Rankin Waste Management testimonial';
-          iframe.className = 'absolute inset-0 size-full';
-          iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
-          iframe.setAttribute('allowfullscreen', '');
-          facade.replaceChildren(iframe);
-        });
-      });
-    </script>
 
     <!-- CTA -->
     <section class="bg-bg py-16 lg:py-24">
