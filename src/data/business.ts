@@ -733,6 +733,41 @@ export const businesses: Business[] = [
   },
   // Professionals — Home Inspections
   {
+    name: 'Joe Fang Headshots',
+    slug: 'joe-fang-headshots',
+    category: 'professionals',
+    published: true,
+    verified: true,
+    shortDescription: 'Executive headshot photographer based in Prosper, serving leaders across Dallas–Fort Worth. A former physical therapist, Joe Fang coaches you through a relaxed, personal session to capture authentic, polished images that match how you lead.',
+    longDescription: 'Joe Fang Headshots specializes in executive and professional headshots for leaders across Prosper and the Dallas–Fort Worth area. After more than a decade in healthcare as a physical therapist, Joe brings an empathy-first approach to photography, starting every session by understanding who you are and the message you want to send. He coaches nervous first-timers through the entire shoot in real time, keeps the experience relaxed and collaborative, and edits with your feedback so the final images feel authentic rather than standard. He has photographed founders, Fortune 500 executives, city leaders, and keynote speakers who understand that their personal image is worth the investment.',
+    htmlDescription: `<h2>Meet Joe Fang, Prosper's Go-To Executive Headshot Photographer</h2>
+<p>Joe Fang is a builder at heart. He spent more than ten years as a physical therapist. Somewhere along the way, he decided he wanted to bet on himself, and that's how his studio in Prosper came to life. He treats listening as the most important part of the work, something he carried over from his years caring for patients. Before he mentions lighting or angles, he wants to understand who you are and what you are actually trying to say to the world.</p>
+
+<h2>What a Headshot Session With Joe Fang Feels Like</h2>
+<p>It's common for clients to walk in nervous, and Joe expects that. Many of them have never sat for executive headshots before, and a good amount will tell you that they are not comfortable in front of a camera. Joe is someone who keeps the conversation light and easy so the stiffness goes away. Then, he helps you through the entire process so you are never left guessing on how to stand or where to look. Clients have described the experience as relaxed, fun, and genuinely personal rather than transactional. He pays close attention to feedback during the shoot and during editing, so the final images feel collaborative. The hard part, as more than one client has admitted, is narrowing down all the photos you love.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/joe-fang-headshot-1.webp" alt="Executive headshot by Joe Fang Headshots in Prosper, TX" loading="lazy" width="1200" height="960" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>A Photographer Who Captures the Real You</h2>
+<p>What clients constantly say is that Joe does not just take a polished picture. He captures you without the mask, the real version, the person behind the title. He asks about the message you want to share and then builds the session around that, which is why the images tend to carry both strength and warmth at the same time. One reviewer put it well when she said the photos felt authentic rather than standard, because Joe took the time to know her first. Whether you lead with big energy or you are quieter and more subtle, he works to find the expression that is naturally you, not a forced smile borrowed from someone else.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/joe-fang-headshot-2.webp" alt="Executive headshot with dramatic lighting by Joe Fang Headshots in Prosper, TX" loading="lazy" width="1200" height="960" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Trusted by Leaders Who Care About Their Personal Brand</h2>
+<p>Joe has worked with founders, Fortune 500 executives, city leaders, keynote speakers, and his belief about all of them is the same. Titles are just titles, and what matters is the human being who still has to take off his shoes when he gets home. His goal is to show that authenticity through strategic, intentional imagery. Instead of chasing photos he can brag about, he is solving the problem most people come to him with. Showing up as someone people trust before you ever say a word. For executives, founders, speakers, authors, and business owners who understand that their personal image is worth the investment, his approach makes a very big difference.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/joe-fang-headshot-3.webp" alt="Professional headshot by Joe Fang Headshots serving Prosper and the DFW area" loading="lazy" width="1200" height="960" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Why Prosper Professionals Choose Joe Fang Headshots</h2>
+<p>Joe puts a lot of care behind the camera and the relationship he builds around the work. He thinks about your goals before, during, and after the session because he genuinely wants you to succeed. Even in his own industry, he does not see other photographers as competition. He will even refer you elsewhere if your timeline does not fit his, because he would rather take care of you than leave you stranded. If you're looking for an amazing experience from start to finish for professional headshots, Joe is your best bet.</p>`,
+    phone: '(945) 289-5965',
+    website: 'https://joefangheadshots.com/',
+    address: 'Serving Prosper and the Dallas–Fort Worth area',
+    image: '/images/joe-fang-headshots.webp',
+    imageAspect: '3/2',
+    logo: '/images/joe-fang-headshots-logo.webp',
+  },
+  {
     name: 'Stonebriar Property Inspections',
     slug: 'stonebriar-property-inspections',
     category: 'professionals',
