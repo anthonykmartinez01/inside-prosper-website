@@ -764,7 +764,7 @@ export const businesses: Business[] = [
     website: 'https://joefangheadshots.com/',
     address: 'Serving Prosper and the Dallas–Fort Worth area',
     image: '/images/joe-fang-headshots.webp',
-    imageAspect: '3/2',
+    imageAspect: '5/4',
     logo: '/images/joe-fang-headshots-logo.webp',
   },
   {
