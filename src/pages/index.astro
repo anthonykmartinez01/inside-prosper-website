@@ -14,7 +14,7 @@ import ItemListSchema from '../components/schema/ItemListSchema.astro';
 import { publishedBusinesses, siteConfig, getBusinessUrl } from '../data/business';
 
 // Keep this in sync with the featured slugs in BusinessListings.astro
-const featuredSlugs = ['new-look-remodeling', 'clear-services-appliance-repair', 'close-automatic-garage-door', 'lucky-nails-spa', 'backyard-movie-theater', '360-iv-infusion-wellness', 'sheetal-henna-artist', 'zero-streaks-window-cleaning', 'chosen-appliance-repair', 'puddle-pool-services', 'stonebriar-property-inspections', 'prosper-painting', 'bobcats-automotive', 'elite-integrated-performance', 'a-joyful-mess-art-studio', 'the-playground-standard', 'the-red-roofer', 'impact-landscapes'];
+const featuredSlugs = ['joe-fang-headshots', 'new-look-remodeling', 'clear-services-appliance-repair', 'close-automatic-garage-door', 'lucky-nails-spa', 'backyard-movie-theater', '360-iv-infusion-wellness', 'sheetal-henna-artist', 'zero-streaks-window-cleaning', 'chosen-appliance-repair', 'puddle-pool-services', 'stonebriar-property-inspections', 'prosper-painting', 'bobcats-automotive', 'elite-integrated-performance', 'a-joyful-mess-art-studio', 'the-playground-standard', 'the-red-roofer', 'impact-landscapes'];
 const featuredItems = featuredSlugs
   .map((slug) => publishedBusinesses.find((b) => b.slug === slug))
   .filter((b): b is NonNullable<typeof b> => Boolean(b))
