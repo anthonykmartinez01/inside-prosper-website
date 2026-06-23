@@ -33,7 +33,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
     {resolvedImage ? (
       <Image
         src={resolvedImage}
-        alt={`${name}, local business in Prosper, Texas`}
+        alt={`${name} — local business in Prosper, Texas`}
         width={400}
         height={300}
         loading="lazy"
@@ -46,7 +46,7 @@ const resolvedImage = isLocal ? localImages[`/src/assets/images/${filename}`]?.d
     ) : (
       <img
         src={image}
-        alt={`${name}, local business in Prosper, Texas`}
+        alt={`${name} — local business in Prosper, Texas`}
         width="400"
         height="300"
         loading="lazy"

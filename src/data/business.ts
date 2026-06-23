@@ -29,16 +29,16 @@ export const categories: Category[] = [
     slug: 'food-fun',
     urlPath: 'food-and-fun',
     description: 'Restaurants, entertainment, and local eateries in Prosper, Texas.',
-    longDescription: 'Prosper, Texas has quietly become one of the best dining destinations in Collin County. From specialty coffee shops brewing fresh pour-overs to authentic Tex-Mex joints and globally inspired kitchens, the local food scene reflects the diversity and pride of this growing community. Whether you are craving handmade sushi, Southern Indian favorites, or a perfectly crafted espresso after a Saturday morning walk, Prosper has something for every palate. These are the restaurants and eateries that neighbors recommend to each other, the kind of places where the owners know your name and the food keeps you coming back. Residents from nearby Celina, Frisco, and McKinney regularly make the drive to eat here, and once you try them, you will too.',
-    metaDescription: 'Discover the best restaurants, cafes, and eateries in Prosper, TX. Locally owned food spots recommended by your neighbors, from coffee to Tex-Mex to sushi.',
+    longDescription: 'Prosper, Texas has quietly become one of the best dining destinations in Collin County. From specialty coffee shops brewing fresh pour-overs to authentic Tex-Mex joints and globally inspired kitchens, the local food scene reflects the diversity and pride of this growing community. Whether you are craving handmade sushi, Southern Indian favorites, or a perfectly crafted espresso after a Saturday morning walk, Prosper has something for every palate. These are the restaurants and eateries that neighbors recommend to each other — the kind of places where the owners know your name and the food keeps you coming back. Residents from nearby Celina, Frisco, and McKinney regularly make the drive to eat here, and once you try them, you will too.',
+    metaDescription: 'Discover the best restaurants, cafes, and eateries in Prosper, TX. Locally owned food spots recommended by your neighbors — from coffee to Tex-Mex to sushi.',
   },
   {
     name: 'Health & Fitness',
     slug: 'health-fitness',
     urlPath: 'health-and-fitness',
     description: 'Gyms, wellness centers, and health professionals in Prosper, Texas.',
-    longDescription: 'Staying active in Prosper, Texas means more than just hitting a treadmill, it means joining a community that pushes you to be your best. From high-intensity CrossFit boxes and functional training studios to results-driven personal training facilities, Prosper has fitness options for every level and goal. What makes these gyms special is the people behind them: coaches who learn your name, trainers who build programs around your life, and communities that celebrate every milestone with you. Residents across Prosper, Celina, and Frisco trust these fitness professionals to help them build strength, confidence, and lasting healthy habits.',
-    metaDescription: 'Find the best gyms, fitness studios, and wellness centers in Prosper, TX. CrossFit, personal training, group classes, trusted by the local community.',
+    longDescription: 'Staying active in Prosper, Texas means more than just hitting a treadmill — it means joining a community that pushes you to be your best. From high-intensity CrossFit boxes and functional training studios to results-driven personal training facilities, Prosper has fitness options for every level and goal. What makes these gyms special is the people behind them: coaches who learn your name, trainers who build programs around your life, and communities that celebrate every milestone with you. Residents across Prosper, Celina, and Frisco trust these fitness professionals to help them build strength, confidence, and lasting healthy habits.',
+    metaDescription: 'Find the best gyms, fitness studios, and wellness centers in Prosper, TX. CrossFit, personal training, group classes — trusted by the local community.',
   },
   {
     name: 'Professionals',
@@ -46,7 +46,7 @@ export const categories: Category[] = [
     urlPath: 'professionals',
     description: 'Accountants, lawyers, real estate agents, and more in Prosper, Texas.',
     longDescription: 'When you need an accountant, attorney, or financial advisor in Prosper, Texas, nothing beats working with someone who understands the local community. The professional service providers featured here have earned their reputation through years of dedicated work serving families and businesses across Prosper, Celina, Frisco, and the surrounding area. Whether you are planning your estate, navigating a real estate transaction, or looking for a CPA to manage your taxes, these professionals combine deep expertise with a personal, small-town approach. They are the kind of people your neighbors recommend at the soccer field or over the backyard fence.',
-    metaDescription: 'Find trusted lawyers, CPAs, and professional services in Prosper, TX. Estate planning, tax preparation, real estate law, recommended by your neighbors.',
+    metaDescription: 'Find trusted lawyers, CPAs, and professional services in Prosper, TX. Estate planning, tax preparation, real estate law — recommended by your neighbors.',
   },
   {
     name: 'Shop',
@@ -54,7 +54,7 @@ export const categories: Category[] = [
     urlPath: 'shop',
     description: 'Boutiques, retail stores, and unique shopping experiences in Prosper, Texas.',
     longDescription: 'Downtown Prosper is home to a growing collection of boutiques, gift shops, and specialty stores that make shopping here feel personal. From curated women\'s fashion and artisanal home decor to locally arranged flower bouquets, the shops in Prosper reflect the character and creativity of this community. Broadway Street and Main Street are the heart of the shopping scene, where you can browse unique finds, discover the perfect gift, and support small business owners who pour their hearts into their storefronts. Visitors from Frisco, McKinney, and Celina frequently make the trip to explore what downtown Prosper has to offer.',
-    metaDescription: 'Shop local boutiques, florists, and unique stores in Prosper, TX. Curated fashion, home decor, and gifts on Broadway Street, support small business.',
+    metaDescription: 'Shop local boutiques, florists, and unique stores in Prosper, TX. Curated fashion, home decor, and gifts on Broadway Street — support small business.',
   },
   {
     name: 'Trades',
@@ -62,7 +62,7 @@ export const categories: Category[] = [
     urlPath: 'trades',
     description: 'Plumbers, electricians, contractors, and skilled tradespeople in Prosper, Texas.',
     longDescription: 'Finding a reliable plumber, electrician, or contractor in Prosper, Texas should not feel like a gamble. The skilled tradespeople featured here have earned the trust of homeowners across Prosper, Little Elm, Frisco, and the surrounding communities through consistent, high-quality work. Whether you need an emergency plumbing repair at midnight, a panel upgrade for your new home, or routine HVAC maintenance, these professionals show up on time, do the job right, and stand behind their work. In a fast-growing area where new homes are going up every day, having a trusted tradesperson on speed dial is worth its weight in gold.',
-    metaDescription: 'Find trusted plumbers, electricians, and contractors serving Prosper, TX. 24/7 emergency service, honest pricing, recommended by local homeowners.',
+    metaDescription: 'Find trusted plumbers, electricians, and contractors serving Prosper, TX. 24/7 emergency service, honest pricing — recommended by local homeowners.',
   },
 ];
 
@@ -112,7 +112,7 @@ export const businesses: Business[] = [
     slug: '1418-coffee',
     category: 'food-fun',
     shortDescription: 'Locally owned coffee shop in Prosper, TX serving fresh-baked pastries, espresso drinks, and pour-overs. A neighborhood favorite on Preston Road.',
-    longDescription: '1418 Coffee is a locally owned specialty coffee shop right here in Prosper, Texas. We\'re passionate about serving expertly crafted espresso drinks, smooth pour-overs, and fresh-baked pastries made in-house daily. Our cozy space is designed to be a gathering spot for the community, whether you\'re catching up with friends, getting some work done, or just enjoying a quiet moment with a great cup of coffee. We source our beans from quality roasters and take pride in every drink we serve. Stop by and taste the difference that local love makes.',
+    longDescription: '1418 Coffee is a locally owned specialty coffee shop right here in Prosper, Texas. We\'re passionate about serving expertly crafted espresso drinks, smooth pour-overs, and fresh-baked pastries made in-house daily. Our cozy space is designed to be a gathering spot for the community\u2014whether you\'re catching up with friends, getting some work done, or just enjoying a quiet moment with a great cup of coffee. We source our beans from quality roasters and take pride in every drink we serve. Stop by and taste the difference that local love makes.',
     quote: 'We wanted to create a coffee shop that feels like home for the Prosper community.',
     phone: '(469) 598-1418',
     address: '1418 N Preston Rd, Prosper, TX 75078',
@@ -494,12 +494,12 @@ export const businesses: Business[] = [
 <h2>What TruClean Power Washing Offers</h2>
 
 <ul>
-<li><strong>Driveway &amp; Concrete Cleaning</strong>: oil stains, dirt buildup, and weathering</li>
-<li><strong>House Washing</strong>: full exterior soft wash to remove mold, mildew, and grime</li>
-<li><strong>Window Cleaning</strong>: interior and exterior, the service customers rave about most</li>
-<li><strong>Gutter Cleaning</strong>: debris removal and exterior gutter brightening</li>
-<li><strong>Patio &amp; Deck Cleaning</strong>: restore outdoor living spaces</li>
-<li><strong>Commercial Dumpster Pad Cleaning</strong>: for businesses and property managers</li>
+<li><strong>Driveway &amp; Concrete Cleaning</strong> — oil stains, dirt buildup, and weathering</li>
+<li><strong>House Washing</strong> — full exterior soft wash to remove mold, mildew, and grime</li>
+<li><strong>Window Cleaning</strong> — interior and exterior, the service customers rave about most</li>
+<li><strong>Gutter Cleaning</strong> — debris removal and exterior gutter brightening</li>
+<li><strong>Patio &amp; Deck Cleaning</strong> — restore outdoor living spaces</li>
+<li><strong>Commercial Dumpster Pad Cleaning</strong> — for businesses and property managers</li>
 </ul>
 
 <p>Need a free estimate? Call or text Tyler directly at <a href="tel:+15743703974">(574) 370-3974</a> or email <a href="mailto:info@trucleanpw.com">info@trucleanpw.com</a>. He responds fast.</p>
@@ -577,11 +577,11 @@ export const businesses: Business[] = [
 <h2>What The Playground Standard Offers</h2>
 
 <ul>
-<li><strong>Full Playground Deep Cleaning</strong>: every surface scrubbed, top to bottom</li>
-<li><strong>Sanitation with Child-Safe Products</strong>: eco-friendly, no bleach, no harsh chemicals</li>
-<li><strong>Safety Inspection Reports</strong>: missing bolts, cracks, and hazards flagged</li>
-<li><strong>Before &amp; After Documentation</strong>: full photo report with every job</li>
-<li><strong>Recurring Maintenance Plans</strong>: keep playgrounds safe year-round</li>
+<li><strong>Full Playground Deep Cleaning</strong> — every surface scrubbed, top to bottom</li>
+<li><strong>Sanitation with Child-Safe Products</strong> — eco-friendly, no bleach, no harsh chemicals</li>
+<li><strong>Safety Inspection Reports</strong> — missing bolts, cracks, and hazards flagged</li>
+<li><strong>Before &amp; After Documentation</strong> — full photo report with every job</li>
+<li><strong>Recurring Maintenance Plans</strong> — keep playgrounds safe year-round</li>
 </ul>
 
 <h2>Who They Serve Across Collin and Denton County</h2>
@@ -621,17 +621,17 @@ export const businesses: Business[] = [
 
 <h2>Medical Optimization Nobody Else in Prosper Is Offering</h2>
 
-<p>What nobody else in Prosper is doing is the medical side. Elite has a Chief Nursing Officer on staff and a team of doctors backing the operation. Peptide programs, testosterone replacement therapy, IV therapy, comprehensive bloodwork, all of it runs through certified pharmacies with real medical evaluations. You're not buying something off the internet and hoping for the best.</p>
+<p>What nobody else in Prosper is doing is the medical side. Elite has a Chief Nursing Officer on staff and a team of doctors backing the operation. Peptide programs, testosterone replacement therapy, IV therapy, comprehensive bloodwork — all of it runs through certified pharmacies with real medical evaluations. You're not buying something off the internet and hoping for the best.</p>
 
 <h2>What Elite Integrated Performance Offers</h2>
 
 <ul>
-<li><strong>Personalized Training Programs</strong>: built on your InBody data, not cookie-cutter templates</li>
-<li><strong>Custom Nutrition Planning</strong>: calorie and macro targets based on real numbers, adjusted each phase</li>
-<li><strong>Three-Phase Annual Programming</strong>: 16 weeks cutting, 16 weeks performance, 16 weeks building</li>
-<li><strong>Peptide Programs &amp; TRT</strong>: medically supervised through certified pharmacies</li>
-<li><strong>IV Therapy</strong>: recovery and optimization protocols</li>
-<li><strong>Comprehensive Bloodwork</strong>: real medical evaluations, not guesswork</li>
+<li><strong>Personalized Training Programs</strong> — built on your InBody data, not cookie-cutter templates</li>
+<li><strong>Custom Nutrition Planning</strong> — calorie and macro targets based on real numbers, adjusted each phase</li>
+<li><strong>Three-Phase Annual Programming</strong> — 16 weeks cutting, 16 weeks performance, 16 weeks building</li>
+<li><strong>Peptide Programs &amp; TRT</strong> — medically supervised through certified pharmacies</li>
+<li><strong>IV Therapy</strong> — recovery and optimization protocols</li>
+<li><strong>Comprehensive Bloodwork</strong> — real medical evaluations, not guesswork</li>
 </ul>
 
 <h2>25 Years of Coaching Experience Behind Every Program</h2>
@@ -648,7 +648,7 @@ export const businesses: Business[] = [
     image: '/images/elite-integrated-performance.webp',
     verified: true,
   },
-  // Shop, Kids Activities
+  // Shop — Kids Activities
   {
     name: 'A Joyful Mess Art Studio',
     slug: 'a-joyful-mess-art-studio',
@@ -693,7 +693,7 @@ export const businesses: Business[] = [
     imagePosition: 'top',
     verified: true,
   },
-  // Professionals, Henna / Mehndi Artist
+  // Professionals — Henna / Mehndi Artist
   {
     name: "Sheetal's Henna Designs LLC",
     slug: 'sheetal-henna-artist',
@@ -731,7 +731,7 @@ export const businesses: Business[] = [
       instagram: 'https://www.instagram.com/sheetals_henna_designs_dallas/',
     },
   },
-  // Professionals, Home Inspections
+  // Professionals — Home Inspections
   {
     name: 'Joe Fang Headshots',
     slug: 'joe-fang-headshots',
@@ -797,13 +797,13 @@ export const businesses: Business[] = [
 <h2>What Stonebriar Property Inspections Offers</h2>
 
 <ul>
-<li><strong>Full Home Inspections</strong>: thorough walkthroughs for buyers, sellers, and homeowners</li>
-<li><strong>Wood Destroying Insect &amp; Termite Inspections</strong>: certified inspector with detailed reporting</li>
-<li><strong>Thermal Imaging</strong>: catch moisture, insulation, and electrical issues invisible to the eye</li>
-<li><strong>Foundation Measurements</strong>: precise evaluation of slab and structural movement</li>
-<li><strong>Pool Inspections</strong>: full assessment of pool equipment, safety, and condition</li>
-<li><strong>Drone Roof Inspections</strong>: safe, detailed roof analysis with aerial imaging</li>
-<li><strong>Sewer Scoping</strong>: catch costly pipe issues before you close on the house</li>
+<li><strong>Full Home Inspections</strong> — thorough walkthroughs for buyers, sellers, and homeowners</li>
+<li><strong>Wood Destroying Insect &amp; Termite Inspections</strong> — certified inspector with detailed reporting</li>
+<li><strong>Thermal Imaging</strong> — catch moisture, insulation, and electrical issues invisible to the eye</li>
+<li><strong>Foundation Measurements</strong> — precise evaluation of slab and structural movement</li>
+<li><strong>Pool Inspections</strong> — full assessment of pool equipment, safety, and condition</li>
+<li><strong>Drone Roof Inspections</strong> — safe, detailed roof analysis with aerial imaging</li>
+<li><strong>Sewer Scoping</strong> — catch costly pipe issues before you close on the house</li>
 </ul>
 
 <h2>A Home Inspection Report You Can Actually Read and Understand</h2>
@@ -833,7 +833,7 @@ export const businesses: Business[] = [
     imageAspect: '1200/1106',
     verified: true,
   },
-  // Trades, Auto Repair
+  // Trades — Auto Repair
   {
     name: 'Bobcats Automotive',
     slug: 'bobcats-automotive',
@@ -1004,7 +1004,7 @@ export const businesses: Business[] = [
     published: true,
     verified: true,
     shortDescription: 'Family-owned kitchen, bathroom, and full-home remodeling serving Prosper, Celina, Frisco, Plano, Allen, and the DFW Metroplex. Run by Sevario and Michelle Campobasso with 30+ years of craftsmanship since 1999.',
-    longDescription: 'New Look Remodeling is a family-owned remodeling company founded by Sevario and Michelle Campobasso, based in Celina and serving Prosper, Frisco, Plano, Allen, and the broader Dallas–Fort Worth Metroplex since 1999. With more than thirty years of craftsmanship, the team handles kitchens, bathrooms, custom cabinets and countertops, painting, tile, flooring, plumbing, electrical, roofing, home additions, and outdoor living spaces including patios, outdoor kitchens, pergolas, and custom pools. Homeowners describe them as honest, communicative, respectful, and reliable, a full-service team that keeps every part of the project in-house and treats your home like their own.',
+    longDescription: 'New Look Remodeling is a family-owned remodeling company founded by Sevario and Michelle Campobasso, based in Celina and serving Prosper, Frisco, Plano, Allen, and the broader Dallas–Fort Worth Metroplex since 1999. With more than thirty years of craftsmanship, the team handles kitchens, bathrooms, custom cabinets and countertops, painting, tile, flooring, plumbing, electrical, roofing, home additions, and outdoor living spaces including patios, outdoor kitchens, pergolas, and custom pools. Homeowners describe them as honest, communicative, respectful, and reliable — a full-service team that keeps every part of the project in-house and treats your home like their own.',
     htmlDescription: `<h2>Meet the Family Behind New Look Remodeling in Prosper and the DFW Area</h2>
 <p>Sevario Campobasso came to Texas from Italy without much English and without a single customer waiting for him. He picked up the language on his own, earned his citizenship, learned Spanish along the way so he could work shoulder to shoulder with his crew, and slowly built New Look Remodeling into what it is today. He started out in Chicago back in 1999, made the move to the Dallas Fort Worth area in 2000, took a job at Home Depot to meet people and build connections, and by 2003 he had built up enough steady work to go out on his own. He and his wife Michelle have been growing the business ever since. When you hire them, you are not handing your home to a faceless company. You are working with a family who has spent more than 30 years earning their reputation one project at a time.</p>
 
@@ -1038,8 +1038,8 @@ export const businesses: Business[] = [
     category: 'trades',
     published: true,
     verified: true,
-    shortDescription: 'Owner-operated pool cleaning and maintenance serving Prosper, Celina, and the surrounding area. Brandon Clark brings a lifetime of hands-on pool care, a detailed every-visit routine, and after-visit photo reports, consistent, professional, and trustworthy.',
-    longDescription: 'Pool Clean is an owner-operated pool service led by Brandon Clark, serving Prosper, Celina, and the surrounding North Texas area. Brandon grew up caring for pools and has owned his own for 27 years, bringing a lifetime of hands-on experience to every visit. He follows a structured routine on every service, testing the water with a saturation index method, adding chemicals in the right order, vacuuming, brushing, netting, and checking equipment, and sends a full photo report after each visit. Customers consistently describe him as honest, professional, courteous, dependable, and the most consistent pool service they have had.',
+    shortDescription: 'Owner-operated pool cleaning and maintenance serving Prosper, Celina, and the surrounding area. Brandon Clark brings a lifetime of hands-on pool care, a detailed every-visit routine, and after-visit photo reports — consistent, professional, and trustworthy.',
+    longDescription: 'Pool Clean is an owner-operated pool service led by Brandon Clark, serving Prosper, Celina, and the surrounding North Texas area. Brandon grew up caring for pools and has owned his own for 27 years, bringing a lifetime of hands-on experience to every visit. He follows a structured routine on every service — testing the water with a saturation index method, adding chemicals in the right order, vacuuming, brushing, netting, and checking equipment — and sends a full photo report after each visit. Customers consistently describe him as honest, professional, courteous, dependable, and the most consistent pool service they have had.',
     htmlDescription: `<h2>Meet the Owner Behind Pool Clean in Prosper, Texas</h2>
 <p>When you hire a pool service, you want to know who is walking into your backyard. With Pool Clean, that person is Brandon Clark, and he is exactly the kind of business owner you hope to find. Brandon grew up in a small Texas town on Cedar Creek Lake, spent twenty years in Austin, and moved his family back to the Prosper and Celina area to be closer to relatives. He has cared for pools his entire life, starting as a kid doing weekly maintenance his dad taught him, and he has owned a pool of his own for the twenty seven years he has been married. That lifetime of hands on experience is something you feel from the very first visit.</p>
 
@@ -1118,7 +1118,7 @@ export const businesses: Business[] = [
 
 <p>360 IV Infusion and Wellness does not look or feel like the IV bars you have probably scrolled past on Instagram. It does not feel like a clinic, and it does not feel like a typical day spa either. Instead there is a calm, modern, boutique space that was intentionally built around what someone actually wants when they walk in tired, run down, or just needing to feel refreshed. Clients keep mentioning one word in their online reviews, and that word is welcomed. Even the chairs are the kind that make you forget you came in for a treatment in the first place.</p>
 
-<h2>Meet Oge Ogundu, DNP, MSN, RN, The Heart Behind 360 IV Infusion and Wellness</h2>
+<h2>Meet Oge Ogundu, DNP, MSN, RN — The Heart Behind 360 IV Infusion and Wellness</h2>
 
 <p>This IV Hydration and Wellness Lounge is owned by Oge Ogundu, DNP, MSN, RN, who brings her background in both optometry and nursing into every detail of the experience. Originally from Nigeria, she built her career in healthcare across the country before planting roots in Prosper. Her approach is shaped by something she noticed during years of bedside and insurance work: that people often think about their health only after something has already gone wrong. 360 IV Infusion and Wellness was created so you can be proactive with your wellness inside a space that feels safe, supervised, and personal. Oge is also a mother of two, a wife, and a traveler at heart, with a vision of one day using a portion of the proceeds to support scholarships for young girls.</p>
 
@@ -1221,7 +1221,7 @@ export const businesses: Business[] = [
     category: 'food-fun',
     published: true,
     shortDescription: 'Backyard Movie Theater turns Prosper, TX yards into cinematic experiences with a 20-ft industrial-grade screen, custom pre-show reels, indoor inflatable theater, LED dance floor, and gaming lounge options. Owned by Derek Sharp.',
-    longDescription: "Backyard Movie Theater is a full-service movie night and party experience company serving Prosper and the surrounding North Texas area. Founded by Derek Sharp after a Christmas gift to his own family turned into a community favorite, Backyard Movie Theater offers a 20-foot industrial-grade outdoor screen, an air-conditioned indoor inflatable theater, an inflatable nightclub setup, a gaming lounge with multiple TV screens, and an LED dance floor, all paired with custom pre-show reels that turn any event into a real theater experience.",
+    longDescription: "Backyard Movie Theater is a full-service movie night and party experience company serving Prosper and the surrounding North Texas area. Founded by Derek Sharp after a Christmas gift to his own family turned into a community favorite, Backyard Movie Theater offers a 20-foot industrial-grade outdoor screen, an air-conditioned indoor inflatable theater, an inflatable nightclub setup, a gaming lounge with multiple TV screens, and an LED dance floor — all paired with custom pre-show reels that turn any event into a real theater experience.",
     htmlDescription: `<h2>A Backyard Movie Theater Experience in Prosper, TX That Goes Beyond a Simple Movie Night</h2>
 
 <p>If you have ever wondered what it would feel like to turn your own backyard into a memory you will talk about for years, Derek Sharp and his Backyard Movie Theater setup are exactly what you are looking for. What started as a Christmas gift for his own family quickly grew into a full service experience after neighbors caught on to how special a good movie night can really feel. Now Derek brings that same energy to families, schools, and groups all across Prosper and the surrounding North Texas area.</p>
@@ -1240,29 +1240,29 @@ export const businesses: Business[] = [
 
 <p>One of the things that sets this service apart is the pre show experience Derek puts together for you. Instead of just pressing play on a movie, he builds a custom reel ahead of time. That can include your child's favorite YouTube videos, a music playlist that matches the vibe of the night, and coming attractions that roll right into the main feature. By the time the movie starts, your guests are already settled in and feeling like they walked into a private theater under the stars.</p>
 
-<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-indoor-theater.webp" alt="Indoor inflatable theater interior with movie playing, Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-indoor-theater.webp" alt="Indoor inflatable theater interior with movie playing — Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
 
 <h2>Indoor Movie Theater, LED Dance Floor, and Gaming Lounge Options</h2>
 
 <p>Derek has expanded what is possible far beyond the traditional outdoor setup. For families with younger kids who need an earlier start time, there is a fully air conditioned indoor inflatable theater complete with carpeting, LED perimeter lighting, and four AC units to keep things cool. That same space transforms into an inflatable nightclub with fog machines, lights, velvet ropes, and a red carpet, or into a gaming lounge with multiple TV screens for tournaments and group play. The newest addition is an LED dance floor that pairs perfectly with the big screen, turning the back half of any party into a full on concert once the movie wraps up.</p>
 
-<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-nightclub.webp" alt="Inflatable nightclub setup with red lighting and projection screen, Backyard Movie Theater" loading="lazy" width="1000" height="1333" class="w-full rounded-2xl shadow-md" /></figure>
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-nightclub.webp" alt="Inflatable nightclub setup with red lighting and projection screen — Backyard Movie Theater" loading="lazy" width="1000" height="1333" class="w-full rounded-2xl shadow-md" /></figure>
 
 <figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-gaming-lounge.webp" alt="Gaming lounge with multiple TV screens and arcade machines at Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
 
-<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-led-dance-floor.webp" alt="Indoor LED dance floor with movie projection, Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-led-dance-floor.webp" alt="Indoor LED dance floor with movie projection — Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
 
 <h2>Why Families and Schools in Prosper Keep Coming Back</h2>
 
 <p>If you read through the reviews about Backyard Movie Rental, you'll see a clear pattern showing up over and over again. Parents talk about how their kids called it the best birthday ever. PTA organizers describe the smoothest school movie night they have ever hosted. Couples mention how Derek made their wedding reception unforgettable by playing their elopement video on the big screen. The common thread is that Derek does not just deliver equipment. He shows up, takes ownership of the experience, makes adjustments when weather or logistics throw a curveball, and quietly disappears so your event feels completely yours.</p>
 
-<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-outdoor-led.webp" alt="Outdoor rainbow LED dance floor under the movie screen, Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-outdoor-led.webp" alt="Outdoor rainbow LED dance floor under the movie screen — Backyard Movie Theater" loading="lazy" width="1000" height="750" class="w-full rounded-2xl shadow-md" /></figure>
 
 <h2>Booking Backyard Movie Theater for Your Next Event</h2>
 
 <p>If you are planning a birthday, a school function, a holiday gathering, a corporate event, or any celebration where you want guests walking away saying they have never seen anything like it, this is the setup to book. Derek puts real care into every event he takes on, from the picture quality to the way he interacts with your guests. You are not booking a rental. You are booking a night that turns into a core memory for the people you love.</p>
 
-<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-outdoor-setup.webp" alt="Outdoor inflatable theater setup with lounge seating and red carpet, Backyard Movie Theater" loading="lazy" width="1000" height="1333" class="w-full rounded-2xl shadow-md" /></figure>`,
+<figure class="my-8 mx-auto max-w-md"><img src="/images/backyard-movie-outdoor-setup.webp" alt="Outdoor inflatable theater setup with lounge seating and red carpet — Backyard Movie Theater" loading="lazy" width="1000" height="1333" class="w-full rounded-2xl shadow-md" /></figure>`,
     phone: '(424) 209-9087',
     website: 'https://backyardmovietheater.com/',
     address: 'Serving Prosper and surrounding areas',
@@ -1276,7 +1276,7 @@ export const businesses: Business[] = [
       youtube: 'https://www.youtube.com/@backyardmovietheater',
     },
   },
-  // Trades, Garage Door Repair
+  // Trades — Garage Door Repair
   {
     name: 'Close Automatic Garage Door',
     slug: 'close-automatic-garage-door',
