@@ -59,7 +59,7 @@ const breadcrumbItems = [
 ---
 
 <BaseLayout
-  title={`${business.name} — ${category?.name || 'Business'} in Prosper, TX | ${siteConfig.name}`}
+  title={`${business.name}, ${category?.name || 'Business'} in Prosper, TX | ${siteConfig.name}`}
   description={business.shortDescription}
   ogImage={business.image || undefined}
 >
@@ -97,13 +97,13 @@ const breadcrumbItems = [
           )}
         </div>
         <h1 class="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-          {business.name} <span class="text-white/40">—</span> <span class="font-display italic text-primary">{business.locationLabel || 'Prosper, TX'}</span>
+          {business.name}<span class="text-white/40">,</span> <span class="font-display italic text-primary">{business.locationLabel || 'Prosper, TX'}</span>
         </h1>
         <p class="mt-4 max-w-2xl text-base text-white/60 sm:text-lg">
           {business.shortDescription}
         </p>
 
-        {/* Mobile-only quick actions — the sticky contact sidebar is below the
+        {/* Mobile-only quick actions, the sticky contact sidebar is below the
             article on small screens, so surface call/website in the hero.
             Hidden on lg+ where the sidebar is visible alongside the content. */}
         {business.phone && (
@@ -142,7 +142,7 @@ const breadcrumbItems = [
                 {resolvedImage ? (
                   <Image
                     src={resolvedImage}
-                    alt={`${business.name} — local business in Prosper, Texas`}
+                    alt={`${business.name}, local business in Prosper, Texas`}
                     width={1600}
                     height={Math.round(1600 * (aspectH / aspectW))}
                     loading="eager"
@@ -154,7 +154,7 @@ const breadcrumbItems = [
                 ) : (
                   <img
                     src={business.image}
-                    alt={`${business.name} — local business in Prosper, Texas`}
+                    alt={`${business.name}, local business in Prosper, Texas`}
                     width="1600"
                     height={Math.round(1600 * (aspectH / aspectW))}
                     loading="eager"
@@ -168,7 +168,7 @@ const breadcrumbItems = [
                 {resolvedImage ? (
                   <Image
                     src={resolvedImage}
-                    alt={`${business.name} — local business in Prosper, Texas`}
+                    alt={`${business.name}, local business in Prosper, Texas`}
                     width={1600}
                     height={Math.round(1600 * (aspectH / aspectW))}
                     loading="eager"
@@ -180,7 +180,7 @@ const breadcrumbItems = [
                 ) : (
                   <img
                     src={business.image}
-                    alt={`${business.name} — local business in Prosper, Texas`}
+                    alt={`${business.name}, local business in Prosper, Texas`}
                     width="800"
                     height={500}
                     loading="eager"

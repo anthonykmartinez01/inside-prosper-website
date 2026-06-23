@@ -106,7 +106,7 @@ import { siteConfig, navigation } from '../../data/business';
     });
   });
 
-  // Scroll transition — using setAttribute with !important to override Tailwind v4 cascade layers
+  // Scroll transition, using setAttribute with !important to override Tailwind v4 cascade layers
   const baseStyle = 'transition:background-color 0.3s ease,backdrop-filter 0.3s ease,border-bottom 0.3s ease;';
   const clearStyle = baseStyle + 'background-color:transparent !important;border-bottom:1px solid transparent !important;';
   const solidStyle = baseStyle + 'background-color:rgba(13,13,13,0.95) !important;backdrop-filter:blur(16px) !important;-webkit-backdrop-filter:blur(16px) !important;border-bottom:1px solid rgba(255,255,255,0.08) !important;';

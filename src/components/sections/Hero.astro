@@ -4,11 +4,11 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
 ---
 
 <section class="relative min-h-[45vh] lg:min-h-[70vh] overflow-hidden bg-bg-dark" data-hero-section>
-  <!-- Layer 1: Full background image (sky + scene) — LCP element -->
+  <!-- Layer 1: Full background image (sky + scene), LCP element -->
   <div class="absolute inset-0" data-hero-bg>
     <Image
       src={heroImage}
-      alt="Sunset over Prosper, Texas — a small-town main street with American flags and grain silos"
+      alt="Sunset over Prosper, Texas, a small-town main street with American flags and grain silos"
       class="size-full object-cover"
       loading="eager"
       fetchpriority="high"
@@ -23,8 +23,8 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
   <!-- Layer 2: Spacer (giant text removed) -->
   <div class="pointer-events-none absolute inset-0" data-hero-text></div>
 
-  <!-- Layer 3: Foreground cutout — same image with CSS mask revealing only bottom portion.
-       Decorative duplicate of Layer 1 — same file (deduped by browser cache),
+  <!-- Layer 3: Foreground cutout, same image with CSS mask revealing only bottom portion.
+       Decorative duplicate of Layer 1, same file (deduped by browser cache),
        just decoded and painted with the gradient mask. Marked low priority + async
        decode so it doesn't compete with the LCP image. -->
   <div class="absolute inset-0 hero-foreground-mask" data-hero-fg>
@@ -43,32 +43,32 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
     />
   </div>
 
-  <!-- Layer 4: Gradient overlay — lighter in middle so PROSPER text shows clearly.
+  <!-- Layer 4: Gradient overlay, lighter in middle so PROSPER text shows clearly.
        JS controls opacity (0.6 → 1.0) for scroll-based darkening. -->
   <div class="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-[#0D0D0D]/15 to-[#0D0D0D]/95" data-hero-overlay></div>
 
   <!-- Layer 5: Foreground content -->
   <div class="relative z-20 mx-auto max-w-7xl px-6 pt-20 pb-8 lg:pt-40 lg:pb-28" data-hero-content>
     <div class="max-w-2xl">
-      <!-- Badge — slides down from above -->
+      <!-- Badge, slides down from above -->
       <div data-hero-el="badge" class="hero-animate hero-animate-slide-down mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm border border-white/10">
         <svg class="size-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" /></svg>
         Welcome to Inside Prosper
       </div>
 
-      <!-- Heading — NO entrance animation (LCP element must render immediately) -->
+      <!-- Heading, NO entrance animation (LCP element must render immediately) -->
       <h1 data-hero-el="heading" class="font-heading text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
         Discover the Best Local
         <span class="font-display italic text-primary">Businesses</span>
         in Prosper, Texas
       </h1>
 
-      <!-- Subtitle — fade only -->
+      <!-- Subtitle, fade only -->
       <p data-hero-el="subtitle" class="hero-animate hero-animate-fade hero-animate-delay-2 mt-6 max-w-lg text-base leading-relaxed text-[#F5F5F5]/70 sm:text-lg">
-        25+ handpicked local businesses — curated for Prosper residents who support their neighbors.
+        25+ handpicked local businesses, curated for Prosper residents who support their neighbors.
       </p>
 
-      <!-- CTA buttons — slide up -->
+      <!-- CTA buttons, slide up -->
       <div data-hero-el="cta" class="hero-animate hero-animate-delay-3 mt-10 flex flex-wrap items-center gap-4">
         <a
           href="#businesses"
@@ -87,7 +87,7 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
         </a>
       </div>
 
-      <!-- Social proof avatar stack — fade only -->
+      <!-- Social proof avatar stack, fade only -->
       <div data-hero-el="social" class="hero-animate hero-animate-fade hero-animate-delay-4 mt-12 flex items-center gap-4">
         <div class="flex -space-x-3">
           <div class="size-10 rounded-full border-2 border-white/80 bg-gradient-to-br from-primary to-primary-dark"></div>

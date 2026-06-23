@@ -60,7 +60,7 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
-    <!-- Fonts — only preload the two critical weights (body + heading) -->
+    <!-- Fonts, only preload the two critical weights (body + heading) -->
     <link rel="preload" href="/fonts/plus-jakarta-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin />
   </head>
@@ -71,7 +71,7 @@ const ogImageUrl = new URL(ogImage, Astro.site);
 
     <script>
       // Defer all non-critical JS until the browser is idle.
-      // This keeps Total Blocking Time low without changing the visual experience —
+      // This keeps Total Blocking Time low without changing the visual experience,
       // reveal animations and hero scroll effects kick in after first paint.
       const initEnhancements = () => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -141,12 +141,12 @@ const ogImageUrl = new URL(ogImage, Astro.site);
           if (el) el.style.willChange = 'transform, opacity, filter';
         });
 
-        // Smooth easing curve — decelerates for a buttery feel
+        // Smooth easing curve, decelerates for a buttery feel
         function easeOutQuart(t: number): number {
           return 1 - Math.pow(1 - t, 4);
         }
 
-        // rAF-throttled scroll handler — one calculation per frame max
+        // rAF-throttled scroll handler, one calculation per frame max
         let ticking = false;
 
         function updateHeroAnimations() {
@@ -169,7 +169,7 @@ const ogImageUrl = new URL(ogImage, Astro.site);
 
           // ── Staggered content: each element fades/drifts independently ──
           // Each element has its own scroll "window" defined by offset.
-          // Badge goes first, social proof goes last — cascading dissolve.
+          // Badge goes first, social proof goes last, cascading dissolve.
           for (const { el, offset, drift, scale } of heroEls) {
             if (!el) continue;
 

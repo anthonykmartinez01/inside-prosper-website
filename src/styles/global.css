@@ -60,7 +60,7 @@
   font-display: swap;
   src: url('/fonts/inter-400.woff2') format('woff2');
 }
-/* Self-hosted Playfair Display (serif accent — italic used for display text) */
+/* Self-hosted Playfair Display (serif accent, italic used for display text) */
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
@@ -90,7 +90,7 @@
   }
 }
 
-/* Giant hero background text — Ascape-style depth layering */
+/* Giant hero background text, Ascape-style depth layering */
 .hero-giant-text {
   font-family: var(--font-hero);
   font-size: clamp(100px, 24vw, 500px);
@@ -100,7 +100,7 @@
   text-transform: uppercase;
 }
 
-/* Foreground mask — reveals only bottom portion of the image (buildings, silos, road)
+/* Foreground mask, reveals only bottom portion of the image (buildings, silos, road)
    so they physically overlap the PROSPER text behind them.
    Sky area is masked out, letting the text show through. */
 .hero-foreground-mask {
@@ -108,7 +108,7 @@
   mask-image: linear-gradient(to bottom, transparent 15%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.7) 42%, black 52%);
 }
 
-/* Hero scroll animation initial states — JS takes over on scroll.
+/* Hero scroll animation initial states, JS takes over on scroll.
    Set here so there's no visual flash before JS hydrates. */
 [data-hero-bg],
 [data-hero-fg] {
@@ -138,7 +138,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Navbar scroll transition — handled via is:inline style in Navbar.astro */
+/* Navbar scroll transition, handled via is:inline style in Navbar.astro */
 
 /* Scroll-triggered fade-up animation */
 .reveal {
@@ -161,7 +161,7 @@
 .reveal-stagger > .reveal:nth-child(5) { transition-delay: 400ms; }
 .reveal-stagger > .reveal:nth-child(6) { transition-delay: 500ms; }
 
-/* Hero entrance animations — staggered cascade on page load.
+/* Hero entrance animations, staggered cascade on page load.
    The H1 (LCP element) is excluded from animations to avoid render delay. */
 @keyframes hero-fade-up {
   0% { opacity: 0; transform: translateY(30px); }
@@ -195,7 +195,7 @@
 .hero-animate-delay-3 { animation-delay: 1.0s; }
 .hero-animate-delay-4 { animation-delay: 1.2s; }
 
-/* Card hover — scale + elevated shadow */
+/* Card hover, scale + elevated shadow */
 .card-hover {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -206,7 +206,7 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* Reduced motion — disable ALL scroll and entrance animations */
+/* Reduced motion, disable ALL scroll and entrance animations */
 @media (prefers-reduced-motion: reduce) {
   .hero-animate,
   .hero-animate-slide-down,
@@ -241,7 +241,7 @@
   }
 }
 
-/* Blog post images — mobile optimized, prevent layout shift */
+/* Blog post images, mobile optimized, prevent layout shift */
 .prose img {
   width: 100%;
   height: auto;
