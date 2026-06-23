@@ -1033,6 +1033,34 @@ export const businesses: Business[] = [
     logo: '/images/new-look-remodeling-logo.webp',
   },
   {
+    name: 'Pool Clean',
+    slug: 'pool-clean',
+    category: 'trades',
+    published: true,
+    verified: true,
+    shortDescription: 'Owner-operated pool cleaning and maintenance serving Prosper, Celina, and the surrounding area. Brandon Clark brings a lifetime of hands-on pool care, a detailed every-visit routine, and after-visit photo reports — consistent, professional, and trustworthy.',
+    longDescription: 'Pool Clean is an owner-operated pool service led by Brandon Clark, serving Prosper, Celina, and the surrounding North Texas area. Brandon grew up caring for pools and has owned his own for 27 years, bringing a lifetime of hands-on experience to every visit. He follows a structured routine on every service — testing the water with a saturation index method, adding chemicals in the right order, vacuuming, brushing, netting, and checking equipment — and sends a full photo report after each visit. Customers consistently describe him as honest, professional, courteous, dependable, and the most consistent pool service they have had.',
+    htmlDescription: `<h2>Meet the Owner Behind Pool Clean in Prosper, Texas</h2>
+<p>When you hire a pool service, you want to know who is walking into your backyard. With Pool Clean, that person is Brandon Clark, and he is exactly the kind of business owner you hope to find. Brandon grew up in a small Texas town on Cedar Creek Lake, spent twenty years in Austin, and moved his family back to the Prosper and Celina area to be closer to relatives. He has cared for pools his entire life, starting as a kid doing weekly maintenance his dad taught him, and he has owned a pool of his own for the twenty seven years he has been married. That lifetime of hands on experience is something you feel from the very first visit.</p>
+
+<h2>What to Expect From a Reliable Pool Cleaning Service</h2>
+<p>The thing people mention again and again about Brandon is consistency. He shows up when he says he will, and if rain or weather pushes him a day, he tells you in advance instead of leaving you guessing. One longtime customer who had cycled through several pool companies over the years called him the most consistent service he had ever had. You will understand that quickly. Brandon treats showing up on time and doing what he promised as the foundation of the whole business, and it shows in how smoothly your service weeks run.</p>
+
+<h2>Attention to Detail That Sets Pool Clean Apart</h2>
+<p>Where a lot of services move some water around and leave, Brandon follows a structured routine every single visit. He tests your water using a proper saturation index method, because there is a real difference between a pool that simply looks clean and one that is genuinely healthy and balanced. He adds chemicals in the right order and at the right time rather than dumping everything in at once. He vacuums the bottom first, then brushes the walls, tiles, and skimmers, nets the surface, cleans out the robot or vacuum, and checks your equipment for leaks. He even rinses the skimmer baskets and cleaner bags so nothing looks dingy, and he carries a small blower to clear leaves and debris off your deck. Customers describe this as a night and day difference from their previous companies, and you can tell the quality of the work genuinely matters to him.</p>
+
+<h2>Professional, Respectful, and Trustworthy Pool Care</h2>
+<p>Brandon and his team always arrive in a clean uniform with the logo clearly visible, so you know exactly who is in your yard. He parks on the curb to avoid blocking your driveway, keeps his focus on the pool, and respects your privacy and your property the entire time he is there. Reviewers consistently use words like honest, professional, courteous, and dependable, and that reputation is well earned. Nothing from your pool gets left behind in your trash either, since he bags it all and takes it with him.</p>
+
+<h2>Clear Communication Every Step of the Way</h2>
+<p>After each visit you receive a report with photos of your pool, your full chemistry readings, anything that was added, and a note on when it is safe to swim again. If something looks off, Brandon documents it and reaches out so there are no surprises. That kind of transparency is why so many people say it is a relief to finally stop worrying about maintenance. With Pool Clean, you can simply enjoy a crystal clear pool, knowing it is in genuinely capable and caring hands.</p>`,
+    phone: '(469) 200-3420',
+    website: 'https://poolclean.us',
+    address: 'Serving Prosper, Celina, and the surrounding area',
+    image: '/images/pool-clean.webp',
+    imageAspect: '16/9',
+  },
+  {
     name: 'Zero Streaks Window Cleaning',
     slug: 'zero-streaks-window-cleaning',
     category: 'trades',
