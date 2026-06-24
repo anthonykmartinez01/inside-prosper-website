@@ -59,7 +59,7 @@ const breadcrumbItems = [
 ---
 
 <BaseLayout
-  title={`${business.name} — ${category?.name || 'Business'} in Prosper, TX | ${siteConfig.name}`}
+  title={`${business.name} — ${category?.name || 'Business'} in ${business.locationLabel || 'Prosper, TX'} | ${siteConfig.name}`}
   description={business.shortDescription}
   ogImage={business.image || undefined}
 >
