@@ -1059,6 +1059,7 @@ export const businesses: Business[] = [
     address: 'Serving Prosper, Celina, and the surrounding area',
     image: '/images/pool-clean.webp',
     imageAspect: '16/9',
+    logo: '/images/pool-clean-logo.webp',
   },
   {
     name: 'Zero Streaks Window Cleaning',
