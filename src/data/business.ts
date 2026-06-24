@@ -1059,6 +1059,7 @@ export const businesses: Business[] = [
     address: 'Serving Prosper, Celina, and the surrounding area',
     image: '/images/pool-clean.webp',
     imageAspect: '3/4',
+    cardImage: '/images/pool-clean-card.webp',
     logo: '/images/pool-clean-logo.webp',
   },
   {
