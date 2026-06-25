@@ -1098,6 +1098,7 @@ export const businesses: Business[] = [
     phone: '(214) 842-8319',
     website: 'https://www.integritydancearts.com/',
     address: 'Serving Prosper, McKinney, Celina, and the surrounding North Texas area',
+    mapEmbedUrl: 'https://www.google.com/maps?q=Integrity+Dance+Arts,+McKinney,+TX&output=embed',
     image: '/images/integrity-dance-arts.webp',
     imageAspect: '3/2',
     cardImage: '/images/integrity-dance-arts-card.webp',
