@@ -1063,6 +1063,51 @@ export const businesses: Business[] = [
     logo: '/images/pool-clean-logo.webp',
   },
   {
+    name: 'Integrity Dance Arts',
+    slug: 'integrity-dance-arts',
+    category: 'food-fun',
+    published: true,
+    verified: true,
+    locationLabel: 'McKinney, TX',
+    shortDescription: 'A dance studio serving Prosper, McKinney, Celina, and the surrounding area. Owners Shelley and Bianca teach ages eighteen months through adult with combo, ballet, jazz, tap, lyrical, and contemporary classes, led by experienced, caring instructors in a true family environment.',
+    longDescription: 'Integrity Dance Arts is a dance studio serving Prosper, McKinney, Celina, and the surrounding North Texas area, built by owners Shelley and Bianca around the values of honesty, character, and treating dance as something for everyone. The studio teaches ages eighteen months through adult, with combo classes for little ones, leveled ballet and jazz on a real syllabus, lyrical and contemporary for older students, performing company opportunities, summer camps, and a growing slate of adult programming. Families consistently describe experienced instructors who genuinely care, reasonable pricing, and a welcoming, true family feel, and the studio is now moving into a much larger space to better serve the community.',
+    htmlDescription: `<h2>A Prosper and McKinney Dance Studio Built on Integrity</h2>
+<p>When you walk into Integrity Dance Arts, the first thing you notice is that the name is not just a label on the door. Shelley and Bianca built this studio around the idea of staying true, being honest, and developing good character, and you feel that in the way the staff greets your child and the way the families treat one another. This is a place where dance is treated as something for everyone, from toddlers taking their very first steps in a creative movement class all the way through adults who want to move again after years away from it.</p>
+
+<h2>Dance Classes for All Ages and Every Level</h2>
+<p>One of the things you can count on here is that your dancer will be met exactly where they are. Families talk about how their children are challenged individually and encouraged to grow at their own pace, and that holds true whether you are signing up a curious three year old or a teenager preparing for a performing company. The studio teaches ages eighteen months through adult, with combo classes for the littles that mix ballet, tap, jazz, and hip hop, leveled jazz and ballet classes with a real syllabus, and lyrical and contemporary classes that give older students a healthy outlet for working through emotion and expression. You are never going to feel like your child was dropped into the wrong room. They start in the level that fits them and build real technique from there.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/integrity-dance-arts-1.webp" alt="Young dancers at the barre during a class at Integrity Dance Arts in McKinney, TX" loading="lazy" width="760" height="1013" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>Experienced Dance Instructors Who Truly Care</h2>
+<p>Something that comes up again and again from parents is how wonderful the teachers are. The staff is made up of experienced dance educators, many holding a BFA or a degree with an emphasis in dance, and several have danced professionally. What you will notice, though, is not just the credentials but the warmth. The instructors are sweet with the kids, hands on with their corrections, and genuinely love what they do. They explain placement in ways that make sense to a young dancer, sometimes using playful and relatable language for the little ones, and they bring patience to every age group. Many of these teachers have been with the studio since the beginning, which tells you a lot about the culture they have built together.</p>
+
+<figure class="my-8 mx-auto max-w-md"><img src="/images/integrity-dance-arts-2.webp" alt="Ballet students working on technique at the barre at Integrity Dance Arts" loading="lazy" width="760" height="1013" class="w-full rounded-2xl shadow-md" /></figure>
+
+<h2>A Real Dance Family in North Texas</h2>
+<p>If you ask families what keeps them at Integrity Dance Arts, most of them will use the same word: family. Parents describe a welcoming environment with a true family feel, and many have been there since the studio opened and plan to stay for years to come. You will find moms taking adult classes together in the evenings while their daughters dance in the performing company. You will see boys and girls of all ages enjoying summer camps that quickly become a favorite part of the year. It is the kind of place where you arrive as a client and end up part of something bigger.</p>
+
+<h2>Reasonable Prices and a Wide Range of Options</h2>
+<p>You can expect honesty in how the studio runs, and that extends to pricing. Families consistently point out how reasonable the prices are, and they appreciate that the experience can be as competitive or as relaxed as you want it to be. There is a full range of options, so a child who simply wants to dance for fun has a place here, and a dancer with bigger goals has a clear path to grow. That flexibility is rare, and it is one of the reasons parents recommend this studio so freely to anyone considering dance.</p>
+
+<h2>Growing With the Prosper Community</h2>
+<p>Integrity Dance Arts is entering an exciting new chapter as it moves into a much larger space, roughly doubling in size to better serve dancers across Prosper, McKinney, Celina, and the surrounding area. With that growth comes more of what families already love, plus adult programming that is genuinely hard to find this far north of Dallas, covering everything from ballet and pilates to cardio dance, jazz, lyrical, and tap. There are also plans for an adaptive dance program, because the belief that dance is for everyone is something this studio takes seriously rather than treating as a slogan.</p>
+
+<h2>What You Can Expect at Integrity Dance Arts</h2>
+<p>What you can expect when you bring your family here is a studio that cares about more than steps and recitals. You can expect teachers who will know your child, a community that will welcome you, and owners who measure success by how their dancers grow as people, not just performers. Whether your little one is taking their first class or your teen is chasing a serious passion, you will find a place that meets them with patience, skill, and a whole lot of heart.</p>`,
+    phone: '(214) 842-8319',
+    website: 'https://www.integritydancearts.com/',
+    address: 'Serving Prosper, McKinney, Celina, and the surrounding North Texas area',
+    image: '/images/integrity-dance-arts.webp',
+    imageAspect: '3/2',
+    cardImage: '/images/integrity-dance-arts-card.webp',
+    logo: '/images/integrity-dance-arts-logo.webp',
+    socials: {
+      facebook: 'https://www.facebook.com/INTEGRITYDA/',
+      instagram: 'https://www.instagram.com/integrityda/',
+    },
+  },
+  {
     name: 'Dro\'s Auto Detail',
     slug: 'dros-auto-detail',
     category: 'trades',
