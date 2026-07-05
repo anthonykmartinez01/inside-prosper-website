@@ -63,9 +63,6 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <!-- Fonts — only preload the two critical weights (body + heading) -->
     <link rel="preload" href="/fonts/plus-jakarta-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin />
-
-    <!-- Site Optimizer tag — runs on the main thread (manipulates the DOM, so not Partytown-compatible); async to avoid render blocking -->
-    <script src="https://storage.googleapis.com/site-optimizer/p/tag/insideprosper.com/optimizer-tag.js" async is:inline></script>
   </head>
   <body>
     <OrganizationSchema />
