@@ -1056,7 +1056,7 @@ export const businesses: Business[] = [
 <p>After each visit you receive a digital report with photos of your pool, your full chemistry readings, anything that was added, and a note on when it is safe to swim again. If something looks off, Brandon documents it and reaches out so there are no surprises. That kind of transparency is why so many people say it is a relief to finally stop worrying about maintenance. With Pool Clean, you can simply enjoy a clean, healthy, and sanitary pool, knowing it is in genuinely capable and caring hands.</p>`,
     phone: '(469) 200-3420',
     website: 'https://poolclean.us',
-    address: 'Serving Prosper, Celina, and the surrounding area',
+    address: '2813 Little Current Ct, Celina, TX 75009',
     image: '/images/pool-clean.webp',
     imageAspect: '3/4',
     cardImage: '/images/pool-clean-card.webp',
