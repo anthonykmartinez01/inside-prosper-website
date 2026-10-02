@@ -34,8 +34,13 @@ import { siteConfig } from '../../data/business';
     "Prosper TX services",
     "Prosper Texas directory"
   ],
+  "memberOf": {
+    "@type": "Organization",
+    "name": siteConfig.chamber.name,
+    "url": siteConfig.chamber.url
+  },
   "sameAs": [
-    "https://www.facebook.com/REPLACE_WITH_FACEBOOK_URL/people/InsideProsper/61574519054783/",
-    "https://www.prosperchamber.com/REPLACE_WITH_CHAMBER_LISTING_URL/list/member/inside-prosper-7757"
+    "https://www.facebook.com/people/InsideProsper/61574519054783/",
+    siteConfig.chamber.listingUrl
   ]
 })} />

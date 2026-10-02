@@ -10,6 +10,13 @@ export const siteConfig = {
   city: 'Prosper',
   state: 'TX',
   zip: '75078',
+  // Chamber of Commerce membership — single source of truth for the trust badge + schema
+  chamber: {
+    name: 'Prosper Chamber of Commerce',
+    url: 'https://www.prosperchamber.com/',
+    // Public, verifiable member listing in the chamber's directory
+    listingUrl: 'https://business.prosperchamber.com/list/member/inside-prosper-7757',
+  },
 };
 
 export const nearbyCities = ['Celina', 'Frisco', 'McKinney', 'Little Elm', 'Aubrey'];

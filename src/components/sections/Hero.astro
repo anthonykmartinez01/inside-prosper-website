@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import ChamberBadge from '../ui/ChamberBadge.astro';
 import heroImage from '../../assets/images/hero-prosper.jpg';
 ---
 
@@ -98,6 +99,11 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
         <p class="text-sm text-[#F5F5F5]/60">
           Join neighbors discovering local gems in Prosper
         </p>
+      </div>
+
+      <!-- Chamber of Commerce trust badge — fade only -->
+      <div data-hero-el="chamber" class="hero-animate hero-animate-fade hero-animate-delay-4 mt-8">
+        <ChamberBadge tone="dark" size="sm" />
       </div>
     </div>
   </div>
