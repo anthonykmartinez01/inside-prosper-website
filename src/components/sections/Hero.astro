@@ -51,10 +51,12 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
   <!-- Layer 5: Foreground content -->
   <div class="relative z-20 mx-auto max-w-7xl px-6 pt-20 pb-8 lg:pt-40 lg:pb-28" data-hero-content>
     <div class="max-w-2xl">
-      <!-- Badge — slides down from above -->
-      <div data-hero-el="badge" class="hero-animate hero-animate-slide-down mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm border border-white/10">
-        <svg class="size-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" /></svg>
-        Welcome to Inside Prosper
+      <!-- Sister-site masthead — slides down from above -->
+      <div data-hero-el="badge" class="hero-animate hero-animate-slide-down mb-6">
+        <p class="flex items-center gap-3 font-heading text-xs font-semibold uppercase tracking-widest text-white">
+          <span class="h-px w-10 bg-primary" aria-hidden="true"></span>
+          <span>From the team behind <a href="https://insidefriscotx.com" target="_blank" rel="noopener" class="text-primary underline decoration-primary/60 underline-offset-4 transition-colors hover:text-primary-dark">Inside Frisco</a></span>
+        </p>
       </div>
 
       <!-- Heading — NO entrance animation (LCP element must render immediately) -->
@@ -87,6 +89,11 @@ import heroImage from '../../assets/images/hero-prosper.jpg';
           List Your Business
         </a>
       </div>
+
+      <p class="hero-animate hero-animate-fade hero-animate-delay-4 mt-6 max-w-lg text-base">
+        <span class="font-display text-xl italic text-white">Already trusted in Frisco.</span>
+        <a href="https://insidefriscotx.com" target="_blank" rel="noopener" class="font-semibold text-primary underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary-dark">See the guide at insidefriscotx.com</a>
+      </p>
 
       <!-- Social proof avatar stack — fade only -->
       <div data-hero-el="social" class="hero-animate hero-animate-fade hero-animate-delay-4 mt-12 flex items-center gap-4">
