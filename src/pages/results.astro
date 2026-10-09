@@ -84,7 +84,10 @@ const breadcrumbItems = [
             </div>
           </div>
 
-          <!-- Self-hosted video — plays inline, no YouTube embed or sign-in prompt -->
+          <!-- Self-hosted video — plays inline, no YouTube embed or sign-in prompt.
+               Served from Cloudflare R2 (bucket kailenflow-media): Cloudflare Pages
+               ignores byte-range requests, and iOS Safari won't play a video without
+               them. R2 answers ranges with 206 Partial Content. -->
           <div class="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl border border-border bg-black shadow-lg">
             <video
               controls
@@ -93,7 +96,7 @@ const breadcrumbItems = [
               poster="/images/rankin-testimonial-poster.jpg"
               class="absolute inset-0 size-full object-cover"
             >
-              <source src="/videos/rankin-testimonial.mp4" type="video/mp4" />
+              <source src="https://media.kailenflow.com/insideprosper/videos/rankin-testimonial.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -127,7 +130,8 @@ const breadcrumbItems = [
             Carlos shares his experience working with Inside Prosper in his own words.
           </p>
 
-          <!-- Self-hosted vertical video — plays inline, no YouTube embed or sign-in prompt -->
+          <!-- Self-hosted vertical video — plays inline, no YouTube embed or sign-in prompt.
+               Served from Cloudflare R2 for the same byte-range reason as above. -->
           <div class="relative mx-auto mt-8 aspect-[9/16] w-full max-w-xs overflow-hidden rounded-2xl border border-border bg-black shadow-lg">
             <video
               controls
@@ -136,7 +140,7 @@ const breadcrumbItems = [
               poster="/images/carlos-testimonial-poster.jpg"
               class="absolute inset-0 size-full object-cover"
             >
-              <source src="/videos/carlos-testimonial.mp4" type="video/mp4" />
+              <source src="https://media.kailenflow.com/insideprosper/videos/carlos-testimonial.mp4" type="video/mp4" />
             </video>
           </div>
         </div>

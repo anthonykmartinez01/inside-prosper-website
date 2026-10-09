@@ -1,0 +1,31 @@
+---
+// Cloudflare Pages serves this with a real 404 status for unknown URLs.
+// Without a 404.html in the build, Pages falls back to serving the home page
+// with a 200 for every bad URL (soft 404s), which Netlify never did.
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout
+  title="Page Not Found — Inside Prosper | Prosper, TX Local Business Directory"
+  description="The page you were looking for doesn't exist. Browse Prosper, Texas businesses on Inside Prosper."
+  noindex
+>
+  <Navbar />
+  <main class="bg-bg-alt pt-32 pb-20">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h1 class="font-heading text-4xl font-bold text-text">Page not found</h1>
+      <p class="mt-4 text-base leading-relaxed text-text-muted">
+        That page doesn't exist or has moved. Head back to the home page to browse local Prosper businesses.
+      </p>
+      <a
+        href="/"
+        class="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3.5 font-semibold text-white transition-all duration-200 hover:bg-primary-dark"
+      >
+        Back to Inside Prosper
+      </a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
